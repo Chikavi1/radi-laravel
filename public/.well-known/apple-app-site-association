@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "9DKT9985R3.pet.radi.radi",
+                "paths": ["*"]
+            }
+        ]
+    }
+}

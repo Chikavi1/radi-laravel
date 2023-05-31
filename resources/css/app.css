@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.capital:first-letter {text-transform: uppercase}
+
+
+
+.leaflet-popup-content-wrapper {
+    background: #00213f !important;
+    color: #adefd1;
+  }
+
+
+
+  .leaflet-popup-content-wrapper .leaflet-popup-content {
+    background: #00213f;
+    color: #adefd1;
+  }
+
+  .leaflet-popup-tip-container {
+    width: 0px;
+    height: 0px;
+  }
+
+  .leaflet-popup-tip {
+    width: 0px;
+    height: 0px;
+  }
+

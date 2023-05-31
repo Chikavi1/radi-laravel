@@ -1,0 +1,143 @@
+[
+    {
+      "image": "https://images.unsplash.com/photo-1636300958042-64356873ffcc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "title": "Querétaro",
+      "subtitle": "Querétaro",
+      "latitude": 20.58822547874799,
+      "longitude": -100.38924556837699
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1604413703617-2daf6ac1aeb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1142&q=80",
+      "title": "Cabo San Lucas",
+      "subtitle": "Baja California Sur",
+      "latitude": 22.896548097646455,
+      "longitude":  -109.92422076536016
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1647361334420-d7b542a9d555?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1168&q=80",
+      "title": "San Cristóbal",
+      "subtitle": "Chiapas",
+      "latitude": 16.733338460193103,
+      "longitude":  -92.63709668284037
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1799067641814-36f8ad3e1acb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dG9sdWNhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "title": "Toluca",
+      "subtitle": "Estado de México",
+      "latitude": 19.28220100548764,
+      "longitude": -99.65568523243134
+    },
+    {
+      "image": "https://topadventure.com/__export/1642690644980/sites/laverdad/img/2022/01/20/catedral_de_aguascalientes_portada_principal.jpg_1040467494.jpg",
+      "title": "Aguascalientes",
+      "subtitle": "Aguascalientes",
+      "latitude": 21.883237235185113,
+      "longitude":  -102.29350473907907
+    },
+
+    {
+      "image": "https://images.unsplash.com/photo-1665096852979-988cf501d86f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGVvbiUyMGd1YW5hanVhdG98ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "title": "León",
+      "subtitle": "Guanajuato",
+      "latitude": 21.12457598281628,
+      "longitude": -101.68554142656122
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1626916740698-4b5bc027290c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+      "title": "Zihuatanejo",
+      "subtitle": "Guerrero",
+      "latitude": 17.642666576468734,
+      "longitude": -101.55524321090438
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1578940421555-2dcc68d56e50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "title": "Oaxaca de Juárez",
+      "subtitle": "Oaxaca",
+      "latitude": 17.07266938232323,
+      "longitude":  -96.72781548898392
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1638328175835-f094f4a6b909?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+      "title": "Cuernavaca",
+      "subtitle": "Morelos",
+      "latitude": 18.931442909872203,
+      "longitude":  -99.22220882582405
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1541033861714-bd82cd092c74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "title": "Puebla",
+      "subtitle": "Puebla",
+      "latitude": 19.042002836420338,
+      "longitude":  -98.20595370849624
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1618867147699-538324f003ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+      "title": "Tijuana",
+      "subtitle": "Baja California",
+      "latitude": 32.51665837466576,
+      "longitude":  -117.0119303440196
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1625255312731-e0974fccc281?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "title": "Playa del carmen",
+      "subtitle": "Quintana Roo",
+      "latitude": 20.645386892659985,
+      "longitude": -87.06999349604601
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1608322681243-91727e61cd86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "title": "Bacalar",
+      "subtitle": "Quintana Roo",
+      "latitude": 18.678343440293748,
+      "longitude": -88.39215426635344
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80",
+      "title": "Cancún",
+      "subtitle": "Quintana Roo",
+      "latitude": 21.152527077721,
+      "longitude": -86.82558575535178
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1598363460575-485fb6bea99a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+      "title": "Acapulco",
+      "subtitle": "Guerrero",
+      "latitude": 16.825576136083235,
+      "longitude": -99.85532257535661
+    },
+    {
+      "image": "https://media.istockphoto.com/id/652692564/es/foto/nuestra-senora-de-la-soledad-church-in-camaguey-cuba.jpg?s=612x612&w=0&k=20&c=I3Kh7_sdr9FBZZhTxHoKKtp6rH9p5xNjfwoxF46gKf4=",
+      "title": "Culiacán",
+      "subtitle": "Sinaloa",
+      "latitude": 24.79268338289185,
+      "longitude":  -107.39999069132102
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1612086730392-be7864e4ea65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "title": "Mazatlán",
+      "subtitle": "Sinaloa",
+      "latitude": 23.24451406001847,
+      "longitude":  -106.41114311464851
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1565670105658-ea35d27f7de7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80",
+      "title": "Guadalajara",
+      "subtitle": "Jalisco",
+      "latitude": 20.665744032402145,
+      "longitude": -103.35038640901855
+    },
+    {
+      "image":"https://images.unsplash.com/photo-1585464231875-d9ef1f5ad396?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "title":"Ciudad de México",
+      "subtitle":"CDMX",
+      "latitude": 19.42864150716571,
+      "longitude": -99.13541604776036
+    },
+    {
+      "image":"https://images.unsplash.com/photo-1618950399704-86fb060cd003?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "title":"Monterrey",
+      "subtitle":"Nuevo Léon",
+      "latitude": 25.683443123542776,
+      "longitude": -100.3166290304401
+    }
+  ]

@@ -1,0 +1,5 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target" : { "namespace": "android_app", "package_name": "pet.radi.radi",
+                 "sha256_cert_fingerprints": ["B9:F3:22:59:16:A8:A7:C2:84:69:10:04:30:B7:7B:15:4A:18:D4:5D:62:99:F3:0B:86:5D:08:92:00:DE:46:BE"] }
+  }]
