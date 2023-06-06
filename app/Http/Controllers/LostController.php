@@ -44,71 +44,71 @@ class LostController extends Controller
 
 
         // lost
-        // $img->insert($watermark, 'bottom-left', -10, 0);
-        // $img->insert($petImage, 'center-right', 30, 10);
+        $img->insert($watermark, 'bottom-left', -10, 0);
+        $img->insert($petImage, 'center-right', 30, 10);
 
-        // $img->text('Mascota Desaparecida', 273, 150, function($font) {
-        //     $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
-        //     $font->size(40);
-        //     $font->color('#f2b63c');
-        //     $font->align('center');
-        //     $font->valign('bottom');
-        //     $font->angle(0);
-        // });
-        // $img->text($lost->pet->name, 60, 240, function($font) {
-        //     $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
-        //     $font->size(70);
-        //     $font->color('#FFFF');
-        //     $font->angle(0);
-        // });
-        // if($lost->rewards){
-        //     $img->text('Recompensa de '.$lost->rewards.' MXN', 60, 340, function($font) {
-        //         $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
-        //         $font->size(35);
-        //         $font->color('#FFFF');
-        //         $font->angle(0);
-        //     });
-        // }
-        // $img->text($lost->cellphone, 60, 420, function($font) {
-        //     $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
-        //     $font->size(35);
-        //     $font->color('#FFFF');
-        //     $font->angle(0);
-        // });
-        // $img->text('Haz click para saber más', 60, 470, function($font) {
-        //     $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
-        //     $font->size(35);
-        //     $font->color('#FFFF');
-        //     $font->angle(0);
-        // });
+        $img->text('Mascota Desaparecida', 273, 150, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+            $font->size(40);
+            $font->color('#f2b63c');
+            $font->align('center');
+            $font->valign('bottom');
+            $font->angle(0);
+        });
+        $img->text($lost->pet->name, 60, 240, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+            $font->size(70);
+            $font->color('#FFFF');
+            $font->angle(0);
+        });
+        if($lost->rewards){
+            $img->text('Recompensa de '.$lost->rewards.' MXN', 60, 340, function($font) {
+                $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
+                $font->size(35);
+                $font->color('#FFFF');
+                $font->angle(0);
+            });
+        }
+        $img->text($lost->cellphone, 60, 420, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
+            $font->size(35);
+            $font->color('#FFFF');
+            $font->angle(0);
+        });
+        $img->text('Haz click para saber más', 60, 470, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
+            $font->size(35);
+            $font->color('#FFFF');
+            $font->angle(0);
+        });
 
 
         // DEAD
-        $img->insert($rip, 'left-top', 350, 150);
-        $img->insert($petImage, 'center-right', 100, 80);
-        $img->insert($watermark, 'bottom-left', 130, 120);
+        // $img->insert($rip, 'left-top', 350, 150);
+        // $img->insert($petImage, 'center-right', 100, 80);
+        // $img->insert($watermark, 'bottom-left', 130, 120);
 
-        $img->text('En memoria de nuestro amado', 420, 300, function($font) {
-        $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
-        $font->size(40);
-        $font->color('#f2b63c');
-        $font->align('center');
-        $font->valign('bottom');
-        $font->angle(0);
-         });
-        $img->text('Radiador', 145, 390, function($font) {
-        $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
-        $font->size(70);
-        $font->color('#FFFF');
-        $font->angle(0);
-        });
-        $img->text('28 de mayo del 2029', 145, 480, function($font) {
-                    $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
-                    $font->size(35);
-                    $font->color('#FFFF');
-                    $font->angle(0);
-                });
-        return $img->response('jpg');
+        // $img->text('En memoria de nuestro amado', 420, 300, function($font) {
+        // $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+        // $font->size(40);
+        // $font->color('#f2b63c');
+        // $font->align('center');
+        // $font->valign('bottom');
+        // $font->angle(0);
+        //  });
+        // $img->text('Radiador', 145, 390, function($font) {
+        // $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+        // $font->size(70);
+        // $font->color('#FFFF');
+        // $font->angle(0);
+        // });
+        // $img->text('28 de mayo del 2029', 145, 480, function($font) {
+        //             $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
+        //             $font->size(35);
+        //             $font->color('#FFFF');
+        //             $font->angle(0);
+        //         });
+        // return $img->response('jpg');
     }
 
     public function create()

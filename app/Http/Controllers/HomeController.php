@@ -77,6 +77,18 @@ class HomeController extends Controller
         return view('home.download');
     }
 
+    public function feedback()
+    {
+        SEO::setTitle('Regalanos tu opinion de la app');
+        SEO::setDescription('Apoya a mejorar la plataforma de Radi Pets.');
+        SEO::opengraph()->setUrl('https://www.radi.pet');
+        SEO::setCanonical('https://www.radi.pet');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/default.png'));
+        SEO::twitter()->setImage(asset('img/default.png'));
+        return view('home.download');
+    }
+
 
     public function petFriendly()
     {

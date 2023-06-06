@@ -23,7 +23,7 @@ class OrganizationsController extends Controller
         //     * sin(radians(Organizations.latitude))) AS distance"))
         //     ->paginate(12);
 
-        $orgs = Organizations::orderBy('createdAt','desc')->paginate(12);
+        $orgs = Organizations::orderBy('createdAt','desc')->where('status',1)->paginate(12);
         SEO::setTitle('Albergues y refugios en Radi Pets');
         SEO::setDescription('Encuentra tu compañero perfecto y apoya a albergues y refugios de mascotas. ¡Adopta y salva una vida hoy!');
         SEO::opengraph()->setUrl('https://www.radi.pet');
