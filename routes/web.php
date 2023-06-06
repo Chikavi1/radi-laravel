@@ -28,6 +28,7 @@ if (App::environment('production')) {
 
 Route::get('/', [HomeController::class, 'home'])->name('home.home');
 Route::get('/download', [HomeController::class, 'download'])->name('home.download');
+Route::get('/feedback', [HomeController::class, 'feedback'])->name('home.feedback');
 
 Route::resource('org', OrganizationsController::class);
 Route::resource('pet', PetsController::class);
