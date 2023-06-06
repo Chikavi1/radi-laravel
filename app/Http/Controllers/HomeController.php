@@ -86,7 +86,7 @@ class HomeController extends Controller
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
-        return view('home.download');
+        return view('home.feedback');
     }
 
 
