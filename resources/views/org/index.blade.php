@@ -29,7 +29,7 @@
         </div>
         </div>
         <div class="hidden lg:flex justify-center h-full overflow-hidden lg:w-2/3 xl:w-1/2 lg:absolute lg:justify-start lg:bottom-0 lg:right-0 lg:items-end">
-        <img src="https://radi-images.s3.us-west-1.amazonaws.com/Post+Instagram+Promoci%C3%B3n+Tips+Dispositivo+iPad+iPhone+Beige.png" class="object-cover object-top w-full h-64 max-w-xl  rounded lg:ml-32 xl:ml-8 lg:h-auto lg:max-w-screen-md" alt="" />
+        <img src="{{asset('img/org.png')}}" class="object-cover object-top w-full h-64 max-w-xl  rounded lg:ml-32 xl:ml-8 lg:h-auto lg:max-w-screen-md" alt="" />
         </div>
     </div>
 @endif
