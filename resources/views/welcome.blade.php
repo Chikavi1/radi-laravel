@@ -124,7 +124,7 @@
       </div>
     </div>
 
-    <div class="lg:w-full  w-5/6">
+    <div class="w-5/6">
       <img class="object-cover object-center rounded h-full" alt="hero" src="{{asset('img/landing.png')}}">
     </div>
   </div>
