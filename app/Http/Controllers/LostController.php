@@ -127,6 +127,8 @@ class LostController extends Controller
             'ccExpiryMonth' => 'required',
             'ccExpiryYear' => 'required',
             'cvvNumber' => 'required',
+            'id_pet' => 'required',
+
         ]);
 
         if($validator->passes()){
@@ -163,7 +165,7 @@ class LostController extends Controller
                         'status'            => 1,
                         'id_pet'            => $request->get('id_pet'),
                         'date'              => Carbon::now(),
-                        'note'              => $request->get('description'),
+                        'note'              => ucfirst($request->get('description')),
                         'id_payment'        => $charge['id'],
                         'rewards'           => $request->get('rewards'),
                         'cellphone'         => $request->get('cellphone'),
@@ -245,8 +247,8 @@ class LostController extends Controller
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::setTitle('Ayúdanos a encontrar a '.$lost->pet->name);
         SEO::setDescription('Ayúdanos a encontrar a las mascotas con Radi Pets.');
-        SEO::opengraph()->setUrl('https://www.radi.pet/lost/'.$hash);
-        SEO::setCanonical('https://www.radi.pet/lost/'.$hash);
+        SEO::opengraph()->setUrl('https://radi.pet/lost/'.$hash);
+        SEO::setCanonical('https://radi.pet/lost/'.$hash);
 
         $age=20;
         return view('lost.show',compact('lost','age','hash'));

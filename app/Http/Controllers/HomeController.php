@@ -17,8 +17,8 @@ class HomeController extends Controller
     {
         SEO::setTitle('La plataforma para los amantes de las mascotas');
         SEO::setDescription('Encuentra lugares pet friendly, adopta a una mascota o apoya a los albergues, todo en un solo lugar.');
-        SEO::opengraph()->setUrl('https://www.radi.pet');
-        SEO::setCanonical('https://www.radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet');
+        SEO::setCanonical('https://radi.pet');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
@@ -34,8 +34,8 @@ class HomeController extends Controller
     {
         SEO::setTitle('Contacta a nuestro equipo');
         SEO::setDescription('Contacta a nuestro equipo de expertos para obtener ayuda y asesoramiento en cualquier tema relacionado con nuestros servicios. Estamos disponibles para responder a tus preguntas y ayudarte en lo que necesites. ¡Contáctanos hoy mismo y descubre cómo podemos ayudarte a alcanzar tus objetivos!');
-        SEO::opengraph()->setUrl('https://www.radi.pet');
-        SEO::setCanonical('https://www.radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet');
+        SEO::setCanonical('https://radi.pet');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
@@ -46,8 +46,8 @@ class HomeController extends Controller
     {
         SEO::setTitle('Términos y condiciones');
         SEO::setDescription('Obtén información importante sobre tus derechos y responsabilidades al utilizar nuestros productos y servicios');
-        SEO::opengraph()->setUrl('https://www.radi.pet');
-        SEO::setCanonical('https://www.radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet');
+        SEO::setCanonical('https://radi.pet');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
@@ -57,8 +57,8 @@ class HomeController extends Controller
     {
         SEO::setTitle('Política de privacidad');
         SEO::setDescription('Lee nuestras políticas de privacidad para entender cómo manejamos la información personal que recopilamos de nuestros usuarios. Protegemos tus datos personales y nos comprometemos a mantener la confidencialidad de la información que compartes con nosotros.');
-        SEO::opengraph()->setUrl('https://www.radi.pet');
-        SEO::setCanonical('https://www.radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet');
+        SEO::setCanonical('https://radi.pet');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
@@ -69,8 +69,8 @@ class HomeController extends Controller
     {
         SEO::setTitle('Descarga la app de Radi Pets');
         SEO::setDescription('Descubre, crea perfiles, adopta y ayuda a encontrar mascotas desaparecidas en Radi Pets. La app perfecta para amantes de las mascotas. ¡Descarga ahora!');
-        SEO::opengraph()->setUrl('https://www.radi.pet');
-        SEO::setCanonical('https://www.radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet');
+        SEO::setCanonical('https://radi.pet');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
@@ -79,10 +79,10 @@ class HomeController extends Controller
 
     public function feedback()
     {
-        SEO::setTitle('Regalanos tu opinion de la app');
+        SEO::setTitle('Regálanos tu opinión de la app');
         SEO::setDescription('Apoya a mejorar la plataforma de Radi Pets.');
-        SEO::opengraph()->setUrl('https://www.radi.pet');
-        SEO::setCanonical('https://www.radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet');
+        SEO::setCanonical('https://radi.pet');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
@@ -99,8 +99,8 @@ class HomeController extends Controller
     {
         SEO::setTitle('Placas de identificación');
         SEO::setDescription('Las placas de identificación de Radi Pets son una forma segura y elegante de asegurarte de que tu mascota esté protegida en caso de que se pierda. ');
-        SEO::opengraph()->setUrl('https://www.radi.pet/placas');
-        SEO::setCanonical('https://www.radi.pet/placas');
+        SEO::opengraph()->setUrl('https://radi.pet/placas');
+        SEO::setCanonical('https://radi.pet/placas');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));

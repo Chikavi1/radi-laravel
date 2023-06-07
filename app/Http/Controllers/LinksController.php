@@ -11,7 +11,6 @@ class LinksController extends Controller
     public function index()
     {
         abort(404);
-
     }
 
 

@@ -126,7 +126,7 @@ Eliminar, alterar u ocultar cualquier aviso de propiedad (incluido cualquier avi
     <p class='mt-2 text-xl'>No dude en contactarnos si tiene alguna pregunta.</p>
     <p class='mt-2 text-xl'>A través de correo electrónico: luisrojas@radi.pet</p>
     <p class='mt-2 text-xl'>A través del número de teléfono: 3327276923</p>
-    <p class='mt-2 text-xl'>A través de este enlace: https://www.radi.pet</p>
+    <p class='mt-2 text-xl'>A través de este enlace: https://radi.pet</p>
 </div>
 
 @include('layouts.footer')

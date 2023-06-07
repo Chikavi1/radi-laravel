@@ -67,13 +67,18 @@ rel="stylesheet"
                             />
 
                             <div class="p-4 sm:p-6">
-                                <h3 class="text-lg font-medium dark:text-white text-gray-900">
+                                <h3 class="truncate text-lg font-medium dark:text-white text-gray-900">
                                     {{$pet->name}}
                                 </h3>
 
-                                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-                                    {{$pet->description}}
-                                </p>
+                                @if($pet->description)
+                                    <p class="truncate mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                                        {{$pet->description}}
+                                    </p>
+                                @else
+                                    <p class="truncate mt-2 line-clamp-3 text-sm/relaxed text-gray-500">Sin descripción</p>
+                                @endif
+
 
 
                             </div>

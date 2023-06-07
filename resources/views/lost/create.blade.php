@@ -33,10 +33,10 @@
 
         <div class="hidden md:block">
               <section class="px-4  mx-auto max-w-7xl">
-               <div class="grid grid-cols-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4   lg:gap-x-24 gap-y-20">
+               <div class="grid grid-cols-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4   lg:gap-x-24 gap-y-8">
 
                 <div class="col-span-4">
-                    <div class="col-span-4 w-8 h-8 mb-4 text-green-600  rounded-full">
+                    <div class="flex items-center justify-center w-8 h-8  text-green-800 rounded-full">
                         <i class="fa-solid fa-money-bill"></i>
                     </div>
                     <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Ahorra dinero y tiempo</h3>
@@ -44,7 +44,7 @@
                 </div>
 
                   <div  class="col-span-4">
-                    <div class="flex items-center justify-center w-8 h-8 mb-4 text-blue-800 rounded-full">
+                    <div class="flex items-center justify-center w-8 h-8  text-blue-800 rounded-full">
                         <i class="fa-solid fa-bolt"></i>
                     </div>
                     <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Rápida difusión</h3>
@@ -52,7 +52,7 @@
                   </div>
 
                   <div  class="col-span-4">
-                    <div class="flex items-center justify-center w-8 h-8 mb-4 text-yellow-600   rounded-full">
+                    <div class="flex items-center justify-center w-8 h-8  text-yellow-600   rounded-full">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Ayuda</h3>
@@ -60,7 +60,7 @@
                   </div>
 
                   <div  class="col-span-4">
-                    <div class="flex items-center justify-center w-8 h-8 mb-4 text-purple-600 rounded-full">
+                    <div class="flex items-center justify-center w-8 h-8  text-purple-600 rounded-full">
                       <i class="fa-solid fa-paw"></i>
                     </div>
                     <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Apoyo</h3>
@@ -91,8 +91,15 @@
                 <label for="Phone" class="block text-xs font-medium text-gray-700">
                   Mascota
                 </label>
+                @if(count($pets)!= 0)
+                    {!! Form::select('id_pet',$pets,null,['required'=>'true','class' => 'mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm']); !!}
+                @else
+                <div class="my-8 text-center">
+                    <p class="text-red-800">Necesitas tener el perfil de una mascota.</p>
+                    <p>Puedes crear tu mascota <a href="/pet/create" class="text-purple-900 font-bold">aquí</a></p>
+                </div>
+                @endif
 
-                {!! Form::select('id_pet',$pets,null,['class' => 'mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm']); !!}
 
             </div>
 
@@ -117,6 +124,7 @@
                   type="tel"
                   id="Phone"
                   name="cellphone"
+                  required
                   placeholder="Ingresa teléfono"
                   value="{{Auth::user()->phone}}"
                   maxlength="10"

@@ -150,7 +150,7 @@
         <div class="col-span-12 lg:col-span-6 p-4  lg:ml-6 lg:shadow-md">
             <div class="text-center">
             <h2 class="text-4xl">Tu Reseña</h2>
-            <img src="{{Auth::user()->photo}}" class="w-44 h-44 mx-auto rounded-full mt-6" alt="image profile" >
+            <img  src="{{Auth::user()->photo}}" class="w-44 h-44 mx-auto rounded-full mt-6" alt="image profile" >
 
                 <h2 class="mt-2 font-bold">{{Auth::user()->name}}</h2>
                 <p class="text-yellow-300 text-2xl mt-6">
@@ -163,6 +163,10 @@
 </div>
 
 <script>
+
+    $('img').on('error',function() {
+        $(this).attr('src', '{{asset('img/icon.png')}}').addClass('no-img');
+    });
 
     $(".rw-c").on('click',(e)=> {
         console.log(e.target.innerHTML);

@@ -48,7 +48,7 @@
                 <div class="navbar hidden md:block ">
                     <ul class="flex space-x-8 text-sm font-semibold">
                       <li> <a href="/results">Lugares</a></li>
-                      <li> <a href="/pet">En adopción</a></li>
+                      <li> <a href="/adoptions">En adopción</a></li>
                       <li> <a href="/lost">Desaparecidos</a></li>
                       <li> <a href="/org">Albergues</a></li>
                       {{-- <li> <a href="/placas">Placas</a></li> --}}
@@ -79,7 +79,7 @@
                 </li>
 
                 <li>
-                    <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="/pet" >En adopción</a>
+                    <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="/adoptions" >En adopción</a>
                 </li>
 
                 <li>

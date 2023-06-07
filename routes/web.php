@@ -36,6 +36,10 @@ Route::resource('places', PlacesController::class);
 Route::resource('lost', LostController::class);
 Route::resource('links', LinksController::class);
 
+
+Route::get('/adoptions', [PetsController::class, 'index'])->name('adoptions.index');
+
+
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 Route::get('/terms',  [HomeController::class, 'terms'])->name('home.terms');
 Route::get('/privacy', [HomeController::class, 'privacy'])->name('home.privacy');

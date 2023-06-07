@@ -288,7 +288,7 @@ crossorigin="anonymous"></script>
 
       <div class="mt-4">
       <p id="p1" class="max-w-[40ch] text-sm text-gray-500" id="text">
-          https://www.radi.pet/places/{{$hash}}
+          https://radi.pet/places/{{$hash}}
       </p>
       <button onclick="copyToClipboard('#p1')" class="mt-2 border-purple-600 bg-purple-600 hover:bg-purple-700 hover:border-purple-700 text-white font-bold py-2 px-4 rounded-full">
           Copiar
@@ -494,7 +494,7 @@ crossorigin="anonymous"></script>
                   @foreach ($place->reviews as $review)
                     <blockquote >
                         <header class="sm:flex sm:items-center sm:gap-4">
-                        <img src="{{$review->users->photo}}" class="w-12 h-12 rounded-full" alt="image">
+                        <img src="{{$review->users->photo}}" class="u-img w-12 h-12 rounded-full" alt="image">
                         <div class="flex">
                             <p class="text-yellow-400 font-bold">
                             {{$review->score}} / 10
@@ -690,6 +690,11 @@ crossorigin="anonymous"></script>
 </script>
 
 <script>
+
+    $('.u-img').on('error',function() {
+        alert('caca');
+        $(this).attr('src', '{{asset('img/icon.png')}}').addClass('no-img');
+    });
 
 
     function copyToClipboard(element) {

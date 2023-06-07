@@ -47,7 +47,7 @@ class ReviewsController extends Controller
         $review = new ReviewsPlaces([
             'user_id'           => Auth::user()->id,
             'score'             => $request->score,
-            'comments'          => $request->comments,
+            'comments'          => ucfirst($request->comments),
             'place_id'          => $place_id[0],
             'metadata'          => json_encode($metadata),
             'verified'          => 0,

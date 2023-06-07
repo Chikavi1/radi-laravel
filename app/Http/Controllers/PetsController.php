@@ -38,8 +38,8 @@ class PetsController extends Controller
         }
         SEO::setTitle($textTitle.''.$pet->name);
         SEO::setDescription($pet->description);
-        SEO::opengraph()->setUrl('https://www.radi.pet');
-        SEO::setCanonical('https://www.radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet');
+        SEO::setCanonical('https://radi.pet');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage($pet->photo);
         SEO::twitter()->setImage($pet->photo);
@@ -51,16 +51,16 @@ class PetsController extends Controller
 
     public function index()
     {
-        SEO::setTitle('Mascotas en adopcion en Radi Pets');
+        SEO::setTitle('Mascotas en adopción en Radi Pets');
         SEO::setDescription('Encuentra tu compañero perfecto ¡Adopta y salva una vida hoy!');
-        SEO::opengraph()->setUrl('https://www.radi.pet');
-        SEO::setCanonical('https://www.radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet');
+        SEO::setCanonical('https://radi.pet');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
 
         $pets = Pets::where('status',2)->paginate();
-        return view('pets.index',compact('pets'));
+        return view('adoptions.index',compact('pets'));
     }
 
     public function create(){
@@ -92,11 +92,11 @@ class PetsController extends Controller
         }
 
         $pet = new Pets([
-            'name'              => $request->get('name'),
+            'name'              => ucfirst($request->get('name')),
             'photo'             => $image,
             'birthday'          => $request->get('birthday'),
-            'description'       => $request->get('description'),
-            'chronic_disease'   => $request->get('chronic_disease'),
+            'description'       => ucfirst($request->get('description')),
+            'chronic_disease'   => ucfirst($request->get('chronic_disease')),
             'gender'            => $request->get('gender'),
             'specie'            => $request->get('specie'),
             'sterelized'        => $request->get('sterilized'),
@@ -165,20 +165,23 @@ class PetsController extends Controller
         $pet = Pets::findOrFail($id?$id[0]:0);
 
         $textTitle = '';
+        SEO::setDescription($pet->description);
+
         if($pet->status == 0){
             $textTitle = 'Recordando a ';
         }elseif($pet->status == 1){
             $textTitle = 'Descubre el perfil de ';
         }elseif($pet->status == 2){
             $textTitle = 'Adopta a ';
+            SEO::setDescription('Descubre el perfil de '. $pet->name .' completo para obtener más información sobre su personalidad, historia y cómo puedes adoptarlo. ¡No te pierdas la oportunidad de brindarle un hogar lleno de amor y felicidad!');
+
         }
         elseif($pet->status == 3){
             $textTitle = 'Ayúdanos a encontrar a ';
         }
         SEO::setTitle($textTitle.''.$pet->name);
-        SEO::setDescription($pet->description);
-        SEO::opengraph()->setUrl('https://www.radi.pet');
-        SEO::setCanonical('https://www.radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet');
+        SEO::setCanonical('https://radi.pet');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage($pet->photo);
         SEO::twitter()->setImage($pet->photo);

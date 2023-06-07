@@ -26,8 +26,8 @@ class OrganizationsController extends Controller
         $orgs = Organizations::orderBy('createdAt','desc')->where('status',1)->paginate(12);
         SEO::setTitle('Albergues y refugios en Radi Pets');
         SEO::setDescription('Encuentra tu compañero perfecto y apoya a albergues y refugios de mascotas. ¡Adopta y salva una vida hoy!');
-        SEO::opengraph()->setUrl('https://www.radi.pet');
-        SEO::setCanonical('https://www.radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet');
+        SEO::setCanonical('https://radi.pet');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
@@ -48,8 +48,8 @@ class OrganizationsController extends Controller
         $social_media = json_decode($org->social_media);
         SEO::setTitle($org->name);
         SEO::setDescription($org->description);
-        SEO::opengraph()->setUrl('https://www.radi.pet');
-        SEO::setCanonical('https://www.radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet');
+        SEO::setCanonical('https://radi.pet');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage($org->photo);
         SEO::twitter()->setImage($org->photo);
