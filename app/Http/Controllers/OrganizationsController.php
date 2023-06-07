@@ -48,8 +48,8 @@ class OrganizationsController extends Controller
         $social_media = json_decode($org->social_media);
         SEO::setTitle($org->name);
         SEO::setDescription($org->description);
-        SEO::opengraph()->setUrl('https://radi.pet');
-        SEO::setCanonical('https://radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet/org/'.$hash);
+        SEO::setCanonical('https://radi.pet/org/'.$hash);
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage($org->photo);
         SEO::twitter()->setImage($org->photo);

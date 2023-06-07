@@ -254,7 +254,7 @@
                             </path>
                           </svg>
                         </a>
-                        <a class="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition p-1 rounded-full text-white border-red-700 bg-red-700 hover:bg-red-700 hover:border-red-700" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fradi.pet%2Flost%2F{{$hash }}&amp;text=Ay%C3%BAdame%20a%20encontrar%20a%20mi%20mascota%2C%20por%20favor%20se%20llama%20{{$lost->pet->name}}" aria-label="Share on Twitter">
+                        <a class="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition p-1 rounded-full text-white border-red-700 bg-red-700 hover:bg-red-700 hover:border-red-700" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fradi.pet%2Flost%2F{{$hash }}text=Ay%C3%BAdame%20a%20encontrar%20a%20mi%20mascota%2C%20por%20favor%20se%20llama%20{{$lost->pet->name}}" aria-label="Share on Twitter">
                           <svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4">
                             <title>Twitter</title>
                             <path d="m459 152 1 13c0 139-106 299-299 299-59 0-115-17-161-47a217 217 0 0 0 156-44c-47-1-85-31-98-72l19 1c10 0 19-1 28-3-48-10-84-52-84-103v-2c14 8 30 13 47 14A105 105 0 0 1 36 67c51 64 129 106 216 110-2-8-2-16-2-24a105 105 0 0 1 181-72c24-4 47-13 67-25-8 24-25 45-46 58 21-3 41-8 60-17-14 21-32 40-53 55z">
@@ -268,14 +268,14 @@
                             </path>
                           </svg>
                         </a>
-                        <a class="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition p-1 rounded-full text-white border-red-700 bg-red-700 hover:bg-red-700 hover:border-red-700" target="_blank" rel="noopener" href="https://telegram.me/share/url?text=Ay%C3%BAdame%20a%20encontrar%20a%20mi%20mascota%2C%20por%20favor%20se%20llama%20{{$lost->pet->name}}&amp;url=https%3A%2F%2Fradi.pet%2Flost%2F{{$hash }}" aria-label="Share on Telegram" draggable="false">
+                        <a class="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition p-1 rounded-full text-white border-red-700 bg-red-700 hover:bg-red-700 hover:border-red-700" target="_blank" rel="noopener" href="https://telegram.me/share/url?text=Ay%C3%BAdame%20a%20encontrar%20a%20mi%20mascota%2C%20por%20favor%20se%20llama%20{{$lost->pet->name}}url=https%3A%2F%2Fradi.pet%2Flost%2F{{$hash }}" aria-label="Share on Telegram" draggable="false">
                           <svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4">
                             <title>Telegram</title>
                             <path d="M256 8a248 248 0 1 0 0 496 248 248 0 0 0 0-496zm115 169c-4 39-20 134-28 178-4 19-10 25-17 25-14 2-25-9-39-18l-56-37c-24-17-8-25 6-40 3-4 67-61 68-67l-1-4-5-1q-4 1-105 70-15 10-27 9c-9 0-26-5-38-9-16-5-28-7-27-16q1-7 18-14l145-62c69-29 83-34 92-34 2 0 7 1 10 3l4 7a43 43 0 0 1 0 10z">
                             </path>
                           </svg>
                         </a>
-                        <a class="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition p-1 rounded-full text-white border-red-700 bg-red-700 hover:bg-red-700 hover:border-red-700" target="_blank" rel="noopener" href="mailto:?subject=Ay%C3%BAdame%20a%20encontrar%20a%20mi%20mascota%2C%20por%20favor%20se%20llama%20{{$lost->pet->name}}&amp;body=https%3A%2F%2Fradi.pet%2Flost%2F{{$hash }}" aria-label="Share by Email" draggable="false">
+                        <a class="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition p-1 rounded-full text-white border-red-700 bg-red-700 hover:bg-red-700 hover:border-red-700" target="_blank" rel="noopener" href="mailto:?subject=Ay%C3%BAdame%20a%20encontrar%20a%20mi%20mascota%2C%20por%20favor%20se%20llama%20{{$lost->pet->name}}body=https%3A%2F%2Fradi.pet%2Flost%2F{{$hash }}" aria-label="Share by Email" draggable="false">
                           <svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4">
                             <title>Email</title>
                             <path d="M464 64a48 48 0 0 1 29 86L275 314c-11 8-27 8-38 0L19 150a48 48 0 0 1 29-86h416zM218 339c22 17 54 17 76 0l218-163v208c0 35-29 64-64 64H64c-35 0-64-29-64-64V176l218 163z">
