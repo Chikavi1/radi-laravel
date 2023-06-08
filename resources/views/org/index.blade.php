@@ -16,6 +16,7 @@
             <p class="text-base text-gray-700 md:text-lg">
                 Apoya a los albergues y conoce la historia de ellos y cada una de sus mascotas.
             </p>
+            <p class="mt-4">O si quieres registrar tu albergue, refugio u organización haz click <a target="_blank" href="https://org.radi.pet/pre-register" class="font-bold text-purple-900">aquí</a></p>
             </div>
             <div class="flex items-center">
             {{-- <a
