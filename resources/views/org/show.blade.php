@@ -269,8 +269,7 @@ crossorigin="anonymous"></script>
 
     <p class=" font-bold text-2xl mt-12">Social</p>
         @if($social_media)
-            @if($social_media->facebook != ''  && $social_media->instagram != '')
-                <div >
+                <div>
                     <p>Para ver las fotos y saber más puedes seguirlos en sus redes sociales</p>
                     <div class="grid gap-2 grid-cols-12 mt-4">
                         @if($social_media->instagram)
@@ -311,9 +310,7 @@ crossorigin="anonymous"></script>
                     </div>
 
                 </div>
-            @else
-            <h2 class="text-center text-gray-900 font-bold py-12">Este albergue no ha agregado sus redes sociales.</h2>
-            @endif
+
         @else
             <h2 class="text-center text-gray-900 font-bold py-12">Este albergue no ha agregado sus redes sociales.</h2>
         @endif
