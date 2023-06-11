@@ -249,8 +249,7 @@ class LostController extends Controller
         SEO::setDescription('Ayúdanos a encontrar a las mascotas con Radi Pets.');
         SEO::opengraph()->setUrl('https://radi.pet/lost/'.$hash);
         SEO::setCanonical('https://radi.pet/lost/'.$hash);
-
-        $age=20;
+        $age = Carbon::parse($lost->pet->birthday)->diffForHumans();
         return view('lost.show',compact('lost','age','hash'));
     }
 

@@ -121,7 +121,7 @@
                       Edad
                     </h3>
                     <p class="mt-2 text-sm text-gray-500">
-                      {{$age}} años
+                      {{$age}}
                     </p>
                   </div>
                 </a>

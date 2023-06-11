@@ -185,8 +185,8 @@ class PetsController extends Controller
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage($pet->photo);
         SEO::twitter()->setImage($pet->photo);
+        $age = Carbon::parse($pet->birthday)->diffForHumans();
 
-        $age = 4;
         $breedData = [];
         return view('pets.show',compact('pet','age','hash','breedData'));
     }

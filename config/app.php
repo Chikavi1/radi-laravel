@@ -174,6 +174,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
         Ladumor\OneSignal\OneSignalServiceProvider::class,
+
     ])->toArray(),
 
     /*

@@ -107,21 +107,24 @@
         Encuentra lugares pet friendly, adopta a una mascota o apoya a los albergues, todo en un solo lugar.
       </p>
 
+        @auth
+        @else
+        <div class="flex lg:flex-row md:flex-col">
+            <a href="/login" class="bg-purple-800 text-white inline-flex py-3 px-5 rounded-lg items-center hover:bg-purple-700 focus:outline-none">
 
-      <div class="flex lg:flex-row md:flex-col">
-        <a href="/login" class="bg-purple-800 text-white inline-flex py-3 px-5 rounded-lg items-center hover:bg-purple-700 focus:outline-none">
+              <span class="ml-4 flex items-start flex-col leading-none">
+                <span class="title-font font-medium">Iniciar sesión </span>
+              </span>
+            </a>
+            <a href="/register" class="bg-green-600 text-white inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-green-700 focus:outline-none">
 
-          <span class="ml-4 flex items-start flex-col leading-none">
-            <span class="title-font font-medium">Iniciar sesión </span>
-          </span>
-        </a>
-        <a href="/register" class="bg-green-600 text-white inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-green-700 focus:outline-none">
+              <span class="ml-4 flex items-start flex-col leading-none">
+                <span class="title-font font-medium">Registrarse</span>
+              </span>
+            </a>
+          </div>
+        @endauth
 
-          <span class="ml-4 flex items-start flex-col leading-none">
-            <span class="title-font font-medium">Registrarse</span>
-          </span>
-        </a>
-      </div>
     </div>
 
     <div class="w-full">
