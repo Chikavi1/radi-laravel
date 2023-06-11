@@ -228,7 +228,7 @@
                             <img
                             alt="Radi Pets"
                             src="{{asset('img/default-circle.png')}}"
-                            class="h-16 w-16 rounded-lg object-cover shadow-sm"
+                            class="h-16 w-16 md:rounded-lg object-cover shadow-sm"
                             />
                         </div>
                         </div>

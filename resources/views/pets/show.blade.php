@@ -32,7 +32,7 @@ crossorigin="anonymous"></script>
   <div >
     <div class="grid grid-cols-12 ">
       <div class="col-span-12 md:col-span-10 md:col-start-2 xl:col-span-8 xl:col-start-3  lg:px-20">
-        <img src="{{$pet->photo}}" class="md:object-cover md:w-5/6 md:h-96 md:mx-auto w-full rounded-md" alt="profile image">
+        <img src="{{$pet->photo}}" class="md:object-cover md:w-5/6 md:h-96 md:mx-auto w-full md:rounded-md" alt="profile image">
         <div class="p-4">
 
           <h2 class="text-3xl font-bold capital text-gray-800 mt-4">{{$pet->name}}</h2>

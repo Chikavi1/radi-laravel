@@ -123,7 +123,7 @@ crossorigin="anonymous"></script>
     <div >
         <div class="grid grid-cols-12">
         <div class=" col-span-12 md:col-span-10 md:col-start-2 xl:col-span-8 xl:col-start-3  lg:px-20">
-            <img src="{{$org->cover}}" onerror="if (this.src != 'error.jpg') this.src = '{{asset('img/default.png')}}';" class="rounded-lg mt-2 w-full object-cover md:max-h-96" alt="cover image">
+            <img src="{{$org->cover}}" onerror="if (this.src != 'error.jpg') this.src = '{{asset('img/default.png')}}';" class="md:rounded-lg mt-2 w-full object-cover md:max-h-96" alt="cover image">
             <img src="{{$org->photo}}" onerror="if (this.src != 'error.jpg') this.src = '{{asset('img/default-circle.png')}}';" class="w-32 h-32 rounded-full" style="margin-top:-5em;margin-left:1em;" alt="profile image">
             <div class="p-4">
 
