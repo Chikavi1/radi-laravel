@@ -109,7 +109,19 @@ class HomeController extends Controller
 
     public function validate_index()
     {
+        SEO::setTitle('Verificación de adopción');
+        SEO::setDescription('Verifica si la adopción fue en Radi Pets.');
+        SEO::opengraph()->setUrl('https://radi.pet/placas');
+        SEO::setCanonical('https://radi.pet/placas');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/default.png'));
+        SEO::twitter()->setImage(asset('img/default.png'));
         return view('validate_pets.index');
+    }
+
+    public function storeValidate(Request $request){
+        $id = $request->get('code');
+        return redirect("/validate_pet/".$id);
 
     }
 

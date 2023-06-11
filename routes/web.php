@@ -39,6 +39,8 @@ Route::resource('links', LinksController::class);
 
 Route::get('/adoptions', [PetsController::class, 'index'])->name('adoptions.index');
 
+Route::post('/storeValidate', [HomeController::class, 'storeValidate'])->name('validate.store');
+
 
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 Route::get('/terms',  [HomeController::class, 'terms'])->name('home.terms');

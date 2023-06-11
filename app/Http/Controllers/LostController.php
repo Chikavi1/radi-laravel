@@ -24,6 +24,13 @@ class LostController extends Controller
     }
 
     public function index(){
+        SEO::setTitle('Mascotas desaparecidas');
+        SEO::setDescription('Encuentra tu compañero perfecto ¡Adopta y salva una vida hoy!');
+        SEO::opengraph()->setUrl('https://radi.pet');
+        SEO::setCanonical('https://radi.pet');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/default.png'));
+        SEO::twitter()->setImage(asset('img/default.png'));
         $losts = Pets::where('status',3)->orderBy('id','DESC')->paginate(12);
         return view('lost.index',compact('losts'));
     }

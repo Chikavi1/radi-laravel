@@ -51,7 +51,7 @@ class PetsController extends Controller
 
     public function index()
     {
-        SEO::setTitle('Mascotas en adopción en Radi Pets');
+        SEO::setTitle('Mascotas en adopción');
         SEO::setDescription('Encuentra tu compañero perfecto ¡Adopta y salva una vida hoy!');
         SEO::opengraph()->setUrl('https://radi.pet');
         SEO::setCanonical('https://radi.pet');
