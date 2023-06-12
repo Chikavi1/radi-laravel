@@ -102,7 +102,7 @@
   <div class="container mx-auto flex px-5  md:flex-row flex-col items-center">
 
     <div class="md:px-20 lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-bold text-gray-900">Una plataforma para los amantes de las mascotas.</h1>
+      <h1 class="title-font text-left sm:text-4xl text-3xl mb-4 font-bold text-gray-900">Una plataforma para los amantes de las mascotas.</h1>
       <p class="mb-8 text-left text-2xl font-medium">
         Encuentra lugares pet friendly, adopta a una mascota o apoya a los albergues, todo en un solo lugar.
       </p>
@@ -133,6 +133,65 @@
   </div>
 
 </section>
+
+<section class="grid grid-cols-1 gap-0   bg-opacity-25 md:grid-cols-2">
+  <div class="flex flex-col items-start justify-center px-4 py-24 lg:px-20">
+    <h1 class="mb-6 text-4xl font-bold leading-tight text-blue-900 md:text-4xl lg:text-5xl">Descubre lugares Pet Friendly</h1>
+    <p class="pr-0 mb-4 text-xl text-blue-800 tracking-relaxed lg:pr-16">Explora los destinos pet friendly cercanos y disfruta junto a tu mejor amigo de experiencias inolvidables.</p>
+    <a href="/results" class="py-4 px-6 w-full text-center bg-green-800 mt-2 text-white rounded-md">Ver lugares</a>
+    <a href="/pet-friendly-owners" class="py-4 px-2 text-purple-800 font-bold">Registrar lugar</a>
+
+  </div>
+  <div>
+    <img
+      src="https://radi-images.s3.us-west-1.amazonaws.com/radi-places.webp"
+      alt="restaurant"
+      class="lazyload object-cover mt-10 w-full h-64 bg-gray-100 md:h-full"
+      loading="lazy"
+    />
+  </div>
+</section>
+
+<section class="px-4 py-24 mx-auto max-w-7xl">
+    <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
+      <h1 class="ml-6 mb-6 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
+        Guarda la información de tu <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 lg:inline">mascota</span> en un solo lugar
+      </h1>
+
+
+      <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
+        <!-- <a class="bg-purple-800 p-4 text-white inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" href="#">
+          Comprar
+        </a> -->
+      </div>
+
+      <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
+        <a target="_blank" class=" inline-flex items-center rounded-md justify-center w-full mb-2 btn bg-purple-800 text-white py-4 px-6 btn-lg sm:w-auto sm:mb-0" href="https://checkout.stripe.com/c/pay/cs_live_b15EWeo3GObck2QJJfT2lGIQ9ozuoHroE9gMTwYS61dD81ZsY6v8Pqmvqf#fidkdWxOYHwnPyd1blppbHNgWjA0TnZEPHdHdTNwcnczdWp3dklgS308SVFsa2YwUGlJbGJJU2FkM3I3V1ZrXU9qaz13aUtKTU9OSVFxT0xUQFVmMFd2fTBsVXxxY0NtaUpTN3JwcUthX0BzNTVPM1x9anZdNCcpJ3VpbGtuQH11anZgYUxhJz8nMG5EZE0xZGhsZFZkM1ZEYVRXJyknd2BjYHd3YHdKd2xibGsnPydtcXF1PyoqNDcyKzUrNSs0Pz01NTUqJ3gl">
+          Comprar
+
+        </a>
+        <a target="_blank" class="bg-gray-200 px-6 rounded-md py-4 inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0" href="/placas">
+        Ver más
+
+        </a>
+      </div>
+    </div>
+    <div class="w-full mx-auto mt-20 text-center md:w-10/12">
+      <div class="grid grid-cols-12 gap-2">
+        <div class="col-span-12 md:col-span-4">
+          <img src="https://radi-images.s3.us-west-1.amazonaws.com/radi-placa.jpeg" alt="radi image" class="ml-8 md:ml-0 mt-4 md:mt-0 w-72 h-96 rounded-lg shadow-2xl" />
+        </div>
+        <div class="col-span-12 md:col-span-4">
+          <img src="https://radi-images.s3.us-west-1.amazonaws.com/Radi+placas+anuncio+(2).png" alt="radi image" class="ml-8 md:ml-0 mt-4 md:mt-0 object-cover  w-72 h-96 rounded-lg shadow-2xl" />
+        </div>
+        <div class="col-span-12 md:col-span-4">
+          <img src="https://radi-images.s3.us-west-1.amazonaws.com/radi-placa-2.jpeg" alt="radi image" class="ml-8 md:ml-0 mt-4 md:mt-0 object-cover w-72 h-96 rounded-lg shadow-2xl" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
 <div class="relative flex flex-col-reverse px-4 py-16 mx-auto lg:block lg:flex-col lg:py-32 xl:py-48 md:px-8 sm:max-w-xl md:max-w-full">
     <div class="z-0 flex justify-center h-full  overflow-hidden lg:pt-24 lg:pb-16 lg:pr-8 xl:pr-0   lg:absolute lg:justify-end lg:bottom-0 lg:left-0 lg:items-center">
@@ -168,26 +227,9 @@
         </form>
       </div>
     </div>
-  </div>
+</div>
 
 
-  <section class="grid grid-cols-1 gap-0   bg-opacity-25 md:grid-cols-2">
-    <div class="flex flex-col items-start justify-center px-4 py-24 lg:px-20">
-      <h1 class="mb-6 text-4xl font-bold leading-tight text-blue-900 md:text-4xl lg:text-5xl">Descubre lugares Pet Friendly</h1>
-      <p class="pr-0 mb-4 text-xl text-blue-800 tracking-relaxed lg:pr-16">Conoce más sobre el apartado que tenemos de lugares pet friendly donde tú y tu mascota pueden ir.</p>
-      <a href="/pet-friendly-owners" class="py-4 px-2 text-purple-800 font-bold">Registrar lugar</a>
-      <a href="/places" class="py-4 px-6 bg-green-800 mt-2 text-white rounded-md">Ver lugares</a>
-
-    </div>
-    <div>
-      <img
-        src="https://radi-images.s3.us-west-1.amazonaws.com/radi-places.webp"
-        alt="restaurant"
-        class="lazyload object-cover w-full h-64 bg-gray-100 md:h-full"
-        loading="lazy"
-      />
-    </div>
-  </section>
 
 
   <section>
@@ -242,6 +284,22 @@
       </div>
     </div>
   </section>
+
+  <section class="text-white bg-gray-900">
+    <div class="flex flex-col items-stretch justify-between px-4 py-20 mx-auto max-w-7xl lg:flex-row sm:items-center">
+      <div>
+        <h2 class="mb-1 text-xl font-semibold text-left sm:text-2xl sm:text-center lg:text-left">¿Listo para formar una alianza estratégica?</h2>
+        <p class="mb-6 text-lg font-normal text-left text-gray-200 sm:text-xl lg:mb-0 sm:text-center lg:text-left">
+            Si estás buscando oportunidades de crecimiento y colaboración, estás en el lugar adecuado.
+          <br>  ¡Contáctanos ahora y comencemos a construir una alianza exitosa para las mascotas!</p>
+      </div>
+      <div class="flex flex-col mb-2 space-x-0 space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+        <a href="/contact" class="w-full btn bg-white px-4 py-6 text-black btn-lg sm:w-auto">Contactanos</a>
+        {{-- <a href="#" class="w-full btn btn-outline-light btn-lg sm:w-auto">Book a demo</a> --}}
+      </div>
+    </div>
+  </section>
+
 
   <div class="md:px-20 my-10 mx-4">
       <h2 class="text-3xl">Preguntas Frecuentes</h2>
