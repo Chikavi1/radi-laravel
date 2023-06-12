@@ -128,7 +128,7 @@
     </div>
 
     <div class="w-full">
-      <img class="object-cover  rounded h-full" alt="hero" src="{{asset('img/landing.png')}}">
+      <img class="" alt="hero" src="{{asset('img/landing.png')}}">
     </div>
   </div>
 
