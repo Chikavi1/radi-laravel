@@ -269,6 +269,16 @@ class LostController extends Controller
         //
     }
 
+    public function free()
+    {
+        return view('lost.free');
+    }
+
+    public function freeStore()
+    {
+
+    }
+
     public function destroy(Request $request,string $hash)
     {
         $data =  array();
@@ -287,7 +297,5 @@ class LostController extends Controller
         $lost->update();
 
         return redirect()->route('lost.show',$hash)->with('success','Se creo exitosamente.');
-
-
     }
 }

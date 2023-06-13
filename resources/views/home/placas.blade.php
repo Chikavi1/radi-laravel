@@ -34,6 +34,20 @@
   </div>
 </section>
 
+<section class="text-white bg-gray-900">
+    <div class="flex flex-col items-stretch justify-between px-4 py-20 mx-auto max-w-7xl lg:flex-row sm:items-center">
+      <div>
+        <h2 class="mb-1 text-xl font-semibold text-left sm:text-2xl sm:text-center lg:text-left">Únete como distribuidor en placas de Radi Pets.</h2>
+        <p class="mb-6 text-lg font-normal text-left text-gray-200 sm:text-xl lg:mb-0 sm:text-center lg:text-left">
+          Únete como distribuidor y aprovecha los descuentos exclusivos <br> al comprar al por mayor las placas de Radi Pets. <br><br> Protege a las mascotas con estilo mientras haces crecer tu negocio. <br> ¡No pierdas esta oportunidad única!</p>
+      </div>
+      <div class="flex flex-col mb-2 space-x-0 space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+        <a href="/contact" class="w-full btn bg-white px-4 py-6 text-center rounded-md text-black btn-lg sm:w-auto">Contactanos</a>
+        {{-- <a href="#" class="w-full btn btn-outline-light btn-lg sm:w-auto">Book a demo</a> --}}
+      </div>
+    </div>
+  </section>
+
 <section class="px-4 py-20 mx-auto max-w-7xl lg:px-12" >
     <div class="grid items-center grid-cols-1 lg:grid-cols-2 gap-y-10 lg:gap-y-32 gap-x-10 lg:gap-x-24">
       <div>
@@ -335,7 +349,7 @@
         </div>
       </div>
       <div class="relative w-full lg:w-1/2">
-        <iframe class="w-full  bg-black" height="300" src="https://www.youtube.com/embed/CcJVA6suGpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="w-full bg-black" height="300" src="https://www.youtube.com/embed/CcJVA6suGpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
       </div>
     </div>
