@@ -12,7 +12,9 @@
 </div>
 @endif --}}
 
+@include('layouts.announs')
 @include('layouts.nav')
+
 
 <!-- <div class="py-12 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,6 +136,25 @@
 
 </section>
 
+{{--
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="grid row-gap-8 sm:grid-cols-3">
+      <div class="text-center">
+        <h6 class="text-5xl font-bold text-deep-purple-accent-400">+300</h6>
+        <p class="font-bold">Lugares pet friendly</p>
+      </div>
+      <div class="text-center">
+        <h6 class="text-5xl font-bold text-deep-purple-accent-400">3</h6>
+        <p class="font-bold">Mascotas Encontradas</p>
+      </div>
+
+      <div class="text-center">
+        <h6 class="text-5xl font-bold text-deep-purple-accent-400">4</h6>
+        <p class="font-bold">Albergues</p>
+      </div>
+    </div>
+  </div> --}}
+
 <section class="grid grid-cols-1 gap-0   bg-opacity-25 md:grid-cols-2">
   <div class="flex flex-col items-start justify-center px-4 py-24 lg:px-20">
     <h1 class="mb-6 text-4xl font-bold leading-tight text-blue-900 md:text-4xl lg:text-5xl">Descubre lugares Pet Friendly</h1>
@@ -190,6 +211,7 @@
       </div>
     </div>
   </section>
+
 
 
 

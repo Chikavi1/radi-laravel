@@ -57,8 +57,8 @@
 
 
          <div class="mt-4">
+            @if($lost->status == 1)
             <div id="mapa" class="col-span-12 h-80" style="z-index: 0;border-radius:1em;min-height:10em; min-width:15em;" class="mt-4 w-full h-60">
-
             </div>
 
             <div class="flex flex-col gap-4">
@@ -99,7 +99,7 @@
                     </div>
                 </div>
             </div>
-            @if($lost->status == 1)
+
                 <a target="_blank" href="tel:{{$lost->cellphone}}" class="text-white my-6 bg-purple-800 px-4 py-2 rounded-md font-bold text-2xl inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" >
                     Comunicarme
                 </a>
@@ -208,6 +208,7 @@
 
           </div>
 
+        @if($lost->status == 1)
             <div
                         class="mt-4 relative block overflow-hidden rounded-lg border border-gray-400 p-4 sm:p-6 lg:p-8"
                     >
@@ -218,7 +219,7 @@
                         <div class="sm:flex sm:justify-between sm:gap-4">
                         <div>
                             <h3 class="text-lg font-bold text-red-900 sm:text-xl">
-                            Comparte este link para que más personas sepan que  {{$lost->pet->name}} esta desaperecido
+                            Comparte este link para que más personas sepan que  {{$lost->pet->name}} esta desaparecido
                             </h3>
 
                             <p class="mt-1 text-xs font-medium text-gray-600">Recomendación</p>
@@ -286,6 +287,7 @@
                 </div>
                 </dl>
             </div>
+        @endif
         </div>
       </div>
     </div>

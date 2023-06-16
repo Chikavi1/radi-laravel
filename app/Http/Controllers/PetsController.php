@@ -131,7 +131,7 @@ class PetsController extends Controller
             $baseImage = base64_decode($baseImage);
 
 
-            $filePath = 'laravel/' .  Str::random(14).'_'.'radi-pet-shelters';
+            $filePath = 'web/' .  Str::random(14).'_'.'radi-pet-shelters';
             $path = Storage::disk('s3')->put($filePath,$baseImage);
             $path = Storage::disk('s3')->url($path);
             $image   = 'https://radi-images.s3.us-west-1.amazonaws.com/'.$filePath;

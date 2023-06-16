@@ -125,6 +125,10 @@ class HomeController extends Controller
 
     }
 
+    public function testEmail(){
+        return view('mail.lost');
+    }
+
     public function validate_show(String $hash)
     {
         $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');

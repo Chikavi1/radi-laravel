@@ -14,8 +14,9 @@
                 Encuentra a tu mascota: Únete a nuestra comunidad <br class="hidden md:block" />
                 para localizar a tu mascota
             </h2>
-            <p class="text-base text-gray-700 md:text-lg">
-                Reporta la desaparición de tu mascota desde 49.99 mxn.
+            <p class="text-xl text-gray-700 md:text-lg">
+                <span class="line-through"> Reporta la desaparición de tu mascota desde 249.99  mxn</span>.
+                Genera tu reporte <span class="font-bold text-green-800 capitalize">gratis</span>, por tiempo <span class="font-bold">limitado</span>.
             </p>
             </div>
             <div class="flex items-center">

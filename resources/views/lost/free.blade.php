@@ -64,6 +64,7 @@
 
               <input
                 type="url"
+                required="true"
                 id="FirstName"
                 name="first_name"
                 placeholder="Ejemplo: https://radi.pet/pet/214904"
@@ -78,6 +79,7 @@
                 <input
                   type="email"
                   id="Email"
+                  required="true"
                   name="email"
                   placeholder="Correo electrónico del usuario de la mascota"
                   class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
@@ -91,6 +93,7 @@
                 <input
                   type="date"
                   id="Email"
+                  required="true"
                   name="email"
                   placeholder="Correo electrónico del usuario de la mascota"
                   class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
@@ -107,6 +110,7 @@
               <input
                 type="number"
                 id="LastName"
+                required="true"
                 name="last_name"
                 placeholder="Ingresa la cantidad de recompensa"
                 class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
@@ -125,6 +129,7 @@
               </label>
 
               <textarea
+              required="true"
               class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
               ></textarea>
 

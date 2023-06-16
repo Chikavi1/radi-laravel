@@ -12,6 +12,8 @@ use Auth;
 use Carbon\Carbon;
 use Hashids\Hashids;
 use SEO;
+use Mail;
+
 
 use Ladumor\OneSignal\OneSignal;
 
@@ -129,42 +131,47 @@ class LostController extends Controller
 
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(),[
-            'card_no' => 'required',
-            'ccExpiryMonth' => 'required',
-            'ccExpiryYear' => 'required',
-            'cvvNumber' => 'required',
-            'id_pet' => 'required',
 
-        ]);
+        // $validator = Validator::make($request->all(),[
+        //     'card_no' => 'required',
+        //     'ccExpiryMonth' => 'required',
+        //     'ccExpiryYear' => 'required',
+        //     'cvvNumber' => 'required',
+        //     'id_pet' => 'required',
+        // ]);
 
-        if($validator->passes()){
+        // if($validator->passes()){
 
-            $stripe = Stripe::setApiKey(env('STRIPE_ID'));
+            // $stripe = Stripe::setApiKey(env('STRIPE_ID'));
 
-            try{
-                $token = $stripe->tokens()->create([
-                    'card' => [
-                        'number' => $request->get('card_no'),
-                        'exp_month' => $request->get('ccExpiryMonth'),
-                        'exp_year' => $request->get('ccExpiryYear'),
-                        'cvc' => $request->get('cvvNumber'),
-                    ],
-                  ]);
+            // try{
+            //     $token = $stripe->tokens()->create([
+            //         'card' => [
+            //             'number' => $request->get('card_no'),
+            //             'exp_month' => $request->get('ccExpiryMonth'),
+            //             'exp_year' => $request->get('ccExpiryYear'),
+            //             'cvc' => $request->get('cvvNumber'),
+            //         ],
+            //       ]);
 
-                  if (!isset($token['id'])) {
-                    return redirect()->route('stripe.add.money');
-                }
+            //       if (!isset($token['id'])) {
+            //         return redirect()->route('stripe.add.money');
+            //     }
 
-                $charge = $stripe->charges()->create([
-                    'card' => $token['id'],
-                    'currency' => 'MXN',
-                    'amount' => 49.99,
-                    'description' => 'Radi Reporte de desaparición',
-                ]);
+            //     $charge = $stripe->charges()->create([
+            //         'card' => $token['id'],
+            //         'currency' => 'MXN',
+            //         'amount' => 49.99,
+            //         'description' => 'Radi Reporte de desaparición',
+            //     ]);
 
-                if($charge['status'] == 'succeeded'){
-                    // dd($charge);
+            //     if($charge['status'] == 'succeeded'){
+
+                    // dd();
+                    // se envia correo
+
+                    // dd('envio');
+
                     $lost = new Losts([
                         'id_user_report'    =>  Auth::user()->id,
                         'latitude'          => $request->get('latitude'),
@@ -173,7 +180,7 @@ class LostController extends Controller
                         'id_pet'            => $request->get('id_pet'),
                         'date'              => Carbon::now(),
                         'note'              => ucfirst($request->get('description')),
-                        'id_payment'        => $charge['id'],
+                        // 'id_payment'        => $charge['id'],
                         'rewards'           => $request->get('rewards'),
                         'cellphone'         => $request->get('cellphone'),
                     ]);
@@ -186,61 +193,67 @@ class LostController extends Controller
 
                     $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
 
-                    $headers = [
-                        'Accept' => 'application/json',
-                        'Authorization' => 'Bearer ZGY1NTcwMzEtNGMxMS00N2Q4LTg0ZTktYmVkZDM3Yjg4NjE3'
-                    ];
+                    // $headers = [
+                    //     'Accept' => 'application/json',
+                    //     'Authorization' => 'Bearer ZGY1NTcwMzEtNGMxMS00N2Q4LTg0ZTktYmVkZDM3Yjg4NjE3'
+                    // ];
 
-                    $GetOrder = [
-                            'app_id' => 'e15689c2-569b-482f-9364-a8fca5641826',
-                            'data' =>  [
-                                'lost' => $hashids->encode($lost->id),
-                            ],
-                            'headings' =>  [
-                                'en' => 'Pet Lost',
-                                'es' => 'Mascota desaparecida',
-                            ],
-                            'contents' =>  [
-                                'en' => 'A pet near you has disappeared.',
-                                'es' => 'Ha desaparecido una mascota cerca de ti.',
-                            ],
-                            "filters" => [
-                               [
-                                    "field"  => "location",
-                                    "lat"    => $request->get('latitude'),
-                                    "long"   => $request->get('longitude'),
-                                    "radius" => "100"
-                               ]
-                            ],
+                    // $GetOrder = [
+                    //         'app_id' => 'e15689c2-569b-482f-9364-a8fca5641826',
+                    //         'data' =>  [
+                    //             'lost' => $hashids->encode($lost->id),
+                    //         ],
+                    //         'headings' =>  [
+                    //             'en' => 'Pet Lost',
+                    //             'es' => 'Mascota desaparecida',
+                    //         ],
+                    //         'contents' =>  [
+                    //             'en' => 'A pet near you has disappeared.',
+                    //             'es' => 'Ha desaparecido una mascota cerca de ti.',
+                    //         ],
+                    //         "filters" => [
+                    //            [
+                    //                 "field"  => "location",
+                    //                 "lat"    => $request->get('latitude'),
+                    //                 "long"   => $request->get('longitude'),
+                    //                 "radius" => "1"
+                    //            ]
+                    //         ],
 
-                    ];
+                    // ];
 
-                    $client = new \GuzzleHttp\Client();
-                    $res = $client->post('https://onesignal.com/api/v1/notifications', [
-                        'headers' => $headers,
-                        'json' => $GetOrder,
-                    ]);
+                    // $client = new \GuzzleHttp\Client();
+                    // $res = $client->post('https://onesignal.com/api/v1/notifications', [
+                    //     'headers' => $headers,
+                    //     'json' => $GetOrder,
+                    // ]);
 
+                    $data["email"] = Auth::user()->email;
+                    $data["title"] = "Reporte de desaparación";
+                    $data["body"]  = "Lamentamos la situación.";
 
-
-
+                    Mail::send('mail.lost', $data, function($message)use($data) {
+                        $message->to($data["email"])
+                                ->subject($data["title"]);
+                    });
 
                     return redirect()->route('lost.show',$hashids->encode($lost->id))->with('success','Se creo exitosamente.');
-                } else {
-                    return redirect()->route('lost.create')->with('error','Error, sin fondos, intente con otra.');
-                }
 
-            }catch (Exception $e) {
-                return redirect()->route('lost.create')->with('error',$e->getMessage());
-            } catch(\Cartalyst\Stripe\Exception\CardErrorException $e) {
-                return redirect()->route('lost.create')->with('error','Tarjeta declinada, intente con otra.');
-            } catch(\Cartalyst\Stripe\Exception\MissingParameterException $e) {
-                return redirect()->route('lost.create')->with('error','Información incorrecta, verifica tus datos');
-            }
+                // } else {
+                //     return redirect()->route('lost.create')->with('error','Error, sin fondos, intente con otra.');
+                // }
 
-        }else{
-            dd('no pasa');
-        }
+                // }catch (Exception $e) {
+                //     return redirect()->route('lost.create')->with('error',$e->getMessage());
+                // } catch(\Cartalyst\Stripe\Exception\CardErrorException $e) {
+                //     return redirect()->route('lost.create')->with('error','Tarjeta declinada, intente con otra.');
+                // } catch(\Cartalyst\Stripe\Exception\MissingParameterException $e) {
+                //     return redirect()->route('lost.create')->with('error','Información incorrecta, verifica tus datos');
+                // }
+
+        // }else{
+        //     dd('no pasa');
+        // }
     }
 
     public function show(string $hash)
@@ -288,11 +301,15 @@ class LostController extends Controller
         $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
         $id = $hashids->decode($hash);
         $lost = Losts::findOrFail($id?$id[0]:0);
+
+        $pet = Pets::find($lost->id_pet);
+
         $lost->finish_latitude = $request->get('finish_latitude');
         $lost->finish_longitude = $request->get('finish_longitude');
         $lost->meta_data = json_encode($data);
-        $lost->pets->status = 1;
 
+        $pet->status = 1;
+        $pet->update();
         $lost->status = 2;
         $lost->update();
 

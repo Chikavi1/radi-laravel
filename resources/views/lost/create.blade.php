@@ -23,10 +23,10 @@
 
           <div>
             <p style="text-decoration: line-through;color:rgb(231, 101, 101);" class="text-sm font-medium text-red-900 line-through	">
-                $149.99 MXN
+                $249.99 MXN
             </p>
             <p class="text-2xl font-bold tracking-tight  text-green-900">
-              $49.99 MXN
+             Gratis
             </p>
 
         </div>
@@ -105,12 +105,13 @@
 
             <div class="col-span-6">
                 <label for="Phone" class="mt-2 block text-xs font-medium text-gray-700">
-                  Descripción
+                  Descripción de como se perdió
                 </label>
 
                 <textarea
                   id="Phone"
                   name="description"
+                  required
                   placeholder="Ingresa la información de donde y como se perdió"
                   class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"></textarea>
             </div>
@@ -151,7 +152,7 @@
 
 
 
-            <fieldset class="col-span-6 mt-2">
+            {{-- <fieldset class="col-span-6 mt-2">
               <legend class="block text-sm font-medium text-gray-700">
                Detalles de la tarjeta
               </legend>
@@ -171,6 +172,7 @@
                     class="relative mt-1 w-full rounded-t-md border-gray-200 focus:z-10 sm:text-sm"
                   />
                 </div>
+                --}}
                 <input
                 type="hidden"
                 id="latitude"
@@ -182,7 +184,7 @@
                 id="longitude"
                 name="longitude"
               />
-
+                {{--
                 <div class="flex">
                   <div class="flex-1">
                     <label for="CardExpiry" class="sr-only">Mes Expiración</label>
@@ -222,7 +224,7 @@
 
                   </div>
               </div>
-            </fieldset>
+            </fieldset> --}}
 
 
 

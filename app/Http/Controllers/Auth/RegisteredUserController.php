@@ -45,8 +45,9 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'customer' => $data->id,
             'photo' => 'https://radi.pet/img/icon.png',
-            'name' => $request->name,
+            'name'  => $request->name,
             'email' => $request->email,
+            'code'  => 'web',
             'password' => Hash::make($request->password),
         ]);
 

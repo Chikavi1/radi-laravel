@@ -42,6 +42,7 @@ Route::get('/losts/free', [LostController::class, 'free'])->name('lost.free');
 
 Route::post('/storeValidate', [HomeController::class, 'storeValidate'])->name('validate.store');
 
+Route::get('/test-email', [HomeController::class, 'testEmail'])->name('test.index');
 
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 Route::get('/terms',  [HomeController::class, 'terms'])->name('home.terms');

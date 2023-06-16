@@ -1,4 +1,5 @@
 @include('layouts.nav')
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 <section class="px-4 py-24 mx-auto max-w-7xl">
   <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
@@ -7,7 +8,7 @@
     </h1>
 
     <div class="text-center">
-        <p class="text-sm" >Precio</p>
+        <p class="text-sm" data-aos="fade-left" >Precio</p>
         <h2 class="text-4xl font-bold text-green-800">$389 MXN</h2>
         <p class="mb-8">Incluye envio en México</p>
         <a target="_blank" href="https://buy.stripe.com/5kAaH4amiaSa6SAdQR" class="w-full shadow-xl btn btn-primary bg-purple-800 px-8 py-4 text-white rounded-md btn-lg sm:w-auto">Comprar</a>
@@ -115,7 +116,9 @@
 
       </div>
 
-      <div class="col-auto md:col-span-6">
+      <div class="col-auto md:col-span-6" data-aos="zoom-out-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
               <img src="https://radi-images.s3.us-west-1.amazonaws.com/radi-perfil.png" class="p-4" alt="">
         <!-- <img src="https://radi-images.s3.us-west-1.amazonaws.com/tag-radi.png" class="p-4" alt=""> -->
       </div>
@@ -124,7 +127,9 @@
 
 
 
-<div class="m-4 container">
+<div class="m-4 container" data-aos="fade-down"
+data-aos-easing="linear"
+data-aos-duration="1500">
   <section class="px-4 py-32 mx-auto max-w-7xl">
     <div class="w-full mx-auto lg:w-8/12 xl:w-5/12">
       <p class="mb-2 text-xs font-semibold tracking-wide text-gray-400 uppercase">Fácil y Rápido, Menos de 4 minutos</p>
@@ -182,7 +187,9 @@
 
 
 <div class="md:px-24">
-  <div class="lg:mt-24 relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
+  <div data-aos="fade-right"
+    data-aos-easing="linear"
+    data-aos-duration="1500" class="lg:mt-24 relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
     <div class="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
       <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
         <div class="max-w-xl mb-6">
@@ -210,7 +217,9 @@
     </div>
   </div>
 
-  <div class="lg:mt-24  relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
+  <div data-aos="fade-left"
+        data-aos-easing="linear"
+        data-aos-duration="1500"  class="lg:mt-24  relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
     <div class="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
       <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
         <div class="max-w-xl mb-6">
@@ -240,7 +249,9 @@
   </div>
 
 
-  <div class="lg:mt-24 relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
+  <div data-aos="fade-right"
+        data-aos-easing="linear"
+        data-aos-duration="1500" class="lg:mt-24 relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
     <div class="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
       <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
         <div class="max-w-xl mb-6">
@@ -268,7 +279,9 @@
     </div>
   </div>
 
-  <div class="lg:mt-24 relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
+  <div data-aos="fade-left"
+        data-aos-easing="linear"
+        data-aos-duration="1500" class="lg:mt-24 relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
     <div class="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
       <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
         <div class="max-w-xl mb-6">
@@ -294,7 +307,9 @@
     </div>
   </div>
 
-  <div class="lg:mt-24 relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
+  <div  data-aos="fade-right"
+        data-aos-easing="linear"
+        data-aos-duration="1500" class="lg:mt-24 relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
     <div class="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
       <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
         <div class="max-w-xl mb-6">
@@ -357,5 +372,11 @@
 </div>
 
 </div>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 
 @include('layouts.footer')
