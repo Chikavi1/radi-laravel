@@ -106,7 +106,7 @@
     <div class="md:px-20 lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
       <h1 class="title-font text-left sm:text-4xl text-3xl mb-4 font-bold text-gray-900">Una plataforma para los amantes de las mascotas.</h1>
       <p class="mb-8 text-left text-2xl font-medium">
-        Encuentra lugares pet friendly, adopta a una mascota o apoya a los albergues, todo en un solo lugar.
+        Crea el perfil de tu mascota gratis, encuentra lugares pet friendly, adopta a una mascota o apoya a los albergues, todo en un solo lugar.
       </p>
 
         @auth
