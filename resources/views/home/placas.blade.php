@@ -336,7 +336,7 @@ data-aos-duration="1500">
     </div>
   </div>
 
-  <div class=" py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  {{-- <div class=" py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="flex flex-col items-center justify-between lg:flex-row">
       <div class="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0">
         <div class="max-w-xl mb-6">
@@ -368,7 +368,7 @@ data-aos-duration="1500">
 
       </div>
     </div>
-  </div>
+  </div> --}}
 </div>
 
 </div>
