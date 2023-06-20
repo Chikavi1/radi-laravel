@@ -43,7 +43,7 @@
           Únete como distribuidor y aprovecha los descuentos exclusivos <br> al comprar al por mayor las placas de Radi Pets. <br><br> Protege a las mascotas con estilo mientras haces crecer tu negocio. <br> ¡No pierdas esta oportunidad única!</p>
       </div>
       <div class="flex flex-col mb-2 space-x-0 space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
-        <a href="/placas-distribuidor" class="w-full btn bg-white px-4 py-6 text-center rounded-md text-black btn-lg sm:w-auto">Contactanos</a>
+        <a href="/placas-distribuidor" class="w-full btn bg-white px-8 py-4 text-center rounded-md text-black btn-lg sm:w-auto">Ver más</a>
         {{-- <a href="#" class="w-full btn btn-outline-light btn-lg sm:w-auto">Book a demo</a> --}}
       </div>
     </div>

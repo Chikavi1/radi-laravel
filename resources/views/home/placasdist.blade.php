@@ -19,8 +19,8 @@ data-aos-duration="1500"  class="mx-auto h-92" alt="">
 <section class="px-4 mx-auto max-w-7xl">
     <div class="grid items-center grid-cols-1 mb-24 md:grid-cols-2  gap-x-10 md:gap-x-24">
       <div>
-        <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">Independencia financiera</h2>
-        <p class="mb-5 text-base text-center text-gray-600 sm:text-left md:text-lg">
+        <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-black md:leading-tight text-left md:text-4xl">Independencia financiera</h2>
+        <p class="mb-5 text-left  text-base  text-gray-600 md:text-lg">
             Como distribuidor, tú controlas tus ganancias. No hay límites para tu éxito y puedes establecer tus propios precios y estrategias de venta. <br><br> Olvídate de los horarios de oficina y las rutinas monótonas. Ser tu propio jefe te brinda la libertad de organizar tu tiempo como desees y trabajar desde donde quieras.
          </p>
         {{-- <a href="#" class="w-full btn btn-dark btn-lg sm:w-auto">Learn More</a> --}}
@@ -30,8 +30,8 @@ data-aos-duration="1500"  class="mx-auto h-92" alt="">
     </div>
     <div class="grid flex-col-reverse items-center grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
       <div class="order-none md:order-2">
-        <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">Crecimiento en una industria en auge</h2>
-        <p class="mb-5 text-base text-center text-gray-600 sm:text-left md:text-lg">
+        <h2 class="mb-4 text-2xl font-extrabold tracking-tight  text-black md:leading-tight sm:text-left md:text-4xl">Crecimiento en una industria en auge</h2>
+        <p class="mb-5 text-base  text-gray-600 sm:text-left md:text-lg">
             La industria de las mascotas está experimentando un crecimiento acelerado y constante. Únete a ella y aprovecha el gran potencial de mercado para expandir tu negocio.
         </p>
       </div>
@@ -43,8 +43,8 @@ data-aos-duration="1500"  class="mx-auto h-92" alt="">
 <section class="px-4 mx-auto max-w-7xl mt-10">
     <div class="grid items-center grid-cols-1 mb-24 md:grid-cols-2  gap-x-10 md:gap-x-24">
       <div>
-        <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">Apoyo y capacitación</h2>
-        <p class="mb-5 text-base text-center text-gray-600 sm:text-left md:text-lg">
+        <h2 class="mb-4 text-2xl font-extrabold tracking-tight  text-black md:leading-tight sm:text-left md:text-4xl">Apoyo y capacitación</h2>
+        <p class="mb-5 text-base  text-gray-600 sm:text-left md:text-lg">
             En Radi Pets, valoramos a nuestros distribuidores y nos aseguramos de proporcionarles todo el apoyo y la capacitación necesarios para alcanzar el éxito. Te brindaremos herramientas de marketing, materiales promocionales y asesoramiento personalizado para ayudarte a maximizar tus resultados.         </p>
         {{-- <a href="#" class="w-full btn btn-dark btn-lg sm:w-auto">Learn More</a> --}}
       </div>
@@ -53,8 +53,8 @@ data-aos-duration="1500"  class="mx-auto h-92" alt="">
     </div>
     <div class="grid flex-col-reverse items-center grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
       <div class="order-none md:order-2">
-        <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">Impacto positivo</h2>
-        <p class="mb-5 text-base text-center text-gray-600 sm:text-left md:text-lg">
+        <h2 class="mb-4 text-2xl font-extrabold tracking-tight  text-black md:leading-tight sm:text-left md:text-4xl">Impacto positivo</h2>
+        <p class="mb-5 text-base  text-gray-600 sm:text-left md:text-lg">
             Al unirte a Radi Pets, estarás contribuyendo al bienestar y la seguridad de las mascotas. Ayudarás a crear conciencia sobre la importancia de la identificación y la conexión entre las mascotas y sus dueños.        </p>
       </div>
       <img src="https://images.unsplash.com/photo-1602308006427-f1c718609718?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"  data-aos="fade-up-right"  data-aos-easing="linear"
