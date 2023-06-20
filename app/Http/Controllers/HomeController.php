@@ -8,6 +8,8 @@ use App\Models\Organizations;
 use Hashids\Hashids;
 use App\Models\Requests;
 
+use App\Models\User;
+
 class HomeController extends Controller
 {
     //
@@ -95,6 +97,11 @@ class HomeController extends Controller
         return view('home.pet-friendly');
     }
 
+    public function placasdist()
+    {
+        return view('home.placasdist');
+    }
+
     public function placas()
     {
         SEO::setTitle('Placas de identificación');
@@ -105,6 +112,11 @@ class HomeController extends Controller
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
         return view('home.placas');
+    }
+
+    public function userInfo(){
+        $user = User::find(1);
+        return view('home.user-info',compact('user'));
     }
 
     public function validate_index()

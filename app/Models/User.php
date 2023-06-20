@@ -34,6 +34,11 @@ class User extends Authenticatable
             'code'
         ];
 
+        public function Pets()
+        {
+            return $this->hasMany('App\Models\Pets','id_user','id');
+        }
+
     /**
      * The attributes that should be cast.
      *

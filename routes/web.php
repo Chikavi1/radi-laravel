@@ -36,6 +36,8 @@ Route::resource('places', PlacesController::class);
 Route::resource('lost', LostController::class);
 Route::resource('links', LinksController::class);
 
+Route::get('/placas-distribuidor', [HomeController::class, 'placasdist'])->name('home.placasdist');
+
 
 Route::get('/adoptions', [PetsController::class, 'index'])->name('adoptions.index');
 Route::get('/losts/free', [LostController::class, 'free'])->name('lost.free');
@@ -43,6 +45,7 @@ Route::get('/losts/free', [LostController::class, 'free'])->name('lost.free');
 Route::post('/storeValidate', [HomeController::class, 'storeValidate'])->name('validate.store');
 
 Route::get('/test-email', [HomeController::class, 'testEmail'])->name('test.index');
+Route::get('/user-info', [HomeController::class, 'userInfo'])->name('user.index');
 
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 Route::get('/terms',  [HomeController::class, 'terms'])->name('home.terms');
