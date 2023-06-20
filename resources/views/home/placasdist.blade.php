@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <section class="px-4 mx-auto max-w-7xl">
     <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
-        <h1 class="md:ml-6 mb-6 text-2xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
+        <h1 class="md:ml-6 mt-16 mb-6 text-2xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
             Sé distribuidor de Radi Pets
         </h1>
         <h5 class="text-xl">¡Conviértete en distribuidor de placas QR y NFC de Radi Pets y descubre la libertad de ser tu propio jefe!
