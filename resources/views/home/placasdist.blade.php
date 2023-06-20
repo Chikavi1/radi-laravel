@@ -94,7 +94,7 @@ data-aos-duration="1500"  class="mx-auto h-92" alt="">
 
                     </div>
                </div>
-              <a href="https://buy.stripe.com/14kg1o8ea2lE5OwdQS" class="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none">
+              <a href="https://buy.stripe.com/8wM7uSdyu9O66SA6or" class="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none">
                 Comprar
               </a>
         </div>
@@ -130,7 +130,7 @@ data-aos-duration="1500"  class="mx-auto h-92" alt="">
 
                     </div>
                </div>
-              <a href="https://buy.stripe.com/14kg1o8ea2lE5OwdQS" class="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none">
+              <a href="https://buy.stripe.com/7sI4iG9iegcu7WE004" class="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none">
                 Comprar
               </a>
         </div>
@@ -148,33 +148,51 @@ data-aos-duration="1500"  class="mx-auto h-92" alt="">
         <dl class="w-full md:w-2/3">
             <dt class="mb-4">
                 <h3 class="text-xl font-semibold">
-                    We already have ongoing projects. Will Valohai easily integrate with them?
+                    ¿Qué son las placas QR y NFC de Radi Pets?
                 </h3>
             </dt>
             <dd class="mb-16">
                 <p>
-                    Running existing machine learning projects in Valohai is very simple! Integration only requires adding a valohai.yaml configuration file. Moving projects in and out of Valohai is easy – the integration is only the configuration file.
+                    Las placas QR y NFC de Radi Pets son dispositivos personalizables que se pueden colocar en las mascotas, como perros y gatos. Estas placas contienen un código QR y un chip NFC que permiten a las personas acceder a información importante sobre la mascota, como datos de contacto del dueño, historial médico y más.
                 </p>
             </dd>
             <dt class="mb-4">
                 <h3 class="text-xl font-semibold">
-                    How do you compare to other data science platforms?
+                    ¿Cuál es el proceso para convertirse en distribuidor de placas QR y NFC de Radi Pets?
                 </h3>
             </dt>
             <dd class="mb-16">
                 <p>
-                    We don’t. Valohai isn’t a data science platform; it&#x27;s a Machine Learning Management Platform that handles the whole ML pipeline from feature extraction, to training of your model and to deploying it into production in a reproducible manner. Data science platforms offer hosted notebooks and AutoML solutions.
+                    Para convertirte en distribuidor de placas QR y NFC de Radi Pets, simplemente debes ponerte en contacto con nuestro equipo de ventas. Ellos te guiarán a través del proceso de registro y te proporcionarán toda la información necesaria para comenzar a vender nuestras placas.                </p>
+            </dd>
+            <dt class="mb-4">
+                <h3 class="text-xl font-semibold">
+                    ¿Cuáles son los beneficios de ser distribuidor de Radi Pets?
+                </h3>
+            </dt>
+            <dd class="mb-16">
+                <p>
+                    Como distribuidor de Radi Pets, disfrutarás de una serie de beneficios. Esto incluye la oportunidad de ser tu propio jefe, generar ingresos adicionales, trabajar en tus propios horarios y tener acceso a un producto de alta calidad y alta demanda en el mercado de mascotas.                </p>
+            </dd>
+            <dt class="mb-4">
+                <h3 class="text-xl font-semibold">
+                    ¿Cuánto se puede ganar como distribuidor de placas QR y NFC de Radi Pets?
+                </h3>
+            </dt>
+            <dd class="mb-16">
+                <p>
+                    El potencial de ganancias como distribuidor de Radi Pets depende de tu esfuerzo y dedicación. Al establecer una red de clientes y promover activamente las placas QR y NFC, puedes generar ingresos significativos. Nuestro equipo de ventas te brindará orientación sobre estrategias efectivas de comercialización y ventas.
                 </p>
             </dd>
             <dt class="mb-4">
                 <h3 class="text-xl font-semibold">
-                    Does Valohai charge for computation?
+                    ¿Recibiré soporte y materiales de marketing como distribuidor?
                 </h3>
             </dt>
             <dd class="mb-16">
                 <p>
-                    Depends. Most of our customers use their own cloud and thus pay for usage according to their own agreements. Valohai doesn&#x27;t charge anything on top of the per-user license fee. If you don&#x27;t have a cloud provider, you can use our AWS, GCP and Azure accounts, and we&#x27;ll only charge you for what you use.
-                </p>
+                    Sí, como distribuidor de placas QR y NFC de Radi Pets, recibirás un sólido respaldo de nuestro equipo. Te proporcionaremos materiales de marketing y promoción para ayudarte a impulsar tus ventas. Además, contarás con asistencia y soporte continuos para resolver cualquier duda o inquietud que puedas tener.
+                               </p>
             </dd>
         </dl>
     </div>
