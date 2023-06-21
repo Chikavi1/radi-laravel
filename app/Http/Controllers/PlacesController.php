@@ -53,8 +53,8 @@ class PlacesController extends Controller
 
         SEO::setTitle('Lugares Pet Friendly');
         SEO::setDescription('Descubre los mejores lugares pet friendly para ti y tu mascota. Encuentra restaurantes, hoteles, parques y más donde tu compañero peludo es bienvenido. Planifica tus próximas aventuras con tu mascota y disfruta de un tiempo inolvidable juntos.');
-        SEO::opengraph()->setUrl('https://radi.pet');
-        SEO::setCanonical('https://radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet/results');
+        SEO::setCanonical('https://radi.pet/results');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
@@ -76,8 +76,8 @@ class PlacesController extends Controller
         $place = Places::findOrFail($id?$id[0]:0);
         SEO::setTitle($place->title);
         SEO::setDescription($place->description);
-        SEO::opengraph()->setUrl('https://radi.pet');
-        SEO::setCanonical('https://radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet/places/'.$hash);
+        SEO::setCanonical('https://radi.pet/places/'.$hash);
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage($place->image);
         SEO::twitter()->setImage($place->image);
