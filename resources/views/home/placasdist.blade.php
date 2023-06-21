@@ -25,7 +25,7 @@ data-aos-duration="1500"  class="mx-auto h-92" alt="">
          </p>
         {{-- <a href="#" class="w-full btn btn-dark btn-lg sm:w-auto">Learn More</a> --}}
       </div>
-      <img data-aos="fade-up-left"  data-aos-easing="linear"
+      <img data-aos="fade-up"  data-aos-easing="linear"
       data-aos-duration="1500"  class="w-full h-full  " src="{{asset('img/finance.jpg')}}" alt="">
     </div>
     <div class="grid flex-col-reverse items-center grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
@@ -48,7 +48,7 @@ data-aos-duration="1500"  class="mx-auto h-92" alt="">
             En Radi Pets, valoramos a nuestros distribuidores y nos aseguramos de proporcionarles todo el apoyo y la capacitación necesarios para alcanzar el éxito. Te brindaremos herramientas de marketing, materiales promocionales y asesoramiento personalizado para ayudarte a maximizar tus resultados.         </p>
         {{-- <a href="#" class="w-full btn btn-dark btn-lg sm:w-auto">Learn More</a> --}}
       </div>
-      <img data-aos="fade-up-left"  data-aos-easing="linear"
+      <img data-aos="fade-up"  data-aos-easing="linear"
       data-aos-duration="1500"  class="w-full h-full  " src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGNhcGFjaXRhY2lvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
     </div>
     <div class="grid flex-col-reverse items-center grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">

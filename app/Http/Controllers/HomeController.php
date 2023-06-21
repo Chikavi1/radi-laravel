@@ -99,6 +99,13 @@ class HomeController extends Controller
 
     public function placasdist()
     {
+        SEO::setTitle('Conviértete en distribuidor');
+        SEO::setDescription('Conviertete en distribuidor de placas QR y NFC en Radi Pets.');
+        SEO::opengraph()->setUrl('https://radi.pet/placas');
+        SEO::setCanonical('https://radi.pet/placas');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/default.png'));
+        SEO::twitter()->setImage(asset('img/default.png'));
         return view('home.placasdist');
     }
 
