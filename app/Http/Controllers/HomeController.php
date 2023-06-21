@@ -71,8 +71,8 @@ class HomeController extends Controller
     {
         SEO::setTitle('Descarga la app de Radi Pets');
         SEO::setDescription('Descubre, crea perfiles, adopta y ayuda a encontrar mascotas desaparecidas en Radi Pets. La app perfecta para amantes de las mascotas. ¡Descarga ahora!');
-        SEO::opengraph()->setUrl('https://radi.pet');
-        SEO::setCanonical('https://radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet/download');
+        SEO::setCanonical('https://radi.pet/download');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
@@ -83,8 +83,8 @@ class HomeController extends Controller
     {
         SEO::setTitle('Regálanos tu opinión de la app');
         SEO::setDescription('Apoya a mejorar la plataforma de Radi Pets.');
-        SEO::opengraph()->setUrl('https://radi.pet');
-        SEO::setCanonical('https://radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet/feedback');
+        SEO::setCanonical('https://radi.pet/feedback');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
@@ -101,8 +101,8 @@ class HomeController extends Controller
     {
         SEO::setTitle('Conviértete en distribuidor');
         SEO::setDescription('Conviertete en distribuidor de placas QR y NFC en Radi Pets.');
-        SEO::opengraph()->setUrl('https://radi.pet/placas');
-        SEO::setCanonical('https://radi.pet/placas');
+        SEO::opengraph()->setUrl('https://radi.pet/placas-distribuidor');
+        SEO::setCanonical('https://radi.pet/placas-distribuidor');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
