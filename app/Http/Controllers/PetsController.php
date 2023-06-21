@@ -53,8 +53,8 @@ class PetsController extends Controller
     {
         SEO::setTitle('Mascotas en adopción');
         SEO::setDescription('Encuentra tu compañero perfecto ¡Adopta y salva una vida hoy!');
-        SEO::opengraph()->setUrl('https://radi.pet');
-        SEO::setCanonical('https://radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet/adoptions');
+        SEO::setCanonical('https://radi.pet/adoptions');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
@@ -180,8 +180,8 @@ class PetsController extends Controller
             $textTitle = 'Ayúdanos a encontrar a ';
         }
         SEO::setTitle($textTitle.''.$pet->name);
-        SEO::opengraph()->setUrl('https://radi.pet');
-        SEO::setCanonical('https://radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet/pet/'.$hash);
+        SEO::setCanonical('https://radi.pet/pet/'.$hash);
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage($pet->photo);
         SEO::twitter()->setImage($pet->photo);

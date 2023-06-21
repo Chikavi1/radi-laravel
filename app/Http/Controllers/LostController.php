@@ -28,8 +28,8 @@ class LostController extends Controller
     public function index(){
         SEO::setTitle('Mascotas desaparecidas');
         SEO::setDescription('Encuentra tu compañero perfecto ¡Adopta y salva una vida hoy!');
-        SEO::opengraph()->setUrl('https://radi.pet');
-        SEO::setCanonical('https://radi.pet');
+        SEO::opengraph()->setUrl('https://radi.pet/lost');
+        SEO::setCanonical('https://radi.pet/lost');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
@@ -468,8 +468,8 @@ class LostController extends Controller
         $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
         $id = $hashids->decode($hash);
         $lost = Losts::findOrFail($id?$id[0]:0);
-        SEO::opengraph()->addImage( url('losts/thumbnail?id='.$hash) );
-        SEO::twitter()->setImage( url('losts/thumbnail?id='.$hash) );
+        SEO::opengraph()->addImage(url('losts/thumbnail?id='.$hash) );
+        SEO::twitter()->setImage(url('losts/thumbnail?id='.$hash) );
         if($lost->pet->name??0){
             SEO::opengraph()->addProperty('type', 'articles');
             SEO::setTitle('Ayúdanos a encontrar a '.$lost->pet->name);
