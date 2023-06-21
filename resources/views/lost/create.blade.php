@@ -232,7 +232,7 @@
               <button
                 class="block w-full mt-2 rounded-md bg-black px-4 py-2 text-sm text-white transition hover:shadow-lg"
               >
-                Pagar
+                Generar reporte
               </button>
             </div>
             {!! Form::close() !!}
