@@ -139,28 +139,6 @@ data-aos-duration="1500"  class="mx-auto h-92" alt="">
 </div>
 
 
-<button onclick="downloadImage('losts/thumbnail', 'LogoStackOverflow.png')" >DOWNLOAD</button>
-
-<script>
-function downloadImage(url, name){
-      fetch(url)
-        .then(resp => resp.blob())
-        .then(blob => {
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.style.display = 'none';
-            a.href = url;
-            // the filename you want
-            a.download = name;
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-        })
-        .catch((error) => {console.log(error);alert('An error sorry')});
-}
-</script>
-
-
 <div class="px-4 py-20 bg-lightblue">
     <div class="flex flex-col max-w-6xl mx-auto md:flex-row">
         <h2 class="w-full mr-8 text-3xl font-extrabold leading-9 md:w-1/3">
