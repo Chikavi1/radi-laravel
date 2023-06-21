@@ -33,7 +33,7 @@ class LostController extends Controller
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
-        $losts = Pets::where('status',3)->orderBy('id','DESC')->paginate(12);
+        $losts = Losts::where('status',1)->groupBy('id_pet')->orderBy('id','DESC')->paginate(12);
         return view('lost.index',compact('losts'));
     }
 
@@ -41,55 +41,106 @@ class LostController extends Controller
     return view('lost.finish',compact('hash'));
     }
 
-    public function thumbnail()
+    public function thumbnail(Request $request)
     {
+        $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
+        $id = $hashids->decode($request->id);
+        $lost = Losts::findOrFail($id?$id[0]:0);
+        // $img = Image::make(public_path('img/back-rip.png'))->resize(1280,720);
+        // $watermark = Image::make(public_path('img/logo-white.png'))->resize(55, 55);
+        // $rip = Image::make(public_path('img/ribbon.png'))->resize(100, 130);
+        $img = Image::make(public_path('img/thumbnail.png'))->resize(1280,720);
 
-        $lost = Losts::findOrFail(1);
-        $img = Image::make(public_path('img/back-rip.png'))->resize(1280,720);
-        $watermark = Image::make(public_path('img/logo-white.png'))->resize(55, 55);
-        $rip = Image::make(public_path('img/ribbon.png'))->resize(100, 130);
-
-        $petImage = Image::make($lost->pet->photo)->greyscale()->resize(450, 370);
-
-
-        // lost
-        $img->insert($watermark, 'bottom-left', -10, 0);
+        $petImage = Image::make($lost->pet->photo)->resize(535, 345);
         $img->insert($petImage, 'center-right', 30, 10);
 
-        $img->text('Mascota Desaparecida', 273, 150, function($font) {
+
+        // // lost
+        // $img->insert($watermark, 'bottom-left', -10, 0);
+        // $img->insert($petImage, 'center-right', 30, 10);
+
+        $img->text('Radi Pets', 80, 100, function($font) {
             $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
             $font->size(40);
-            $font->color('#f2b63c');
-            $font->align('center');
+            $font->color('#0000');
+            $font->align('left');
             $font->valign('bottom');
             $font->angle(0);
         });
-        $img->text($lost->pet->name, 60, 240, function($font) {
-            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
-            $font->size(70);
-            $font->color('#FFFF');
+
+
+        $img->text('Mascota', 80, 220, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+            $font->size(80);
+            $font->color('#cc0202');
+            $font->align('left');
+            $font->valign('bottom');
             $font->angle(0);
         });
+
+        $img->text('Desaparecida', 80, 320, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+            $font->size(80);
+            $font->color('#cc0202');
+            $font->align('left');
+            $font->valign('bottom');
+            $font->angle(0);
+        });
+
+        $img->text(ucfirst($lost->pet->name), 75, 420, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+            $font->size(70);
+            $font->color('#cc0202');
+            $font->align('left');
+            $font->valign('bottom');
+            $font->angle(0);
+        });
+
         if($lost->rewards){
-            $img->text('Recompensa de '.$lost->rewards.' MXN', 60, 340, function($font) {
-                $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
-                $font->size(35);
-                $font->color('#FFFF');
+            $img->text('Se ofrece recompensa', 80, 560, function($font) {
+                $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+                $font->size(40);
+                $font->color('#0000');
+                $font->align('left');
+                $font->valign('bottom');
                 $font->angle(0);
             });
         }
-        $img->text($lost->cellphone, 60, 420, function($font) {
-            $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
-            $font->size(35);
-            $font->color('#FFFF');
+
+        $img->text('Haz clic para saber más', 80, 630, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+            $font->size(60);
+            $font->color('#0000');
+            $font->align('left');
+            $font->valign('bottom');
             $font->angle(0);
         });
-        $img->text('Haz click para saber más', 60, 470, function($font) {
-            $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
-            $font->size(35);
-            $font->color('#FFFF');
-            $font->angle(0);
-        });
+        // $img->text($lost->pet->name, 60, 240, function($font) {
+        //     $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+        //     $font->size(70);
+        //     $font->color('#FFFF');
+        //     $font->angle(0);
+        // });
+        // if($lost->rewards){
+        //     $img->text('Recompensa de '.$lost->rewards.' MXN', 60, 340, function($font) {
+        //         $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
+        //         $font->size(35);
+        //         $font->color('#FFFF');
+        //         $font->angle(0);
+        //     });
+        // }
+        // $img->text($lost->cellphone, 60, 420, function($font) {
+        //     $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
+        //     $font->size(35);
+        //     $font->color('#FFFF');
+        //     $font->angle(0);
+        // });
+        // $img->text('Haz click para saber más', 60, 470, function($font) {
+        //     $font->file(public_path('fonts/Roboto/Roboto-Regular.ttf'));
+        //     $font->size(35);
+        //     $font->color('#FFFF');
+        //     $font->angle(0);
+        // });
 
 
         // DEAD
@@ -117,7 +168,163 @@ class LostController extends Controller
         //             $font->color('#FFFF');
         //             $font->angle(0);
         //         });
-        // return $img->response('jpg');
+        // return $img->response();
+            // dd($img->encode('data-url'));
+        // return response()->download($img->encode('data-url'));
+
+        // return response()->download($img);
+        return $img->response('jpg');
+
+    }
+
+    public function poster(Request $request){
+        $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
+        $id = $hashids->decode($request->id);
+        $lost = Losts::findOrFail($id?$id[0]:0);
+
+         $img = Image::make(public_path('img/lost-bg.png'))->resize(1728,2304);
+         $img->text('Mascota Desaparecida', 840, 150, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+            $font->size(120);
+            $font->color('#fffff');
+            $font->align('center');
+            $font->valign('top');
+            $font->angle(0);
+        });
+
+        $img->text('¡Comparte para llegar a más personas!', 840, 280, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Medium.ttf'));
+            $font->size(50);
+            $font->color('#fffff');
+            $font->align('center');
+            $font->valign('top');
+            $font->angle(0);
+        });
+
+        $petImage = Image::make($lost->pet->photo)->resize(900, 600);
+
+        $img->insert($petImage, 'left-left', 100, 450);
+
+        $qrcode = Image::make("https://qrcg-free-editor.qr-code-generator.com/main/assets/images/websiteQRCode_noFrame.png")->resize(600, 600);
+        $img->insert($qrcode, 'left-left', 40, 1180);
+
+
+        if($lost->rewards){
+            $img->text('SE OFRECE', 1370, 700, function($font) {
+                $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+                $font->size(100);
+                $font->color('#ef5421');
+                $font->align('center');
+                $font->valign('top');
+                $font->angle(0);
+            });
+        }else{
+            $img->text('SIN', 1370, 700, function($font) {
+                $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+                $font->size(100);
+                $font->color('#ef5421');
+                $font->align('center');
+                $font->valign('top');
+                $font->angle(0);
+            });
+        }
+
+
+        $img->text('Recompensa', 1370, 795, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Medium.ttf'));
+            $font->size(60);
+            $font->color('#ef5421');
+            $font->align('center');
+            $font->valign('top');
+            $font->angle(0);
+        });
+
+
+        $img->text(ucfirst($lost->pet->name), 100, 1120, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+            $font->size(90);
+            $font->color('#eb2411');
+            $font->align('left');
+            $font->valign('top');
+            $font->angle(0);
+        });
+
+
+
+        $width       = 1728;
+        $height      = 2304;
+        $center_x    = 680;
+        $center_y    = 1450;
+        $max_len     = 45;
+        $font_size   = 45;
+        $font_height = 30;
+
+        $text = $lost->note;
+
+
+        $lines = explode("\n", wordwrap($text, $max_len));
+        $y     = $center_y - ((count($lines) - 1) * $font_height);
+
+        foreach ($lines as $line)
+        {
+            $img->text($line, $center_x, $y, function($font) use ($font_size){
+                $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+                $font->size($font_size);
+                $font->color('#00000');
+                $font->align('left');
+                $font->valign('center');
+            });
+
+            $y += $font_height * 2;
+        }
+
+        $img->text('Escanea el código QR', 100, 1850, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+            $font->size(60);
+            $font->color('#0000');
+            $font->align('left');
+            $font->valign('top');
+            $font->angle(0);
+        });
+
+        $img->text('Contacta', 1660, 2050, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+            $font->size(60);
+            $font->color('#ffff');
+            $font->align('right');
+            $font->valign('top');
+            $font->angle(0);
+        });
+
+        $img->text($lost->cellphone, 1660, 2130, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+            $font->size(130);
+            $font->color('#ffff');
+            $font->align('right');
+            $font->valign('top');
+            $font->angle(0);
+        });
+
+
+        $img->text('Radi Pets', 100, 2080, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+            $font->size(80);
+            $font->color('#ffff');
+            $font->align('left');
+            $font->valign('top');
+            $font->angle(0);
+        });
+
+        $img->text('www.radi.pet', 100, 2160, function($font) {
+            $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+            $font->size(50);
+            $font->color('#ffff');
+            $font->align('left');
+            $font->valign('top');
+            $font->angle(0);
+        });
+        return $img->response('jpg');
+
     }
 
     public function create()
@@ -261,15 +468,18 @@ class LostController extends Controller
         $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
         $id = $hashids->decode($hash);
         $lost = Losts::findOrFail($id?$id[0]:0);
-        SEO::opengraph()->addImage( url('losts/thumbnail') );
-        SEO::twitter()->setImage( url('losts/thumbnail') );
-
-        SEO::opengraph()->addProperty('type', 'articles');
-        SEO::setTitle('Ayúdanos a encontrar a '.$lost->pet->name);
-        SEO::setDescription('Ayúdanos a encontrar a las mascotas con Radi Pets.');
-        SEO::opengraph()->setUrl('https://radi.pet/lost/'.$hash);
-        SEO::setCanonical('https://radi.pet/lost/'.$hash);
-        $age = Carbon::parse($lost->pet->birthday)->diffForHumans();
+        SEO::opengraph()->addImage( url('losts/thumbnail?id='.$hash) );
+        SEO::twitter()->setImage( url('losts/thumbnail?id='.$hash) );
+        if($lost->pet->name??0){
+            SEO::opengraph()->addProperty('type', 'articles');
+            SEO::setTitle('Ayúdanos a encontrar a '.$lost->pet->name);
+            SEO::setDescription('Ayúdanos a encontrar a las mascotas con Radi Pets.');
+            SEO::opengraph()->setUrl('https://radi.pet/lost/'.$hash);
+            SEO::setCanonical('https://radi.pet/lost/'.$hash);
+            $age = Carbon::parse($lost->pet->birthday)->diffForHumans();
+        }else{
+            abort(404);
+        }
         return view('lost.show',compact('lost','age','hash'));
     }
 

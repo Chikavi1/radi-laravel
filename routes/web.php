@@ -54,6 +54,7 @@ Route::get('/pet-friendly-owners', [HomeController::class, 'petFriendly'])->name
 Route::get('/placas', [HomeController::class, 'placas'])->name('home.placas');
 
 Route::get('/losts/thumbnail', [LostController::class, 'thumbnail'])->name('lost.thumbnail');
+Route::get('/losts/poster', [LostController::class, 'poster'])->name('lost.poster');
 
 
 Route::get('/pets/{id}', [PetsController::class, 'qrCode'])->name('lost.qrCode');

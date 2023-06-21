@@ -39,7 +39,10 @@
             @auth
                 @if(Auth::user()->id == $lost->id_user_report)
                     @if($lost->status == 1)
-                        <a href="/losts/finish/{{$hash}}" class="bg-green-300 hover:bg-green-400 text-green-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                    <button class="text-white my-6 bg-blue-800 px-4 py-2 rounded-md font-bold text-xl inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" onclick="downloadImage('https://radi.pet/losts/poster?id={{$lost->setHiddenId()}}', 'reporte.png')" ><i class="fa-solid fa-download mr-4"></i> Descargar afiche</button>
+
+
+                        <a href="/losts/finish/{{$hash}}" class="bg-green-300 hover:bg-green-400 text-green-800 font-bold py-3 px-4 rounded inline-flex items-center">
                             <span>Encontre a mi mascota</span>
                         </a>
                     @endif
@@ -103,9 +106,9 @@
                 <a target="_blank" href="tel:{{$lost->cellphone}}" class="text-white my-6 bg-purple-800 px-4 py-2 rounded-md font-bold text-2xl inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" >
                     Comunicarme
                 </a>
+
             @endif
           </div>
-
 
 
           <p class="mt-4 font-bold text-2xl">Descripción de la mascota</p>
@@ -255,7 +258,7 @@
                             </path>
                           </svg>
                         </a>
-                        <a class="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition p-1 rounded-full text-white border-red-700 bg-red-700 hover:bg-red-700 hover:border-red-700" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fradi.pet%2Flost%2F{{$hash }}text=Ay%C3%BAdame%20a%20encontrar%20a%20mi%20mascota%2C%20por%20favor%20se%20llama%20{{$lost->pet->name}}" aria-label="Share on Twitter">
+                        <a class="border-2 duration-200 ease inline-flex items-center mb-1 mr-1 transition p-1 rounded-full text-white border-red-700 bg-red-700 hover:bg-red-700 hover:border-red-700" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fradi.pet%2Flost%2F{{$hash}}&text=Ay%C3%BAdame%20a%20encontrar%20a%20mi%20mascota%2C%20por%20favor%20se%20llama%20{{$lost->pet->name}}" aria-label="Share on Twitter">
                           <svg aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4">
                             <title>Twitter</title>
                             <path d="m459 152 1 13c0 139-106 299-299 299-59 0-115-17-161-47a217 217 0 0 0 156-44c-47-1-85-31-98-72l19 1c10 0 19-1 28-3-48-10-84-52-84-103v-2c14 8 30 13 47 14A105 105 0 0 1 36 67c51 64 129 106 216 110-2-8-2-16-2-24a105 105 0 0 1 181-72c24-4 47-13 67-25-8 24-25 45-46 58 21-3 41-8 60-17-14 21-32 40-53 55z">
@@ -356,6 +359,23 @@
 
 <script>
 
+function downloadImage(url, name){
+                  fetch(url)
+                    .then(resp => resp.blob())
+                    .then(blob => {
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.style.display = 'none';
+                        a.href = url;
+                        // the filename you want
+                        a.download = name;
+                        document.body.appendChild(a);
+                        a.click();
+                        window.URL.revokeObjectURL(url);
+                    })
+                    .catch((error) => {console.log(error);alert('An error sorry')});
+            }
+
     const options = {
         enableHighAccuracy: true,
         timeout: 5000,
@@ -413,6 +433,7 @@
         return Value * Math.PI / 180;
     }
 
+    @if($lost->latitude)
     var latitude = {{$lost->latitude}};
     var longitude = {{$lost->longitude}};
 
@@ -420,8 +441,6 @@
 
     L.tileLayer('https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga', {
     }).addTo(map);
-
-
 
     var radiIcon = L.icon({
         iconUrl: '{{asset("img/target.png")}}',
@@ -437,8 +456,12 @@
 
     L.marker([latitude,longitude], {icon: radiIcon}).addTo(map)
     .bindPopup('Aquí se perdío');
-
     navigator.geolocation.getCurrentPosition(success, error, options);
+    @endif
+
+
+
+
 
 
     function copyToClipboard(element) {

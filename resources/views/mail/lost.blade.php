@@ -84,9 +84,7 @@
 									</tr>
 									<tr>
 										<td align="left" style="font: 16px/23px Arial, Helvetica, sans-serif, Apercu;mso-line-height-rule: exactly;">
-											En nombre de todo el equipo de Radi Pets, lamentamos mucho la desaparición de tu querida mascota. <br> Comprendemos lo angustiante que puede ser esta situación y queremos que sepas que estamos aquí para brindarte apoyo en este difícil momento.
-                                            <br><br>
-                                            Sabemos lo importante que es tu mascota para ti y entendemos el vínculo especial que se crea entre las mascotas y sus dueños. <br><br> Queremos ofrecerte algunos consejos que podrían ayudarte durante la búsqueda:
+											Lamentamos mucho la desaparición de tu querida mascota. <br> Comprendemos lo angustiante que puede ser esta situación y queremos que sepas que estamos aquí para brindarte apoyo en este difícil momento.Sabemos lo importante que es tu mascota para ti y entendemos el vínculo especial que se crea entre las mascotas y sus dueños. <br><br> Queremos ofrecerte algunos consejos que podrían ayudarte durante la búsqueda:
                                         </td>
 									</tr>
 								</table>

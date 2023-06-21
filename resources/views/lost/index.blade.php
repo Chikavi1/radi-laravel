@@ -42,29 +42,28 @@
     <h1 class="text-3xl font-bold px-4 text-gray-800 mt-4">Listado de desaparecidos</h1>
     @if(count($losts) != 0)
     <div class="grid grid-cols-12 gap-3">
-            @foreach ($losts as $pet)
+            @foreach ($losts as $lost)
                 <div class="col-span-12 md:col-span-6 lg:col-span-4 p-4">
                     <a
                     target="_blank"
-                    href="/pet/{{$pet->setHiddenId()}}">
+                    href="/lost/{{$lost->setHiddenId()}}">
                     <article
                     class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm"
                     >
                     <img
                     alt="foto de la mascota"
-                    src="{{$pet->photo}}"
+                    src="{{$lost->pet->photo ?? '/img/default.png'}}"
                     class="h-56 w-full object-cover"
                     />
 
                     <div class="p-4 sm:p-6">
                         <h3 class="capital text-lg font-medium text-gray-900">
-                        {{$pet->name}}
+                            {{$lost->pet->name ?? 'Sin nombre'}}
                         </h3>
-
-                            <p>Desaparecido</p>
-                    @if($pet->description)
+                            <p>Se perdió {{ Carbon\Carbon::parse($lost->date)->diffForHumans()}}</p>
+                    @if($lost->description)
                         <p class="truncate  mt-2 line-clamp-3 text-sm/relaxed text-gray-500 capital">
-                            {{$pet->description}}
+                            {{$lost->note}}
                         </p>
                     @else
                         <p class="truncate  mt-2 line-clamp-3 text-sm/relaxed text-gray-500 capital">
