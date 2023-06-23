@@ -27,11 +27,11 @@
         </p>
         <div style="text-align:center;color:white">
 
-            <p style="font-size: 4em;">{{$pet->name}}</p>
+            <p style="font-size: 4em;"> {{ ucfirst($pet->name)}}</p>
             @if ($pet->sterelized)
                 <p style="font-size: 1.7em;">Esterilizado</p>
             @endif
-            <p style="font-size: 1.5em;">{{$pet->gender==1?'Macho':'Hembra'}}   Talla
+            <p style="font-size: 1.5em;">{{$pet->gender==2?'Macho':'Hembra'}}   Talla
                     @switch($pet->size)
                         @case('mn')
                             <span class="status">Mini</span>
