@@ -202,7 +202,7 @@ class PetsController extends Controller
             'pet' => $pet,
             'age' => Carbon::parse($pet->birthday)->diffForHumans()
         ];
-        return  PDF::loadView('pdf.adoptions', $data)->setPaper('a4', 'landscape')->stream('Ayúdanos a encontrar a '.$pet->name.'.pdf');
+        return  PDF::loadView('pdf.adoptions', $data)->setPaper('a4', 'landscape')->stream('Adopta a '.$pet->name.'.pdf');
     }
 
 
