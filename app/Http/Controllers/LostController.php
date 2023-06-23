@@ -27,7 +27,7 @@ class LostController extends Controller
 
     public function index(){
         SEO::setTitle('Mascotas desaparecidas');
-        SEO::setDescription('Encuentra tu compañero perfecto ¡Adopta y salva una vida hoy!');
+        SEO::setDescription('Sé un héroe, Ayuda a las demás personas a encontrar a su mascota');
         SEO::opengraph()->setUrl('https://radi.pet/lost');
         SEO::setCanonical('https://radi.pet/lost');
         SEO::opengraph()->addProperty('type', 'articles');
@@ -329,6 +329,12 @@ class LostController extends Controller
 
     public function create()
     {
+        SEO::setTitle('Reporta la desaparición de tu mascota');
+        SEO::opengraph()->setUrl('https://radi.pet/lost/create');
+
+        SEO::setDescription('Genera un reporte de desaparación en Radi Pets.');
+        SEO::opengraph()->addImage(asset('img/default.png'));
+
         $months = array('01'=>'Enero','02' => 'Febrero','03'=>'Marzo','04'=>'Abril','05'=>'Mayo','06'=>'Junio','07'=>'Julio','08'=>'Agosto','09'=>'Septiembre','10'=>'Octubre','11'=>'Noviembre','12'=>'Diciembre');
         $years = array('2023'=>'2023','2024' => '2024','2025'=>'2025','2026'=>'2026','2027'=>'2027','2028'=>'2028','2029'=>'2029','2030'=>'2030');
         $pets  = Pets::where('id_user',Auth::user()->id)->where('status',1)->pluck('name','id');
@@ -468,8 +474,8 @@ class LostController extends Controller
         $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
         $id = $hashids->decode($hash);
         $lost = Losts::findOrFail($id?$id[0]:0);
-        SEO::opengraph()->addImage(url('losts/thumbnail?id='.$hash) );
-        SEO::twitter()->setImage(url('losts/thumbnail?id='.$hash) );
+        SEO::opengraph()->addImage(url('losts/thumbnail?id='.$hash));
+        SEO::twitter()->setImage(url('losts/thumbnail?id='.$hash));
         if($lost->pet->name??0){
             SEO::opengraph()->addProperty('type', 'articles');
             SEO::setTitle('Ayúdanos a encontrar a '.$lost->pet->name);

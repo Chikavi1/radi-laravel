@@ -63,6 +63,9 @@ Route::get('/results', [PlacesController::class, 'result'])->name('places.result
 Route::get('/places-register', [PlacesController::class, 'register'])->name('places.register');
 
 
+Route::get('/adoptions/pdf', [PetsController::class, 'adoptionsPdf'])->name('adoptions.pdf');
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

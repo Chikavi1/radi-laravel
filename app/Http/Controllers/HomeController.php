@@ -145,7 +145,7 @@ class HomeController extends Controller
     }
 
     public function testEmail(){
-        return view('mail.lost');
+        return view('mail.onBoarding');
     }
 
     public function validate_show(String $hash)

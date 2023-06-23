@@ -4,7 +4,11 @@
         {{ $message }}
     </p>
   </div>
+@else
+@include('layouts.announs')
+
 @endif
+
 
 
 <x-app-layout>

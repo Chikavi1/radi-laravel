@@ -1,3 +1,4 @@
+
 <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,6 +20,21 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('pets.my-pets')" :active="request()->routeIs('pets.my-pets')">
                         Mis Mascotas
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('places.result')" :active="request()->routeIs('places.result')">
+                        Lugares
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('pet.index')" :active="request()->routeIs('pet.index')">
+                        En adopción
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('lost.index')" :active="request()->routeIs('lost.index')">
+                        Desaparecidos
                     </x-nav-link>
                 </div>
             </div>

@@ -13,6 +13,8 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
 
+use PDF;
+
 class PetsController extends Controller
 {
 
@@ -191,6 +193,16 @@ class PetsController extends Controller
         return view('pets.show',compact('pet','age','hash','breedData'));
     }
 
+    public function adoptionsPdf(){
+        $pet = Pets::find(1);
+        $data = [
+            'pet' => $pet,
+            'age' => Carbon::parse($pet->birthday)->diffForHumans()
+        ];
+
+        return  PDF::loadView('pdf.adoptions', $data)->setPaper('a4', 'landscape')->stream('adopción.pdf');
+
+    }
 
     public function destroy(string $id)
     {

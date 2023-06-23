@@ -7,6 +7,7 @@
     "require": {
         "php": "^8.1",
         "artesaos/seotools": "^1.1",
+        "barryvdh/laravel-dompdf": "^2.0",
         "cartalyst/stripe-laravel": "^15.0",
         "guzzlehttp/guzzle": "^7.2",
         "hashids/hashids": "^5.0",
@@ -18,6 +19,7 @@
         "laravelcollective/html": "^6.4",
         "laraveles/spanish": "^1.5",
         "league/flysystem-aws-s3-v3": "^3.15",
+        "simplesoftwareio/simple-qrcode": "^4.2",
         "stevebauman/location": "^6.6",
         "stripe/stripe-php": "^10.12"
     },
