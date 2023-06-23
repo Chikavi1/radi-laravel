@@ -13,6 +13,7 @@ use Carbon\Carbon;
 use Hashids\Hashids;
 use SEO;
 use Mail;
+use PDF;
 
 
 use Ladumor\OneSignal\OneSignal;
@@ -182,149 +183,152 @@ class LostController extends Controller
         $id = $hashids->decode($request->id);
         $lost = Losts::findOrFail($id?$id[0]:0);
 
-         $img = Image::make(public_path('img/lost-bg.png'))->resize(1728,2304);
-         $img->text('Mascota Desaparecida', 840, 150, function($font) {
-            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
-            $font->size(120);
-            $font->color('#fffff');
-            $font->align('center');
-            $font->valign('top');
-            $font->angle(0);
-        });
+        //  $img = Image::make(public_path('img/lost-bg.png'))->resize(1728,2304);
+        //  $img->text('Mascota Desaparecida', 840, 150, function($font) {
+        //     $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+        //     $font->size(120);
+        //     $font->color('#fffff');
+        //     $font->align('center');
+        //     $font->valign('top');
+        //     $font->angle(0);
+        // });
 
-        $img->text('¡Comparte para llegar a más personas!', 840, 280, function($font) {
-            $font->file(public_path('fonts/Roboto/Roboto-Medium.ttf'));
-            $font->size(50);
-            $font->color('#fffff');
-            $font->align('center');
-            $font->valign('top');
-            $font->angle(0);
-        });
+        // $img->text('¡Comparte para llegar a más personas!', 840, 280, function($font) {
+        //     $font->file(public_path('fonts/Roboto/Roboto-Medium.ttf'));
+        //     $font->size(50);
+        //     $font->color('#fffff');
+        //     $font->align('center');
+        //     $font->valign('top');
+        //     $font->angle(0);
+        // });
 
-        $petImage = Image::make($lost->pet->photo)->resize(900, 600);
+        // $petImage = Image::make($lost->pet->photo)->resize(900, 600);
 
-        $img->insert($petImage, 'left-left', 100, 450);
+        // $img->insert($petImage, 'left-left', 100, 450);
 
-        $qrcode = Image::make("https://qrcg-free-editor.qr-code-generator.com/main/assets/images/websiteQRCode_noFrame.png")->resize(600, 600);
-        $img->insert($qrcode, 'left-left', 40, 1180);
-
-
-        if($lost->rewards){
-            $img->text('SE OFRECE', 1370, 700, function($font) {
-                $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
-                $font->size(100);
-                $font->color('#ef5421');
-                $font->align('center');
-                $font->valign('top');
-                $font->angle(0);
-            });
-        }else{
-            $img->text('SIN', 1370, 700, function($font) {
-                $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
-                $font->size(100);
-                $font->color('#ef5421');
-                $font->align('center');
-                $font->valign('top');
-                $font->angle(0);
-            });
-        }
+        // $qrcode = Image::make("https://qrcg-free-editor.qr-code-generator.com/main/assets/images/websiteQRCode_noFrame.png")->resize(600, 600);
+        // $img->insert($qrcode, 'left-left', 40, 1180);
 
 
-        $img->text('Recompensa', 1370, 795, function($font) {
-            $font->file(public_path('fonts/Roboto/Roboto-Medium.ttf'));
-            $font->size(60);
-            $font->color('#ef5421');
-            $font->align('center');
-            $font->valign('top');
-            $font->angle(0);
-        });
+        // if($lost->rewards){
+        //     $img->text('SE OFRECE', 1370, 700, function($font) {
+        //         $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+        //         $font->size(100);
+        //         $font->color('#ef5421');
+        //         $font->align('center');
+        //         $font->valign('top');
+        //         $font->angle(0);
+        //     });
+        // }else{
+        //     $img->text('SIN', 1370, 700, function($font) {
+        //         $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+        //         $font->size(100);
+        //         $font->color('#ef5421');
+        //         $font->align('center');
+        //         $font->valign('top');
+        //         $font->angle(0);
+        //     });
+        // }
 
 
-        $img->text(ucfirst($lost->pet->name), 100, 1120, function($font) {
-            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
-            $font->size(90);
-            $font->color('#eb2411');
-            $font->align('left');
-            $font->valign('top');
-            $font->angle(0);
-        });
+        // $img->text('Recompensa', 1370, 795, function($font) {
+        //     $font->file(public_path('fonts/Roboto/Roboto-Medium.ttf'));
+        //     $font->size(60);
+        //     $font->color('#ef5421');
+        //     $font->align('center');
+        //     $font->valign('top');
+        //     $font->angle(0);
+        // });
+
+
+        // $img->text(ucfirst($lost->pet->name), 100, 1120, function($font) {
+        //     $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+        //     $font->size(90);
+        //     $font->color('#eb2411');
+        //     $font->align('left');
+        //     $font->valign('top');
+        //     $font->angle(0);
+        // });
 
 
 
-        $width       = 1728;
-        $height      = 2304;
-        $center_x    = 680;
-        $center_y    = 1450;
-        $max_len     = 45;
-        $font_size   = 45;
-        $font_height = 30;
+        // $width       = 1728;
+        // $height      = 2304;
+        // $center_x    = 680;
+        // $center_y    = 1450;
+        // $max_len     = 45;
+        // $font_size   = 45;
+        // $font_height = 30;
 
-        $text = $lost->note;
-
-
-        $lines = explode("\n", wordwrap($text, $max_len));
-        $y     = $center_y - ((count($lines) - 1) * $font_height);
-
-        foreach ($lines as $line)
-        {
-            $img->text($line, $center_x, $y, function($font) use ($font_size){
-                $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
-                $font->size($font_size);
-                $font->color('#00000');
-                $font->align('left');
-                $font->valign('center');
-            });
-
-            $y += $font_height * 2;
-        }
-
-        $img->text('Escanea el código QR', 100, 1850, function($font) {
-            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
-            $font->size(60);
-            $font->color('#0000');
-            $font->align('left');
-            $font->valign('top');
-            $font->angle(0);
-        });
-
-        $img->text('Contacta', 1660, 2050, function($font) {
-            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
-            $font->size(60);
-            $font->color('#ffff');
-            $font->align('right');
-            $font->valign('top');
-            $font->angle(0);
-        });
-
-        $img->text($lost->cellphone, 1660, 2130, function($font) {
-            $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
-            $font->size(130);
-            $font->color('#ffff');
-            $font->align('right');
-            $font->valign('top');
-            $font->angle(0);
-        });
+        // $text = $lost->note;
 
 
-        $img->text('Radi Pets', 100, 2080, function($font) {
-            $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
-            $font->size(80);
-            $font->color('#ffff');
-            $font->align('left');
-            $font->valign('top');
-            $font->angle(0);
-        });
+        // $lines = explode("\n", wordwrap($text, $max_len));
+        // $y     = $center_y - ((count($lines) - 1) * $font_height);
 
-        $img->text('www.radi.pet', 100, 2160, function($font) {
-            $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
-            $font->size(50);
-            $font->color('#ffff');
-            $font->align('left');
-            $font->valign('top');
-            $font->angle(0);
-        });
-        return $img->response('jpg');
+        // foreach ($lines as $line)
+        // {
+        //     $img->text($line, $center_x, $y, function($font) use ($font_size){
+        //         $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+        //         $font->size($font_size);
+        //         $font->color('#00000');
+        //         $font->align('left');
+        //         $font->valign('center');
+        //     });
 
+        //     $y += $font_height * 2;
+        // }
+
+        // $img->text('Escanea el código QR', 100, 1850, function($font) {
+        //     $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+        //     $font->size(60);
+        //     $font->color('#0000');
+        //     $font->align('left');
+        //     $font->valign('top');
+        //     $font->angle(0);
+        // });
+
+        // $img->text('Contacta', 1660, 2050, function($font) {
+        //     $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+        //     $font->size(60);
+        //     $font->color('#ffff');
+        //     $font->align('right');
+        //     $font->valign('top');
+        //     $font->angle(0);
+        // });
+
+        // $img->text($lost->cellphone, 1660, 2130, function($font) {
+        //     $font->file(public_path('fonts/Roboto/Roboto-Bold.ttf'));
+        //     $font->size(130);
+        //     $font->color('#ffff');
+        //     $font->align('right');
+        //     $font->valign('top');
+        //     $font->angle(0);
+        // });
+
+
+        // $img->text('Radi Pets', 100, 2080, function($font) {
+        //     $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+        //     $font->size(80);
+        //     $font->color('#ffff');
+        //     $font->align('left');
+        //     $font->valign('top');
+        //     $font->angle(0);
+        // });
+
+        // $img->text('www.radi.pet', 100, 2160, function($font) {
+        //     $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+        //     $font->size(50);
+        //     $font->color('#ffff');
+        //     $font->align('left');
+        //     $font->valign('top');
+        //     $font->angle(0);
+        // });
+        // return $img->response('jpg');
+        $data = [
+            'lost' => $lost,
+        ];
+        return  PDF::loadView('pdf.lost', $data)->setPaper('a4', 'landscape')->stream('Ayúdanos a encontrar a '.$lost->pet->name.'.pdf');
     }
 
     public function create()

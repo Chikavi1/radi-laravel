@@ -20,7 +20,7 @@
   <tr >
     <th style="width: 100%;height: 791px;background:#643c83;">
         <h1 style="font-size:3.5em;text-align:center;color:white;margin-bottom:1em;">
-            Adoptame
+            Adóptame
         </h1>
         <p style="text-align: center;">
             <img style="border-radius:1em;width:75%" src="{{$pet->photo}}" alt="">
@@ -57,7 +57,7 @@
         </div>
     </th>
     <th style="width: 100%;color:#3b1687">
-        <h1 style="font-size:2.5em;margin-top:1em;">Escanea para saber más</h1>
+        <h1 style="font-size:2.5em;margin-top:1em;">Escanea para saber más información</h1>
 
         <img style="margin-top:4em;"  src="data:image/png;base64, {!! base64_encode(QrCode::size(250)->style('dot')->eye('circle')->color(59,22,135)->generate('https://radi.pet/pet/'.$pet->setHiddenId()  )) !!} ">
         <h2>

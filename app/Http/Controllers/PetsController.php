@@ -193,16 +193,18 @@ class PetsController extends Controller
         return view('pets.show',compact('pet','age','hash','breedData'));
     }
 
-    public function adoptionsPdf(){
-        $pet = Pets::find(1);
+
+    public function adoptionsPdf(Request $request){
+        $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
+        $id = $hashids->decode($request->id);
+        $pet = Pets::findOrFail($id?$id[0]:0);
         $data = [
             'pet' => $pet,
             'age' => Carbon::parse($pet->birthday)->diffForHumans()
         ];
-
-        return  PDF::loadView('pdf.adoptions', $data)->setPaper('a4', 'landscape')->stream('adopción.pdf');
-
+        return  PDF::loadView('pdf.adoptions', $data)->setPaper('a4', 'landscape')->stream('Ayúdanos a encontrar a '.$pet->name.'.pdf');
     }
+
 
     public function destroy(string $id)
     {
