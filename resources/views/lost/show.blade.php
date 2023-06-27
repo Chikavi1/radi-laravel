@@ -42,7 +42,7 @@
                     <a href="https://www.radi.pet/losts/poster?id={{$lost->setHiddenId()}}" target="_blank" class="text-white my-6 bg-blue-800 px-4 py-2 rounded-md font-bold text-xl inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" ><i class="fa-solid fa-download mr-4"></i> Descargar afiche</button>
 
 
-                        <a href="/losts/finish/{{$hash}}" class="bg-green-300 hover:bg-green-400 text-green-800 font-bold py-3 px-4 rounded inline-flex items-center">
+                        <a href="/losts/finish/{{$hash}}" class="bg-green-300 hover:bg-green-400 ml-2 text-green-800 font-bold py-2 px-4 rounded inline-flex items-center">
                             <span>Encontre a mi mascota</span>
                         </a>
                     @endif

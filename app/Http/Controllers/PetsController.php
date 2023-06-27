@@ -112,7 +112,7 @@ class PetsController extends Controller
         ]);
 
         $pet->save();
-        return redirect('/my-pets')->with('success', 'Se ha creado correctamente.');
+        return redirect('/pet/'.$pet->setHiddenId())->with('success', 'Se ha creado correctamente.');
     }
 
     public function myPets()

@@ -57,6 +57,9 @@ crossorigin="anonymous"></script>
                     <a href="/pet/{{$hash}}/edit" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
                         <span>Editar información</span>
                     </a>
+                    <a href="/lost/create" class="bg-red-300 hover:bg-red-400 text-red-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                        <span><i class="fa-solid fa-triangle-exclamation"></i>  Reportar desaparición</span>
+                    </a>
                 @endif
             @endauth
           </div>
@@ -70,7 +73,7 @@ crossorigin="anonymous"></script>
 
                     <h3 class="mt-4 text-lg font-bold text-gray-900 sm:text-xl">
                     Para mi
-                    @if($pet->gender == 2)
+                    @if($pet->gender == 1)
                             <span>
                                 querido
                             </span>
@@ -83,7 +86,7 @@ crossorigin="anonymous"></script>
                     </h3>
 
                     <p class="mt-2">Siempre serás mi fiel
-                        @if($pet->gender == 2)
+                        @if($pet->gender == 1)
                             <span>
                                 compañero
                             </span>
@@ -93,7 +96,7 @@ crossorigin="anonymous"></script>
                             </span>
                         @endif
                     tu partida deja un gran vacío en mi corazón. Recordaremos a {{$pet->name}} con cariño y aprecio, con grandes momentos que
-                    @if($pet->gender == 2)
+                    @if($pet->gender == 1)
                         <span>él</span>
                     @else
                         <span>
@@ -101,7 +104,7 @@ crossorigin="anonymous"></script>
                         </span>
                     @endif
                     me brindo durante nuestro tiempo juntos. Descansa en paz, mi
-                    @if($pet->gender == 2)
+                    @if($pet->gender == 1)
                         <span>
                             querido
                         </span>

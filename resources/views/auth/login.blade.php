@@ -29,7 +29,9 @@ rel="stylesheet"
                             </svg>
                         </span>
                         <input type="text" name="email" id="design-login-email" class=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Correo"/>
-                        </div>
+
+                    </div>
+                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
                     <div class="flex flex-col pt-4 mb-12">
                         <div class="flex relative ">
@@ -41,7 +43,9 @@ rel="stylesheet"
                             </span>
                             <input name="password" type="password" id="design-login-password" class=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Contraseña"/>
                             </div>
-                        </div>
+                    </div>
+                                <x-input-error :messages="$errors->get('password')" class="my-2" />
+
                         <button type="submit" class="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-black shadow-md hover:text-black hover:bg-white focus:outline-none focus:ring-2">
                             <span class="w-full">
                                 Ingresar

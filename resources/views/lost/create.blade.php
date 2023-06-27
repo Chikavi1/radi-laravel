@@ -83,6 +83,8 @@
         <div class="mx-auto max-w-lg px-4 lg:px-8 mt-4">
             {!! Form::open(['route' => ['lost.store']], ['class' => 'grid grid-cols-6 gap-4 mt-12' ,'files' => true]) !!}
             @csrf
+            @if(count($pets)!= 0)
+
             <label for="Phone" class="block text-xs font-medium text-gray-700">
                 Mueve el punto rojo para señalar donde fue la última vez que viste a tu mascota.
               </label>
@@ -95,14 +97,8 @@
                 <label for="Phone" class="block text-xs font-medium text-gray-700">
                   Mascota
                 </label>
-                @if(count($pets)!= 0)
                     {!! Form::select('id_pet',$pets,null,['required'=>'true','class' => 'mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm']); !!}
-                @else
-                <div class="my-8 text-center">
-                    <p class="text-red-800">Necesitas tener el perfil de una mascota.</p>
-                    <p>Puedes crear tu mascota <a href="/pet/create" class="text-purple-900 font-bold">aquí</a></p>
-                </div>
-                @endif
+
 
 
             </div>
@@ -156,27 +152,27 @@
 
 
 
-            {{-- <fieldset class="col-span-6 mt-2">
-              <legend class="block text-sm font-medium text-gray-700">
-               Detalles de la tarjeta
-              </legend>
+                {{-- <fieldset class="col-span-6 mt-2">
+                <legend class="block text-sm font-medium text-gray-700">
+                Detalles de la tarjeta
+                </legend>
 
-              <div class="mt-1 -space-y-px rounded-md bg-white shadow-sm">
-                <div>
-                  <label for="CardNumber" class="sr-only"> Card Number </label>
+                <div class="mt-1 -space-y-px rounded-md bg-white shadow-sm">
+                    <div>
+                    <label for="CardNumber" class="sr-only"> Card Number </label>
 
-                  <input
-                    type="text"
-                    name="card_no"
-                    required
-                    autocomplete="false"
-                    maxlength="16"
-                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
-                    placeholder="Número de tarjeta"
-                    class="relative mt-1 w-full rounded-t-md border-gray-200 focus:z-10 sm:text-sm"
-                  />
-                </div>
-                --}}
+                    <input
+                        type="text"
+                        name="card_no"
+                        required
+                        autocomplete="false"
+                        maxlength="16"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                        placeholder="Número de tarjeta"
+                        class="relative mt-1 w-full rounded-t-md border-gray-200 focus:z-10 sm:text-sm"
+                    />
+                    </div>
+                    --}}
                 <input
                 type="hidden"
                 id="latitude"
@@ -188,47 +184,47 @@
                 id="longitude"
                 name="longitude"
               />
-                {{--
-                <div class="flex">
-                  <div class="flex-1">
-                    <label for="CardExpiry" class="sr-only">Mes Expiración</label>
+                    {{--
+                    <div class="flex">
+                    <div class="flex-1">
+                        <label for="CardExpiry" class="sr-only">Mes Expiración</label>
 
 
 
 
-                    {!! Form::select('ccExpiryMonth',
-                    $months,
-                    null,['required'=>'true','class' => 'relative w-full rounded-ee-md border-gray-200 focus:z-10 sm:text-sm']); !!}
+                        {!! Form::select('ccExpiryMonth',
+                        $months,
+                        null,['required'=>'true','class' => 'relative w-full rounded-ee-md border-gray-200 focus:z-10 sm:text-sm']); !!}
 
 
-                  </div>
+                    </div>
 
-                  <div class="-ms-px flex-1">
-                    <label for="CardCVC" class="sr-only"> Año Expiración</label>
-
-
-                    {!! Form::select('ccExpiryYear',
-                    $years,
-                    null,['required'=>'true','class' => 'relative w-full rounded-ee-md border-gray-200 focus:z-10 sm:text-sm']); !!}
+                    <div class="-ms-px flex-1">
+                        <label for="CardCVC" class="sr-only"> Año Expiración</label>
 
 
-                  </div>
+                        {!! Form::select('ccExpiryYear',
+                        $years,
+                        null,['required'=>'true','class' => 'relative w-full rounded-ee-md border-gray-200 focus:z-10 sm:text-sm']); !!}
+
+
+                    </div>
+                    </div>
+                    <div class="-ms-px flex-1">
+                        <label for="CardCVC" class="sr-only"> CVC de la tarjeta </label>
+
+                        <input
+                        type="text"
+                        required
+                        maxlength="4"
+                        name="cvvNumber"
+                        placeholder="CVC"
+                        class="relative w-full rounded-ee-md border-gray-200 focus:z-10 sm:text-sm"
+                        />
+
+                    </div>
                 </div>
-                <div class="-ms-px flex-1">
-                    <label for="CardCVC" class="sr-only"> CVC de la tarjeta </label>
-
-                    <input
-                      type="text"
-                      required
-                      maxlength="4"
-                      name="cvvNumber"
-                      placeholder="CVC"
-                      class="relative w-full rounded-ee-md border-gray-200 focus:z-10 sm:text-sm"
-                    />
-
-                  </div>
-              </div>
-            </fieldset> --}}
+                </fieldset> --}}
 
 
 
@@ -239,6 +235,13 @@
                 Generar reporte
               </button>
             </div>
+            @else
+                <div class="my-8 text-center">
+                    <h2 class="text-6xl text-red-900 mb-4"><i class="fa-solid fa-triangle-exclamation"></i></h2>
+                    <p class="text-red-800">Necesitas tener el perfil de una mascota.</p>
+                    <p>Puedes crear tu mascota <a href="/pet/create" class="text-purple-900 font-bold">aquí</a></p>
+                </div>
+            @endif
             {!! Form::close() !!}
         </div>
       </div>
