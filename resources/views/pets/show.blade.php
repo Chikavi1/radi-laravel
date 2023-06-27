@@ -280,12 +280,12 @@ crossorigin="anonymous"></script>
                       Género
                     </h3>
                     @if ($pet->gender == 1)
-                        <p  *ngIf="$pet->gender == 1" class="mt-2 text-sm text-gray-500">
-                        Hembra
+                        <p class="mt-2 text-sm text-gray-500">
+                        Macho
                         </p>
                     @else
-                        <p  *ngIf="$pet->gender == 2" class="mt-2 text-sm text-gray-500">
-                        Macho
+                        <p class="mt-2 text-sm text-gray-500">
+                        Hembra
                         </p>
                     @endif
                   </div>

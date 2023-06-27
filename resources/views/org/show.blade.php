@@ -450,10 +450,10 @@ crossorigin="anonymous"></script>
                                 <div class="mt-1.5 sm:mt-0">
                                     <p class="text-gray-500">Género</p>
                                     @if($pet->gender == 1)
-                                    <p class="font-medium">Hembra</p>
-                                @else
-                                    <p class="font-medium" >Macho</p>
-                                @endif
+                                        <p class="font-medium">Macho</p>
+                                    @else
+                                        <p class="font-medium" >Hembra</p>
+                                    @endif
                                 </div>
                                 </div>
 
