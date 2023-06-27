@@ -172,11 +172,11 @@
                       </h3>
                       @if ($lost->pet->gender == 1)
                           <p  *ngIf="$lost->pet->gender == 1" class="mt-2 text-sm text-gray-500">
-                          Hembra
+                          Macho
                           </p>
                       @else
                           <p  *ngIf="$lost->pet->gender == 2" class="mt-2 text-sm text-gray-500">
-                          Macho
+                          Hembra
                           </p>
                       @endif
                     </div>
