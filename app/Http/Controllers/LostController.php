@@ -483,14 +483,15 @@ class LostController extends Controller
         $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
         $id = $hashids->decode($hash);
         $lost = Losts::findOrFail($id?$id[0]:0);
-        SEO::opengraph()->addImage(url('losts/thumbnail?id='.$hash));
-        SEO::twitter()->setImage(url('losts/thumbnail?id='.$hash));
+        SEO::opengraph()->addImage($lost->pet->photo);
+        SEO::twitter()->setImage($lost->pet->photo);
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->setUrl('https://radi.pet/lost/'.$hash);
+        SEO::setCanonical('https://radi.pet/lost/'.$hash);
+        SEO::setDescription('Ayúdanos a encontrar a las mascotas con Radi Pets.');
+
         if($lost->pet->name??0){
-            SEO::opengraph()->addProperty('type', 'articles');
             SEO::setTitle('Ayúdanos a encontrar a '.$lost->pet->name);
-            SEO::setDescription('Ayúdanos a encontrar a las mascotas con Radi Pets.');
-            SEO::opengraph()->setUrl('https://radi.pet/lost/'.$hash);
-            SEO::setCanonical('https://radi.pet/lost/'.$hash);
             $age = Carbon::parse($lost->pet->birthday)->diffForHumans();
         }else{
             abort(404);

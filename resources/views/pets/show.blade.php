@@ -57,9 +57,11 @@ crossorigin="anonymous"></script>
                     <a href="/pet/{{$hash}}/edit" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
                         <span>Editar información</span>
                     </a>
+                    @if( $pet->status != 0 ||  $pet->status != 3)
                     <a href="/lost/create" class="bg-red-300 hover:bg-red-400 text-red-800 font-bold py-2 px-4 rounded inline-flex items-center">
                         <span><i class="fa-solid fa-triangle-exclamation"></i>  Reportar desaparición</span>
                     </a>
+                    @endif
                 @endif
             @endauth
           </div>
