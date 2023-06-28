@@ -26,7 +26,9 @@ class LostController extends Controller
         $this->middleware('auth')->except('index','show','thumbnail');
     }
 
-    public function index(){
+    public function index(Request $request){
+
+
         SEO::setTitle('Mascotas desaparecidas');
         SEO::setDescription('Sé un héroe, Ayuda a las demás personas a encontrar a su mascota');
         SEO::opengraph()->setUrl('https://radi.pet/lost');
@@ -407,6 +409,9 @@ class LostController extends Controller
                     $pet = Pets::find($request->get('id_pet'));
                     $pet->status = 3;
                     $pet->update();
+
+                    // crear contact detail
+
 
                     $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
 

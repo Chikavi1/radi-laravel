@@ -39,7 +39,8 @@
     {{-- <a href="/lost/create" class="my-8 mx-4  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
       Crear reporte
     </a> --}}
-    <h1 class="text-3xl font-bold px-4 text-gray-800 mt-4">Listado de desaparecidos</h1>
+    <h1 class="text-3xl font-bold px-4 text-gray-800 mt-4">Últimos desaparecidos</h1>
+    <p class="ml-4 mb-4">Para ver las mascotas desaparecidas cerca de tu área, te recomendamos <a href="/download" class="font-bold text-purple-800">descargar la app</a>.</p>
     @if(count($losts) != 0)
     <div class="grid grid-cols-12 gap-3">
             @foreach ($losts as $lost)

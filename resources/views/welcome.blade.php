@@ -187,7 +187,7 @@
       </div>
 
       <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
-        <a target="_blank" class=" inline-flex items-center rounded-md justify-center w-full mb-2 btn bg-purple-800 text-white py-4 px-6 btn-lg sm:w-auto sm:mb-0" href="https://checkout.stripe.com/c/pay/cs_live_b15EWeo3GObck2QJJfT2lGIQ9ozuoHroE9gMTwYS61dD81ZsY6v8Pqmvqf#fidkdWxOYHwnPyd1blppbHNgWjA0TnZEPHdHdTNwcnczdWp3dklgS308SVFsa2YwUGlJbGJJU2FkM3I3V1ZrXU9qaz13aUtKTU9OSVFxT0xUQFVmMFd2fTBsVXxxY0NtaUpTN3JwcUthX0BzNTVPM1x9anZdNCcpJ3VpbGtuQH11anZgYUxhJz8nMG5EZE0xZGhsZFZkM1ZEYVRXJyknd2BjYHd3YHdKd2xibGsnPydtcXF1PyoqNDcyKzUrNSs0Pz01NTUqJ3gl">
+        <a target="_blank" class=" inline-flex items-center rounded-md justify-center w-full mb-2 btn bg-purple-800 text-white py-4 px-6 btn-lg sm:w-auto sm:mb-0" href="https://checkout.stripe.com/c/pay/cs_live_b1fnVEDHkU8AcYNjqZEkS7c7oiDWS2Q8ePc9O4gggIVh8qd2pKtWPYGjtD#fidkdWxOYHwnPyd1blppbHNgWjA0TnZEPHdHdTNwcnczdWp3dklgS308SVFsa2YwUGlJbGJJU2FkM3I3V1ZrXU9qaz13aUtKTU9OSVFxT0xUQFVmMFd2fTBsVXxxY0NtaUpTN3JwcUthX0BzNTVPM1x9anZdNCcpJ3VpbGtuQH11anZgYUxhJz8nMG5EZE0xZGhsZFZkM1ZEYVRXJyknd2BjYHd3YHdKd2xibGsnPydtcXF1dj8qKmZtYGZuanBxK3Zxd2x1YCtmamgqJ3gl">
           Comprar
 
         </a>

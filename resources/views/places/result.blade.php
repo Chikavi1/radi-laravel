@@ -237,14 +237,20 @@ crossorigin="anonymous"></script>
         L.marker([{{$place->latitude}},{{$place->longitude}}], {icon: radiIcon}).bindPopup("<div class='w-60 max-w-60'><img class='rounded-lg mb-2' src='{{ $place->image }}'><b> {{$place->title}}</b><br><p class='text-center text-white'><a target='_blank' href='places/{{$place->setHiddenId()}}'> Ver más </a><p></div>").addTo(map);
     @endforeach
 
-    function blockAdblockUser() {
-    if ($('.myTestAd').height() == 0) {
-        window.location = 'http://example.com/AdblockNotice.html';
+    async function detectAdBlock() {
+        let adBlockEnabled = false
+        const googleAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+        try {
+            await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
+        } catch (e) {
+            adBlockEnabled = true
+        } finally {
+            console.log(`AdBlock Enabled: ${adBlockEnabled}`)
+        }
     }
-}
 
-$(document).ready(function(){
-    blockAdblockUser();
-});
+  detectAdBlock();
+
+
 
 </script>

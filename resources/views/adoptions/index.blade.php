@@ -2,7 +2,9 @@
 @include('layouts.nav')
 
 <div class="md:px-20 mt-10">
-    <h1 class="text-3xl font-bold px-4 text-gray-800">Listado de mascotas</h1>
+    <h1 class="text-3xl font-bold px-4 text-gray-800">Últimas mascotas dadas en adopción</h1>
+    <p class="ml-4 mb-4">Para ver las mascotas en adopción cerca de tu área, te recomendamos <a href="/download" class="font-bold text-purple-800">descargar la app</a>.</p>
+
     @if(count($pets) != 0)
     <div class="grid grid-cols-12 gap-3">
             @foreach ($pets as $pet)

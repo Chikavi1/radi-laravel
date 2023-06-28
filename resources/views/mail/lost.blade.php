@@ -59,12 +59,7 @@
 							<td class="pt-30" style="padding: 36px 0 28px;mso-line-height-rule: exactly;">
 								<table width="728" align="center" style="max-width:728px; width:100% !important; margin:0 auto;" cellpadding="0" cellspacing="0">
 									<tr>
-										<td width="22" style="mso-line-height-rule: exactly;">
-											<a style="text-decoration: none;outline: none;color: #1ABCFE;" href="https://radi.pet">
-												{{-- <img src="https://static.figma.com/uploads/488b2894aa9a772924aa68e5ca077dfc557ad1fb" width="22" style="width: 22px;font: bold 16px/20px Arial, Helvetica, sans-serif, Apercu;vertical-align: top;border: none;" alt="Figma"> --}}
 
-											</a>
-										</td>
 										<td align="center" style="padding: 0 37px 0 15px;font: 16px/20px Arial, Helvetica, sans-serif, Apercu;mso-line-height-rule: exactly;">
 											Radi Pets
 										</td>
@@ -99,15 +94,7 @@
 										<td class="pb-30" style="padding: 0 0 40px;mso-line-height-rule: exactly;">
 											<table class="maxw-350 t-c" width="100%" style="border-radius:4px; overflow:hidden;" cellpadding="0" cellspacing="0">
 												<tr>
-													{{-- <th class="tflex h-a" width="222" height="328" align="left" style="background: #0ACF83;padding: 0;">
-														<table width="100%" cellpadding="0" cellspacing="0">
-															<tr>
-																<td align="center" style="padding: 30px 15px;mso-line-height-rule: exactly;">
-																	<img src="https://static.figma.com/uploads/2ce92931b60fee293621d836392ea8fe472b5056" width="134" style="width:176px; vertical-align:top;" alt="">
-																</td>
-															</tr>
-														</table>
-													</th> --}}
+
 													<th class="tflex" align="left" style="background: #fff;padding: 0;">
 														<table width="100%" cellpadding="0" cellspacing="0">
 															<tr>
@@ -137,15 +124,7 @@
 										<td class="pb-30" style="padding: 0 0 40px;mso-line-height-rule: exactly;">
 											<table class="maxw-350 t-c" width="100%" style="border-radius:4px; overflow:hidden;" cellpadding="0" cellspacing="0">
 												<tr>
-													{{-- <th class="tflex h-a" width="222" height="328" align="left" style="background: #FFC700;padding: 0;">
-														<table width="100%" cellpadding="0" cellspacing="0">
-															<tr>
-																<td align="center" style="padding: 30px 15px;mso-line-height-rule: exactly;">
-																	<img src="https://static.figma.com/uploads/77847015ce1e2038b92ca8d54e798f2f55ddce9e" width="134" style="width:164px; vertical-align:top;" alt="">
-																</td>
-															</tr>
-														</table>
-													</th> --}}
+
 													<th class="tflex" align="left" style="background: #fff;padding: 0;">
 														<table width="100%" cellpadding="0" cellspacing="0">
 															<tr>
@@ -175,15 +154,7 @@
 										<td class="pb-30" style="padding: 0 0 40px;mso-line-height-rule: exactly;">
 											<table class="maxw-350 t-c" width="100%" style="border-radius:4px; overflow:hidden;" cellpadding="0" cellspacing="0">
 												<tr>
-													{{-- <th class="tflex h-a" width="222" height="328" align="left" style="background: #2C2C2C;padding: 0;">
-														<table width="100%" cellpadding="0" cellspacing="0">
-															<tr>
-																<td align="center" style="padding: 20px 15px;mso-line-height-rule: exactly;">
-																	<img src="https://static.figma.com/uploads/a09775fc784c29dd5667479e9de5fda4e7b5de0c" width="110" style="width:110px; vertical-align:top;" alt="">
-																</td>
-															</tr>
-														</table>
-													</th> --}}
+
 													<th class="tflex" align="left" style="background: #fff;padding: 0;">
 														<table width="100%" cellpadding="0" cellspacing="0">
 															<tr>
@@ -212,15 +183,7 @@
 										<td class="pb-30" style="padding: 0 0 40px;mso-line-height-rule: exactly;">
 											<table class="maxw-350 t-c" width="100%" style="border-radius:4px; overflow:hidden;" cellpadding="0" cellspacing="0">
 												<tr>
-													{{-- <th class="tflex h-a" width="222" height="328" align="left" style="background: #F5F5F5;padding: 0;">
-														<table width="100%" cellpadding="0" cellspacing="0">
-															<tr>
-																<td align="center" style="padding: 20px 15px;mso-line-height-rule: exactly;">
-																	<img src="https://static.figma.com/uploads/c0e2c8a2f45701ab4e1f821fc9ec08e80feb38c4" width="170" style="width:168px; vertical-align:top;" alt="">
-																</td>
-															</tr>
-														</table>
-													</th> --}}
+
 													<th class="tflex" align="left" style="background: #fff;padding: 0;">
 														<table width="100%" cellpadding="0" cellspacing="0">
 															<tr>
