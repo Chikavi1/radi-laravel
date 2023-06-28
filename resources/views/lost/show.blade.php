@@ -55,7 +55,7 @@
             <p>{{ $lost->note }}</p>
 
             @if($lost->rewards)
-                <p class="mt-4 text-2xl">Se ofrece recompensa de <span class="font-bold text-green-700 ">${{ $lost->rewards }} MXN</span>  </p>
+                <p class="mt-4 text-2xl">Se ofrece recompensa</p>
             @endif
 
 
