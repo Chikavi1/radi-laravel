@@ -563,7 +563,7 @@ crossorigin="anonymous"></script>
     function copyToClipboard(element) {
         var $temp = $("<input>");
         $("body").append($temp);
-        $temp.val($(element).text()).select();
+        $temp.val($.trim($(element).text())).select();
         document.execCommand("copy");
         $temp.remove();
         $("#modalShare").addClass('hidden');

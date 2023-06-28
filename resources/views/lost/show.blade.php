@@ -473,9 +473,11 @@ function downloadImage(url, name){
 
 
     function copyToClipboard(element) {
+        console.log($.trim($(element).text()));
         var $temp = $("<input>");
         $("body").append($temp);
-        $temp.val($(element).text()).select();
+        $temp.val($.trim($(element).text())).select();
+
         document.execCommand("copy");
         $temp.remove();
         $("#modalShare").addClass('hidden');
