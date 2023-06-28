@@ -39,7 +39,7 @@
         <p>Contacta a</p>
         <h2 style="font-size:2.5em;">{{$lost->cellphone}}</h2>
         <h1 style="font-size:1.5em;margin-top:1em;">Escanea para saber más <br> información</h1>
-        <a target="_blank" href="{{'../lost/'.$lost->setHiddenId()}}">
+        <a target="_blank" href="{{'https://radi.pet/lost/'.$lost->setHiddenId()}}">
             <img style="margin-top:4em;"  src="data:image/png;base64, {!! base64_encode(QrCode::size(250)->style('dot')->eye('circle')->color(211,3,3)->generate('https://radi.pet/lost/'.$lost->setHiddenId()  )) !!} ">
             <h2 style="color:#d30303;font-size:1.3em;margin-top:2em;">Radi Pets</h2>
         </a>
