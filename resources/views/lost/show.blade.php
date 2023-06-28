@@ -437,7 +437,7 @@ function downloadImage(url, name){
     var latitude = {{$lost->latitude}};
     var longitude = {{$lost->longitude}};
 
-    var map = L.map('mapa').setView([latitude, longitude], 13);
+    var map = L.map('mapa').setView([latitude, longitude], 14);
 
     L.tileLayer('https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga', {
     }).addTo(map);
@@ -456,6 +456,14 @@ function downloadImage(url, name){
 
     L.marker([latitude,longitude], {icon: radiIcon}).addTo(map)
     .bindPopup('Aquí se perdío');
+
+    L.circle({lat: latitude, lng: longitude}, {
+          color: 'red',
+          radius: 900,
+          fillColor: 'red',
+          opacity: 0.5
+        }).addTo(map);
+
     navigator.geolocation.getCurrentPosition(success, error, options);
     @endif
 
