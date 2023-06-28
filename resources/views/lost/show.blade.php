@@ -39,7 +39,7 @@
             @auth
                 @if(Auth::user()->id == $lost->id_user_report)
                     @if($lost->status == 1)
-                    <a href="https://www.radi.pet/losts/poster?id={{$lost->setHiddenId()}}" target="_blank" class="text-white my-6 bg-blue-800 px-4 py-2 rounded-md font-bold text-xl inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" ><i class="fa-solid fa-download mr-4"></i> Descargar afiche</button>
+                    <a href="/losts/poster?id={{$lost->setHiddenId()}}" target="_blank" class="text-white my-6 bg-blue-800 px-4 py-2 rounded-md font-bold text-xl inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" ><i class="fa-solid fa-download mr-4"></i> Descargar afiche</button>
 
 
                         <a href="/losts/finish/{{$hash}}" class="bg-green-300 hover:bg-green-400 ml-2 text-green-800 font-bold py-2 px-4 rounded inline-flex items-center">
@@ -391,16 +391,16 @@ function downloadImage(url, name){
         if(distanceBeetwen < 1){
             $("#high").removeClass('hidden');
             console.log('Alta');
-        }else if(distanceBeetwen > 1){
+        }else if(distanceBeetwen < 1.5){
             $("#good").removeClass('hidden');
             console.log('buena');
-        }else if(distanceBeetwen > 5){
+        }else if(distanceBeetwen < 3){
             $("#medium").removeClass('hidden');
             console.log('mediana');
-        }else if(distanceBeetwen > 10){
+        }else if(distanceBeetwen < 5.5){
             $("#low").removeClass('hidden');
             console.log('baja');
-        }else if(distanceBeetwen > 20){
+        }else if(distanceBeetwen > 8){
             $("#lower").removeClass('hidden');
             console.log('muy baja');
         }
