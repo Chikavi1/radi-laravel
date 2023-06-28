@@ -485,7 +485,7 @@ class LostController extends Controller
         $lost = Losts::findOrFail($id?$id[0]:0);
 
         SEO::setDescription('Ayúdanos a encontrar a las mascotas con Radi Pets.');
-        SEO::setTitle('Ayúdanos a encontrar a '.$lost->pet->name);
+        // SEO::setTitle('Ayúdanos a encontrar a '.$lost->pet->name);
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->setUrl('https://radi.pet/lost/'.$hash);
         SEO::setCanonical('https://radi.pet/lost/'.$hash);
