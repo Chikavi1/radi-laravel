@@ -134,11 +134,12 @@
               <div  class="rounded-2xl bg-gradient-to-r from-red-900 via-red-900 to-red-900 p-1 shadow-xl">
                 <a target="_blank"  class="block rounded-xl bg-white p-4 sm:p-6 lg:p-8" >
                   <div class="">
-                    <i class="fa-solid fa-paw"></i>
-                    <h3 class="text-lg font-bold text-gray-900 sm:text-xl">
-                      Tamaño
-                    </h3>
-                    @switch($lost->pet->size)
+                    @if()
+                        <i class="fa-solid fa-paw"></i>
+                        <h3 class="text-lg font-bold text-gray-900 sm:text-xl">
+                        Tamaño
+                        </h3>
+                        @switch($lost->pet->size)
                         @case('mn')
                             <span class="status">Mini</span>
                         @break
@@ -157,6 +158,15 @@
                         @default
                             <span class="status">N/A</span>
                     @endswitch
+                    @else
+                        <i class="fa-solid fa-weight-hanging"></i>
+                        <h3 class="text-lg font-bold text-gray-900 sm:text-xl">
+                        Peso
+                        </h3>
+                        {{$pet->weight}} KG
+                    @endif
+
+
                   </div>
                 </a>
               </div>
