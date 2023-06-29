@@ -134,7 +134,7 @@
               <div  class="rounded-2xl bg-gradient-to-r from-red-900 via-red-900 to-red-900 p-1 shadow-xl">
                 <a target="_blank"  class="block rounded-xl bg-white p-4 sm:p-6 lg:p-8" >
                   <div class="">
-                    @if()
+                    @if($pet->specie == 2)
                         <i class="fa-solid fa-paw"></i>
                         <h3 class="text-lg font-bold text-gray-900 sm:text-xl">
                         Tamaño
