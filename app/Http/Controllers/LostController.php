@@ -514,8 +514,8 @@ class LostController extends Controller
             // return redirect('/lost/'.$pet->losts->setHiddenId());
         }
         SEO::setTitle($textTitle.''.$pet->name);
-        SEO::opengraph()->setUrl('https://radi.pet/pet/'.$hash);
-        SEO::setCanonical('https://radi.pet/pet/'.$hash);
+        SEO::opengraph()->setUrl('https://radi.pet/lost/'.$hash);
+        SEO::setCanonical('https://radi.pet/lost/'.$hash);
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage($pet->photo);
         SEO::twitter()->setImage($pet->photo);
