@@ -7,14 +7,14 @@
 <meta property="og:url" content="https://radi.pet/lost/{{$lost->setHiddenId()}}" />
 <meta property="og:title" content="Ayúdanos a que {{$lost->pet->name}} regrese a casa - Radi Pets" />
 <meta property="og:description" content="{{$lost->note}}" />
-<meta property="og:image" content="{{asset('img/default.png')}}" />
+<meta property="og:image" content="$lost->pet->photo" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="https://radi.pet/lost/{{$lost->setHiddenId()}}" />
 <meta property="twitter:title" content="Ayúdanos a que {{$lost->pet->name}} regrese a casa - Radi Pets" />
 <meta property="twitter:description" content="{{$lost->note}}" />
-<meta property="twitter:image" content="{{asset('img/default.png')}}" />
+<meta property="twitter:image" content="$lost->pet->photo" />
 
 <!-- Meta Tags Generated with https://metatags.io -->
 
@@ -32,9 +32,6 @@
   </div>
 @endif
 @include('layouts.nav')
-
-<!---Modal -->
-<meta property="og:image" content="{{asset('img/default.png')}}" />
 
 
 <div >
