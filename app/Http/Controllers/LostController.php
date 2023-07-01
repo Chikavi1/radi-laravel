@@ -480,49 +480,17 @@ class LostController extends Controller
 
     public function show(string $hash)
     {
-        // $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
-        // $id = $hashids->decode($hash);
-        // $lost = Losts::findOrFail($id?$id[0]:0);
-
-        // SEO::setTitle('Ayúdanos a que '. $lost->pet->name.' regrese a casa');
-        // SEO::setDescription($lost->note);
-        // SEO::opengraph()->setUrl('https://radi.pet/lost/'.$hash);
-        // SEO::setCanonical('https://radi.pet/lost/'.$hash);
-        // SEO::opengraph()->addProperty('type', 'articles');
-        // SEO::opengraph()->addImage(asset('img/default.png'));
-        // SEO::twitter()->setImage(asset('img/default.png'));
-        // $age = Carbon::parse($lost->pet->birthday)->diffForHumans();
         $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
         $id = $hashids->decode($hash);
         $lost = Losts::findOrFail($id?$id[0]:0);
-        $pet = $lost->pet;
-
-        $textTitle = '';
-        SEO::setDescription($pet->description);
-
-        if($pet->status == 0){
-            $textTitle = 'Recordando a ';
-        }elseif($pet->status == 1){
-            $textTitle = 'Descubre el perfil de ';
-        }elseif($pet->status == 2){
-            $textTitle = 'Adopta a ';
-            SEO::setDescription('Descubre el perfil de '. $pet->name .' completo para obtener más información sobre su personalidad, historia y cómo puedes adoptarlo. ¡No te pierdas la oportunidad de brindarle un hogar lleno de amor y felicidad!');
-
-        }
-        elseif($pet->status == 3){
-            $textTitle = 'Ayúdanos a encontrar a ';
-            // return redirect('/lost/'.$pet->losts->setHiddenId());
-        }
-        SEO::setTitle($textTitle.''.$pet->name);
-        SEO::opengraph()->setUrl('https://radi.pet/lost/'.$hash);
-        SEO::setCanonical('https://radi.pet/lost/'.$hash);
+        SEO::setTitle('Lost Pet');
+        SEO::setDescription('Lost Pet.');
         SEO::opengraph()->addProperty('type', 'articles');
-        SEO::opengraph()->addImage($pet->photo);
-        SEO::twitter()->setImage($pet->photo);
-        $age = Carbon::parse($pet->birthday)->diffForHumans();
+        SEO::opengraph()->addImage(asset('img/default.png'));
+        SEO::twitter()->setImage(asset('img/default.png'));
+        $age = Carbon::parse($lost->pet->birthday)->diffForHumans();
 
-
-        return view('lost.show',compact('lost','pet','age','hash'));
+        return view('lost.show',compact('lost','age','hash'));
     }
 
     public function edit(string $id)
