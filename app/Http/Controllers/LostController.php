@@ -522,7 +522,7 @@ class LostController extends Controller
         $age = Carbon::parse($pet->birthday)->diffForHumans();
 
 
-        return view('lost.show',compact('lost','age','hash'));
+        return view('lost.show',compact('lost','pet','age','hash'));
     }
 
     public function edit(string $id)
