@@ -491,10 +491,10 @@ class LostController extends Controller
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
-        // $age = Carbon::parse($lost->pet->birthday)->diffForHumans();
+        $age = Carbon::parse($lost->pet->birthday)->diffForHumans();
 
 
-        return view('lost.show',compact('lost','hash'));
+        return view('lost.show',compact('lost','age','hash'));
     }
 
     public function edit(string $id)
