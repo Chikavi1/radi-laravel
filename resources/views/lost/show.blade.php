@@ -15,7 +15,6 @@
 @include('layouts.nav')
 
 <!---Modal -->
-<meta property="og:image:secure_url"  content="{{$lost->pet->photo}}" />
 
 
 <div >
