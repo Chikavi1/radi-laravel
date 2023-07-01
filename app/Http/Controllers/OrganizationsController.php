@@ -47,7 +47,7 @@ class OrganizationsController extends Controller
 
         $social_media = json_decode($org->social_media);
         SEO::setTitle($org->name);
-        SEO::setDescription($org->description);
+        SEO::setDescription('Mira el perfil de '.$org->name.' y apoyalos!');
         SEO::opengraph()->setUrl('https://radi.pet/org/'.$hash);
         SEO::setCanonical('https://radi.pet/org/'.$hash);
         SEO::opengraph()->addProperty('type', 'articles');

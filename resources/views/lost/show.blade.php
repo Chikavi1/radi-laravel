@@ -1,3 +1,22 @@
+<title>Ayúdanos a que Peque regrese a casa - Radi Pets</title>
+<meta name="title" content="Ayúdanos a que Peque regrese a casa - Radi Pets" />
+<meta name="description" content="Salí de la terraza "mi sueño" ubicada en marcos montero #330 en Tlaquepaque centro muy cerca de la cruz verde el sábado 24 de junio a las 3:30PM" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://radi.pet/lost/B48094" />
+<meta property="og:title" content="Ayúdanos a que Peque regrese a casa - Radi Pets" />
+<meta property="og:description" content="Salí de la terraza "mi sueño" ubicada en marcos montero #330 en Tlaquepaque centro muy cerca de la cruz verde el sábado 24 de junio a las 3:30PM" />
+<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://radi.pet/lost/B48094" />
+<meta property="twitter:title" content="Ayúdanos a que Peque regrese a casa - Radi Pets" />
+<meta property="twitter:description" content="Salí de la terraza "mi sueño" ubicada en marcos montero #330 en Tlaquepaque centro muy cerca de la cruz verde el sábado 24 de junio a las 3:30PM" />
+<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+<!-- Meta Tags Generated with https://metatags.io -->
 
 @if($lost->status == 2)
 <div class="bg-green-600 px-4 py-3 text-white">
