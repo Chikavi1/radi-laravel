@@ -115,7 +115,7 @@
             <a href="/download" class="mr-2 bg-purple-800 text-white inline-flex py-3 px-5 rounded-lg items-center hover:bg-purple-700 focus:outline-none">
 
               <span class=" flex items-start flex-col leading-none">
-                <span class="title-font font-medium"><i class="fa-solid fa-cloud-arrow-down"></i> Descargar</span>
+                <span class="title-font font-medium"><i class="fa-solid fa-cloud-arrow-down"></i> Descargar App</span>
               </span>
             </a>
             <a href="/login" class="bg-green-600 text-white inline-flex py-3 px-5 rounded-lg items-center lg: md:ml-0  md:mt-4 mt-0 lg:mt-0 hover:bg-green-700 focus:outline-none">
