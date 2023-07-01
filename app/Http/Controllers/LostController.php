@@ -490,8 +490,8 @@ class LostController extends Controller
         SEO::opengraph()->setUrl('https://radi.pet/lost/'.$hash);
         SEO::setCanonical('https://radi.pet/lost/'.$hash);
         SEO::opengraph()->addProperty('type', 'articles');
-        SEO::opengraph()->addImage($pet->photo);
-        SEO::twitter()->setImage($pet->photo);
+        SEO::opengraph()->addImage(asset('img/default.png'));
+        SEO::twitter()->setImage(asset('img/default.png'));
         $age = Carbon::parse($pet->birthday)->diffForHumans();
 
 
