@@ -232,8 +232,7 @@
                         <div class="sm:flex sm:justify-between sm:gap-4">
                         <div>
                             <h3 class="text-lg font-bold text-red-900 sm:text-xl">
-                            Comparte este link para que más personas sepan que  {{$lost->pet->name}} esta desaparecido
-                            </h3>
+                            Comparte este link para que más personas sepan que desapareció {{$lost->pet->name}} </h3>
 
                             <p class="mt-1 text-xs font-medium text-gray-600">Recomendación</p>
                         </div>
@@ -392,7 +391,8 @@ function downloadImage(url, name){
         maximumAge: 0
     };
 
-    function success(pos) {
+    function success(pos){
+
     const crd = pos.coords;
 
     distanceBeetwen = calcCrow(crd.latitude,crd.longitude,latitude,longitude).toFixed(1);
@@ -400,23 +400,17 @@ function downloadImage(url, name){
         console.log(distanceBeetwen);
         if(distanceBeetwen < 1){
             $("#high").removeClass('hidden');
-            console.log('Alta');
         }else if(distanceBeetwen < 1.5){
             $("#good").removeClass('hidden');
-            console.log('buena');
         }else if(distanceBeetwen < 3){
             $("#medium").removeClass('hidden');
-            console.log('mediana');
         }else if(distanceBeetwen < 5.5){
             $("#low").removeClass('hidden');
-            console.log('baja');
-        }else if(distanceBeetwen > 8){
+        }else if(distanceBeetwen < 8){
             $("#lower").removeClass('hidden');
-            console.log('muy baja');
         }
 
-        L.marker([crd.latitude,crd.longitude], {icon: mylocation}).addTo(map)
-        .bindPopup('Tu úbicación');
+        L.marker([crd.latitude,crd.longitude], {icon: mylocation}).addTo(map).bindPopup('Tu úbicación');
 
     }
 

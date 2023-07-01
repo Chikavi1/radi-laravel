@@ -41,7 +41,7 @@
 
     {!! Form::open(['route' => ['pet.update',$pet->id],'method' => 'put'], ['class' => 'p-6  flex items-center justify-center' ,'files' => true]) !!}
 
-        <div class="container max-w-screen-lg mx-auto">
+        <div class="container max-w-screen-lg mx-auto py-12">
             <div>
                 <h2 class="font-semibold text-xl dark:text-white text-gray-600 mt-6">Agrega Mascota </h2>
                 <p class="text-gray-500 mb-6">* Campos obligatorios</p>
@@ -92,9 +92,9 @@
                                 <div class="md:col-span-5">
                                     <label class="dark:text-white " for="birthday">Fecha de nacimiento *</label>
                                     <input
-                                    value="2018-07-22"
                                     type="date"
                                     min="2003-01-01"
+                                    {{-- max="" --}}
                                     id="birthday"
                                     class="dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50"
                                     name="birthday"
