@@ -180,6 +180,7 @@ class PetsController extends Controller
         }
         elseif($pet->status == 3){
             $textTitle = 'Ayúdanos a encontrar a ';
+            return redirect('/lost/'.$pet->losts->setHiddenId());
         }
         SEO::setTitle($textTitle.''.$pet->name);
         SEO::opengraph()->setUrl('https://radi.pet/pet/'.$hash);
