@@ -106,22 +106,22 @@
     <div class="md:px-20 lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
       <h1 class="title-font text-left sm:text-4xl text-3xl mb-4 font-bold text-gray-900">Una plataforma para los amantes de las mascotas.</h1>
       <p class="mb-8 text-left text-2xl font-medium">
-        Crea el perfil de tu mascota gratis, encuentra lugares pet friendly, adopta a una mascota o apoya a los albergues, todo en un solo lugar.
+        Crea el perfil de tu mascota gratis, encuentra lugares pet friendly, reporta desapariciones, adopta a una mascota o apoya a los albergues, todo en un solo lugar.
       </p>
 
         @auth
         @else
         <div class="flex lg:flex-row md:flex-col">
-            <a href="/login" class="bg-purple-800 text-white inline-flex py-3 px-5 rounded-lg items-center hover:bg-purple-700 focus:outline-none">
+            <a href="/download" class="mr-2 bg-purple-800 text-white inline-flex py-3 px-5 rounded-lg items-center hover:bg-purple-700 focus:outline-none">
 
-              <span class="ml-4 flex items-start flex-col leading-none">
-                <span class="title-font font-medium">Iniciar sesión </span>
+              <span class=" flex items-start flex-col leading-none">
+                <span class="title-font font-medium"><i class="fa-solid fa-cloud-arrow-down"></i> Descargar</span>
               </span>
             </a>
-            <a href="/register" class="bg-green-600 text-white inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-green-700 focus:outline-none">
+            <a href="/login" class="bg-green-600 text-white inline-flex py-3 px-5 rounded-lg items-center lg: md:ml-0  md:mt-4 mt-0 lg:mt-0 hover:bg-green-700 focus:outline-none">
 
-              <span class="ml-4 flex items-start flex-col leading-none">
-                <span class="title-font font-medium">Registrarse</span>
+              <span class="flex items-start flex-col leading-none">
+                <span class="title-font font-medium"><i class="fa-solid fa-arrow-right-to-bracket"></i> Inicia sesión</span>
               </span>
             </a>
           </div>
