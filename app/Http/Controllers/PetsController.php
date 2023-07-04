@@ -81,6 +81,8 @@ class PetsController extends Controller
     public function store(Request $request)
     {
 
+        $image = 'https://radi-images.s3.us-west-1.amazonaws.com/pet-default.jpeg';
+
         if($request->get('base') && $request->get('base') != 'data:,'){
             $baseImage = $request->base;
             list($type, $baseImage) = explode(';', $baseImage);
@@ -117,7 +119,7 @@ class PetsController extends Controller
 
     public function myPets()
     {
-        $pets = Pets::where('id_user',Auth::user()->id)->get();
+        $pets = Pets::where('id_user',Auth::user()->id)->orderBy('createdAt','DESC')->get();
         return view('pets.my-pets',compact('pets'));
     }
 

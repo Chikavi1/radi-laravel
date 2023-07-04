@@ -51,14 +51,8 @@
 
                                 <div class="md:col-span-5">
                                     <label class="dark:text-white " for="birthday">Fecha de nacimiento *</label>
-                                    <input
-                                    value="2018-07-22"
-                                    type="date"
-                                    id="birthday"
-                                    class="dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                                    name="birthday"
-                                    required
-                                    placeholder="Fecha de nacimiento"/>
+                                    {{Form::date('birthday', \Carbon\Carbon::now(), ['max'=> \Carbon\Carbon::now(),'class' => 'dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50'])}}
+
                                 </div>
 
                                 <div class="md:col-span-5">
@@ -100,7 +94,7 @@
 
                                 <div class="md:col-span-12">
                                     <label class="dark:text-white " for="specie">Especie *</label>
-                                    {!! Form::select('specie', array('1' => 'Gato', '2' => 'Perro'), null,['id'=>'specie','class' => 'dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50']); !!}
+                                    {!! Form::select('specie', array('1' => 'Gato', '2' => 'Perro'), 2,['id'=>'specie','class' => 'dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50']); !!}
                                 </div>
 
                             <div class="md:col-span-12">
@@ -183,7 +177,11 @@
 
 
 $(document).ready(function(){
-    init()
+    init();
+    $('[type="date"]').prop('max', function(){
+            return new Date().toJSON().split('T')[0];
+        });
+
     var w = $("#image_demo").width();
     var h = $("#image_demo").height();
 
@@ -274,7 +272,7 @@ function runDog(){
         $("#divneclacke").addClass('hidden');
         $("#divsize").addClass('hidden');
         $("#divweight").removeClass('hidden');
-        breeds('cat');
+        breeds('dog');
    }
 
   function breeds(breed){

@@ -85,9 +85,9 @@
             @csrf
             @if(count($pets)!= 0)
 
-            <label for="Phone" class="block text-xs font-medium text-gray-700">
+            <h3 class="block text-xl font-medium text-gray-700">
                 Mueve el punto rojo para señalar donde fue la última vez que viste a tu mascota.
-              </label>
+            </h3>
             <div id="mapa" class="col-span-12 h-64 mt-2" style="z-index:0;border-radius:1em;min-height:10em; min-width:15em;">
 
             </div>
@@ -148,6 +148,14 @@
                   placeholder="Ingresa la recompensa que daras (no se cobrara)."
                   class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
                 />
+              </div>
+
+              <div class="col-span-6">
+                <label for="Phone" class="block text-xs mt-4 font-medium text-gray-700">
+                  Dia de desaparición
+                </label>
+                {{Form::date('date', \Carbon\Carbon::now(), ['max'=>\Carbon\Carbon::now(),'class' => 'mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm'])}}
+
               </div>
 
 
@@ -293,7 +301,11 @@ L.marker([latitude,longitude], {icon: radiIcon,draggable:true}).addTo(map)
 
     }
 
-
+    $(function(){
+        $('[type="date"]').prop('max', function(){
+            return new Date().toJSON().split('T')[0];
+        });
+    });
 
 
     function error(err){

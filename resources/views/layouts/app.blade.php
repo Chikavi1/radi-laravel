@@ -61,9 +61,18 @@
             @endif
 
             <!-- Page Content -->
+            @if(Auth::user()->status != 3)
             <main>
                 {{ $slot }}
             </main>
+            @else
+            <div class=" text-center mt-24 dark:text-white ">
+                <h2 class="text-2xl font-bold">Tu cuenta ha sido bloqueada </h2>
+                <p class="text-lg mt-8">
+                    Porque infligiste nuestros términos y condiciones <br>
+si crees que se debe a un error comunícate con nosotros por medio de nuestras redes sociales.</p>
+            </div>
+            @endif
         </div>
     </body>
 </html>

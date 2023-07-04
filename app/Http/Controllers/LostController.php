@@ -390,14 +390,13 @@ class LostController extends Controller
                     // se envia correo
 
                     // dd('envio');
-
                     $lost = new Losts([
                         'id_user_report'    =>  Auth::user()->id,
                         'latitude'          => $request->get('latitude'),
                         'longitude'         => $request->get('longitude'),
                         'status'            => 1,
                         'id_pet'            => $request->get('id_pet'),
-                        'date'              => Carbon::now(),
+                        'date'              => $request->get('date'),
                         'note'              => ucfirst($request->get('description')),
                         // 'id_payment'        => $charge['id'],
                         'rewards'           => $request->get('rewards'),

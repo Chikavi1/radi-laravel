@@ -70,7 +70,7 @@
 
                                     <div class="card-body">
                                         <div id="image_demo" class="mx-auto w-96 h-72"></div>
-                                        <div id="uploaded_image" style="width:350px; margin-top:30px;"></div>
+                                        <div id="uploaded_image" style="width:350px; margin-top:10px;"></div>
                                     </div>
 
                                     <label class="dark:text-white " for="image">Imagen *</label>
@@ -86,20 +86,13 @@
 
                                 </div>
 
+                                <div class="md:col-span-5 mt-28">
+                                    <label class="dark:text-white" for="birthday">Fecha de nacimiento *</label>
+                                    {{Form::date('birthday', Carbon\Carbon::parse($pet->birthday),[
+                                    'required' => true,
+                                    'id'=>'birthday',
+                                    'class' => 'datelim dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50'])}}
 
-
-
-                                <div class="md:col-span-5">
-                                    <label class="dark:text-white " for="birthday">Fecha de nacimiento *</label>
-                                    <input
-                                    type="date"
-                                    min="2003-01-01"
-                                    {{-- max="" --}}
-                                    id="birthday"
-                                    class="dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                                    name="birthday"
-                                    required
-                                    placeholder="Fecha de nacimiento"/>
                                 </div>
 
                                 <div class="md:col-span-5">
@@ -161,23 +154,24 @@
 
                             <div class="md:col-span-12" id="divdatesterilized">
                                 <label class="dark:text-white " for="datesterilized">Fecha de esterilizacion</label>
-                                <input
-                                value="2018-07-22"
-                                type="date"
-                                min="2018-01-01" max="2023-12-31"
-                                id="datesterilized"
-                                class="dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                                name="datesterilized"
-                                required
-                                placeholder="Fecha de nacimiento"/>
+
+                                {{Form::date('datesterilized', Carbon\Carbon::parse($pet->sterelized_date),[
+                                    'required' => true,
+                                    'id'=>'datesterilized',
+                                    'class' => 'datelim dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50'])}}
+
                             </div>
 
                             <div class="md:col-span-12">
-                                <label class="dark:text-white " for="payments_card">Raza</label>
-                                <input required type="text" name="breeds" id="breeds" class="dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="{{$pet->breed}}" placeholder="" />
+                                <label class="dark:text-white">Raza</label>
+                                <input required type="text" name="breeds" id="breeds" class="dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                                placeholder="Asegurate de dar clic al escribirlo" />
                             </div>
 
-                            <input required type="hidden" name="breed" id="breed" class="dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+                            <input required
+                            type="hidden"
+                            value="{{$pet->breed}}"
+                            name="breed" id="breed" class="dark:bg-gray-700 dark:text-white h-10 border mt-1 rounded px-4 w-full bg-gray-50"/>
 
 
                             <div class="md:col-span-12"  id="divsize">
@@ -226,110 +220,76 @@
 <script src="https://cdn.jsdelivr.net/gh/BossBele/cropzee@latest/dist/cropzee.js" defer></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script>
+    $(document).ready(function(){
+
+        birthday.max = new Date().toISOString().split("T")[0];
+        datesterilized.max = new Date().toISOString().split("T")[0];
+        // datesterilized.min = new Date("{{$pet->birthday}}]").toISOString().split("T")[0];
+
+        // init();
+
+    });
 
 
-$(document).ready(function(){
-    init()
-    var w = $("#image_demo").width();
-    var h = $("#image_demo").height();
+    $("#sterilized").on('change',function(e){
+            if(e.target.value == 1){
+                $("#divdatesterilized").removeClass('hidden');
+            }else{
+                $("#divdatesterilized").addClass('hidden');
+            }
+    });
 
-    $image_crop = $('#image_demo').croppie({
-       enableExif: true,
-       viewport: {
-        width: w-10, height: h-20,
-         type:'square' //circle
-       },
-       url: "{{ ($pet->photo)?$pet->photo:'https://radi-images.s3.us-west-1.amazonaws.com/places/casavirreyes.JPG';}}",
-       boundary:{
-        width: w, height: h
-       }
-     });
-     $('#upload_image').on('change', function(){
-       var reader = new FileReader();
+    $("#changePhoto").on('click',function(e){
+        $("#uploadimage").removeClass('hidden');
+        $("#imageview").addClass('hidden');
+    });
 
-       reader.onload = function (event) {
-         $image_crop.croppie('bind', {
-           url: event.target.result
-         })
-       }
+    $("#cancelPhoto").on('click',function(e){
+        $("#imageview").removeClass('hidden');
+        $("#uploadimage").addClass('hidden');
 
-        reader.readAsDataURL(this.files[0]);
-            $('#uploadimage').show();
-        });
-
-     $('#send').click(function(event){
-       $image_crop.croppie('result', {
-         type: 'canvas',
-         size: 'viewport'
-       }).then(function(response){
-            $("#base").val(response);
-            console.log(response);
-       })
-     });
-
-   });
+    });
 
 
-   $("#sterilized").on('change',function(e){
-        if(e.target.value == 1){
-            $("#divdatesterilized").removeClass('hidden');
-        }else{
-            $("#divdatesterilized").addClass('hidden');
-        }
-   });
+    if({{$pet->specie}} == 1){
+        runCat();
+    }else{
+        runDog();
+    }
 
-   $("#changePhoto").on('click',function(e){
-    $("#uploadimage").removeClass('hidden');
-    $("#imageview").addClass('hidden');
-   });
-
-   $("#cancelPhoto").on('click',function(e){
-    $("#imageview").removeClass('hidden');
-    $("#uploadimage").addClass('hidden');
-
-   });
-
-
-if({{$pet->specie}} == 1){
-    runCat();
-}else{
-    runDog();
-}
-
-function runCat(){
-    $("#divneclacke").addClass('hidden');
-    $("#divsize").addClass('hidden');
-    $("#divweight").removeClass('hidden');
-    breeds('cat');
-}
-
-function runDog(){
-    $("#divneclacke").removeClass('hidden');
-    $("#divsize").removeClass('hidden');
-    $("#divweight").addClass('hidden');
-    breeds('dog');
-}
-
-    $("#specie").on('change',function(e){
-        $("#breeds").val('');
-        if(e.target.value == 1){
-            runCat();
-
-        }else{
-            runDog();
-
-        }
-   });
-
-   function init(){
+    function runCat(){
         $("#divneclacke").addClass('hidden');
         $("#divsize").addClass('hidden');
         $("#divweight").removeClass('hidden');
-        breeds('cat');
-   }
+        mybreeds('cat');
+    }
 
-  function breeds(breed){
+    function runDog(){
+        $("#divneclacke").removeClass('hidden');
+        $("#divsize").removeClass('hidden');
+        $("#divweight").addClass('hidden');
+        mybreeds('dog');
+    }
+
+    $("#specie").on('change',function(e){
+        $("#breeds").val('');
+            if(e.target.value == 1){
+                runCat();
+            }else{
+                runDog();
+            }
+    });
+
+//    function init(){
+//         $("#divneclacke").addClass('hidden');
+//         $("#divsize").addClass('hidden');
+//         $("#divweight").removeClass('hidden');
+//         breeds('cat');
+//    }
+
+  function mybreeds(breed){
 
     var url = '';
     if(breed == 'cat'){
@@ -337,50 +297,28 @@ function runDog(){
     }else{
         url = "{{ asset('json/dogs.json')}}"
     }
+
     var data = [];
     $.getJSON(url,function(result){
         $.each(result,function(index,val){
             data.push({label:val.name,id:val.id})
+            if({{$pet->breed}} == val.id){
+                $("#breeds").val(val.name);
+            }
         });
     });
+
     $("#breeds").autocomplete({
         source: data,
         select: function(event, ui) {
         var e = ui.item;
         $("#breed").val(e.id);
-
-        // var result = "<p>label : " + e.label + " - id : " + e.id + "</p>";
-        // console.log(result);
         }
     });
+
   }
 
-</script>
 
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-
-<script>
-
-    var latitude = {{   $pet->latitude?$pet->latitude:Auth::user()->latitude }};
-    var longitude = {{  $pet->longitude?$pet->longitude:Auth::user()->longitude }};
-
-    var map = L.map('mapa').setView([latitude, longitude], 15);
-
-    L.tileLayer('https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga', {
-    }).addTo(map);
-
-    L.marker([latitude,longitude],{draggable:true}).addTo(map)
-    .bindPopup('Aquí se encuentra')
-    .on('dragend', function(e) {
-      $("#latitude").val(e.target._latlng.lat);
-      $("#longitude").val(e.target._latlng.lng);
-    }).openPopup();
-
-</script>
-
-<script>
     let modal = document.getElementById('modal');
      let btn = document.getElementById('open-btn');
       let button = document.getElementById('ok-btn');
@@ -403,5 +341,43 @@ function runDog(){
       modal.style.display = "none";
       }
       }
+
+      var w = $("#image_demo").width();
+        var h = $("#image_demo").height();
+
+        $image_crop = $('#image_demo').croppie({
+            enableExif: true,
+            viewport: {
+                width: w-10, height: h-20,
+                type:'square' //circle
+            },
+            url: "{{ ($pet->photo)?$pet->photo:'https://radi-images.s3.us-west-1.amazonaws.com/places/casavirreyes.JPG';}}",
+            boundary:{
+                width: w, height: h
+            }
+        });
+
+        $('#upload_image').on('change', function(){
+            var reader = new FileReader();
+
+            reader.onload = function (event) {
+                $image_crop.croppie('bind', {
+                url: event.target.result
+                })
+            }
+
+            reader.readAsDataURL(this.files[0]);
+            $('#uploadimage').show();
+        });
+
+        $('#send').click(function(event){
+            $image_crop.croppie('result', {
+                type: 'canvas',
+                size: 'viewport'
+            }).then(function(response){
+                    $("#base").val(response);
+                    console.log(response);
+            })
+        });
 
   </script>
