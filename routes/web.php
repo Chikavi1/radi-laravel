@@ -37,6 +37,10 @@ Route::resource('lost', LostController::class);
 Route::resource('links', LinksController::class);
 
 Route::get('/placas-distribuidor', [HomeController::class, 'placasdist'])->name('home.placasdist');
+Route::get('/placas-descuento', [HomeController::class, 'placasdescuento'])->name('home.placasdescuento');
+
+Route::get('/memorial', [HomeController::class, 'memorial'])->name('home.memorial');
+Route::get('/memorial/{id}', [HomeController::class, 'memorialshow'])->name('home.memorialshow');
 
 
 Route::get('/adoptions', [PetsController::class, 'index'])->name('adoptions.index');
@@ -58,6 +62,7 @@ Route::get('/losts/poster', [LostController::class, 'poster'])->name('lost.poste
 
 
 Route::get('/pets/{id}', [PetsController::class, 'qrCode'])->name('lost.qrCode');
+Route::get('/pet_death/{id}', [PetsController::class, 'deathpdf'])->name('pet.deathpdf');
 
 Route::get('/results', [PlacesController::class, 'result'])->name('places.result');
 Route::get('/places-register', [PlacesController::class, 'register'])->name('places.register');

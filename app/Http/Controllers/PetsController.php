@@ -19,7 +19,7 @@ class PetsController extends Controller
 {
 
     public function __construct() {
-        $this->middleware('auth')->except('index','show','qrCode');
+        $this->middleware('auth')->except('index','show','qrCode','deathpdf');
     }
 
     public function qrCode(string $hash){
@@ -115,6 +115,13 @@ class PetsController extends Controller
 
         $pet->save();
         return redirect('/pet/'.$pet->setHiddenId())->with('success', 'Se ha creado correctamente.');
+    }
+
+    public function deathpdf(){
+        $data = [
+            'lost' => 'nada',
+        ];
+        return  PDF::loadView('pdf.death', $data)->stream('memorial.pdf');
     }
 
     public function myPets()

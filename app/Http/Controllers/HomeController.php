@@ -138,10 +138,37 @@ class HomeController extends Controller
         return view('validate_pets.index');
     }
 
+    public function memorial(){
+        SEO::setTitle('Crea un recuerdo especial para tu mascota');
+        SEO::setDescription('Un espacio para compartir la tristeza y los hermosos recuerdos de nuestra mascota🐾❤️');
+        SEO::opengraph()->setUrl('https://radi.pet/memorial/');
+        SEO::setCanonical('https://radi.pet/memorial/');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/memorial.png'));
+        SEO::twitter()->setImage(asset('img/memorial.png'));
+        return view('memorial.index');
+    }
+
+
+    public function memorialshow($id){
+        SEO::setTitle('Recordando con amor a ');
+        SEO::setDescription('Un espacio para compartir la tristeza y los hermosos recuerdos de nuestra mascota🐾❤️');
+        SEO::opengraph()->setUrl('https://radi.pet/memorial/'.$id);
+        SEO::setCanonical('https://radi.pet/memorial/'.$id);
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/memorial.png'));
+        SEO::twitter()->setImage(asset('img/memorial.png'));
+        return view('memorial.show');
+    }
+
+
+    public function placasdescuento(){
+        return view('home.placas-descuentos');
+    }
+
     public function storeValidate(Request $request){
         $id = $request->get('code');
         return redirect("/validate_pet/".$id);
-
     }
 
     public function testEmail(){
