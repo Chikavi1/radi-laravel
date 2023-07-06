@@ -150,7 +150,9 @@ class HomeController extends Controller
     }
 
 
-    public function memorialshow($id){
+    public function memorialshow($id,Request $request){
+        $ip = $request->ip();
+
         SEO::setTitle('Recordando con amor a ');
         SEO::setDescription('Un espacio para compartir la tristeza y los hermosos recuerdos de nuestra mascota🐾❤️');
         SEO::opengraph()->setUrl('https://radi.pet/memorial/'.$id);
@@ -158,7 +160,7 @@ class HomeController extends Controller
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/memorial.png'));
         SEO::twitter()->setImage(asset('img/memorial.png'));
-        return view('memorial.show');
+        return view('memorial.show',compact('ip'));
     }
 
 
