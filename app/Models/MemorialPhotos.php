@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class MemorialPhotos extends Model
 {
 
-    protected $table = 'memorialphotos';
+    protected $table = 'MemorialPhotos';
     const CREATED_AT = 'createdAt';
     const UPDATED_AT = 'updatedAt';
 

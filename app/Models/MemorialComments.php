@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class MemorialComments extends Model
 {
 
-    protected $table = 'memorialcomments';
+    protected $table = 'MemorialComments';
     const CREATED_AT = 'createdAt';
     const UPDATED_AT = 'updatedAt';
 
