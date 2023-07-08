@@ -8,7 +8,7 @@ use Hashids\Hashids;
 
 class Memorial extends Model
 {
-    protected $table = 'memorials';
+    protected $table = 'Memorials';
     const CREATED_AT = 'createdAt';
     const UPDATED_AT = 'updatedAt';
 
