@@ -43,6 +43,7 @@ Route::get('/memorial', [HomeController::class, 'memorial'])->name('home.memoria
 Route::get('/memorial/{id}', [HomeController::class, 'memorialshow'])->name('home.memorialshow');
 
 
+
 Route::get('/adoptions', [PetsController::class, 'index'])->name('adoptions.index');
 Route::get('/losts/free', [LostController::class, 'free'])->name('lost.free');
 
@@ -80,6 +81,11 @@ Route::get('/validate_pet/{id}', [HomeController::class, 'validate_show'])->name
 
 
 Route::middleware('auth')->group(function () {
+
+    Route::get('/memorial/{id}/comments', [HomeController::class, 'memorialshowcomments'])->name('home.memorialshowcomments');
+    Route::post('/memorial/comment/', [HomeController::class, 'createCommment'])->name('home.createCommment');
+
+
     Route::get('/review/{id}', [ReviewsController::class, 'show'])->name('reviews.show');
     Route::post('/review/store', [ReviewsController::class, 'store'])->name('reviews.store');
 

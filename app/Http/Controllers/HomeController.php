@@ -9,6 +9,10 @@ use Hashids\Hashids;
 use App\Models\Requests;
 
 use App\Models\User;
+use Auth;
+
+use App\Models\Memorial;
+use App\Models\MemorialComments;
 
 class HomeController extends Controller
 {
@@ -149,20 +153,52 @@ class HomeController extends Controller
         return view('memorial.index');
     }
 
+    public function memorialshow($hash,Request $request){
+        $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
+        $id = $hashids->decode($hash);
+        $memorial = Memorial::findOrFail($id?$id[0]:0);
 
-    public function memorialshow($id,Request $request){
-        $ip = $request->ip();
+        $questions;
+        if($memorial->pets){
+            $questions =  json_decode($memorial->pets->randomqa, true);
+        }
 
-        SEO::setTitle('Recordando con amor a ');
+
+        // dd($memorial->comments);
+        // dd($pet);
+        SEO::setTitle('Recordando con amor a '.$memorial->pets->name);
         SEO::setDescription('Un espacio para compartir la tristeza y los hermosos recuerdos de nuestra mascota🐾❤️');
-        SEO::opengraph()->setUrl('https://radi.pet/memorial/'.$id);
-        SEO::setCanonical('https://radi.pet/memorial/'.$id);
+        SEO::opengraph()->setUrl('https://radi.pet/memorial/'.$hash);
+        SEO::setCanonical('https://radi.pet/memorial/'.$hash);
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/memorial.png'));
         SEO::twitter()->setImage(asset('img/memorial.png'));
-        return view('memorial.show',compact('ip'));
+        return view('memorial.show',compact('memorial','questions','hash'));
     }
 
+    public function memorialshowcomments($hash){
+        $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
+        $id = $hashids->decode($hash);
+        $comment = MemorialComments::where('memorial_id',$id)->where('user_id',Auth::user()->id)->get()->first();
+
+        return view('memorial.comments',compact('comment','hash'));
+    }
+
+    public function createCommment(Request $request){
+        $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
+        $id = $hashids->decode($request->hash)[0];
+
+        $comment = new MemorialComments([
+            'user_id'           =>  Auth::user()->id,
+            'text'              => $request->get('text'),
+            'status'            => 1,
+            'memorial_id'       =>  $id,
+        ]);
+
+        $comment->save();
+        return redirect()->route('home.memorialshow',$request->hash)->with('success','Se agrego exitosamente.');
+
+    }
 
     public function placasdescuento(){
         return view('home.placas-descuentos');
