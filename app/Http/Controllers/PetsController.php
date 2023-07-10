@@ -12,6 +12,7 @@ use Auth;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
+use App\Models\Memorial;
 
 use PDF;
 
@@ -117,9 +118,15 @@ class PetsController extends Controller
         return redirect('/pet/'.$pet->setHiddenId())->with('success', 'Se ha creado correctamente.');
     }
 
-    public function deathpdf(){
+    public function deathpdf($hash){
+        ini_set('max_execution_time', 180); //3 minutes
+
+        $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
+        $id = $hashids->decode($hash);
+        $memorial = Memorial::findOrFail($id?$id[0]:0);
+        // dd($memorial);
         $data = [
-            'lost' => 'nada',
+            'memorial' => $memorial,
         ];
         return  PDF::loadView('pdf.death', $data)->stream('memorial.pdf');
     }
