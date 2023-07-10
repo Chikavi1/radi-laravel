@@ -250,7 +250,9 @@
     <h2 class="ml-4 text-3xl font-bold my-4">Recuerdos</h2>
 
     @foreach($memorial->photos as $photo )
-        <div class="my-4">
+        <div class="my-4" data-aos="fade-left"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
             <img src="{{$photo->photo}}" alt="image">
             <p class="m-4 font-bold capital ">
                 {{$photo->text}}
@@ -332,7 +334,12 @@
                     </div>
                 </div>
     </div>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 <script>
     $("#commentshidden").on('click',function(){
@@ -361,6 +368,8 @@
 
     $("#buttonShare").on('click',function(){
         $("#share").removeClass('hidden');
+        $("#buttonShare").addClass('hidden');
+
     });
 
     $("#button").on("click",function(){
@@ -381,4 +390,6 @@
         $("#modalShare").addClass('hidden');
 
     }
+
 </script>
+
