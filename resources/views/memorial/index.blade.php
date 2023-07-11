@@ -79,7 +79,7 @@
                 <div class="border-0 rounded-none shadow-none card sm:shadow-md sm:rounded-lg">
                   <div class="flex flex-col justify-between p-6 border-b border-gray-200">
                     <div>
-                      <p class="mb-1 text-lg font-semibold text-white">Básico</p>
+                      <p class="mb-1 text-lg font-semibold text-white">Digital</p>
                       <p class="my-2  text-4xl font-extrabold text-white" x-text="selected === 'monthly' ? '$9' : '$89'">$99.00 MXN</p>
                       <p class="text-base text-white" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">Único pago </p>
                     </div>
@@ -129,7 +129,7 @@
                 <div class="border-0 rounded-none shadow-none card sm:shadow-md sm:rounded-lg">
                   <div class="flex flex-col justify-between p-6 border-b border-gray-200">
                     <div>
-                      <p class="mb-1 text-lg font-semibold text-white">Premium</p>
+                      <p class="mb-1 text-lg font-semibold text-white">Digital con cuadro personalizado</p>
                       <p class="my-2  text-4xl font-extrabold text-white" x-text="selected === 'monthly' ? '$21' : '$189'">$399.00 MXN</p>
                       <p class="text-base text-white" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">Único pago y envió incluido en México</p>
                     </div>
