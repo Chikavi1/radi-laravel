@@ -1,7 +1,9 @@
 @include('layouts.nav')
     <div style="background: black; padding:1em;">
         <img class="mx-auto rounded-md mt-4"  src="https://i.ibb.co/q9c6gc3/Whats-App-Image-2023-07-05-at-00-12-21.jpg" alt="">
-          <h1 class="mt-12 text-center block pb-2 mb-5 text-4xl font-extrabold leading-none tracking-normal text-transparent md:text-6xl md:tracking-tight bg-clip-text bg-gradient-to-r from-green-400 to-purple-500">
+          <h1 data-aos="fade"
+          data-aos-easing="linear"
+          data-aos-duration="1000" class="mt-12 text-center block pb-2 mb-5 text-4xl font-extrabold leading-none tracking-normal text-transparent md:text-6xl md:tracking-tight bg-clip-text bg-gradient-to-r from-green-400 to-purple-500">
             Crea un recuerdo especial
           </h1>
           <div class="md:px-44">
@@ -12,7 +14,7 @@
           <section class="grid grid-cols-1 gap-20 px-4 py-24 mx-auto max-w-7xl lg:px-16 xl:px-24 md:grid-cols-2 lg:grid-cols-3">
             <div>
                 <p><i class="text-white text-3xl fa-solid fa-truck-fast"></i></p>
-              <h3 class="mb-3 mt-4 text-lg font-medium leading-tight text-white">envió  gratis</h3>
+              <h3 class="mb-3 mt-4 text-lg font-medium leading-tight text-white">Envió  gratis</h3>
               <p class="text-base leading-relaxed text-white">
                 Te enviamos el marco de forma gratuita. Nos aseguramos de que tu memorial llegue a tus manos sin ningún costo adicional. Queremos que este proceso sea lo más cómodo y gratificante posible, para que puedas honrar a tu mascota amada sin preocupaciones.
 
@@ -280,7 +282,9 @@
                   </div>
                 </div>
               </div>
-              <div class="relative">
+              <div class="relative" data-aos="fade-left"
+              data-aos-easing="linear"
+              data-aos-duration="1000">
                 <img
                   class="inset-0 object-cover object-bottom w-full rounded shadow-lg h-96 lg:absolute lg:h-full"
                   src="https://i.ibb.co/sKYVChX/Marble-Phone-Mockup-Monday-Schedule-Instagram-Story.png"
@@ -298,9 +302,10 @@
                 <p class="mb-5 text-base text-center text-white sm:text-left md:text-lg">
                     Nuestros cuadros QR memoriales ofrecen una experiencia emocional única al combinar la belleza de los cuadros con la tecnología moderna de los códigos QR. Te permiten revivir los recuerdos y momentos especiales de tu mascota de una manera interactiva y conmovedora.
                 </p>
-                <a href="#" class="w-full btn btn-dark btn-lg sm:w-auto">Learn More</a>
               </div>
-              <div class="w-full h-full rounded-lg">
+              <div class="w-full h-full rounded-lg"  data-aos="fade-left"
+              data-aos-easing="linear"
+              data-aos-duration="1000">
                 <img class="rounded-md" src="https://i.ibb.co/5TKVY30/Poster-aniversario-pareja-fotografico-rosa-y-dorado-2.png" alt="">
               </div>
             </div>
@@ -310,9 +315,10 @@
                 <p class="mb-5 text-base text-center text-white sm:text-left md:text-lg">
                     Los cuadros QR memoriales de Radi Pets te permiten honrar a tu mascota de una manera duradera y significativa. Tendrás un hermoso cuadro en tu hogar que captura la esencia de tu compañero peludo, y podrás compartir esos recuerdos con tus seres queridos, manteniendo su memoria viva.
                 </p>
-                <a href="#" class="w-full btn btn-dark btn-lg sm:w-auto">Learn More</a>
               </div>
-              <div class="w-full h-full rounded-lg">
+              <div class="w-full h-full rounded-lg" data-aos="fade-right"
+              data-aos-easing="linear"
+              data-aos-duration="1000">
                 <img class="rounded-md" src="https://i.ibb.co/rm6skwH/Poster-aniversario-pareja-fotografico-rosa-y-dorado-3.png" alt="">
               </div>
             </div>
@@ -324,3 +330,9 @@
             </div>
     </div>
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
