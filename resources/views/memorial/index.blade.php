@@ -12,7 +12,7 @@
           <section class="grid grid-cols-1 gap-20 px-4 py-24 mx-auto max-w-7xl lg:px-16 xl:px-24 md:grid-cols-2 lg:grid-cols-3">
             <div>
                 <p><i class="text-white text-3xl fa-solid fa-truck-fast"></i></p>
-              <h3 class="mb-3 mt-4 text-lg font-medium leading-tight text-white">Envios gratis</h3>
+              <h3 class="mb-3 mt-4 text-lg font-medium leading-tight text-white">envió  gratis</h3>
               <p class="text-base leading-relaxed text-white">
                 Te enviamos el marco de forma gratuita. Nos aseguramos de que tu memorial llegue a tus manos sin ningún costo adicional. Queremos que este proceso sea lo más cómodo y gratificante posible, para que puedas honrar a tu mascota amada sin preocupaciones.
 
@@ -42,7 +42,7 @@
             <div class="pb-64 ">
               <div class="max-w-7xl px-4 pt-20 mx-auto text-center sm:text-left">
                 <h1 class="mb-3 text-4xl font-bold leading-tight text-white md:text-5xl md:font-extrabold">Paquetes</h1>
-                <p class="mb-10 text-lg text-white md:text-xl">Configuralo en menos de 5 min · </p>
+                <p class="mb-10 text-lg text-white md:text-xl">configúralo en menos de 5 min · </p>
               </div>
             </div>
             <div class="max-w-7xl pb-20 mx-auto -mt-48">
@@ -77,7 +77,7 @@
                 <div class="border-0 rounded-none shadow-none card sm:shadow-md sm:rounded-lg">
                   <div class="flex flex-col justify-between p-6 border-b border-gray-200">
                     <div>
-                      <p class="mb-1 text-lg font-semibold text-white">Basico</p>
+                      <p class="mb-1 text-lg font-semibold text-white">Básico</p>
                       <p class="my-2  text-4xl font-extrabold text-white" x-text="selected === 'monthly' ? '$9' : '$89'">$99.00 MXN</p>
                       <p class="text-base text-white" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">Único pago </p>
                     </div>
@@ -112,7 +112,7 @@
                       <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
-                      <p class="text-white">Personaliza el memorial de tu mascota y configuralo a tu gusto</p>
+                      <p class="text-white">Personaliza el memorial de tu mascota y configúralo a tu gusto</p>
                     </div>
                   </div>
                   <div class="flex flex-col flex-grow p-6 space-y-3">
@@ -129,7 +129,7 @@
                     <div>
                       <p class="mb-1 text-lg font-semibold text-white">Premium</p>
                       <p class="my-2  text-4xl font-extrabold text-white" x-text="selected === 'monthly' ? '$21' : '$189'">$399.00 MXN</p>
-                      <p class="text-base text-white" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">Único pago y envio incluido en México</p>
+                      <p class="text-base text-white" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">Único pago y envió incluido en México</p>
                     </div>
                     <a href="https://buy.stripe.com/00gbL83XU4tM6SA9AG" class="w-full mt-6 btn btn-light btn-lg text-purple-800 font-bold text-2xl">Comprar</a>
                   </div>
@@ -162,7 +162,7 @@
                       <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
-                      <p class="text-white">Personaliza el memorial de tu mascota y configuralo a tu gusto</p>
+                      <p class="text-white">Personaliza el memorial de tu mascota y configúralo a tu gusto</p>
                     </div>
                   </div>
                   <div class="flex flex-col flex-grow p-6 space-y-3">
