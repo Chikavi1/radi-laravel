@@ -51,16 +51,26 @@
                   <div class="flex flex-col justify-between p-6 border-b border-gray-200">
                     <p class="mb-1 text-lg font-semibold text-white">Gratis</p>
                     <p class="pb-0 my-2  text-4xl font-extrabold text-white md:pb-2">$0</p>
-                    <p class="text-base text-white" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">Gratis</p>
-                    <a href="#" class="w-full mt-6 btn btn-light btn-lg text-purple-800 font-bold text-2xl">Iniciar</a>
+                    <p class="text-base text-white" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">Descarga la app</p>
+                    <a href="/download" class="w-full mt-6 btn btn-light btn-lg text-purple-800 font-bold text-2xl">Iniciar</a>
+
                   </div>
                   <div class="flex flex-col flex-grow p-6 space-y-3">
                     <div class="flex items-start">
                       <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
-                      <p class="text-white">Email APIs, SMTP Relay, and Webhooks</p>
+                      <p class="text-white">Perfil de tu mascota</p>
                     </div>
+                  </div>
+                  <div class="flex flex-col flex-grow p-6 space-y-3">
+
+                    <div class="flex items-start">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <p class="text-white">Comparte el perfil de tu mascota</p>
+                      </div>
 
                   </div>
                 </div>
@@ -71,14 +81,46 @@
                       <p class="my-2  text-4xl font-extrabold text-white" x-text="selected === 'monthly' ? '$9' : '$89'">$99.00 MXN</p>
                       <p class="text-base text-white" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">Único pago </p>
                     </div>
-                    <a href="#" class="w-full mt-6 btn btn-light btn-lg text-purple-800 font-bold text-2xl">Comprar</a>
+                    <a href="https://buy.stripe.com/00g6qOcuq9O62Ck28d" class="w-full mt-6 btn btn-light btn-lg text-purple-800 font-bold text-2xl">Comprar</a>
                   </div>
                   <div class="flex flex-col flex-grow p-6 space-y-3">
                     <div class="flex items-start">
                       <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
-                      <p class="text-white">Email APIs, SMTP Relay, and Webhooks</p>
+                      <p class="text-white">Perfil de tu mascota</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col flex-grow p-6 space-y-3">
+                    <div class="flex items-start">
+                      <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-white">Comparte el perfil de tu mascota    </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col flex-grow p-6 space-y-3">
+                    <div class="flex items-start">
+                      <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-white">Modifica las veces que sea necesario</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col flex-grow p-6 space-y-3">
+                    <div class="flex items-start">
+                      <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-white">Personaliza el memorial de tu mascota y configuralo a tu gusto</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col flex-grow p-6 space-y-3">
+                    <div class="flex items-start">
+                      <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-white">Agrega hasta 35 recuerdos de tu mascota</p>
                     </div>
                   </div>
                 </div>
@@ -89,46 +131,54 @@
                       <p class="my-2  text-4xl font-extrabold text-white" x-text="selected === 'monthly' ? '$21' : '$189'">$399.00 MXN</p>
                       <p class="text-base text-white" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">Único pago y envio incluido en México</p>
                     </div>
-                    <a href="#" class="w-full mt-6 btn btn-light btn-lg text-purple-800 font-bold text-2xl">Comprar</a>
+                    <a href="https://buy.stripe.com/00gbL83XU4tM6SA9AG" class="w-full mt-6 btn btn-light btn-lg text-purple-800 font-bold text-2xl">Comprar</a>
                   </div>
                   <div class="flex flex-col flex-grow p-6 space-y-3">
                     <div class="flex items-start">
                       <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
-                      <p class="text-white">Email APIs, SMTP Relay, and Webhooks</p>
+                      <p class="text-white">Perfil de tu mascota</p>
                     </div>
+                  </div>
+                  <div class="flex flex-col flex-grow p-6 space-y-3">
                     <div class="flex items-start">
                       <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
-                      <p class="text-white">Suppression Management</p>
+                      <p class="text-white">Comparte el perfil de tu mascota</p>
                     </div>
+                  </div>
+                  <div class="flex flex-col flex-grow p-6 space-y-3">
                     <div class="flex items-start">
                       <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
-                      <p class="text-white">Email Tracking and Analytics</p>
+                      <p class="text-white">Modifica las veces que sea necesario</p>
                     </div>
+                  </div>
+                  <div class="flex flex-col flex-grow p-6 space-y-3">
                     <div class="flex items-start">
                       <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
-                      <p class="text-white">99.99% Guaranteed Uptime SLA</p>
+                      <p class="text-white">Personaliza el memorial de tu mascota y configuralo a tu gusto</p>
                     </div>
-
-
+                  </div>
+                  <div class="flex flex-col flex-grow p-6 space-y-3">
                     <div class="flex items-start">
                       <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
-                      <p class="text-white">Instant Chat Support</p>
+                      <p class="text-white">Agrega hasta 35 recuerdos de tu mascota</p>
                     </div>
+                  </div>
+                  <div class="flex flex-col flex-grow p-6 space-y-3">
                     <div class="flex items-start">
                       <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
-                      <p class="text-white">Custom Features</p>
+                      <p class="text-white">Hermoso cuadro del memorial de tu mascota</p>
                     </div>
                   </div>
                 </div>
@@ -152,9 +202,9 @@
                     <div class="w-px h-full bg-gray-300"></div>
                   </div>
                   <div class="pt-1 pb-8">
-                    <p class="mb-2 text-lg font-bold text-white">Step 1</p>
+                    <p class="mb-2 text-lg font-bold text-white">Paso 1</p>
                     <p class="text-white">
-                      All recipes are written using certain conventions, which define the characteristics of common ingredients. The rules vary from place to place.
+                      Escoge una o cuatro fotos que reflejen los momentos más entrañables y significativos que compartiste con tu mascota.
                     </p>
                   </div>
                 </div>
@@ -171,9 +221,9 @@
                     <div class="w-px h-full bg-gray-300"></div>
                   </div>
                   <div class="pt-1 pb-8">
-                    <p class="mb-2 text-lg font-bold text-white">Step 2</p>
+                    <p class="mb-2 text-lg font-bold text-white">Paso 2</p>
                     <p class="text-white">
-                      The first mate and his Skipper too will do their very best to make the others comfortable in their tropic island nest. Michael Knight a young loner.
+                      Agrega información como el nombre, fecha de nacimiento y fallecimiento de tu mascota.
                     </p>
                   </div>
                 </div>
@@ -190,9 +240,9 @@
                     <div class="w-px h-full bg-gray-300"></div>
                   </div>
                   <div class="pt-1 pb-8">
-                    <p class="mb-2 text-lg font-bold text-white">Step 3</p>
+                    <p class="mb-2 text-lg font-bold text-white">Paso 3</p>
                     <p class="text-white">
-                        Una vez que hayas completado el diseño, nuestro equipo se encargará de imprimir tu cuadro con la más alta calidad y atención al detalle. Utilizamos materiales duraderos y resistentes para garantizar que tu memorial dure toda la vida.                    </p>
+                        Selecciona si quieres la versión digital o la version imprimible. en caso de seleccionar digital te llegara un correo y en el caso del cuadro nuestro equipo se encargará de imprimir tu cuadro con la más alta calidad y atención al detalle. Utilizamos materiales duraderos y resistentes para garantizar que tu memorial dure toda la vida.                    </p>
                   </div>
                 </div>
                 <div class="flex">
@@ -208,9 +258,9 @@
                     <div class="w-px h-full bg-gray-300"></div>
                   </div>
                   <div class="pt-1 pb-8">
-                    <p class="mb-2 text-lg font-bold text-white">Step 4</p>
+                    <p class="mb-2 text-lg font-bold text-white">Paso 4</p>
                     <p class="text-white">
-                      If one examines precultural libertarianism, one is faced with a choice: either accept rationalism or conclude that context is a product.
+                        Dentro de la app de Radi Pets puedes modificar la información del memorial de tu mascota.
                     </p>
                   </div>
                 </div>
@@ -225,7 +275,7 @@
                     </div>
                   </div>
                   <div class="pt-1">
-                    <p class="mb-2 text-lg font-bold text-white">Success</p>
+                    <p class="mb-2 text-lg font-bold text-white">Listo</p>
                     <p class="text-white"></p>
                   </div>
                 </div>
@@ -233,7 +283,7 @@
               <div class="relative">
                 <img
                   class="inset-0 object-cover object-bottom w-full rounded shadow-lg h-96 lg:absolute lg:h-full"
-                  src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                  src="https://i.ibb.co/sKYVChX/Marble-Phone-Mockup-Monday-Schedule-Instagram-Story.png"
                   alt=""
                 />
               </div>
@@ -246,22 +296,25 @@
               <div>
                 <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">Clear overview for efficient tracking</h2>
                 <p class="mb-5 text-base text-center text-white sm:text-left md:text-lg">
-                    Acompáñanos en este viaje de homenaje mientras te mostramos cómo podemos crear cuadros con QR y fotos de nuestra mascota fallecida para construir un memorial lleno de amor y recuerdos.
+                    Nuestros cuadros QR memoriales ofrecen una experiencia emocional única al combinar la belleza de los cuadros con la tecnología moderna de los códigos QR. Te permiten revivir los recuerdos y momentos especiales de tu mascota de una manera interactiva y conmovedora.
                 </p>
                 <a href="#" class="w-full btn btn-dark btn-lg sm:w-auto">Learn More</a>
               </div>
-              <div class="w-full h-full py-48 bg-gray-200"></div>
+              <div class="w-full h-full rounded-lg">
+                <img class="rounded-md" src="https://i.ibb.co/5TKVY30/Poster-aniversario-pareja-fotografico-rosa-y-dorado-2.png" alt="">
+              </div>
             </div>
             <div class="grid flex-col-reverse items-center grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
               <div class="order-none md:order-2">
                 <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">Decide how you integrate Payments</h2>
                 <p class="mb-5 text-base text-center text-white sm:text-left md:text-lg">
-                  Love to code? Next to our ready-made and free plugins you can use our expansive yet simple API; decide how you integrate Payments and build advanced and reliable products yourself from
-                  scratch.
+                    Los cuadros QR memoriales de Radi Pets te permiten honrar a tu mascota de una manera duradera y significativa. Tendrás un hermoso cuadro en tu hogar que captura la esencia de tu compañero peludo, y podrás compartir esos recuerdos con tus seres queridos, manteniendo su memoria viva.
                 </p>
                 <a href="#" class="w-full btn btn-dark btn-lg sm:w-auto">Learn More</a>
               </div>
-              <div class="w-full h-full py-48 bg-gray-200"></div>
+              <div class="w-full h-full rounded-lg">
+                <img class="rounded-md" src="https://i.ibb.co/rm6skwH/Poster-aniversario-pareja-fotografico-rosa-y-dorado-3.png" alt="">
+              </div>
             </div>
           </section>
 
