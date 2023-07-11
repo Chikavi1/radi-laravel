@@ -23,7 +23,7 @@
             En Radi Pets, te ofrecemos una oportunidad única para que tu tienda o negocio aparezca en nuestra plataforma y llegue a usuarios interesados en productos y servicios para mascotas. Estamos buscando socios que quieran ofrecer descuentos, promociones o beneficios exclusivos a nuestra comunidad de amantes de las mascotas.</p>
 
         <a
-          target="_blank" href="/places-register"
+          target="_blank" href="/register-negocio-descuento"
           class="mt-8 inline-flex items-center rounded border border-indigo-600 bg-indigo-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
         >
           <span class="text-sm font-medium">Empezar </span>
@@ -101,7 +101,7 @@
 
           <div class="mt-4 md:mt-8">
             <a
-              target="_blank" href="/places-register"
+              target="_blank" href="/register-negocio-descuento"
               class="inline-block rounded border border-white bg-white px-12 py-3 text-sm font-medium text-blue-500 transition hover:bg-transparent hover:text-white focus:outline-none focus:ring focus:ring-yellow-400"
             >
               ¡Registrarme Gratis!
@@ -174,7 +174,7 @@
   </div>
   <div class="mt-8 sm:w-full sm:max-w-md xl:mt-0 xl:ml-8">
       <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-          <a  href="/places-register" class="flex items-center justify-center w-full px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-green-500 border border-transparent rounded-md hover:bg-green-400 focus:outline-none focus:bg-green-400">
+          <a  href="/register-negocio-descuento" class="flex items-center justify-center w-full px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-green-500 border border-transparent rounded-md hover:bg-green-400 focus:outline-none focus:bg-green-400">
               Registrarme
           </a>
       </div>

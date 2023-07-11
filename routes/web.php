@@ -38,6 +38,7 @@ Route::resource('links', LinksController::class);
 
 Route::get('/placas-distribuidor', [HomeController::class, 'placasdist'])->name('home.placasdist');
 Route::get('/placas-descuento', [HomeController::class, 'placasdescuento'])->name('home.placasdescuento');
+Route::get('/register-negocio-descuento', [HomeController::class, 'registerplacasdescuento'])->name('home.registerplacasdescuento');
 
 Route::get('/memorial', [HomeController::class, 'memorial'])->name('home.memorial');
 Route::get('/memorial/{id}', [HomeController::class, 'memorialshow'])->name('home.memorialshow');

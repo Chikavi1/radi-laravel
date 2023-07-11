@@ -269,9 +269,9 @@ function runDog(){
    });
 
    function init(){
-        $("#divneclacke").addClass('hidden');
-        $("#divsize").addClass('hidden');
-        $("#divweight").removeClass('hidden');
+        $("#divneclacke").removeClass('hidden');
+        $("#divsize").removeClass('hidden');
+        $("#divweight").addClass('hidden');
         breeds('dog');
    }
 

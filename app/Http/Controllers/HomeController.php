@@ -204,6 +204,10 @@ class HomeController extends Controller
         return view('home.placas-descuentos');
     }
 
+    public function registerplacasdescuento(){
+        return view('home.register-negocio-descuentos');
+    }
+
     public function storeValidate(Request $request){
         $id = $request->get('code');
         return redirect("/validate_pet/".$id);
