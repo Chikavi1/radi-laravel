@@ -13,6 +13,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
 use App\Models\Memorial;
+use Mail;
 
 use PDF;
 
@@ -122,13 +123,34 @@ class PetsController extends Controller
         ini_set('max_execution_time', 180); //3 minutes
 
         $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
+        // dd($hashids->encode($hash));
+
         $id = $hashids->decode($hash);
         $memorial = Memorial::findOrFail($id?$id[0]:0);
-        // dd($memorial);
         $data = [
             'memorial' => $memorial,
         ];
-        return  PDF::loadView('pdf.death', $data)->stream('memorial.pdf');
+
+        if($memorial->photo2){
+            $pdf =  PDF::loadView('pdf.death4', $data);
+        }else{
+            $pdf =  PDF::loadView('pdf.death1', $data);
+        }
+
+        $data["email"] = "chikavi10@gmail.com";
+        $data["title"] = "Memorial";
+        $data["body"] = "Te enviamos el memorial";
+
+        Mail::send('mail.died', $data, function($message)use($data, $pdf) {
+            $message->to($data["email"])
+                    ->subject($data["title"]);
+            // $message->attach($pdf->output());
+            $message->attachData($pdf->output(), 'Memorial.pdf');
+
+        });
+
+        echo "Mail successfully sent!";
+
     }
 
     public function myPets()
