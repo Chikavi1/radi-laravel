@@ -5,7 +5,15 @@
         <div class="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
             <div class="w-full lg:w-6/12">
                 <h2 class="w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9">Somos una Startup que ama a las mascotas</h2>
-                <p class="font-normal text-base leading-6 text-gray-600 mt-6">Originaria de México, creemos que las mascotas son el mejor amigo de los humanos. Por eso desarrollamos Radi una aplicación que ayuda a los dueños de las mascotas a darle una mejor vida con recomendaciones, recordatorios y herramientas para prevenir enfermedades, así como hacer reservaciones, una sección para reportar a tu mascota perdida o darle una segunda oportunidad a una mascota que está en uno de nuestros albergues verificados.</p>
+                <p class="font-normal text-base leading-6 text-gray-600 mt-6">
+
+                    En Radi, nuestra misión es asegurarnos de que todas las mascotas sean encontradas, cuidadas y amadas. Queremos que México sea un lugar donde cada mascota tenga la oportunidad de disfrutar de una vida feliz y saludable junto a una familia que las valore.
+                    <br><br>
+                    Descarga nuestra aplicación desde el siguiente enlace <a href="/download" class="text-purple-700 font-bold">Descarga App</a> y únete a nuestra comunidad de amantes de los animales. Juntos, podemos hacer una diferencia en la vida de nuestras queridas mascotas.
+                    <br><br>
+                    Comparte esta publicación con tus amigos y familiares para que más personas se sumen a esta causa. ¡Ayudemos a que las mascotas desaparecidas sean encontradas y brindemos hogares amorosos a aquellos que lo necesitan!
+                    <br><br>
+                    📲 Descarga la app <a href="/download" class="text-purple-700 font-bold">aquí</a>
             </div>
             <div class="w-full lg:w-6/12">
                 <img class="lg:block hidden w-full" src="https://i.ibb.co/RjNH7QB/Rectangle-122-1.png" alt="people discussing on board" />
