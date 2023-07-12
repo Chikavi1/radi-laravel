@@ -20,7 +20,7 @@
 
 
           <p class="mt-4 text-gray-600 text-xl">
-          Si eres dueño de un restaurante o hotel que es amigable con las mascotas, ¡queremos que seas parte de nuestra comunidad! <br>
+          Si eres dueño de un restaurante, hotel o un lugar que es amigable con las mascotas, ¡queremos que seas parte de nuestra comunidad! <br>
           <br>
           En Radi Pets, nos enorgullece ofrecer un espacio donde los dueños de mascotas pueden encontrar lugares que acogen a sus compañeros peludos.
           <br><br>
@@ -101,7 +101,7 @@
         <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-5 h-5 mt-1 mr-2 text-primary">
           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
         </svg>
-        <p class="text-lg text-gray-700">Agregar Menú en PDF (Restaurantes, opcional).</p>
+        <p class="text-lg text-gray-700">Agregar Menú en PDF (Restaurantes, opcional para los demás).</p>
       </div>
       <div class="flex items-start">
         <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-5 h-5 mt-1 mr-2 text-primary">
