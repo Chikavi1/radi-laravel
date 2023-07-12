@@ -208,7 +208,7 @@
 </section>
 
 
-<div class="px-6 py-6 mx-12 bg-green-700 rounded-lg dark:bg-green-800 md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center">
+<div class="px-6 py-6 mx-4 my-4 bg-green-700 rounded-lg dark:bg-green-800 md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center">
   <div class="xl:w-0 xl:flex-1">
       <h2 class="text-2xl font-extrabold leading-8 tracking-tight text-white sm:text-3xl sm:leading-9">
         No pierdas la oportunidad de destacarte entre la multitud </h2>
