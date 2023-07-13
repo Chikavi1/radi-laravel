@@ -36,7 +36,7 @@
 
     <div class="text-center">
         <h2 style="color:#a9acad;padding-top: 1em;font-size: 1.3em;" >En memoria de</h2>
-        <h1 style="color: #e3c387;font-size: 3em;">{{$memorial->pets->name}}</h1>
+        <h1 style="color: #e3c387;font-size: 3em;text-transform: capitalize;">{{$memorial->pets->name}}</h1>
         <p style="color:#a9acad"> {{ date('Y', strtotime($memorial->pets->birthday)) }} - {{ date('Y', strtotime($memorial->pets->date_death)) }} </p>
     </div>
     <table class="center" style="margin-top:1em;">
