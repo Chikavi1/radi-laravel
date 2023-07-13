@@ -22,14 +22,14 @@
     <table class="center">
         <tr>
             <td>
-                <img width="45" height="45" style="padding: 1em;margin-top:1em;" src="https://i.ibb.co/cNxCq2C/logo-white.png" alt="">
+                <img width="45" height="45" style="padding: 1em;margin-top:6em;" src="https://i.ibb.co/cNxCq2C/logo-white.png" alt="">
             </td>
         </tr>
     </table>
     <table class="center">
         <tr>
             <td>
-                <img style="border-radius: 10%;width: 30em;height: 30em;" class="center" src="{{$memorial->photo1}}" alt="">
+                <img style="border-radius: 10%;width: 25em;height: 25em;" class="center" src="{{$memorial->photo1}}" alt="">
             </td>
         </tr>
     </table>

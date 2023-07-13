@@ -134,7 +134,7 @@ class PetsController extends Controller
         if($memorial->photo2){
             $pdf =  PDF::loadView('pdf.death4', $data);
         }else{
-            $pdf =  PDF::loadView('pdf.death1', $data);
+            $pdf = PDF::loadView('pdf.death1', $data);
         }
 
         $data["email"] = "chikavi10@gmail.com";
@@ -144,7 +144,6 @@ class PetsController extends Controller
         Mail::send('mail.died', $data, function($message)use($data, $pdf) {
             $message->to($data["email"])
                     ->subject($data["title"]);
-            // $message->attach($pdf->output());
             $message->attachData($pdf->output(), 'Memorial.pdf');
 
         });
