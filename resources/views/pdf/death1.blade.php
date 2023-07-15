@@ -35,14 +35,16 @@
     </table>
 
     <div class="text-center">
-        <h2 style="color:#a9acad;padding-top: 1em;font-size: 1.3em;" >En memoria de</h2>
-        <h1 style="color: #e3c387;font-size: 3em;text-transform: capitalize;">{{$memorial->pets->name}}</h1>
-        <p style="color:#a9acad"> {{ date('Y', strtotime($memorial->pets->birthday)) }} - {{ date('Y', strtotime($memorial->pets->date_death)) }} </p>
+        <h2 style="color:white;padding-top: 1em;font-size: 1.3em;" >En memoria de</h2>
+        <h1 style="color: #e3c387;font-size: 4em;text-transform: capitalize;">{{$memorial->pets->name}}</h1>
+        <p style="color:#e3c387;font-size: 1.4em;"> {{ date('Y', strtotime($memorial->pets->birthday)) }} - {{ date('Y', strtotime($memorial->pets->date_death)) }} </p>
     </div>
-    <table class="center" style="margin-top:1em;">
+    <table class="center" style="margin-top:3em;">
         <tr>
             <td>
-                <img class="center" style="width: 13em;height: 13em;" src="data:image/png;base64, {!! base64_encode(QrCode::size(250)->style('dot')->eye('circle')->backgroundColor(0,0,0)->color(227,195,135)->generate('https://radi.pet/memorial/'.$memorial->setHiddenId()) ) !!}">
+                {{-- <img class="center" style="width: 13em;height: 13em;" src="data:image/png;base64, {!! base64_encode(QrCode::size(250)->style('dot')->eye('circle')->backgroundColor(255,255,255)->color(227,195,135)->generate('https://radi.pet/memorial/'.$memorial->setHiddenId()) ) !!}"> --}}
+
+                <img class="center" style="width: 13em;height: 13em;" src="data:image/png;base64, {!! base64_encode(QrCode::size(250)->style('dot')->eye('circle')->backgroundColor(0,0,0)->color(255,255,255)->generate('https://radi.pet/memorial/'.$memorial->setHiddenId()) ) !!}">
             </td>
         </tr>
     </table>
