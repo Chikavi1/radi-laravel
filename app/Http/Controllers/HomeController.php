@@ -142,6 +142,43 @@ class HomeController extends Controller
         return view('validate_pets.index');
     }
 
+    public function discounts()
+    {
+        SEO::setTitle('Descuentos en Radi Pets');
+        SEO::setDescription('Mira los descuentos que tenemos para ti al presentar la placa QR de tu mascota.');
+        SEO::opengraph()->setUrl('https://radi.pet/discounts');
+        SEO::setCanonical('https://radi.pet/discounts');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/default.png'));
+        SEO::twitter()->setImage(asset('img/default.png'));
+        return view('home.download');
+    }
+
+    public function discountbusiness()
+    {
+        SEO::setTitle('Descuentos en Radi Pets');
+        SEO::setDescription('Mira los descuentos que tenemos para ti al presentar la placa QR de tu mascota.');
+        SEO::opengraph()->setUrl('https://radi.pet/discount-business');
+        SEO::setCanonical('https://radi.pet/discount-business');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/default.png'));
+        SEO::twitter()->setImage(asset('img/default.png'));
+        return view('home.download');
+    }
+
+
+    public function discount()
+    {
+        SEO::setTitle('Descuento en Radi Pets');
+        SEO::setDescription('Mira el descuento que tenemos para ti al presentar la placa QR de tu mascota.');
+        SEO::opengraph()->setUrl('https://radi.pet/discount');
+        SEO::setCanonical('https://radi.pet/discount');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/default.png'));
+        SEO::twitter()->setImage(asset('img/default.png'));
+        return view('home.download');
+    }
+
     public function reportdiscount()
     {
         SEO::setTitle('Reporta el incumplimiento de descuentos');
