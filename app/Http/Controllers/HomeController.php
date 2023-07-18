@@ -142,6 +142,18 @@ class HomeController extends Controller
         return view('validate_pets.index');
     }
 
+    public function reportdiscount()
+    {
+        SEO::setTitle('Reporta el incumplimiento de descuentos');
+        SEO::setDescription('Genera un reporte por el incumplimiento de descuentos');
+        SEO::opengraph()->setUrl('https://radi.pet/report-discount');
+        SEO::setCanonical('https://radi.pet/report-discount');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/default.png'));
+        SEO::twitter()->setImage(asset('img/default.png'));
+        return view('home.report-discount');
+    }
+
     public function memorial(){
         SEO::setTitle('Crea un recuerdo especial para tu mascota');
         SEO::setDescription('Un espacio para compartir la tristeza y los hermosos recuerdos de nuestra mascota🐾❤️');

@@ -36,6 +36,7 @@ Route::resource('places', PlacesController::class);
 Route::resource('lost', LostController::class);
 Route::resource('links', LinksController::class);
 
+Route::get('/report-discount', [HomeController::class, 'reportdiscount'])->name('home.reportdiscount');
 Route::get('/placas-distribuidor', [HomeController::class, 'placasdist'])->name('home.placasdist');
 Route::get('/placas-descuento', [HomeController::class, 'placasdescuento'])->name('home.placasdescuento');
 Route::get('/register-negocio-descuento', [HomeController::class, 'registerplacasdescuento'])->name('home.registerplacasdescuento');
