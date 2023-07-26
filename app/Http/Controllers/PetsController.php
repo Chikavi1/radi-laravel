@@ -222,12 +222,13 @@ class PetsController extends Controller
             $textTitle = 'Ayúdanos a encontrar a ';
             // return redirect('/lost/'.$pet->losts->setHiddenId());
         }
+
         SEO::setTitle($textTitle.''.$pet->name);
         SEO::opengraph()->setUrl('https://radi.pet/pet/'.$hash);
         SEO::setCanonical('https://radi.pet/pet/'.$hash);
         SEO::opengraph()->addProperty('type', 'articles');
-        SEO::opengraph()->addImage($pet->photo);
-        SEO::twitter()->setImage($pet->photo);
+        SEO::opengraph()->addImage(asset('img/pets.png'));
+        SEO::twitter()->setImage(asset('img/pets.png'));
         $age = Carbon::parse($pet->birthday)->diffForHumans();
 
         $breedData = [];
