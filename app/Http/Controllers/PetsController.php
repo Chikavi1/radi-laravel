@@ -45,8 +45,10 @@ class PetsController extends Controller
         SEO::opengraph()->setUrl('https://radi.pet');
         SEO::setCanonical('https://radi.pet');
         SEO::opengraph()->addProperty('type', 'articles');
-        SEO::opengraph()->addImage($pet->photo);
-        SEO::twitter()->setImage($pet->photo);
+        // SEO::opengraph()->addImage($pet->photo);
+        // SEO::twitter()->setImage($pet->photo);
+        SEO::opengraph()->addImage(asset('img/pets.png'));
+        SEO::twitter()->setImage(asset('img/pets.png'));
         $age = Carbon::parse($pet->birthday)->diffForHumans();
 
         $breedData = [];
