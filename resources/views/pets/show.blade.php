@@ -164,7 +164,7 @@ crossorigin="anonymous"></script>
 
 
 
-          @if($pet->organizations)
+          @if($pet->organizations && !$pet->id_user)
             <article class="flex bg-white transition hover:shadow-xl my-12">
 
 
