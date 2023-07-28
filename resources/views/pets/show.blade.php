@@ -320,6 +320,33 @@ crossorigin="anonymous"></script>
               </div>
             </div>
           </div>
+          <div
+          class="mt-4 relative block overflow-hidden rounded-lg border border-gray-400 p-4 sm:p-6 lg:p-8"
+      >
+          <span
+          class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-800 via-green-800 to-green-800"
+          ></span>
+
+          <div class="sm:flex sm:justify-between sm:gap-4">
+          <div>
+              <h3 class="text-2xl text-gray-900 sm:text-xl">
+              ¡Crea el perfil de tu mascota <span class="text-green-800 font-bold">gratis</span>!
+              </h3>
+
+              <p class="mt-1 text-xs font-medium text-gray-600">Descarga la app para crear el perfil de tu mascota</p>
+          </div>
+
+          </div>
+
+          <div class="my-4">
+
+          <a href="/download" class="mt-2 mb-4 border-green-600 bg-green-600 hover:bg-green-700 hover:border-green-700 text-white font-bold py-2 px-4 rounded-full">
+              Descargar
+          </a>
+          </div>
+
+</div>
+
 
             <div
                         class="mt-4 relative block overflow-hidden rounded-lg border border-gray-400 p-4 sm:p-6 lg:p-8"
@@ -401,6 +428,7 @@ crossorigin="anonymous"></script>
 
                 </dl>
             </div>
+
 
 
           <div class="mt-4 w-full h-64 rounded-md mx-auto text-center">
