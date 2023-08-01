@@ -40,6 +40,8 @@ Route::get('/discounts', [HomeController::class, 'discounts'])->name('home.disco
 Route::get('/discount/{id}', [HomeController::class, 'discount'])->name('home.discount');
 Route::get('/discount-business/{id}', [HomeController::class, 'discountbusiness'])->name('home.discountbusiness');
 
+Route::get('/business', [HomeController::class, 'business'])->name('home.business');
+
 
 Route::get('/report-discount', [HomeController::class, 'reportdiscount'])->name('home.reportdiscount');
 Route::get('/placas-distribuidor', [HomeController::class, 'placasdist'])->name('home.placasdist');
