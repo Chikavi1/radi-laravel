@@ -7,11 +7,11 @@
       <p class="px-0 mb-6 text-2xl text-gray-600 md:text-3xl lg:px-24">
         Mejora la experiencia de tus clientes, aumenta la <b>fidelidad</b> y el <b>crecimiento</b> de tu negocio <b>gratis</b>.      </p>
       <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
-        <a class="bg-black text-white px-6 py-2 rounded-md inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" href="#">
+        <a class="bg-black text-white px-6 py-2 rounded-md inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" href="/pre-business">
             Registrate
 
         </a>
-        <a class="inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0" href="#">
+        <a class="inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0" href="#download">
           Descarga App
         </a>
       </div>
@@ -88,7 +88,7 @@
   </div>
 </section>
 
-  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div id="download" class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
       <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
         <div class="max-w-xl mb-6">
@@ -128,11 +128,11 @@
   <section class="text-white bg-gray-900">
     <div class="flex flex-col items-stretch justify-between px-4 py-20 mx-auto max-w-7xl lg:flex-row sm:items-center">
       <div>
-        <h2 class="mb-1 text-xl font-semibold text-left sm:text-2xl sm:text-center lg:text-left">Únete gratis</h2>
+        <h2 class="mb-1 text-xl font-semibold text-left sm:text-2xl sm:text-center lg:text-left">Registrate gratis</h2>
         <p class="mb-6 text-lg font-normal text-left text-gray-200 sm:text-xl lg:mb-0 sm:text-center lg:text-left">¡Únete a nosotros y forma parte de la revolución para los negocios de servicios a dueños de mascotas! </p>
       </div>
       <div class="flex flex-col mb-2 space-x-0 space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
-        <a href="#" class="w-full bg-white text-center px-4 py-2 text-gray-900 rounded-md sm:w-auto">Registrarme</a>
+        <a href="/pre-business" class="w-full bg-white text-center px-4 py-2 text-gray-900 rounded-md sm:w-auto">Registrarme</a>
       </div>
     </div>
   </section>

@@ -41,6 +41,7 @@ Route::get('/discount/{id}', [HomeController::class, 'discount'])->name('home.di
 Route::get('/discount-business/{id}', [HomeController::class, 'discountbusiness'])->name('home.discountbusiness');
 
 Route::get('/business', [HomeController::class, 'business'])->name('home.business');
+Route::get('/pre-business', [HomeController::class, 'prebusiness'])->name('home.prebusiness');
 
 
 Route::get('/report-discount', [HomeController::class, 'reportdiscount'])->name('home.reportdiscount');

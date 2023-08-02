@@ -166,6 +166,19 @@ class HomeController extends Controller
         return view('home.download');
     }
 
+
+    public function prebusiness()
+    {
+        SEO::setTitle('App para negocios en Radi Pets');
+        SEO::setDescription('Mira los beneficios de usar Radi Pets para negocios.');
+        SEO::opengraph()->setUrl('https://radi.pet/pre-business');
+        SEO::setCanonical('https://radi.pet/pre-business');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/business-intro.png'));
+        SEO::twitter()->setImage(asset('img/business-intro.png'));
+        return view('home.prebusiness');
+    }
+
     public function business()
     {
         SEO::setTitle('App para negocios en Radi Pets');
