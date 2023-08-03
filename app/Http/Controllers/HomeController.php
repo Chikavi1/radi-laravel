@@ -13,6 +13,7 @@ use Auth;
 
 use App\Models\Memorial;
 use App\Models\MemorialComments;
+use App\Models\DiscountsCompanies;
 
 class HomeController extends Controller
 {
@@ -178,6 +179,28 @@ class HomeController extends Controller
         SEO::twitter()->setImage(asset('img/business-intro.png'));
         return view('home.prebusiness');
     }
+
+    public function prebusinessregister(Request $request)
+    {
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:DiscountsCompanies'],
+            'type' => ['required'],
+        ]);
+
+        $discounts = new DiscountsCompanies([
+            'email'             => $request->get('email'),
+            'name'              => $request->get('name'),
+            'type'              => $request->get('type'),
+            'status'            => 2,
+        ]);
+
+        $discounts->save();
+       return redirect()->route('home.prebusiness')->with('success','Se registró exitosamente, pronto te contactaremos.');
+
+    }
+
+
 
     public function business()
     {

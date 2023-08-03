@@ -11,9 +11,9 @@
             Registrate
 
         </a>
-        <a class="inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0" href="#download">
+        {{-- <a class="inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0" href="#download">
           Descarga App
-        </a>
+        </a> --}}
       </div>
     </div>
     <div class="w-full mx-auto mt-20 text-center md:w-10/12">
@@ -88,7 +88,7 @@
   </div>
 </section>
 
-  <div id="download" class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  {{-- <div id="download" class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
       <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
         <div class="max-w-xl mb-6">
@@ -121,7 +121,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
 
 
@@ -142,7 +142,7 @@
     <div class="px-4 py-32 mx-auto max-w-7xl">
       <div class="grid items-center w-full grid-cols-1 gap-10 mx-auto lg:grid-cols-8 lg:gap-4 xl:w-3/4">
         <div class="w-40 h-40 col-span-1 lg:col-span-2">
-          <img class="rounded-full" src="https://media.licdn.com/dms/image/D5603AQGKfTQBlK67Vw/profile-displayphoto-shrink_400_400/0/1687804692305?e=1696464000&v=beta&t=_gC8-tUHn6Yts_tBGYGaty1NrUmzQuIjWhIhTNPxIQU" class="object-cover w-full h-full bg-center rounded-md shadow-xl" alt="Kutty" />
+          <img class="rounded-full" src="https://i.ibb.co/GQYLDy4/4c968786-6a86-4d2f-8410-82fb3cc3ed50.jpg" class="object-cover w-full h-full bg-center rounded-md shadow-xl" alt="Kutty" />
         </div>
         <div class="col-span-1 lg:col-span-6">
           <h1 class="mb-3 text-2xl font-extrabold text-purple-900 md:leading-tight md:text-4xl">
