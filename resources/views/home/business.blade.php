@@ -11,9 +11,9 @@
             Registrate
 
         </a>
-        {{-- <a class="inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0" href="#download">
+        <a class="inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0" href="#download">
           Descarga App
-        </a> --}}
+        </a>
       </div>
     </div>
     <div class="w-full mx-auto mt-20 text-center md:w-10/12">
@@ -88,7 +88,7 @@
   </div>
 </section>
 
-  {{-- <div id="download" class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div id="download" class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
       <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
         <div class="max-w-xl mb-6">
@@ -104,10 +104,10 @@
             ¡Descarga nuestra app ahora mismo y comienza a disfrutar de todos los beneficios que ofrece!          </p>
         </div>
         <div class="flex items-center space-x-3">
-          <a href="/" class="w-32 transition duration-300 hover:shadow-lg">
+          <a href="https://apps.apple.com/us/app/radi-business/id6457159981" class="w-32 transition duration-300 hover:shadow-lg">
             <img src="https://kitwind.io/assets/kometa/app-store.png" class="object-cover object-top w-full h-auto mx-auto" alt="" />
           </a>
-          <a href="/" class="w-32 transition duration-300 hover:shadow-lg">
+          <a href="https://play.google.com/store/apps/details?id=pet.radi.business" class="w-32 transition duration-300 hover:shadow-lg">
             <img src="https://kitwind.io/assets/kometa/google-play.png" class="object-cover object-top w-full h-auto mx-auto" alt="" />
           </a>
         </div>
@@ -121,7 +121,7 @@
         </div>
       </div>
     </div>
-  </div> --}}
+  </div>
 
 
 
