@@ -6,13 +6,17 @@ use App\Models\Links;
 use Illuminate\Http\Request;
 use SEO;
 use App\Models\DiscountsCompanies;
+use Hashids\Hashids;
+
+
 class BusinessController extends Controller
 {
     public function show($hash)
     {
-        // $hash = '1';
-        $id = $hash;
-        $business = DiscountsCompanies::findOrFail($id);
+
+        $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
+        $id = $hashids->decode($hash);
+        $business = DiscountsCompanies::findOrFail($id?$id[0]:0);
 
         SEO::setTitle($business->name);
         SEO::setDescription($business->description);

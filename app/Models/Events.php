@@ -20,4 +20,10 @@ class Events extends Model
     //     'status'
     // ];
 
+
+    public function business()
+    {
+        return $this->belongsTo('App\Models\DiscountsCompanies','id_business','id');
+    }
+
 }

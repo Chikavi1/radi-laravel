@@ -7,12 +7,38 @@
         <div class="col-span-12 md:col-span-6">
             {{-- https://i.ibb.co/k5Cr3Yq/Whats-App-Image-2023-08-08-at-12-35-58-PM.jpg --}}
             {{-- https://i.ibb.co/pXVLKFx/Whats-App-Image-2023-08-08-at-12-53-34-PM.jpg --}}
-            <img class="cover-event w-full h-1/4 object-cover" src="{{$event->image}}" style="-webkit-mask-image: linear-gradient(#000000, #000000a8, #00000000 );            " alt="imagen">
+            <img class="cover-event w-full h-1/4  md:rounded-md" src="{{$event->image}}" style="-webkit-mask-image: linear-gradient(#000000, #000000a8, #00000000 );            " alt="imagen">
+            <div class="grid grid-cols-12  px-4 md:px-8">
+                <div class="col-span-8">
+                    <h1 class="text-xl md:text-4xl mt-24 md:mt-16">{{$event->name}}</h1>
+                    <h1 class="font-bold text-sm">{{$event->business->name}}</h1>
+                </div>
+                <div class="col-span-4">
+                    <h1 class="text-xl text-right md:text-4xl mt-24 md:mt-16">Costo</h1>
+                </div>
+            </div>
 
-            <h1 class="text-xl md:text-4xl mt-24 md:mt-16">{{$event->name}}</h1>
-            <div class="  shadow-md p-4 mx-4 md:mx-16 bg-white rounded-xl">
+            <div class="grid grid-cols-12 px-4 md:px-8 md:mt-6">
+                <div class="col-span-6">
+                    <h1 class="text-xl md:text-4xl mt-4 font-bold">Sabado </h1>
+                    <h5 class="text-md md:text-sm">15 de junio de 2023</h5>
+                    <h5 class="text-md md:text-sm">2:00 PM</h5>
 
+                </div>
+                <div class="col-span-6">
+                    <h1 class="text-xl md:text-4xl mt-4 font-bold">Domingo </h1>
+                    <h5 class="text-md md:text-sm">15 de junio de 2023</h5>
+                    <h5 class="text-md md:text-sm">7:00 PM</h5>
+
+                </div>
+            </div>
+
+
+            <div class="p-4 bg-white rounded-xl">
+                <p class="mt-8 font-bold">Acerca de</p>
                 <p class="mt-4 capital">{{$event->description}}</p>
+                <p class="mt-8 font-bold">Consideraciones</p>
+                <p class="mt-4 capital">{{$event->considerations}}</p>
 
                 <h2 class="mt-12 text-xl font-bold">Ubicación</h2>
                 <div id="mapa" class="col-span-12 h-72 mt-2" style="z-index:0;border-radius:1em;min-height:10em; min-width:15em;">
@@ -50,7 +76,7 @@
 
                             <div class="mt-4">
                             <p id="p1" class="max-w-[40ch] text-sm text-gray-500" id="text">
-                                https://radi.pet/event/{{$hash}}
+                                https://radi.pet/events/{{$hash}}
                             </p>
                             <button onclick="copyToClipboard('#p1')" class="mt-2 border-purple-700 bg-purple-700 hover:bg-purple-700 hover:border-purple-700 text-white font-bold py-2 px-4 rounded-full">
                                 Copiar

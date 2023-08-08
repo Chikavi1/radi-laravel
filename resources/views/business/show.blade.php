@@ -80,7 +80,7 @@
                         @forelse($business->events as $event)
                         <div class="grid grid-cols-12 mt-12">
                             <div class="col-span-12 md:col-span-6">
-                                <a href="/events/{{$event->id}}">
+                                <a target="_blank" href="/events/{{$event->id}}">
                                     <img src="{{$event->image}}" class="object-cover w-full h-56 mb-5 bg-center rounded" alt="Kutty" loading="lazy" />
                                     <h2 class="mb-2 text-lg font-semibold text-gray-900">
                                         <p   class="capital text-gray-900 hover:text-purple-700">{{$event->title}}</p>
@@ -121,7 +121,7 @@
                             <div class="sm:flex sm:justify-between sm:gap-4">
                             <div>
                                 <h3 class="text-lg font-bold text-purple-900 sm:text-xl">
-                                Comparte este link para que más personas conozcan a {{$business->name}} </h3>
+                                Comparte este negocio para que más personas conozcan a {{$business->name}} en Radi Pets </h3>
 
                                 <p class="mt-1 text-xs font-medium text-gray-600">Recomendación</p>
                             </div>

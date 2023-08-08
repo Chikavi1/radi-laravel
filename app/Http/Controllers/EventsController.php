@@ -6,14 +6,16 @@ use App\Models\Links;
 use Illuminate\Http\Request;
 use SEO;
 use App\Models\Events;
+use Hashids\Hashids;
+
 
 class EventsController extends Controller
 {
     public function show($hash)
     {
-        // $hash = '1';
-        $id = $hash;
-        $event = Events::findOrFail($id);
+        $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
+        $id = $hashids->decode($hash);
+        $event = Events::findOrFail($id?$id[0]:0);
 
         SEO::setTitle($event->name);
         SEO::setDescription($event->description);
