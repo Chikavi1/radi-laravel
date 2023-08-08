@@ -20,4 +20,14 @@ class DiscountsCompanies extends Model
         'status'
     ];
 
+    public function Discounts()
+    {
+        return $this->hasMany('App\Models\Discounts','company_id','id');
+    }
+
+    public function Events()
+    {
+        return $this->hasMany('App\Models\Events','id_business','id');
+    }
+
 }

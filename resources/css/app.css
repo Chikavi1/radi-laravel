@@ -10,6 +10,18 @@
     color: #adefd1;
   }
 
+  .cover-event{
+    mask-image: linear-gradient(#fcfcfcde 5%, #fcfcfc, transparent);
+    }
+
+
+    .truncate {
+        display: -webkit-box;
+        max-width: 200px;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
 
 
   .leaflet-popup-content-wrapper .leaflet-popup-content {

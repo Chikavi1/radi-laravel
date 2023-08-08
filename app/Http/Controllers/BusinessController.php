@@ -5,20 +5,22 @@ use App\Models\Links;
 
 use Illuminate\Http\Request;
 use SEO;
-
+use App\Models\DiscountsCompanies;
 class BusinessController extends Controller
 {
-    public function show()
+    public function show($hash)
     {
-        $hash = '1';
-        $business='cac';
-        SEO::setTitle('La manada de Leo');
-        SEO::setDescription('Ayudar a las personas a que puedan entender a sus perros y asi educarlos correctamente para poder tener una sana convivencia entre las dos especies y fortalecer el vínculo de la relación humano - perro.');
+        // $hash = '1';
+        $id = $hash;
+        $business = DiscountsCompanies::findOrFail($id);
+
+        SEO::setTitle($business->name);
+        SEO::setDescription($business->description);
         SEO::opengraph()->setUrl('https://radi.pet/business/'.$hash);
         SEO::setCanonical('https://radi.pet/business/'.$hash);
         SEO::opengraph()->addProperty('type', 'articles');
-        SEO::opengraph()->addImage('https://i.ibb.co/VYFgGTs/313415142-528083012658977-8498527970720641866-n.png');
-        SEO::twitter()->setImage('https://i.ibb.co/VYFgGTs/313415142-528083012658977-8498527970720641866-n.png');
+        SEO::opengraph()->addImage($business->image);
+        SEO::twitter()->setImage($business->image);
 
 
        return view('business.show',compact('business','hash'));
