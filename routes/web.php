@@ -8,6 +8,7 @@ use App\Http\Controllers\LostController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LinksController;
 use App\Http\Controllers\ReviewsController;
+use App\Http\Controllers\BusinessController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -52,6 +53,9 @@ Route::get('/register-negocio-descuento', [HomeController::class, 'registerplaca
 
 Route::get('/memorial', [HomeController::class, 'memorial'])->name('home.memorial');
 Route::get('/memorial/{id}', [HomeController::class, 'memorialshow'])->name('home.memorialshow');
+
+
+Route::get('/business/{id}', [BusinessController::class, 'show'])->name('business.show');
 
 
 
