@@ -39,7 +39,8 @@ Route::resource('places', PlacesController::class);
 Route::resource('lost', LostController::class);
 Route::resource('links', LinksController::class);
 
-Route::get('/events/{id}', [EventsController::class, 'show'])->name('events.show');
+Route::get('/event/{id}', [EventsController::class, 'show'])->name('events.show');
+Route::get('/events', [EventsController::class, 'index'])->name('events.index');
 
 Route::get('/discounts', [HomeController::class, 'discounts'])->name('home.discounts');
 Route::get('/discount/{id}', [HomeController::class, 'discount'])->name('home.discount');

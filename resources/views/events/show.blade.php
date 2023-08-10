@@ -76,7 +76,7 @@
 
                             <div class="mt-4">
                             <p id="p1" class="max-w-[40ch] text-sm text-gray-500" id="text">
-                                https://radi.pet/events/{{$hash}}
+                                https://radi.pet/event/{{$hash}}
                             </p>
                             <button onclick="copyToClipboard('#p1')" class="mt-2 border-purple-700 bg-purple-700 hover:bg-purple-700 hover:border-purple-700 text-white font-bold py-2 px-4 rounded-full">
                                 Copiar
