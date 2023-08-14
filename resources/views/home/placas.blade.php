@@ -9,7 +9,7 @@
 
     <div class="text-center">
         <p class="text-sm"  >Precio</p>
-        <h2 class="text-4xl font-bold text-green-800">$389 MXN</h2>
+        <h2 class="text-4xl font-bold text-green-800">$299 MXN</h2>
         <p class="mb-8">Incluye envio en México</p>
         <a target="_blank" href="https://buy.stripe.com/5kAaH4amiaSa6SAdQR" class="w-full shadow-xl btn btn-primary bg-purple-800 px-8 py-4 text-white rounded-md btn-lg sm:w-auto">Comprar</a>
       </div>

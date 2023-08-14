@@ -14,19 +14,23 @@
                     <h1 class="font-bold text-sm">{{$event->business->name}}</h1>
                 </div>
                 <div class="col-span-4">
-                    <h1 class="text-xl text-right md:text-4xl mt-24 md:mt-16">Costo</h1>
+                    @if($event->price)
+                        <h1 class="text-xl text-right md:text-4xl mt-24 md:mt-16">Tarifa</h1>
+                    @else
+                        <h1 class="text-xl text-right md:text-4xl mt-24 md:mt-16">Gratuito</h1>
+                    @endif
                 </div>
             </div>
 
             <div class="grid grid-cols-12 px-4 md:px-8 md:mt-6">
                 <div class="col-span-6">
-                    <h1 class="text-xl md:text-4xl mt-4 font-bold">Sabado </h1>
+                    <h1 class="text-xl md:text-4xl mt-4 font-bold">Sábado</h1>
                     <h5 class="text-md md:text-sm">15 de junio de 2023</h5>
                     <h5 class="text-md md:text-sm">2:00 PM</h5>
 
                 </div>
                 <div class="col-span-6">
-                    <h1 class="text-xl md:text-4xl mt-4 font-bold">Domingo </h1>
+                    <h1 class="text-xl md:text-4xl mt-4 font-bold">Domingo</h1>
                     <h5 class="text-md md:text-sm">15 de junio de 2023</h5>
                     <h5 class="text-md md:text-sm">7:00 PM</h5>
 

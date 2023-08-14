@@ -80,7 +80,7 @@
                         @forelse($business->events as $event)
                         <div class="grid grid-cols-12 mt-12">
                             <div class="col-span-12 md:col-span-6">
-                                <a target="_blank" href="/events/{{$event->id}}">
+                                <a target="_blank" href="/event/{{$event->id}}">
                                     <img src="{{$event->image}}" class="object-cover w-full h-56 mb-5 bg-center rounded" alt="Kutty" loading="lazy" />
                                     <h2 class="mb-2 text-lg font-semibold text-gray-900">
                                         <p   class="capital text-gray-900 hover:text-purple-700">{{$event->title}}</p>
