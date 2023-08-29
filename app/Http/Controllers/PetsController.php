@@ -54,7 +54,7 @@ class PetsController extends Controller
             $breedData = [];
             return view('pets.show',compact('pet','age','hash','breedData'));
         }else{
-            SEO::setTitle('Vincula a tu mascota'.''.$pet->name);
+            SEO::setTitle('Vincula a tu mascota');
             SEO::setDescription('Este link no se ha vinculado con ninguna mascota.');
             SEO::opengraph()->setUrl('https://radi.pet');
             SEO::setCanonical('https://radi.pet');
