@@ -30,29 +30,41 @@ class PetsController extends Controller
         $pet = Pets::where('code',$hash)->first();
 
         $textTitle = '';
-        if($pet->status == 0){
-            $textTitle = 'Recordando a ';
-        }elseif($pet->status == 1){
-            $textTitle = 'Descubre el perfil de ';
-        }elseif($pet->status == 2){
-            $textTitle = 'Adopta a ';
-        }
-        elseif($pet->status == 3){
-            $textTitle = 'Ayúdanos a encontrar a ';
-        }
-        SEO::setTitle($textTitle.''.$pet->name);
-        SEO::setDescription($pet->description);
-        SEO::opengraph()->setUrl('https://radi.pet');
-        SEO::setCanonical('https://radi.pet');
-        SEO::opengraph()->addProperty('type', 'articles');
-        // SEO::opengraph()->addImage($pet->photo);
-        // SEO::twitter()->setImage($pet->photo);
-        SEO::opengraph()->addImage(asset('img/pets.png'));
-        SEO::twitter()->setImage(asset('img/pets.png'));
-        $age = Carbon::parse($pet->birthday)->diffForHumans();
+        if($pet){
+            if($pet->status == 0){
+                $textTitle = 'Recordando a ';
+            }elseif($pet->status == 1){
+                $textTitle = 'Descubre el perfil de ';
+            }elseif($pet->status == 2){
+                $textTitle = 'Adopta a ';
+            }
+            elseif($pet->status == 3){
+                $textTitle = 'Ayúdanos a encontrar a ';
+            }
+            SEO::setTitle($textTitle.''.$pet->name);
+            SEO::setDescription($pet->description);
+            SEO::opengraph()->setUrl('https://radi.pet');
+            SEO::setCanonical('https://radi.pet');
+            SEO::opengraph()->addProperty('type', 'articles');
+            // SEO::opengraph()->addImage($pet->photo);
+            // SEO::twitter()->setImage($pet->photo);
+            SEO::opengraph()->addImage(asset('img/pets.png'));
+            SEO::twitter()->setImage(asset('img/pets.png'));
+            $age = Carbon::parse($pet->birthday)->diffForHumans();
+            $breedData = [];
+            return view('pets.show',compact('pet','age','hash','breedData'));
+        }else{
+            SEO::setTitle('Vincula a tu mascota'.''.$pet->name);
+            SEO::setDescription('Este link no se ha vinculado con ninguna mascota.');
+            SEO::opengraph()->setUrl('https://radi.pet');
+            SEO::setCanonical('https://radi.pet');
+            SEO::opengraph()->addProperty('type', 'articles');
+            SEO::opengraph()->addImage(asset('img/pets.png'));
+            SEO::twitter()->setImage(asset('img/pets.png'));
+            abort(404);
 
-        $breedData = [];
-        return view('pets.show',compact('pet','age','hash','breedData'));
+        }
+
     }
 
     public function index()
