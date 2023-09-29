@@ -1,46 +1,32 @@
 @include('layouts.nav')
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
 
 <section class="py-20 font-poppins ">
     <div class="max-w-6xl px-4 mx-auto">
     <div class="flex flex-wrap mb-24 -mx-4">
     <div class="w-full px-4 mb-8 md:w-1/2 md:mb-0">
-    <div class="sticky top-0 z-50 overflow-hidden ">
-    <div class="relative mb-6 lg:mb-10 ">
-    <a class="absolute left-0 transform lg:ml-2 top-1/2 translate-1/2" href="#">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5 text-blue-500 bi bi-chevron-left dark:text-blue-200" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
-    </svg>
-    </a>
-    <img class="object-cover w-full lg:h-1/2" src="https://i.ibb.co/x3DCzdG/Logos-de-colores.png" alt="">
-    <a class="absolute right-0 transform lg:mr-2 top-1/2 translate-1/2" href="#">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5 text-blue-500 bi bi-chevron-right dark:text-blue-200" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
-    </svg>
-    </a>
+    <div class="sticky top-0 z-50 overflow-hidden -mt-20 md:mt-2">
+    <div class="relative mb-6 lg:mb-10  ">
+
+        <div id="side1" class="hidden">
+            <img id="imagemain1" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/jDGpDYN/1.png" alt="purple">
+            <img id="imagemain2" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/Bj38GHv/2.png" alt="black">
+            <img id="imagemain3" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/z8jDHfK/3.png" alt="red">
+            <img id="imagemain4" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/m4hd0fc/4.png" alt="green">
+            <img id="imagemain5" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/BcJKpXp/5.png" alt="pink">
+        </div>
+
+        <div id="side2" class="hidden">
+                <img id="imagetype1" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/xLmDRvh/Nombre-de-tu-mascota-1.png" alt="radi pets">
+                <img id="imagetype2" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/hBHk2My/Nombre-de-tu-mascota-2.png" alt="custom">
+        </div>
+
     </div>
-    <div class="flex-wrap hidden -mx-2 md:flex">
-    <div class="w-1/2 p-2 sm:w-1/4">
-    <a class="block border border-transparent hover:border-blue-400" href="#">
-    <img class="object-cover w-full lg:h-32" src="https://i.postimg.cc/prW7DGkK/R-14.png" alt="">
-    </a>
-    </div>
-    <div class="w-1/2 p-2 sm:w-1/4">
-    <a class="block border border-transparent hover:border-blue-400" href="#">
-    <img class="object-cover w-full lg:h-32" src="https://i.postimg.cc/prW7DGkK/R-14.png" alt="">
-    </a>
-    </div>
-    <div class="w-1/2 p-2 sm:w-1/4">
-    <a class="block border border-transparent hover:border-blue-400" href="#">
-    <img class="object-cover w-full lg:h-32" src="https://i.postimg.cc/prW7DGkK/R-14.png" alt="">
-    </a>
-    </div>
-    <div class="w-1/2 p-2 sm:w-1/4">
-    <a class="block border border-transparent hover:border-blue-400" href="#">
-    <img class="object-cover w-full lg:h-32" src="https://i.postimg.cc/prW7DGkK/R-14.png" alt="">
-    </a>
-    </div>
-    </div>
-    <div class="px-6 pb-6 mt-6 border-t border-gray-300 dark:border-gray-400 ">
+
+    <div class="hidden md:block px-6 pb-6 mt-6 border-t border-gray-300 dark:border-gray-400 ">
     <div class="flex items-center justify-center mt-6">
     <span class="mr-3">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5 text-blue-700 dark:text-gray-400 bi bi-chat-left-dots-fill" viewBox="0 0 16 16">
@@ -62,18 +48,18 @@
     <div class="w-full px-4 md:w-1/2">
     <div class="lg:pl-20">
     <div class="mb-6 ">
-    <span class="text-red-500 dark:text-red-200">Nuevo</span>
-    <h2 class="max-w-xl mt-2 mb-4 text-5xl font-bold md:text-6xl font-heading">
+    <span class="hidden md:block text-red-500 dark:text-red-200">Nuevo</span>
+    <h2 class="text-xl -mt-16 max-w-xl md:mt-2 mb-4 md:text-5xl font-bold font-heading">
     Placa de identificación Radi Pets
     </h2>
-    <p class="max-w-md mb-4 text-green-500 font-bold">
+    <p  id="price" class="max-w-md mb-4 text-green-500 font-bold">
     $289.99  MXN
     </p>
     <div class="">
     <p class="mb-4 text-lg font-semibold dark:text-gray-400">Selecciona un color</p>
     <div class="grid grid-cols-2 gap-4 pb-4 border-b-2 border-gray-300 lg:grid-cols-3 dark:border-gray-600">
     <div>
-    <button  class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
+    <button id="btnpurple" class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
     <div>
     <div style="background: #5148e0;" class="w-8 h-8 mx-auto mb-2 rounded-full bg-emerald-400">
     </div>
@@ -84,7 +70,7 @@
     </button>
     </div>
     <div>
-    <button class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
+    <button id="btnblack" class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
     <div>
     <div style="background: #232323;" class="w-8 h-8 mx-auto mb-2 bg-gray-700 rounded-full dark:bg-gray-600">
     </div>
@@ -95,7 +81,7 @@
     </button>
     </div>
     <div>
-    <button class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
+    <button id="btnred" class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
     <div>
     <div style="background: #d82329;"  class="w-8 h-8 mx-auto mb-2 bg-red-500 rounded-full">
     </div>
@@ -106,7 +92,7 @@
     </button>
     </div>
     <div>
-    <button class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
+    <button id="btngreen" class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
     <div>
     <div style="background: #039a6b;" class="w-8 h-8 mx-auto mb-2 rounded-full bg-stone-200">
     </div>
@@ -117,7 +103,7 @@
     </button>
     </div>
     <div>
-    <button class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
+    <button id="btnpink" class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
     <div>
     <div style="background: #ff7ebf;"  class="w-8 h-8 mx-auto mb-2 bg-blue-200 rounded-full">
     </div>
@@ -137,8 +123,9 @@
     <div>
     <button class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-600 hover:border-blue-400">
     <div>
-    <div class="mb-2 font-semibold dark:text-gray-400">
-        Código QR
+    <div id="btnradimodel" class="mb-2 font-semibold dark:text-gray-400">
+        Modelo <br>
+        Radi Pets
     </div>
 
     </div>
@@ -147,11 +134,12 @@
     <div>
     <button class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-600 hover:border-blue-400">
     <div>
-    <div class="mb-2 font-semibold dark:text-gray-400">
-        Código QR
+    <div id="btncustommodel" class="mb-2 font-semibold dark:text-gray-400">
+        Modelo <br>
+        Personalizado
     </div>
     <p class="px-2 text-xs font-medium text-center text-gray-700 dark:text-gray-400">
-    NFC
+
     </p>
     </div>
     </button>
@@ -195,3 +183,74 @@
     </div>
     </section>
     @include('layouts.footer')
+
+
+    <script>
+        var color = 1;
+        var type  = 1;
+        var side  = 1;
+        $("#side1").removeClass('hidden')
+        $("#imagemain1").removeClass('hidden')
+        $("#imagemain1").addClass('animate__animated animate__rollIn')
+
+
+
+        $("#btnpurple").on('click', () => {
+            transactionColor(1)
+        });
+        $("#btnblack").on('click', () => {
+            transactionColor(2)
+        });
+        $("#btnred").on('click', ()=>{
+            transactionColor(5)
+        });
+        $("#btngreen").on('click', ()=>{
+            transactionColor(4)
+        });
+        $("#btnpink").on('click', ()=>{
+            transactionColor(3)
+        });
+
+        $("#btnradimodel").on('click', ()=>{
+            transactionType(1);
+        });
+
+        $("#btncustommodel").on('click', ()=>{
+            transactionType(2);
+        });
+
+        function transactionColor(id){
+            side = 1;
+            $("#side1").removeClass('hidden')
+            $("#side2").addClass('hidden');
+
+            if(id != color){
+                $("#imagemain"+color).addClass('animate__animated animate__rollOut')
+                setTimeout(() => {
+                    $("#imagemain"+color).removeClass('animate__animated animate__rollOut')
+                    $("#imagemain"+id).removeClass('hidden')
+                    $("#imagemain"+color).addClass('hidden')
+                    $("#imagemain"+id).addClass('animate__animated animate__rollIn')
+                    color = id;
+                }, 600);
+            }
+        }
+
+        function transactionType(id){
+            side = 2;
+            console.log(id);
+            $("#side2").removeClass('hidden');
+            $("#side1").addClass('hidden');
+
+            if(id != type){
+                $("#imagetype"+type).addClass('animate__animated animate__flipOutY')
+                setTimeout(() => {
+                    $("#imagetype"+type).removeClass('animate__animated animate__flipOutY')
+                    $("#imagetype"+id).removeClass('hidden')
+                    $("#imagetype"+type).addClass('hidden')
+                    $("#imagetype"+id).addClass('animate__animated animate__flipInY')
+                    type = id;
+                }, 600);
+            }
+        }
+    </script>
