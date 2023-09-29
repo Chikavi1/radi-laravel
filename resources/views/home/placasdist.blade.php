@@ -12,8 +12,8 @@
 
 </section>
 
-<img src="{{asset('img/placa.png')}}" data-aos="fade-up"  data-aos-easing="linear"
-data-aos-duration="1500"  class="mx-auto h-92" alt="">
+<img src="https://i.ibb.co/gDzcwtc/c22e4c22-a257-48a5-8501-0e380c6a8bb1.jpg" data-aos="fade-up"  data-aos-easing="linear"
+data-aos-duration="1500"  class="mx-auto  md:h-2/3 md:w-2/4 md:rounded-xl my-10 md:shadow-md" alt="">
 
 
 <section class="px-4 mx-auto max-w-7xl">

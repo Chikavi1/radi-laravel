@@ -4,12 +4,12 @@
 <section class="px-4 py-24 mx-auto max-w-7xl">
   <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
     <h1 class="ml-6 mb-6 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
-      Guarda la información de tu <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 lg:inline">mascota</span> en un solo lugar
+      Protege a tu mascota con una placa de <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 lg:inline">Radi Pets</span>
     </h1>
 
     <div class="text-center">
         <p class="text-sm"  >Precio</p>
-        <h2 class="text-4xl font-bold text-green-800">$399 MXN</h2>
+        <h2 class="text-4xl font-bold text-green-800">$289 MXN</h2>
         <p class="mb-8">Incluye envio en México</p>
         <a target="_blank" href="https://buy.stripe.com/eVa8yW7a65xQgta28f" class="w-full shadow-xl btn btn-primary bg-purple-800 px-8 py-4 text-white rounded-md btn-lg sm:w-auto">Comprar</a>
       </div>
@@ -23,14 +23,14 @@
   <div class="w-full mx-auto mt-20 text-center md:w-10/12">
     <div class="grid grid-cols-12 gap-2">
       <div class="col-span-12 md:col-span-4">
-        <img src="https://radi-images.s3.us-west-1.amazonaws.com/radi-placa.jpeg" alt="radi image" class="ml-8 md:ml-0 mt-4 md:mt-0 w-72 h-96 rounded-lg shadow-2xl" />
+        <img src="https://i.ibb.co/MSFvzWt/876b727a-9f43-43f7-8b22-e851fce18bb9.jpg" alt="radi image" class="ml-8 md:ml-0 mt-4 md:mt-0 w-full h-full rounded-lg shadow-2xl" />
       </div>
-      <div class="col-span-12 md:col-span-4">
-        <img src="https://radi-images.s3.us-west-1.amazonaws.com/Radi+placas+anuncio+(2).png" alt="radi image" class="ml-8 md:ml-0 mt-4 md:mt-0 object-cover  w-72 h-96 rounded-lg shadow-2xl" />
+      <div class="col-span-12 md:col-span-8">
+        <img src="https://i.ibb.co/7K2HwST/REDO-I-2.png" alt="radi image" class="ml-8 md:ml-0 mt-4 md:mt-0 object-cover  w-full h-full rounded-lg shadow-2xl" />
       </div>
-      <div class="col-span-12 md:col-span-4">
+      {{-- <div class="col-span-12 md:col-span-4">
         <img src="https://radi-images.s3.us-west-1.amazonaws.com/radi-placa-2.jpeg" alt="radi image" class="ml-8 md:ml-0 mt-4 md:mt-0 object-cover w-72 h-96 rounded-lg shadow-2xl" />
-      </div>
+      </div> --}}
     </div>
   </div>
 </section>

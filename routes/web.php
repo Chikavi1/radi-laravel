@@ -39,6 +39,8 @@ Route::resource('places', PlacesController::class);
 Route::resource('lost', LostController::class);
 Route::resource('links', LinksController::class);
 
+Route::get('/placas-buy', [HomeController::class, 'placasbuy'])->name('home.placasbuy');
+
 Route::get('/event/{id}', [EventsController::class, 'show'])->name('events.show');
 Route::get('/events', [EventsController::class, 'index'])->name('events.index');
 

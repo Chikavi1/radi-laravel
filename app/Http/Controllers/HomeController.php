@@ -20,6 +20,21 @@ class HomeController extends Controller
     //
 
 
+    public function placasbuy()
+    {
+        SEO::setTitle('La plataforma para los amantes de las mascotas');
+        SEO::setDescription('Encuentra lugares pet friendly, adopta a una mascota o apoya a los albergues, todo en un solo lugar.');
+        SEO::opengraph()->setUrl('https://radi.pet/');
+        SEO::setCanonical('https://radi.pet/');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/default.png'));
+        SEO::twitter()->setImage(asset('img/default.png'));
+
+        // $orgs = Organizations::latest()->take(2)->get();
+
+        return view('home.placasbuy');
+
+    }
     public function home()
     {
         SEO::setTitle('La plataforma para los amantes de las mascotas');
