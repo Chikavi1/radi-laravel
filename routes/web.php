@@ -10,6 +10,7 @@ use App\Http\Controllers\LinksController;
 use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\EventsController;
+use App\Http\Controllers\CartController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -32,6 +33,11 @@ if (App::environment('production')) {
 Route::get('/', [HomeController::class, 'home'])->name('home.home');
 Route::get('/download', [HomeController::class, 'download'])->name('home.download');
 Route::get('/feedback', [HomeController::class, 'feedback'])->name('home.feedback');
+
+Route::post('/add-product', [CartController::class, 'add'])->name('cart.add');
+Route::post('/remove-product', [CartController::class, 'remove'])->name('cart.remove');
+Route::get('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+
 
 Route::resource('org', OrganizationsController::class);
 Route::resource('pet', PetsController::class);

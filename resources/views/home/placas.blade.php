@@ -11,7 +11,7 @@
         <p class="text-sm"  >Precio</p>
         <h2 class="text-4xl font-bold text-green-800">$289 MXN</h2>
         <p class="mb-8">Incluye envio en México</p>
-        <a target="_blank" href="https://buy.stripe.com/eVa8yW7a65xQgta28f" class="w-full shadow-xl btn btn-primary bg-purple-800 px-8 py-4 text-white rounded-md btn-lg sm:w-auto">Comprar</a>
+        <a target="_blank" href="/placas-buy" class="w-full shadow-xl btn btn-primary bg-purple-800 px-8 py-4 text-white rounded-md btn-lg sm:w-auto">Comprar</a>
       </div>
     <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
       <!-- <a class="bg-purple-800 p-4 text-white inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" href="#">

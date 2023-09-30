@@ -151,6 +151,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <div class="mt-6">
 
 
+        <p id="availabled" class="mb-2 text-sm dark:text-gray-400 font-bold">Disponible</p>
     </div>
     <div class="mt-6 ">
     <div class="flex flex-wrap items-center">
@@ -160,18 +161,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </svg>
     </span>
     <h2 class="text-lg font-bold text-gray-700 dark:text-gray-400">Envio</h2>
-    </div>
+</div>
     <div class="px-7">
-    <p class="mb-2 text-sm dark:text-gray-400">En stock</p>
-    <p class="mb-2 text-sm dark:text-gray-400">Envio gratis</p>
-    <a class="mb-2 text-sm text-blue-400 dark:text-blue-200" href="#">Envio gratis en México</a>
+    <p class="mb-2 text-sm dark:text-gray-400">Envio gratis en México de 3-7 dias</p>
     </div>
     </div>
 
     <div class="mt-6 ">
-    <button class="w-full px-4 py-2 font-bold text-white bg-blue-400 lg:w-96 hover:bg-blue-500">
-        Continuar
-    </button>
+        {!! Form::open(['route' => ['cart.add']], ['class' => 'p-6  flex items-center justify-center' ,'files' => true]) !!}
+            <button class="w-full px-4 py-2 font-bold text-white bg-blue-800 lg:w-96 hover:bg-blue-500">
+                Agregar al carrito
+            </button>
+        {!! Form::close() !!}
+
     </div>
 
     </div>
@@ -213,10 +215,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
         $("#btnradimodel").on('click', ()=>{
             transactionType(1);
+            $("#price").text("269.00 MXN");
+            $("#availabled").text("Disponible").addClass('text-700-green');
         });
 
         $("#btncustommodel").on('click', ()=>{
             transactionType(2);
+            $("#price").text("299.00 MXN");
+            $("#availabled").text("Tarda 2-7 dias más (dependiendo de la demanda)");
+
         });
 
         function transactionColor(id){
@@ -254,3 +261,5 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             }
         }
     </script>
+
+

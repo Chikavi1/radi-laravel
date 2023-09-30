@@ -9,6 +9,7 @@
         "artesaos/seotools": "^1.1",
         "barryvdh/laravel-dompdf": "^2.0",
         "cartalyst/stripe-laravel": "^15.0",
+        "darryldecode/cart": "^4.2",
         "guzzlehttp/guzzle": "^7.2",
         "hashids/hashids": "^5.0",
         "intervention/image": "^2.7",

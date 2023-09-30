@@ -14,6 +14,7 @@ use Auth;
 use App\Models\Memorial;
 use App\Models\MemorialComments;
 use App\Models\DiscountsCompanies;
+use Cart;
 
 class HomeController extends Controller
 {
@@ -22,6 +23,8 @@ class HomeController extends Controller
 
     public function placasbuy()
     {
+
+
         SEO::setTitle('La plataforma para los amantes de las mascotas');
         SEO::setDescription('Encuentra lugares pet friendly, adopta a una mascota o apoya a los albergues, todo en un solo lugar.');
         SEO::opengraph()->setUrl('https://radi.pet/');
