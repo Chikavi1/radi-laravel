@@ -99,7 +99,7 @@
             </div>
         </div>
 
-            <ul id="navbar" class="z-50 hidden bg-white w-full h-screen max-h-screen absolute flex flex-col p-3 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0">
+            <ul id="navbar" style="z-index: 1000 !important" class="z-50 hidden bg-white w-full h-screen max-h-screen absolute  flex-col p-3 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0">
 
                 <li>
                     <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="/results" >Pet friendly</a>

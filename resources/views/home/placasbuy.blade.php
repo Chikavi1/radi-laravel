@@ -9,10 +9,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <div class="flex flex-wrap mb-24 -mx-4">
     <div class="w-full px-4 mb-8 md:w-1/2 md:mb-0">
     <div class="sticky top-0 z-50 overflow-hidden -mt-20 md:mt-2">
-    <div class="relative mb-6 lg:mb-10  ">
+    <div class=" mb-6 lg:mb-10  ">
 
-        <div id="side1" class="hidden">
-            <img id="imagemain1" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/jDGpDYN/1.png" alt="purple">
+        <div id="side1" class="hidden -z-10">
+            <img id="imagemain1" class="z-0 object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/jDGpDYN/1.png" alt="purple">
             <img id="imagemain2" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/Bj38GHv/2.png" alt="black">
             <img id="imagemain3" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/z8jDHfK/3.png" alt="red">
             <img id="imagemain4" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/m4hd0fc/4.png" alt="green">

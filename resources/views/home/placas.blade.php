@@ -23,10 +23,10 @@
   <div class="w-full mx-auto mt-20 text-center md:w-10/12">
     <div class="grid grid-cols-12 gap-2">
       <div class="col-span-12 md:col-span-4">
-        <img src="https://i.ibb.co/MSFvzWt/876b727a-9f43-43f7-8b22-e851fce18bb9.jpg" alt="radi image" class="ml-8 md:ml-0 mt-4 md:mt-0 w-full h-full rounded-lg shadow-2xl" />
+        <img src="https://i.ibb.co/MSFvzWt/876b727a-9f43-43f7-8b22-e851fce18bb9.jpg" alt="radi image" class="md:ml-8  ml-0 mt-4 md:mt-0 w-full h-full rounded-lg shadow-2xl" />
       </div>
       <div class="col-span-12 md:col-span-8">
-        <img src="https://i.ibb.co/7K2HwST/REDO-I-2.png" alt="radi image" class="ml-8 md:ml-0 mt-4 md:mt-0 object-cover  w-full h-full rounded-lg shadow-2xl" />
+        <img src="https://i.ibb.co/7K2HwST/REDO-I-2.png" alt="radi image" class="md:ml-8 mt-4 md:mt-0 object-cover  w-full h-full rounded-lg shadow-2xl" />
       </div>
       {{-- <div class="col-span-12 md:col-span-4">
         <img src="https://radi-images.s3.us-west-1.amazonaws.com/radi-placa-2.jpeg" alt="radi image" class="ml-8 md:ml-0 mt-4 md:mt-0 object-cover w-72 h-96 rounded-lg shadow-2xl" />
