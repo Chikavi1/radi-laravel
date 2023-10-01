@@ -3,6 +3,7 @@
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
+{!! Form::open(['route' => ['cart.add']], ['class' => 'p-6  flex items-center justify-center' ,'files' => true]) !!}
 
 <section class="py-20 font-poppins ">
     <div class="max-w-6xl px-4 mx-auto">
@@ -14,9 +15,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         <div id="side1" class="hidden -z-10">
             <img id="imagemain1" class="z-0 object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/jDGpDYN/1.png" alt="purple">
             <img id="imagemain2" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/Bj38GHv/2.png" alt="black">
-            <img id="imagemain3" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/z8jDHfK/3.png" alt="red">
+            <img id="imagemain3" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/BcJKpXp/5.png" alt="red">
             <img id="imagemain4" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/m4hd0fc/4.png" alt="green">
-            <img id="imagemain5" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/BcJKpXp/5.png" alt="pink">
+            <img id="imagemain5" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/z8jDHfK/3.png" alt="pink">
         </div>
 
         <div id="side2" class="hidden">
@@ -59,7 +60,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <p class="mb-4 text-lg font-semibold dark:text-gray-400">Selecciona un color</p>
     <div class="grid grid-cols-2 gap-4 pb-4 border-b-2 border-gray-300 lg:grid-cols-3 dark:border-gray-600">
     <div>
-    <button id="btnpurple" class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
+    <button type="button" id="btn1" class="flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200 ">
     <div>
     <div style="background: #5148e0;" class="w-8 h-8 mx-auto mb-2 rounded-full bg-emerald-400">
     </div>
@@ -70,7 +71,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </button>
     </div>
     <div>
-    <button id="btnblack" class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
+    <button type="button" id="btn2" class=" flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200 ">
     <div>
     <div style="background: #232323;" class="w-8 h-8 mx-auto mb-2 bg-gray-700 rounded-full dark:bg-gray-600">
     </div>
@@ -81,7 +82,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </button>
     </div>
     <div>
-    <button id="btnred" class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
+    <button type="button" id="btn3" class="flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200">
     <div>
     <div style="background: #d82329;"  class="w-8 h-8 mx-auto mb-2 bg-red-500 rounded-full">
     </div>
@@ -92,7 +93,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </button>
     </div>
     <div>
-    <button id="btngreen" class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
+    <button type="button" id="btn4" class="flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200">
     <div>
     <div style="background: #039a6b;" class="w-8 h-8 mx-auto mb-2 rounded-full bg-stone-200">
     </div>
@@ -103,7 +104,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </button>
     </div>
     <div>
-    <button id="btnpink" class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-500 hover:border-blue-400">
+    <button type="button" id="btn5" class="flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200">
     <div>
     <div style="background: #ff7ebf;"  class="w-8 h-8 mx-auto mb-2 bg-blue-200 rounded-full">
     </div>
@@ -118,12 +119,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <div class="mt-6">
     <p class="mb-2 text-lg font-semibold dark:text-gray-400">Selecciona una opción</p>
     <a href="#" class="text-blue-500 hover:underline dark:text-gray-400">
-    Que tecnologia te gustaria tener?</a>
-    <div class="grid grid-cols-2 gap-4 pb-4 mt-2 mb-4 border-b-2 border-gray-300 lg:grid-cols-3 dark:border-gray-600">
+        ¿Qué modelo te gustaría tener?</a>
+    <div class="grid grid-cols-2 gap-4 pb-4 mt-2 mb-4    lg:grid-cols-3 ">
     <div>
-    <button class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-600 hover:border-blue-400">
+    <button type="button"  id="btnmodel1" class="btnmodels flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200">
     <div>
-    <div id="btnradimodel" class="mb-2 font-semibold dark:text-gray-400">
+    <div class=" mb-2 font-semibold dark:text-gray-400">
         Modelo <br>
         Radi Pets
     </div>
@@ -132,9 +133,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </button>
     </div>
     <div>
-    <button class="flex items-center justify-center w-full h-full py-4 border-2 border-gray-300 dark:hover:border-blue-400 dark:border-gray-600 hover:border-blue-400">
+    <button type="button" id="btnmodel2" class="btnmodels flex flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200">
     <div>
-    <div id="btncustommodel" class="mb-2 font-semibold dark:text-gray-400">
+    <div  class=" mb-2 font-semibold dark:text-gray-400">
         Modelo <br>
         Personalizado
     </div>
@@ -143,10 +144,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </p>
     </div>
     </button>
-    </div>
+</div>
 
 
-    </div>
+</div>
+
+    <input type="text" name="pet_name" id="inputname" required class="hidden rounded-lg bg-gray-100 border-transparent flex-1 appearance-none border border-gray-500 w-full py-2 px-4  text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+     placeholder="Ingresa el nombre de tu mascota (Max 8 caracteres).">
     </div>
     <div class="mt-6">
 
@@ -168,11 +172,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </div>
 
     <div class="mt-6 ">
-        {!! Form::open(['route' => ['cart.add']], ['class' => 'p-6  flex items-center justify-center' ,'files' => true]) !!}
-            <button class="w-full px-4 py-2 font-bold text-white bg-blue-800 lg:w-96 hover:bg-blue-500">
+        <input type="hidden" name="color" id="inputcolor">
+        <input type="hidden" name="model" id="inputmodel">
+        <button type="submit" class="w-full px-4 py-2 font-bold text-white bg-blue-800 lg:w-96 hover:bg-blue-500">
                 Agregar al carrito
             </button>
-        {!! Form::close() !!}
 
     </div>
 
@@ -184,6 +188,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </div>
     </div>
     </section>
+    {!! Form::close() !!}
+
     @include('layouts.footer')
 
 
@@ -194,42 +200,53 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         $("#side1").removeClass('hidden')
         $("#imagemain1").removeClass('hidden')
         $("#imagemain1").addClass('animate__animated animate__rollIn')
+        $("#btn1").addClass('border-green-400')
+        $("#btnmodel1").addClass('border-green-400')
+        $("#inputcolor").val(color);
+        $("#inputmodel").val(type);
 
 
-
-        $("#btnpurple").on('click', () => {
+        $("#btn1").on('click', () => {
             transactionColor(1)
         });
-        $("#btnblack").on('click', () => {
+        $("#btn2").on('click', () => {
             transactionColor(2)
         });
-        $("#btnred").on('click', ()=>{
-            transactionColor(5)
-        });
-        $("#btngreen").on('click', ()=>{
-            transactionColor(4)
-        });
-        $("#btnpink").on('click', ()=>{
+        $("#btn3").on('click', ()=>{
             transactionColor(3)
         });
+        $("#btn4").on('click', ()=>{
+            transactionColor(4)
+        });
 
-        $("#btnradimodel").on('click', ()=>{
+        $("#btn5").on('click', ()=>{
+            transactionColor(5)
+        });
+
+        $("#btnmodel1").on('click', ()=>{
             transactionType(1);
             $("#price").text("269.00 MXN");
             $("#availabled").text("Disponible").addClass('text-700-green');
+            $("#inputname").addClass('hidden')
+            $("#inputname").removeAttr('required');
         });
 
-        $("#btncustommodel").on('click', ()=>{
+        $("#btnmodel2").on('click', ()=>{
             transactionType(2);
             $("#price").text("299.00 MXN");
             $("#availabled").text("Tarda 2-7 dias más (dependiendo de la demanda)");
+            $("#inputname").removeClass('hidden')
 
         });
 
         function transactionColor(id){
+            $(".btncolor").removeClass('border-green-400');
+            $("#btn"+id).addClass('border-green-400');
+
             side = 1;
             $("#side1").removeClass('hidden')
             $("#side2").addClass('hidden');
+            $("#inputcolor").val(id);
 
             if(id != color){
                 $("#imagemain"+color).addClass('animate__animated animate__rollOut')
@@ -244,10 +261,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         }
 
         function transactionType(id){
+            $(".btnmodels").removeClass('border-green-400');
+
+            $("#btnmodel"+id).addClass('border-green-400');
             side = 2;
-            console.log(id);
-            $("#side2").removeClass('hidden');
             $("#side1").addClass('hidden');
+            $("#inputmodel").val(id);
+            $("#side2").removeClass('hidden');
 
             if(id != type){
                 $("#imagetype"+type).addClass('animate__animated animate__flipOutY')

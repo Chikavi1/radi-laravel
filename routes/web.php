@@ -35,8 +35,9 @@ Route::get('/download', [HomeController::class, 'download'])->name('home.downloa
 Route::get('/feedback', [HomeController::class, 'feedback'])->name('home.feedback');
 
 Route::post('/add-product', [CartController::class, 'add'])->name('cart.add');
-Route::post('/remove-product', [CartController::class, 'remove'])->name('cart.remove');
+Route::post('/remove-product/{id}', [CartController::class, 'remove'])->name('cart.remove');
 Route::get('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+Route::post('/cart-buy', [CartController::class, 'buy'])->name('cart.buy');
 
 
 Route::resource('org', OrganizationsController::class);
