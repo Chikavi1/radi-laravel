@@ -103,9 +103,9 @@
 <section class="text-gray-600 body-font">
   <div class="container mx-auto flex px-5  md:flex-row flex-col items-center">
 
-    <div class="md:px-20 lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+    <div class="md:px-20 lg:flex-grow md:w-3/6 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
       <h1 class="title-font text-left sm:text-4xl text-3xl mb-4 font-bold text-gray-900">Una plataforma para los amantes de las mascotas.</h1>
-      <p class="mb-8 text-left text-2xl font-medium">
+      <p class="mb-8 text-left text-xl font-medium">
         Crea el perfil de tu mascota gratis, encuentra lugares pet friendly, reporta desapariciones, adopta a una mascota o apoya a los albergues, todo en un solo lugar.
       </p>
 
@@ -115,13 +115,13 @@
             <a href="/download" class="mr-2 bg-purple-800 text-white inline-flex py-3 px-5 rounded-lg items-center hover:bg-purple-700 focus:outline-none">
 
               <span class=" flex items-start flex-col leading-none">
-                <span class="title-font font-medium"><i class="fa-solid fa-cloud-arrow-down"></i> Descargar App</span>
+                <span class="title-font font-medium"><i class="fa-solid fa-cloud-arrow-down"></i> App Clientes</span>
               </span>
             </a>
-            <a href="/login" class="bg-green-600 text-white inline-flex py-3 px-5 rounded-lg items-center lg: md:ml-0  md:mt-4 mt-0 lg:mt-0 hover:bg-green-700 focus:outline-none">
+            <a href="/login" class="bg-white text-green-800 inline-flex py-3 px-5 rounded-lg items-center lg: md:ml-0  md:mt-4 mt-0 lg:mt-0 hover:bg-green-700 focus:outline-none">
 
               <span class="flex items-start flex-col leading-none">
-                <span class="title-font font-medium"><i class="fa-solid fa-arrow-right-to-bracket"></i> Inicia sesión</span>
+                <span class="title-font font-medium"> Inicia sesión</span>
               </span>
             </a>
           </div>
@@ -129,8 +129,10 @@
 
     </div>
 
-    <div class="w-full">
-      <img class="" alt="hero" src="{{asset('img/landing.png')}}">
+    <div class="lg:w-3/6 hidden lg:inline-block">
+        <p class="text-right">
+            <img class="h-96lg:w-fulls lg:w-full " alt="hero" src="{{asset('img/landing.png')}}">
+        </p>
     </div>
   </div>
 
@@ -155,7 +157,7 @@
     </div>
   </div> --}}
 
-<section class="grid grid-cols-1 gap-0   bg-opacity-25 md:grid-cols-2">
+{{-- <section class="grid grid-cols-1 gap-0   bg-opacity-25 md:grid-cols-2">
   <div class="flex flex-col items-start justify-center px-4 py-24 lg:px-20">
     <h1 class="mb-6 text-4xl font-bold leading-tight text-blue-900 md:text-4xl lg:text-5xl">Descubre lugares Pet Friendly</h1>
     <p class="pr-0 mb-4 text-xl text-blue-800 tracking-relaxed lg:pr-16">Explora los destinos pet friendly cercanos y disfruta junto a tu mejor amigo de experiencias inolvidables.</p>
@@ -171,9 +173,200 @@
       loading="lazy"
     />
   </div>
-</section>
+</section> --}}
 
-<section class="px-4 py-24 mx-auto max-w-7xl">
+<h2 class="text-center text-3xl mt-20 font-bold ">Algunas Funcionalidades</h2>
+
+
+
+<div class="grid grid-cols-12 gap-4 p-6 mb-12">
+    <div class="col-span-12 md:col-span-4">
+        <a href="/results">
+            <div class="hover:-translate-y-1 hover:scale-150 hover:bg-gray-100 duration-500 relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
+                <img alt="moto" src="https://i.ibb.co/G3SKYcR/Radi-Pets-ORG-2.png" class="rounded-xl w-full  mb-4 -right-20 -bottom-8"/>
+                <div class="w-4/6">
+                    <p class="mb-2 text-lg font-medium text-gray-800">
+                        Lugares Pet Friendly
+                    </p>
+                    <p class="text-xs text-gray-400">
+                        Descubre destinos cercanos que son ideales para disfrutar junto a tu mascota. Vive experiencias nuevas juntos.                    </p>
+                    <p class="text-xl font-medium text-indigo-500 mt-2">
+                        Ver más
+                    </p>
+                </div>
+            </div>
+        </a>
+
+    </div>
+    <div class="col-span-12 md:col-span-4">
+        <a href="/lost">
+            <div class="hover:-translate-y-1 hover:scale-150 hover:bg-gray-100 duration-500 relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
+                <img alt="moto" src="https://i.ibb.co/HTCmLQy/Radi-Pets-ORG-3.png" class="rounded-xl w-full  mb-4 -right-20 -bottom-8"/>
+                <div class="w-4/6">
+                    <p class="mb-2 text-lg font-medium text-gray-800">
+                        Mascotas desaparecidas
+                    </p>
+                    <p class="text-xs text-gray-400">
+                        Reporta la desaparición de tu mascota o ayuda a alguien que la encuentre.¡Hagamos que cada mascota regrese a casa!
+                    </p>
+                    <p class="text-xl font-medium text-indigo-500 mt-2">
+                        Ver más
+                    </p>
+                </div>
+            </div>
+        </a>
+
+    </div>
+    <div class="col-span-12 md:col-span-4">
+        <a href="/org">
+            <div class="hover:-translate-y-1 hover:scale-150 hover:bg-gray-100 duration-500 relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
+                <img alt="moto" src="https://i.ibb.co/hMS1RdB/Radi-Pets-ORG-4.png" class="rounded-xl w-full  mb-4 -right-20 -bottom-8"/>
+                <div class="w-4/6">
+                    <p class="mb-2 text-lg font-medium text-gray-800">
+                        Listado de Organizaciones
+                    </p>
+                    <p class="text-xs text-gray-400">
+                        Explora organizaciones y conoce a las adorables mascotas en busca de un hogar. Descubre cómo puedes marcar la diferencia.
+                    </p>
+                    <p class="text-xl font-medium text-indigo-500 mt-2">
+                        Ver más
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="relative z-20 flex items-center bg-black mt-8">
+    <div class="container relative flex flex-col items-center justify-between px-6 py-20 mx-auto">
+        <div class="flex flex-col">
+            <h1 class="w-full text-4xl font-light text-center text-white uppercase sm:text-5xl">
+                Tienda
+            </h1>
+            <h2 class="w-full max-w-2xl py-8 mx-auto text-xl font-light text-center text-white">
+                Ofrecemos productos excepcionales, con un impacto positivo. Tu elección beneficia a organizaciones y mejora tu experiencia en Radi Pets.
+            </h2>
+            <div class="relative block w-full mx-auto mt-6 md:mt-0">
+                <div class="grid grid-cols-12 gap-4 sm:p-2 md:p-6">
+                    <div class="col-span-12 md:col-span-4 mt-20 md:mt-0">
+                    <a href="/placas">
+                            <div class="relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
+                                <img alt="moto" src="https://i.ibb.co/7K2HwST/REDO-I-2.png" class="w-full h-3/4 mb-4 -right-20 -bottom-8"/>
+                                <div class="w-4/6">
+                                    <p class="mb-2 text-lg font-medium text-gray-800">
+                                        Placas de identificación
+                                    </p>
+                                    <p class="text-xs text-gray-400">
+                                        Incluye envio Desde
+                                    </p>
+                                    <p class="text-xl font-medium text-indigo-500">
+                                        $289 MXN
+                                    </p>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4  mt-20 md:mt-0">
+                    <a href="/memorial">
+                            <div class="relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
+                                <img alt="moto" src="https://i.ibb.co/q9c6gc3/Whats-App-Image-2023-07-05-at-00-12-21.jpg" class="rounded-lg w-full h-3/4 mb-4 -right-20 -bottom-8"/>
+                                <div class="w-4/6">
+                                    <p class="mb-2 text-lg font-medium text-gray-800">
+                                        Cuadro memorial Radi Pets
+                                    </p>
+                                    <p class="text-xs text-gray-400">
+                                        Incluye envio Desde
+                                    </p>
+                                    <p class="text-xl font-medium text-indigo-500">
+                                        $389
+                                    </p>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+
+
+                    <div class="col-span-12 md:col-span-4  mt-20 md:mt-0">
+                        <div class="relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
+                            <img alt="moto" src="https://img.kwcdn.com/product/1e19d4646b4/81dfba1b-75b8-421a-94db-92a8027f1780_800x800.jpeg?imageView2/2/w/800/q/70" class="w-full h-3/4 mb-4 -right-20 -bottom-8"/>
+                            <div class="w-4/6">
+                                <p class="mb-2 text-lg font-medium text-gray-800">
+                                    Pechera con tecnologia NFC
+                                </p>
+                                <p class="text-xs text-gray-400">
+                                    Aún no disponible
+                                </p>
+                                <p class="text-xl font-medium text-indigo-500">
+                                   Proximamente
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<div class="relative z-20 flex items-center bg-white  mt-8">
+    <div class="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
+        <div class="flex flex-col">
+            <h1 class="w-full text-4xl font-light text-left md:text-center  text-gray-800 uppercase sm:text-5xl">
+               Radi organizaciones
+            </h1>
+            <h2 class="w-full max-w-2xl py-8 mx-auto text-2xl font-light text-left md:text-center  text-gray-500">
+                Nuestra plataforma apoya organizaciones, optimiza procesos y promueve el voluntariado. ¡Descubre cómo juntos cambiamos vidas!            </h2>
+            <div class="flex items-center justify-center mt-4">
+                <a href="https://org.radi.pet" class=" px-4 py-2 mr-4 rounded-lg text-white uppercase bg-gray-800 border-2 border-transparent text-md hover:bg-gray-900">
+                    Comenzar
+                </a>
+
+            </div>
+        </div>
+        <div class="relative block w-full mx-auto mt-6 md:mt-0">
+            <img src="https://i.ibb.co/N2LhQFm/Radi-Pets-ORG.png" class="max-w-xs m-auto md:max-w-2xl"/>
+        </div>
+    </div>
+</div>
+
+<div class="mt-20 py-12 px-4 relative z-20 flex items-center overflow-hidden bg-black ">
+    <div class="container relative flex px-6 py-16 mx-auto">
+        <div class="relative z-20 flex flex-col sm:w-full lg:w-2/5 mr-18">
+            <span class="w-20 h-2 mb-12 bg-white  ">
+            </span>
+            <h1 class="flex flex-col text-6xl font-black leading-none text-white uppercase font-bebas-neue sm:text-8xl  ">
+                Radi
+                <span class="text-5xl sm:text-7xl">
+                    Negocios
+                </span>
+            </h1>
+            <p class="text-sm text-white sm:text-base  mt-2">
+                ¿Eres dueño de una veterinaria, estilista, entrenador, parque, guardería u otro negocio que atiende a mascotas? <br><br>
+                ¡Tenemos la solución perfecta para ti! Nuestra innovadora app está diseñada para facilitar y mejorar la experiencia tanto para los dueños de mascotas como para tu negocio.
+            </p>
+            <div class="flex mt-8">
+                <a href="/business" class="px-4 py-2 mr-4 text-black uppercase bg-white border-2 border-transparent rounded-lg text-md">
+                    Ver más
+                </a>
+           </div>
+        </div>
+        <div class="relative w-full lg:w-3/5 pl-20 ">
+            <img src="https://i.ibb.co/S6TZZzh/St-1.png" class="w-full"/>
+        </div>
+    </div>
+</div>
+
+
+{{-- <section class="px-4 py-24 mx-auto max-w-7xl">
     <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
       <h1 class="ml-6 mb-6 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
         Guarda la información de tu <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 lg:inline">mascota</span> en un solo lugar
@@ -210,12 +403,12 @@
         </div>
       </div>
     </div>
-  </section>
+</section> --}}
 
 
 
 
-<div class="relative flex flex-col-reverse px-4 py-16 mx-auto lg:block lg:flex-col lg:py-32 xl:py-48 md:px-8 sm:max-w-xl md:max-w-full">
+{{-- <div class="relative flex flex-col-reverse px-4 py-16 mx-auto lg:block lg:flex-col lg:py-32 xl:py-48 md:px-8 sm:max-w-xl md:max-w-full">
     <div class="z-0 flex justify-center h-full  overflow-hidden lg:pt-24 lg:pb-16 lg:pr-8 xl:pr-0   lg:absolute lg:justify-end lg:bottom-0 lg:left-0 lg:items-center">
       <img src="https://radi-images.s3.us-west-1.amazonaws.com/white+modern+minimalist+electronic+sale+facebook+cover+(1).png" class="object-cover object-right w-full h-auto lg:w-auto lg:h-full" alt="" />
     </div>
@@ -244,17 +437,18 @@
             >
               Ver desaparecidos
           </a>
-            {{-- <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Saber más</a> --}}
+            {{-- <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Saber más</a>
           </div>
         </form>
       </div>
     </div>
-</div>
+</div> --}}
 
 
 
 
-  <section>
+
+  {{-- <section>
     <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
         <div class="grid p-6 bg-gray-100 rounded place-content-center sm:p-8">
@@ -264,7 +458,7 @@
 
               <p class="mt-4 text-gray-500">
 
-¡Conoce nuestra iniciativa de apoyo a albergues! En Radi Pets queremos crear conciencia sobre los albergues y su importante labor en la comunidad. <br> Queremos destacar la importancia de estos refugios para las mascotas abandonadas.
+                ¡Conoce nuestra iniciativa de apoyo a albergues! En Radi Pets queremos crear conciencia sobre los albergues y su importante labor en la comunidad. <br> Queremos destacar la importancia de estos refugios para las mascotas abandonadas.
               </p>
             </header>
 
@@ -305,9 +499,20 @@
 
       </div>
     </div>
-  </section>
+  </section> --}}
 
-  <section class="text-white bg-gray-900">
+
+
+
+
+
+
+
+
+
+
+
+  <section class="text-white bg-gray-900 ">
     <div class="flex flex-col items-stretch justify-between px-4 py-20 mx-auto max-w-7xl lg:flex-row sm:items-center">
       <div>
         <h2 class="mb-1 text-xl font-semibold text-left sm:text-2xl sm:text-center lg:text-left">¿Listo para formar una alianza estratégica?</h2>
@@ -316,11 +521,15 @@
           <br>  ¡Contáctanos ahora y comencemos a construir una alianza exitosa para las mascotas!</p>
       </div>
       <div class="flex flex-col mb-2 space-x-0 space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
-        <a href="/contact" class="w-full btn bg-white px-4 py-6 text-black btn-lg sm:w-auto">Contactanos</a>
+        <a href="/contact" class="w-full btn rounded-lg bg-white px-4 py-2 text-black btn-lg sm:w-auto">Contactanos</a>
         {{-- <a href="#" class="w-full btn btn-outline-light btn-lg sm:w-auto">Book a demo</a> --}}
       </div>
     </div>
   </section>
+
+
+
+
 
 
   <div class="md:px-20 my-10 mx-4">

@@ -39,6 +39,16 @@ Route::post('/remove-product/{id}', [CartController::class, 'remove'])->name('ca
 Route::get('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
 Route::post('/cart-buy', [CartController::class, 'buy'])->name('cart.buy');
 
+Route::post('/chikavi/order-create', [HomeController::class, 'orderCreate'])->name('order.create');
+
+
+Route::get('/generateLogoPlaca/{name}/{color}', [HomeController::class, 'generateLogoPlaca'])->name('home.generateLogoPlaca');
+Route::get('/generateQrPlaca/{url}', [HomeController::class, 'downloadQR'])->name('home.generateImage');
+Route::get('/generateThanks/{name}/{pet_name}', [HomeController::class, 'generateThanks'])->name('home.generateThanks');
+Route::get('/start-guide-id', [HomeController::class, 'startguide'])->name('home.startguide');
+
+Route::get('/chikavi/orders', [HomeController::class, 'orders'])->name('cart.orders');
+
 
 Route::resource('org', OrganizationsController::class);
 Route::resource('pet', PetsController::class);

@@ -74,11 +74,15 @@
 
                 <div class="navbar hidden md:block ">
                     <ul class="flex space-x-8 text-sm font-semibold">
-                      <li> <a href="/results">Pet friendly</a></li>
+                        <li> <a href="/download">Clientes</a></li>
+                        <li> <a target="_blank" href="/business">Negocios</a></li>
+                        <li> <a target="_blank" href="https://org.radi.pet">Organizaciones</a></li>
+
+                      {{-- <li> <a href="/results">Pet friendly</a></li> --}}
                       {{-- <li> <a href="/adoptions">En adopción</a></li> --}}
-                      <li> <a href="/lost">Mascotas Desaparecidas</a></li>
+                      {{-- <li> <a href="/lost">Mascotas Desaparecidas</a></li>
                       <li> <a href="/org">Albergues</a></li>
-                      <li> <a href="/placas">Placas</a></li>
+                      <li> <a href="/placas">Placas</a></li> --}}
 
                       <!-- <li> <a href="/clients">Clientes</a></li>
                         <li> <a href="/partners">Socios</a></li>
@@ -102,17 +106,17 @@
             <ul id="navbar" style="z-index: 1000 !important" class="z-50 hidden bg-white w-full h-screen max-h-screen absolute  flex-col p-3 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0">
 
                 <li>
-                    <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="/results" >Pet friendly</a>
+                    <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="/download" >Clientes</a>
                 </li>
                 {{--
                 <li>
                     <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="/adoptions" >En adopción</a>
                 </li> --}}
                 <li>
-                    <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="/lost" >Mascotas Desaparecidas</a>
+                    <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="/business" >Negocios</a>
                 </li>
                 <li>
-                    <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="/org" >Albergues</a>
+                    <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="https://org.radi.pet" >Organizaciones</a>
                 </li>
 
                 <li>

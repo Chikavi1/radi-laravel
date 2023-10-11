@@ -15,6 +15,12 @@ use App\Models\Memorial;
 use App\Models\MemorialComments;
 use App\Models\DiscountsCompanies;
 use Cart;
+use GuzzleHttp\Client;
+use Image;
+use App\Models\OrdersRadi;
+use App\Models\Identifications;
+
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -38,6 +44,259 @@ class HomeController extends Controller
         return view('home.placasbuy');
 
     }
+
+    public function generateLogoPlaca($name,$color){
+        $BLACK = '#222222';
+        $BLUE  = '#4f46e5';
+        $RED   = '#dc2626';
+        $PINK  = '#ec4899';
+        $GREEN = '#059669';
+
+        $name = $name == 'null'?'Radi Pets':$name;
+        $COLOR = $BLACK;
+
+        if($color == 'blue'){
+            $COLOR = $BLUE;
+
+        }else if($color == 'red'){
+            $COLOR = $RED;
+
+        }else if($color == 'pink'){
+            $COLOR = $PINK;
+
+        }else if($color == 'green'){
+            $COLOR = $GREEN;
+        }
+
+
+        $img = Image::make(public_path('img/bg-placa.png'))->resize(1024,1024);
+        $img->text($name,512,512,function($font) use($COLOR){
+            $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+
+            $font->size(176);
+            $font->color($COLOR);
+            $font->align("center");
+            $font->valign("center");
+        });
+
+        $image = $img->encode('jpg');
+        $name = '03-10-14'.$name.'.jpg';
+
+        $headers = [
+            'Content-Type' => 'image/jpeg',
+            'Content-Disposition' => 'attachment; filename='. $name,
+        ];
+
+        return response()->stream(function() use ($image) {
+            echo $image;
+        }, 200, $headers);
+    }
+
+    public function downloadQR($id){
+        $order = OrdersRadi::findOrFail($id);
+        $name = 'QR.png';
+        $image = Image::make($order->url_tag)->encode('png');
+        $headers = [
+            'Content-Type' => 'image/png',
+            'Content-Disposition' => 'attachment; filename='. $name,
+        ];
+        return response()->stream(function() use ($image) {
+            echo $image;
+        }, 200, $headers);
+    }
+
+    public function startguide(){
+        dd('chavales gracias');
+    }
+
+    public function generateThanks($name,$pet_name){
+            // $name = 'Saulo';
+            // $pet_name = 'Loki';
+            $onlyname = explode(" ", $name);
+            $name = ucfirst($onlyname[0]);
+            $name =  ($name!='Null')?$name:'';
+
+        $img = Image::make(public_path('img/bg-thanks.png'))->resize(1414,2000);
+        if($name){
+            $img->text('¡Hola '.$name.'!',212,480,function($font){
+                $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+                $font->size(96);
+                $font->color('#17202F');
+                $font->align("left");
+            });
+        }else{
+            $img->text('¡Hola!',212,480,function($font){
+                $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+                $font->size(96);
+                $font->color('#17202F');
+                $font->align("left");
+            });
+        }
+
+
+        $img->text('¡Esperamos que tú y',712,1295,function($font){
+            $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+            $font->size(85);
+            $font->color('#17202F');
+            $font->align("center");
+        });
+
+
+        if($pet_name == 'Radi Pets'){
+            $img->text('mascota lo disfruten!',712,1400,function($font){
+                $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+
+                $font->size(85);
+                $font->color('#17202F');
+                $font->align("center");
+            });
+        }else{
+            $img->text(ucfirst($pet_name).' lo disfruten!',712,1400,function($font){
+                $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+
+                $font->size(85);
+                $font->color('#17202F');
+                $font->align("center");
+            });
+        }
+
+
+
+        // return $img->response('jpg');
+
+
+        $image = $img->encode('jpg');
+        $name = '03-10-14'.$name.'.jpg';
+
+        $headers = [
+            'Content-Type' => 'image/jpeg',
+            'Content-Disposition' => 'attachment; filename='. $name,
+        ];
+
+        return response()->stream(function() use ($image) {
+            echo $image;
+        }, 200, $headers);
+
+
+
+        // $url = "https://i.ibb.co/59yLsxN/Documento-A4-Portada-trabajo-final-de-carrera-azules-pastel-1.png";
+        // $name = 'thanks.png';
+
+        // $image = Image::make($url)->encode('png');
+        // $headers = [
+        //     'Content-Type' => 'image/png',
+        //     'Content-Disposition' => 'attachment; filename='. $name,
+        // ];
+        // return response()->stream(function() use ($image) {
+        //     echo $image;
+        // }, 200, $headers);
+
+
+    }
+
+    public function orderCreate(Request $request){
+        // OrdersRadi::create
+
+        $name = 'placa';
+        $pricing = 299.00;
+        $total   = $pricing*$request->get('quantity');
+        $status = 1;
+
+
+
+        if($request->get('sku') == '0001'){
+
+            $code = 'RD'.Str::random(7);
+
+            $identification = new Identifications([
+                'code' => $code,
+                'url'  => 'https://radi.pet/pets/'.$code,
+                'version' => 2,
+                'color' => $request->color
+            ]);
+
+            $identification->save();
+
+                $payload = [
+                    "url"   => 'https://radi.pet/pets/'.$code,
+                    "color" => $request->color
+                ];
+
+                $client = new \GuzzleHttp\Client();
+                $res = $client->post('localhost:8080/generateQR', [
+                    'json' => $payload,
+                ]);
+
+              $resp =  json_decode($res->getBody()->getContents());
+              $url_tag  = $resp->data;
+
+            if($request->get('pet_name')){
+                $pricing = 205;
+            }else{
+                $pricing = 169;
+                $status = 3;
+            }
+        }
+
+        $product = new OrdersRadi([
+            'color' => $request->get('color'),
+            'size' => $request->get('size'),
+            'gender' => $request->get('gender'),
+            'specie' => $request->get('specie'),
+            'allergies' => $request->get('allergies'),
+            'id_tag'    =>  $code,
+            'url_tag'   => $url_tag,
+
+            'product_name'    =>  $name,
+            'sku'             =>  $request->get('sku'),
+            'quantity'        =>  $request->get('quantity'),
+            'pricing'         =>  $pricing,
+            'shipping'        =>  $request->get('shipping'),
+            'email'           =>  $request->get('email'),
+            'phone'           =>  $request->get('phone'),
+            'user_name'       =>  ucfirst($request->get('user_name')),
+            'pet_name'        =>  $request->get('pet_name')?ucfirst($request->get('pet_name')):'Radi Pets',
+            'notes'           =>  $request->get('notes'),
+            'address'         =>  ucfirst($request->get('address')),
+            'total'           =>  $total,
+            'status'          =>  $status,
+        ]);
+
+        $product->save();
+
+        return redirect()->back();
+
+    }
+
+    public function orders()
+    {
+        $products = OrdersRadi::orderBy('id','desc')->get();
+
+        // $products = array([
+        //     'product_name'  => '1',
+        //     'sku' => 'sad',
+        //     'quatinty' => '1',
+        //     'pricing' => '169',
+        //     'shipping' => 'normal',
+        //     'email' => 'chikavi@hotmail.com',
+        //     'phone' => '33272742',
+        //     'user_name' => 'luis rojas',
+        //     'pet_name' => 'radi',
+        //     'payment_id' => '2131231dsfdsafvs',
+        //     'notes'=> 'momigm',
+        //     'address' => 'san mateo',
+        //     'total' => '169',
+        //     'rating' => null,
+        //     'status' => 1
+        // ]
+        // );
+
+
+    return view('orders.index',compact('products'));
+
+
+    }
+
     public function home()
     {
         SEO::setTitle('La plataforma para los amantes de las mascotas');
