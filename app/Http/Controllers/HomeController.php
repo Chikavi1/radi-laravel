@@ -53,31 +53,34 @@ class HomeController extends Controller
         $GREEN = '#059669';
 
         $name = $name == 'null'?'Radi Pets':$name;
-        $COLOR = $BLACK;
+        $COLOR = public_path('img/bg-black.png');
 
         if($color == 'blue'){
-            $COLOR = $BLUE;
+            $COLOR = public_path('img/bg-blue.png') ;
 
         }else if($color == 'red'){
-            $COLOR = $RED;
+            $COLOR = public_path('img/bg-red.png') ;
 
         }else if($color == 'pink'){
-            $COLOR = $PINK;
+            $COLOR = public_path('img/bg-pink.png') ;
 
         }else if($color == 'green'){
-            $COLOR = $GREEN;
+            $COLOR = public_path('img/bg-green.png') ;
         }
 
 
-        $img = Image::make(public_path('img/bg-placa.png'))->resize(1024,1024);
+        $img = Image::make( $COLOR)->resize(1024,1024);
         $img->text($name,512,512,function($font) use($COLOR){
-            $font->file(public_path('fonts/Roboto/Roboto-Light.ttf'));
+            $font->file(public_path('fonts/Roboto/Roboto-Black.ttf'));
 
             $font->size(176);
-            $font->color($COLOR);
+            $font->color('#FFFFFF');
             $font->align("center");
             $font->valign("center");
         });
+
+        return $img->response('jpg');
+
 
         $image = $img->encode('jpg');
         $name = '03-10-14'.$name.'.jpg';
@@ -106,7 +109,7 @@ class HomeController extends Controller
     }
 
     public function startguide(){
-        dd('chavales gracias');
+        return view('startguideid' );
     }
 
     public function generateThanks($name,$pet_name){
