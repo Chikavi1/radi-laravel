@@ -310,9 +310,8 @@ class HomeController extends Controller
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
 
-        $orgs = Organizations::latest()->take(2)->get();
 
-        return view('welcome',compact('orgs'));
+        return view('welcome');
 
     }
 
