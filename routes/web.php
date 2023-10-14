@@ -49,6 +49,7 @@ Route::get('/start-guide-id', [HomeController::class, 'startguide'])->name('home
 
 Route::get('/chikavi/orders', [HomeController::class, 'orders'])->name('cart.orders');
 
+Route::get('/affiliate-program', [HomeController::class, 'affiliateprogram'])->name('home.affiliateprogram');
 
 Route::resource('org', OrganizationsController::class);
 Route::resource('pet', PetsController::class);

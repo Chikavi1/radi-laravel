@@ -197,6 +197,10 @@ class HomeController extends Controller
 
     }
 
+    public function affiliateprogram(){
+        return view('home.affiliate-program');
+    }
+
     public function orderCreate(Request $request){
         // OrdersRadi::create
 
