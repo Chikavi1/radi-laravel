@@ -13,7 +13,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <div class=" mb-6 lg:mb-10  ">
 
         <div id="side1" class="hidden -z-10">
-            <img id="imagemain1" class="z-0 object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/WKyKhKD/Nombre-de-tu-mascota-1.png" alt="purple">
+            <img id="imagemain1" class="z-0 object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/K5QgHVj/Nombre-de-tu-mascota-4.png" alt="purple">
             <img id="imagemain2" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/Bj38GHv/2.png" alt="black">
             <img id="imagemain3" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/BcJKpXp/5.png" alt="red">
             <img id="imagemain4" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/m4hd0fc/4.png" alt="green">
