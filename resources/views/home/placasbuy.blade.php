@@ -14,10 +14,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
         <div id="side1" class="hidden -z-10">
             <img id="imagemain1" class="z-0 object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/K5QgHVj/Nombre-de-tu-mascota-4.png" alt="purple">
-            <img id="imagemain2" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/Bj38GHv/2.png" alt="black">
-            <img id="imagemain3" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/BcJKpXp/5.png" alt="red">
-            <img id="imagemain4" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/m4hd0fc/4.png" alt="green">
-            <img id="imagemain5" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/z8jDHfK/3.png" alt="pink">
+            <img id="imagemain2" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/vzqYRGs/Nombre-de-tu-mascota-5.png" alt="black">
+            <img id="imagemain3" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/d6kM24J/Nombre-de-tu-mascota-7.png" alt="red">
+            <img id="imagemain4" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/BGN992R/Nombre-de-tu-mascota-8.png" alt="green">
+            <img id="imagemain5" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/nDW0HyW/Nombre-de-tu-mascota-6.png" alt="pink">
         </div>
 
         <div id="side2" class="hidden">
