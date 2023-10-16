@@ -16,8 +16,8 @@
                         <img class="m-2 h-24 w-28 rounded-md border object-cover object-center" src="{{$product->attributes->image}}" alt="" />
                     </div>
                     <div class="col-span-8">
-                        <p class="font-semibold mt-4">{{$product->name}}</p>
-                        <p class=" text-gray-400">{{$product->attributes->pet_name}}</p>
+                        <p class="font-semibold mt-4">{{$product->name}}  {{$product->attributes->color}} </p>
+                        <p class=" text-gray-400">{{$product->attributes->pet_name?$product->attributes->pet_name:'Sin Personalizar'}}</p>
                         <p class="text-lg font-bold">{{$product->price}}</p>
 
                         {!! Form::open(['route' => ['cart.remove',$product->id]], ['class' => 'p-6  flex items-center justify-center' ,'files' => true]) !!}
@@ -33,8 +33,6 @@
           <p class="mt-8 text-lg font-medium">Envios</p>
           <form class="mt-5 grid gap-6">
             <div class="relative">
-              <input class="peer hidden" id="radio_1" type="radio" name="radio" checked />
-              <span class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
               <label class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_1">
                 {{-- <img class="w-14 object-contain" src="https://enviosperros.com/img/ep/aliados/redpack.svg" alt="" /> --}}
                 <div class="ml-5">
@@ -44,18 +42,7 @@
                 </div>
               </label>
             </div>
-            <div class="relative">
-              <input class="peer hidden" id="radio_2" type="radio" name="radio" checked />
-              <span class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
-              <label class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_2">
-                {{-- <img class="w-14 object-contain" src="https://enviosperros.com/img/ep/aliados/estafeta.svg" alt="" /> --}}
-                <div class="ml-5">
-                  <span class="mt-2 font-semibold">Envio express</span>
-                  <p>$149.00 MXN</p>
-                  <p class="text-slate-500 text-sm leading-6">Entrega de 1 a 2 días hábiles</p>
-                </div>
-              </label>
-            </div>
+
           </form>
         </div>
 
@@ -116,7 +103,7 @@
 
                     </div>
                 <div class="col-span-6">
-                        <input required type="text" id="billing-neighborhood" name="billing-address" class="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="Colonia o barrio" />
+                        <input required type="text" id="billing-neighborhood" name="billing-neighborhood" class="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="Colonia o barrio" />
 
                 </div>
                 <div class="col-span-6">
@@ -148,7 +135,7 @@
                 </div>
                 <div class="mt-6 flex items-center justify-between">
                 <p class="text-sm font-medium text-gray-900">Total</p>
-                <p class="text-2xl font-semibold text-gray-900">$408.00</p>
+                <p class="text-2xl font-semibold text-gray-900">${{ Cart::getTotal()}}</p>
                 </div>
             </div>
             <button class="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white">Ordenar</button>

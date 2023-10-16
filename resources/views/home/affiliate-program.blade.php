@@ -20,23 +20,19 @@
         <div class="flex flex-col items-center md:flex-row">
           <a
             href="/"
-            class="inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide  transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+            style="background: #0D5E6C;"
+            class="inline-flex items-center justify-center  text-white w-full h-12 px-6 mb-3 font-medium tracking-wide  transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
           >
             <span class="mr-3">Registrate gratis</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4">
-              <polyline fill="none" stroke="currentColor" stroke-miterlimit="10" points="4,4 22,4 19,14 4,14 "></polyline>
-              <circle cx="4" cy="22" r="2" stroke-linejoin="miter" stroke-linecap="square" stroke="none" fill="currentColor"></circle>
-              <circle cx="20" cy="22" r="2" stroke-linejoin="miter" stroke-linecap="square" stroke="none" fill="currentColor"></circle>
-              <polyline fill="none" stroke="currentColor" stroke-miterlimit="10" points="1,1 4,4 4,14 2,18 23,18 "></polyline>
-            </svg>
+
           </a>
         </div>
       </div>
       <div class="relative lg:w-1/2">
-        <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96" src="https://images.unsplash.com/photo-1543269866-487350d6fa5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" />
+        <img class="hidden lg:inline-block object-cover w-full h-56 rounded shadow-lg sm:h-96" src="https://images.unsplash.com/photo-1543269866-487350d6fa5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" />
         <a href="/" aria-label="Play Video" class="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25">
           <div class="flex items-center justify-center w-16 h-16 transition duration-300 transform bg-gray-100 rounded-full shadow-2xl group-hover:scale-110">
-            <svg class="w-10 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="hidden lg:inline-block w-10 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M16.53,11.152l-8-5C8.221,5.958,7.833,5.949,7.515,6.125C7.197,6.302,7,6.636,7,7v10 c0,0.364,0.197,0.698,0.515,0.875C7.667,17.958,7.833,18,8,18c0.184,0,0.368-0.051,0.53-0.152l8-5C16.822,12.665,17,12.345,17,12 S16.822,11.335,16.53,11.152z"
               ></path>
@@ -51,24 +47,24 @@
 
   <div class="grid grid-cols-12 gap-4 p-6 mb-12">
     <div class="col-span-12 md:col-span-4">
-            <div class="hover:-translate-y-1 hover:scale-150 duration-500 relative w-full p-4 overflow-hidden bg-black shadow-lg rounded-2xl">
-                <img alt="moto" src="https://i.ibb.co/XxVtwBL/Post-facebook-venta-de-producto-comercial-moderno-gris-2.png" class="rounded-xl w-full  mb-4 -right-20 -bottom-8"/>
+            <div style="background: #0D5E6C;" class="hover:-translate-y-1 hover:scale-150 duration-500 relative w-full p-4 overflow-hiddenshadow-lg rounded-2xl">
+                <img alt="moto" src="https://i.ibb.co/z715HdP/Post-facebook-venta-de-producto-comercial-moderno-gris-9.png" class="rounded-xl w-full  mb-4 -right-20 -bottom-8"/>
                 <div class="w-4/6">
                     <p class="mb-2 text-lg font-medium text-white">
-                        Garantia de Radi Pets
+                        Comparte tu link
                     </p>
-                    <p class="text-xs text-gray-400">
-                        En Radi Pets, respaldamos nuestros productos con una garantía sólida de 1 mes. Estamos comprometidos a brindar el mejor servicio a nuestros clientes.
+                    <p class="text-xs text-gray-200">
+                        Comparte tu enlace de compra con tu código, ¡y gana dinero sin esfuerzo! Las compras realizadas a través de tu enlace en las próximas 3 semanas te generarán ganancias. ¡Así de sencillo!
                 </div>
             </div>
 
     </div>
     <div class="col-span-12 md:col-span-4">
-            <div class="hover:-translate-y-1 hover:scale-150  duration-500 relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
-                <img alt="moto" src="https://i.ibb.co/qD4RCZR/Post-facebook-venta-de-producto-comercial-moderno-gris-1.png" class="rounded-xl w-full object-cover  mb-4 -right-20 -bottom-8"/>
+            <div style="background: #CADBDF;" class="hover:-translate-y-1 hover:scale-150  duration-500 relative w-full p-4 overflow-hidden shadow-lg rounded-2xl">
+                <img alt="moto" src="https://i.ibb.co/Fm89QrZ/Post-facebook-venta-de-producto-comercial-moderno-gris-10.png" class="rounded-xl w-full object-cover  mb-4 -right-20 -bottom-8"/>
                 <div class="w-full">
-                    <p class="mb-2 text-lg font-medium text-gray-800">
-                       Seguridad en tu información
+                    <p class="mb-2 text-lg font-medium text-black">
+                       Recibe premios
                     </p>
                     <p class="text-xs w-full text-gray-700">
                         Priorizamos la privacidad de nuestros usuarios. Seguimos altos estándares de seguridad de datos y nunca compartimos tu información de contacto la cual solo se comparte cuando alguien escanea el QR de tu mascota desaparecida.                    </p>
@@ -78,111 +74,78 @@
 
     </div>
     <div class="col-span-12 md:col-span-4">
-            <div style="background:#0348ac" class="hover:-translate-y-1 hover:scale-150   duration-500 relative w-full p-4 overflow-hiddeshadow-lg rounded-2xl">
-                <img alt="moto" src="https://i.ibb.co/GkS0mhF/Post-facebook-venta-de-producto-comercial-moderno-gris-3.png" class="rounded-xl   h-42 mb-4 -right-20 -bottom-8"/>
+            <div style="background:#000000" class="hover:-translate-y-1 hover:scale-150   duration-500 relative w-full p-4 overflow-hiddeshadow-lg rounded-2xl">
+                <img alt="moto" src="https://i.ibb.co/pWYqzXh/Post-facebook-venta-de-producto-comercial-moderno-gris-11.png" class="rounded-xl   h-42 mb-4 -right-20 -bottom-8"/>
                 <div class="w-4/6">
                     <p class="mb-2 text-lg font-medium text-white">
-                        Diseño Único e Incomparable
+                        Apoya a la causa
                     </p>
-                    <p class="text-xs text-gray-400">
-                        Las placas de Radi Pets destacan por su diseño único, marcando la diferencia frente a las placas tradicionales y ofreciendo beneficios exclusivos en el mercado.
-                    </p>
+                    <p class="text-xs text-gray-200">
+
+                        Si eres estudiante o buscas ingresos extra, esta oportunidad es ideal para ti. No hay requisitos particulares, genera ingresos mientras colaboras en la identificación de mascotas y en la reducción de casos de desapariciones.                    </p>
                 </div>
             </div>
     </div>
 </div>
 
 
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+<div class="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="flex flex-col mb-6 lg:flex-row md:mb-10">
       <div class="lg:w-1/2">
-        <h2 class="max-w-md mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none xl:max-w-lg">
-          The quick, brown fox jumps over a lazy dog
+        <h2 class="max-w-md mb-6 font-sans text-3xl  tracking-tight text-gray-900 sm:text-4xl sm:leading-none xl:max-w-lg">
+           Gana <b>dinero desde casa </b> con las Placas de Identificación.
         </h2>
       </div>
       <div class="lg:w-1/2">
         <p class="text-base text-gray-700 md:text-lg">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut unde omnis iste natus.
+            Explora y aprovecha una amplia gama de ventajas que te brinda ser afiliado de Radi Pets.  <br>
+            Conviértete en parte de nuestra red de afiliados y descubre cómo puedes disfrutar de una serie de beneficios.
         </p>
       </div>
     </div>
     <div class="grid gap-8 row-gap-10 sm:grid-cols-2 lg:grid-cols-4">
       <div class="max-w-md">
-        <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-          <svg class="w-12 h-12 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-          </svg>
-        </div>
-        <h6 class="mb-2 font-semibold leading-5">The deep ocean</h6>
+
+        <h6 class="mb-2 font-semibold leading-5">Ingresos Adicionales</h6>
         <p class="mb-3 text-sm text-gray-900">
-          A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.
+            Genera ingresos adicionales al promover un producto en crecimiento que es esencial para el cuidado de mascotas.
         </p>
-        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
       </div>
       <div class="max-w-md">
-        <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-          <svg class="w-12 h-12 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-          </svg>
-        </div>
-        <h6 class="mb-2 font-semibold leading-5">When has justice</h6>
+
+        <h6 class="mb-2 font-semibold leading-5">Apoyo y Recursos</h6>
         <p class="mb-3 text-sm text-gray-900">
-          Rough pomfret lemon shark plownose chimaera southern sandfish kokanee northern sea robin Antarctic cod.
+            Acceso a material promocional, capacitación y soporte de ventas para ayudarte a tener éxito en tu emprendimiento.
         </p>
-        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
       </div>
       <div class="max-w-md">
-        <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-          <svg class="w-12 h-12 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-          </svg>
-        </div>
-        <h6 class="mb-2 font-semibold leading-5">Organically grow</h6>
+
+        <h6 class="mb-2 font-semibold leading-5">Programa de Incentivos</h6>
         <p class="mb-3 text-sm text-gray-900">
-          A slice of heaven. O for awesome, this chocka full cuzzie is as rip-off as a cracker.
-        </p>
-        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+            Participa en programas de incentivos con recompensas especiales, como placas gratuitas y bonificaciones por el rendimiento.        </p>
       </div>
       <div class="max-w-md">
-        <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-          <svg class="w-12 h-12 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-          </svg>
-        </div>
-        <h6 class="mb-2 font-semibold leading-5">A slice of heaven</h6>
+
+        <h6 class="mb-2 font-semibold leading-5">Flexibilidad</h6>
         <p class="mb-3 text-sm text-gray-900">
-          Disrupt inspire and think tank, social entrepreneur but preliminary thinking think tank compelling.
+            Trabaja a tu propio ritmo y establece tu horario de trabajo, lo que te brinda la flexibilidad de adaptar tu negocio a tus necesidades.
         </p>
-        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
       </div>
     </div>
   </div>
 
 
-  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
-      <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-        <div>
-          <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-            Brand new
-          </p>
-        </div>
+      <div class="max-w-xl  md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+
         <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
           <span class="relative inline-block">
-            <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
-              <defs>
-                <pattern id="70326c9b-4a0f-429b-9c76-792941e326d5" x="0" y="0" width=".135" height=".30">
-                  <circle cx="1" cy="1" r=".7"></circle>
-                </pattern>
-              </defs>
-              <rect fill="url(#70326c9b-4a0f-429b-9c76-792941e326d5)" width="52" height="24"></rect>
-            </svg>
-            <span class="relative">The</span>
-          </span>
-          quick, brown fox jumps over a lazy dog
+
+            Resuelve tus Dudas
         </h2>
         <p class="text-base text-gray-700 md:text-lg">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
+            Conoce las preguntas frecuentes sobre ser afiliado de las Placas de Radi Pets
         </p>
       </div>
     </div>
@@ -191,54 +154,45 @@
         <div class="space-y-8">
           <div>
             <p class="mb-4 text-xl font-medium">
-              The quick, brown fox jumps over a lazy dog?
+              ¿Cuanto es la comisión?
             </p>
             <p class="text-gray-700">
-              Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds.<br />
-              <br />
-              Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                La comisión que obtienes al compartir el enlace y cuando alguien realiza una compra equivale al 10.5% del total de la venta.
+            </p>
+          </div>
+          <div>
+            <p class="mb-4 text-xl font-medium">¿cuanto tiempo va a durar el programa de afiliados?</p>
+            <p class="text-gray-700">
+                ¡No dejes escapar esta oportunidad única! Nuestro programa de afiliados estará disponible solo hasta el 30 de noviembre. Cada día que pasa es una oportunidad perdida para ganar dinero extra. Regístrate ahora y comienza a generar ingresos mientras compartes tu amor por las mascotas.
             </p>
           </div>
           <div>
             <p class="mb-4 text-xl font-medium">
-              The first mate and his Skipper too will do?
-            </p>
-            <p class="text-gray-700">
-              Well, the way they make shows is, they make one show. That show's called a pilot.<br />
-              <br />
-              Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs.Some don't, become nothing. She
-              starred in one of the ones that became nothing.
-            </p>
-          </div>
-          <div>
-            <p class="mb-4 text-xl font-medium">Is the Space Pope reptilian!?</p>
-            <p class="text-gray-700">
-              A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.
-            </p>
+                ¿que información necesito para registrarme?
+              </p>
+             <p class="text-gray-700">
+
+                Para unirte al programa, simplemente completa el registro gratuito en la plataforma proporcionando tu nombre, dirección de correo electrónico y número de teléfono.            </p>
           </div>
         </div>
         <div class="space-y-8">
           <div>
-            <p class="mb-4 text-xl font-medium">How much money you got on you?</p>
+            <p class="mb-4 text-xl font-medium">¿Existen restricciones geográficas para convertirse en afiliado de Radi Pets?</p>
             <p class="text-gray-700">
               The first mate and his Skipper too will do their very best to make the others comfortable in their tropic island nest.<br />
-              <br />
-              Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.
             </p>
           </div>
           <div>
             <p class="mb-4 text-xl font-medium">
-              Galaxies Orion's sword globular star cluster?
+                ¿Cuánto puedo ganar como afiliado de las placas de identificación de Radi Pets?
             </p>
             <p class="text-gray-700">
               A business big enough that it could be listed on the NASDAQ goes belly up. Disappears!<br />
-              <br />
-              It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.
             </p>
           </div>
           <div>
             <p class="mb-4 text-xl font-medium">
-              When has justice ever been as simple as a rule book?
+                ¿Hay un límite en la cantidad de placas de identificación que puedo vender como afiliado?
             </p>
             <p class="text-gray-700">
               This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.

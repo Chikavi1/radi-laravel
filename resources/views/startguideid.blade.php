@@ -18,14 +18,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       </div>
     </div>
     <div class="w-full mx-auto mt-12 text-center ">
-      <img src="https://i.ibb.co/jDGpDYN/1.png" alt="id radi" class="animate__animated animate__rollIn w-72 mx-auto" />
+      <img src="https://i.ibb.co/K5QgHVj/Nombre-de-tu-mascota-4.png " alt="id radi" class="animate__animated animate__rollIn w-72 mx-auto" />
     </div>
   </section>
 
   <div class="grid grid-cols-12 gap-4 p-6 mb-12">
     <div class="col-span-12 md:col-span-4">
             <div class="hover:-translate-y-1 hover:scale-150 duration-500 relative w-full p-4 overflow-hidden bg-black shadow-lg rounded-2xl">
-                <img alt="moto" src="https://i.ibb.co/XxVtwBL/Post-facebook-venta-de-producto-comercial-moderno-gris-2.png" class="rounded-xl w-full  mb-4 -right-20 -bottom-8"/>
+                <img alt="moto" src="https://i.ibb.co/VDxGVL6/Post-facebook-venta-de-producto-comercial-moderno-gris-4.png" class="rounded-xl w-full  mb-4 -right-20 -bottom-8"/>
                 <div class="w-4/6">
                     <p class="mb-2 text-lg font-medium text-white">
                         Garantia de Radi Pets
@@ -38,7 +38,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </div>
     <div class="col-span-12 md:col-span-4">
             <div class="hover:-translate-y-1 hover:scale-150  duration-500 relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
-                <img alt="moto" src="https://i.ibb.co/qD4RCZR/Post-facebook-venta-de-producto-comercial-moderno-gris-1.png" class="rounded-xl w-full object-cover  mb-4 -right-20 -bottom-8"/>
+                <img alt="moto" src="https://i.ibb.co/fQYgXZR/Post-facebook-venta-de-producto-comercial-moderno-gris-5.png" class="rounded-xl w-full object-cover  mb-4 -right-20 -bottom-8"/>
                 <div class="w-full">
                     <p class="mb-2 text-lg font-medium text-gray-800">
                        Seguridad en tu información
@@ -52,7 +52,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </div>
     <div class="col-span-12 md:col-span-4">
             <div style="background:#0348ac" class="hover:-translate-y-1 hover:scale-150   duration-500 relative w-full p-4 overflow-hiddeshadow-lg rounded-2xl">
-                <img alt="moto" src="https://i.ibb.co/GkS0mhF/Post-facebook-venta-de-producto-comercial-moderno-gris-3.png" class="rounded-xl   h-42 mb-4 -right-20 -bottom-8"/>
+                <img alt="moto" src="https://i.ibb.co/cxGKfzs/Post-facebook-venta-de-producto-comercial-moderno-gris-6.png" class="rounded-xl   h-42 mb-4 -right-20 -bottom-8"/>
                 <div class="w-4/6">
                     <p class="mb-2 text-lg font-medium text-white">
                         Diseño Único e Incomparable
@@ -72,7 +72,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         <article class="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
             <img
               alt="Office"
-              src="https://i.ibb.co/k9pXDR5/Post-facebook-venta-de-producto-comercial-moderno-gris-1.gif"
+              src="https://i.ibb.co/44RmsSH/Post-facebook-venta-de-producto-comercial-moderno-gris-2.gif"
               class="h-56 w-full object-cover"
             />
 
@@ -94,7 +94,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         <article class="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
             <img
               alt="Office"
-              src="https://i.ibb.co/gtJSLdB/image.png"
+              src="https://i.ibb.co/fXjnPcQ/Post-facebook-venta-de-producto-comercial-moderno-gris-8.png"
               class="h-56 w-full object-cover"
             />
 

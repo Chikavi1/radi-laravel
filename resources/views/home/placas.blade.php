@@ -1,18 +1,25 @@
 @include('layouts.nav')
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-<section class="px-4 py-24 mx-auto max-w-7xl">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<section class="px-4 py-12 mx-auto max-w-7xl">
   <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
-    <h1 class="ml-6 mb-6 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
-      Protege a tu mascota con una placa de <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 lg:inline">Radi Pets</span>
+    <h1 class="ml-6 mb-2 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
+        Bienvenido a la nueva experiencia de las <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 lg:inline">Placas de identificacion</span>
     </h1>
+
+    <div class="w-full mx-auto mt-2 text-center ">
+        <img src="https://i.ibb.co/K5QgHVj/Nombre-de-tu-mascota-4.png " alt="id radi" class="animate__animated animate__rollIn w-72 mx-auto" />
+      </div>
 
     <div class="text-center">
         <p class="text-sm"  >Precio</p>
-        <h2 class="text-4xl font-bold text-green-800">$289 MXN</h2>
-        <p>Pregunta en tu veterinaria más cercana</p>
-        {{-- <p class="mb-8">Incluye envio en México</p> --}}
-        {{-- <a target="_blank" href="/placas-buy" class="w-full shadow-xl btn btn-primary bg-purple-800 px-8 py-4 text-white rounded-md btn-lg sm:w-auto">Comprar</a> --}}
+        <h2 class="text-4xl font-bold text-green-800">$269 MXN</h2>
+        {{-- <p>Pregunta en tu veterinaria más cercana</p> --}}
+        <p class="mb-8">Incluye envio en México</p>
+        <a target="_blank" href="/placas-buy" class="w-full shadow-xl btn btn-primary bg-purple-800 px-8 py-4 text-white rounded-md btn-lg sm:w-auto">Comprar</a>
       </div>
     <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
       <!-- <a class="bg-purple-800 p-4 text-white inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" href="#">
@@ -21,19 +28,61 @@
     </div>
 
   </div>
-  <div class="w-full mx-auto mt-20 text-center md:w-10/12">
+  {{-- <div class="w-full mx-auto mt-20 text-center md:w-10/12">
     <div class="grid grid-cols-12 gap-2">
       <div class="col-span-12 md:col-span-4">
         <img src="https://i.ibb.co/MSFvzWt/876b727a-9f43-43f7-8b22-e851fce18bb9.jpg" alt="radi image" class="md:ml-8  ml-0 mt-4 md:mt-0 w-full h-full rounded-lg shadow-2xl" />
       </div>
       <div class="col-span-12 md:col-span-8">
-        <img src="https://i.ibb.co/7K2HwST/REDO-I-2.png" alt="radi image" class="md:ml-8 mt-4 md:mt-0 object-cover  w-full h-full rounded-lg shadow-2xl" />
+        <img src="https://i.ibb.co/rpt75v0/Behavior-Table-Worksheet-in-White-Blue-and-Pink-Cartoon-Style-2.png" alt="radi image" class="md:ml-8 mt-4 md:mt-0 object-cover  w-full h-full rounded-lg shadow-2xl" />
       </div>
-      {{-- <div class="col-span-12 md:col-span-4">
+       <div class="col-span-12 md:col-span-4">
         <img src="https://radi-images.s3.us-west-1.amazonaws.com/radi-placa-2.jpeg" alt="radi image" class="ml-8 md:ml-0 mt-4 md:mt-0 object-cover w-72 h-96 rounded-lg shadow-2xl" />
-      </div> --}}
+      </div>
     </div>
-  </div>
+  </div> --}}
+  <div class="grid grid-cols-12 gap-4 p-6 ">
+    <div class="col-span-12 md:col-span-4">
+            <div class="hover:-translate-y-1 hover:scale-150 duration-500 relative w-full p-4 overflow-hidden bg-black shadow-lg rounded-2xl">
+                <img alt="moto" src="https://i.ibb.co/VDxGVL6/Post-facebook-venta-de-producto-comercial-moderno-gris-4.png" class="rounded-xl w-full  mb-4 -right-20 -bottom-8"/>
+                <div class="w-4/6">
+                    <p class="mb-2 text-lg font-medium text-white">
+                        Garantia de Radi Pets
+                    </p>
+                    <p class="text-xs text-gray-400">
+                        En Radi Pets, respaldamos nuestros productos con una garantía sólida de 1 mes. Estamos comprometidos a brindar el mejor servicio a nuestros clientes.
+                </div>
+            </div>
+
+    </div>
+    <div class="col-span-12 md:col-span-4">
+            <div class="hover:-translate-y-1 hover:scale-150  duration-500 relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
+                <img alt="moto" src="https://i.ibb.co/fQYgXZR/Post-facebook-venta-de-producto-comercial-moderno-gris-5.png" class="rounded-xl w-full object-cover  mb-4 -right-20 -bottom-8"/>
+                <div class="w-full">
+                    <p class="mb-2 text-lg font-medium text-gray-800">
+                       Seguridad en tu información
+                    </p>
+                    <p class="text-xs w-full text-gray-700">
+                        Priorizamos la privacidad de nuestros usuarios. Seguimos altos estándares de seguridad de datos y nunca compartimos tu información de contacto la cual solo se comparte cuando alguien escanea el QR de tu mascota desaparecida.                    </p>
+
+                </div>
+            </div>
+
+    </div>
+    <div class="col-span-12 md:col-span-4">
+            <div style="background:#0348ac" class="hover:-translate-y-1 hover:scale-150   duration-500 relative w-full p-4 overflow-hiddeshadow-lg rounded-2xl">
+                <img alt="moto" src="https://i.ibb.co/cxGKfzs/Post-facebook-venta-de-producto-comercial-moderno-gris-6.png" class="rounded-xl   h-42 mb-4 -right-20 -bottom-8"/>
+                <div class="w-4/6">
+                    <p class="mb-2 text-lg font-medium text-white">
+                        Diseño Único e Incomparable
+                    </p>
+                    <p class="text-xs text-gray-400">
+                        Las placas de Radi Pets destacan por su diseño único, marcando la diferencia frente a las placas tradicionales y ofreciendo beneficios exclusivos en el mercado.
+                    </p>
+                </div>
+            </div>
+    </div>
+</div>
 </section>
 
 
@@ -51,7 +100,7 @@
 </style>
 
 <section class="text-gray-600 body-font">
-  <div class="container px-5 py-12 mx-auto ">
+  <div class="container px-5 py-2 mx-auto ">
     <div class="flex flex-col text-center w-full mb-20">
       <h1 class="sm:text-3xl text-3xl title-font text-gray-900 font-bold">¿Cómo funciona?</h1>
     </div>
@@ -781,12 +830,12 @@
 <section class="text-white bg-gray-900">
     <div class="flex flex-col items-stretch justify-between px-4 py-20 mx-auto max-w-7xl lg:flex-row sm:items-center">
       <div>
-        <h2 class="mb-1 text-xl font-semibold text-left sm:text-2xl sm:text-center lg:text-left">Únete como distribuidor en placas de Radi Pets.</h2>
+        <h2 class="mb-1 text-xl font-semibold text-left sm:text-2xl sm:text-center lg:text-left">Únete como afiliado de placas de Radi Pets.</h2>
         <p class="mb-6 text-lg font-normal text-left text-gray-200 sm:text-xl lg:mb-0 sm:text-center lg:text-left">
-          Únete como distribuidor y aprovecha los descuentos exclusivos <br> al comprar al por mayor las placas de Radi Pets. <br><br> Protege a las mascotas con estilo mientras haces crecer tu negocio. <br> ¡No pierdas esta oportunidad única!</p>
+          Únete como afliliado y aprovecha los descuentos exclusivos <br> al comprar al por mayor las placas de Radi Pets. <br><br> Protege a las mascotas con estilo mientras haces crecer tu negocio. <br> ¡No pierdas esta oportunidad única!</p>
       </div>
       <div class="flex flex-col mb-2 space-x-0 space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
-        <a href="/placas-distribuidor" class="w-full btn bg-white px-8 py-4 text-center rounded-md text-black btn-lg sm:w-auto">Ver más</a>
+        <a href="/affiliate-program" class="w-full btn bg-white px-8 py-4 text-center rounded-md text-black btn-lg sm:w-auto">Ver más</a>
         {{-- <a href="#" class="w-full btn btn-outline-light btn-lg sm:w-auto">Book a demo</a> --}}
       </div>
     </div>

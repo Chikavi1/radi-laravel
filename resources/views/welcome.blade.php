@@ -189,7 +189,7 @@
                         Lugares Pet Friendly
                     </p>
                     <p class="text-xs text-gray-400">
-                        Descubre destinos cercanos que son ideales para disfrutar junto a tu mascota. Vive experiencias nuevas juntos.                    </p>
+                        Descubre lugares pet friendly cercanos a tu ubicación, que son ideales para disfrutar junto a tu mascota. Vive experiencias nuevas juntos.                    </p>
                     <p class="text-xl font-medium text-indigo-500 mt-2">
                         Ver más
                     </p>
@@ -248,10 +248,10 @@
             </h2>
             <div class="relative block w-full mx-auto mt-6 md:mt-0">
                 <div class="grid grid-cols-12 gap-4 sm:p-2 md:p-6">
-                    <div class="col-span-12 md:col-span-4 mt-20 md:mt-0">
+                    <div class="col-span-12 md:col-span-6 mt-20 md:mt-0">
                     <a href="/placas">
                             <div class="relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
-                                <img alt="moto" src="https://i.ibb.co/7K2HwST/REDO-I-2.png" class="w-full h-3/4 mb-4 -right-20 -bottom-8"/>
+                                <img alt="moto" src="https://i.ibb.co/fnDgkJS/Behavior-Table-Worksheet-in-White-Blue-and-Pink-Cartoon-Style-1.png" class="rounded-lg w-full h-3/4 mb-4 -right-20 -bottom-8"/>
                                 <div class="w-4/6">
                                     <p class="mb-2 text-lg font-medium text-gray-800">
                                         Placas de identificación
@@ -260,7 +260,7 @@
                                         Incluye envio Desde
                                     </p>
                                     <p class="text-xl font-medium text-indigo-500">
-                                        $289 MXN
+                                        $269 MXN
                                     </p>
                                 </div>
                             </div>
@@ -268,7 +268,7 @@
                         </a>
                     </div>
 
-                    <div class="col-span-12 md:col-span-4  mt-20 md:mt-0">
+                    <div class="col-span-12 md:col-span-6  mt-20 md:mt-0">
                     <a href="/memorial">
                             <div class="relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
                                 <img alt="moto" src="https://i.ibb.co/q9c6gc3/Whats-App-Image-2023-07-05-at-00-12-21.jpg" class="rounded-lg w-full h-3/4 mb-4 -right-20 -bottom-8"/>
@@ -289,7 +289,7 @@
                     </div>
 
 
-                    <div class="col-span-12 md:col-span-4  mt-20 md:mt-0">
+                    {{-- <div class="col-span-12 md:col-span-4  mt-20 md:mt-0">
                         <div class="relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
                             <img alt="moto" src="https://img.kwcdn.com/product/1e19d4646b4/81dfba1b-75b8-421a-94db-92a8027f1780_800x800.jpeg?imageView2/2/w/800/q/70" class="w-full h-3/4 mb-4 -right-20 -bottom-8"/>
                             <div class="w-4/6">
@@ -304,7 +304,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>

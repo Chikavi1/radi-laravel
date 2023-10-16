@@ -253,6 +253,7 @@
                                                     </a>
                                                 @endif
 
+
                                                 <a target="_blank" href="/generateThanks/{{$pet->user_name?$pet->user_name:'null'}}/{{$pet->pet_name}}" class="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 ">
                                                     <i class="fa-solid fa-person-praying"></i>
                                                 </a>
@@ -260,6 +261,8 @@
                                                 <a class="open px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 ">
                                                         <i class="fa-solid fa-pen-to-square w-6 h-6"></i>
                                                 </a>
+                                                <i class="fa-solid fa-arrow-right"></i>
+
                                             </td>
                                         </tr>
                                     @endforeach

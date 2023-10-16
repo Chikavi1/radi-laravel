@@ -19,17 +19,19 @@ use GuzzleHttp\Client;
 use Image;
 use App\Models\OrdersRadi;
 use App\Models\Identifications;
-
+use Request as req;
 use Illuminate\Support\Str;
+use Illuminate\Http\Response;
+
+
+use Symfony\Component\HttpFoundation\Cookie;
 
 class HomeController extends Controller
 {
     //
 
-
-    public function placasbuy()
+    public function placasbuy(Request $request)
     {
-
 
         SEO::setTitle('La plataforma para los amantes de las mascotas');
         SEO::setDescription('Encuentra lugares pet friendly, adopta a una mascota o apoya a los albergues, todo en un solo lugar.');
@@ -39,9 +41,15 @@ class HomeController extends Controller
         SEO::opengraph()->addImage(asset('img/default.png'));
         SEO::twitter()->setImage(asset('img/default.png'));
 
-        // $orgs = Organizations::latest()->take(2)->get();
 
-        return view('home.placasbuy');
+        if(req::cookie('affiliate')){
+            return view('home.placasbuy');
+        }else{
+            if($request->id){
+                $response = new Response('Set Cookie');
+                return response(view('home.placasbuy'))->withCookie(cookie('affiliate','12345',30240));
+            }
+        }
 
     }
 
