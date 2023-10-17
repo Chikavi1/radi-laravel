@@ -33,13 +33,13 @@ class HomeController extends Controller
     public function placasbuy(Request $request)
     {
 
-        SEO::setTitle('Bienvenido a la nueva experiencia de las Placas de identificacion');
+        SEO::setTitle('Placas de identificacion con QR de Radi Pets');
         SEO::setDescription('Conoce las nuevas placas de identificación con código QR');
         SEO::opengraph()->setUrl('https://radi.pet/placas-buy');
         SEO::setCanonical('https://radi.pet/placas-buy');
         SEO::opengraph()->addProperty('type', 'articles');
-        SEO::opengraph()->addImage(asset('img/placas-buy.png'));
-        SEO::twitter()->setImage(asset('img/placas-buy.png'));
+        SEO::opengraph()->addImage(asset('img/placas-tabla.png'));
+        SEO::twitter()->setImage(asset('img/placas-tabla.png'));
 
 
         if(!req::cookie('affiliate')){
@@ -213,8 +213,8 @@ class HomeController extends Controller
         SEO::opengraph()->setUrl('https://radi.pet/affiliate-program');
         SEO::setCanonical('https://radi.pet/affiliate-program');
         SEO::opengraph()->addProperty('type', 'articles');
-        SEO::opengraph()->addImage(asset('img/placas-buy.png'));
-        SEO::twitter()->setImage(asset('img/placas-buy.png'));
+        SEO::opengraph()->addImage(asset('img/placas-tabla.png'));
+        SEO::twitter()->setImage(asset('img/placas-tabla.png'));
         return view('home.affiliate-program');
     }
 
