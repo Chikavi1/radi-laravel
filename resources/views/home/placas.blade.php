@@ -7,7 +7,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 <section class="px-4 py-12 mx-auto max-w-7xl">
   <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
     <h1 class="ml-6 mb-2 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
-        Bienvenido a la nueva experiencia de las <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 lg:inline">Placas de identificacion</span>
+        Bienvenido a la nueva experiencia de las <span class="block w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-500 lg:inline">Placas de identificación</span>
     </h1>
 
     <div class="w-full mx-auto mt-2 text-center ">

@@ -33,13 +33,13 @@ class HomeController extends Controller
     public function placasbuy(Request $request)
     {
 
-        SEO::setTitle('La plataforma para los amantes de las mascotas');
-        SEO::setDescription('Encuentra lugares pet friendly, adopta a una mascota o apoya a los albergues, todo en un solo lugar.');
+        SEO::setTitle('Bienvenido a la nueva experiencia de las Placas de identificacion');
+        SEO::setDescription('Conoce las nuevas placas de identificación con código QR');
         SEO::opengraph()->setUrl('https://radi.pet/');
         SEO::setCanonical('https://radi.pet/');
         SEO::opengraph()->addProperty('type', 'articles');
-        SEO::opengraph()->addImage(asset('img/default.png'));
-        SEO::twitter()->setImage(asset('img/default.png'));
+        SEO::opengraph()->addImage(asset('img/placas-buy.png'));
+        SEO::twitter()->setImage(asset('img/placas-buy.png'));
 
 
         if(req::cookie('affiliate')){
@@ -206,6 +206,15 @@ class HomeController extends Controller
     }
 
     public function affiliateprogram(){
+
+
+        SEO::setTitle('Gana dinero desde casa recomendando placas de identificación de mascotas con tecnología QR.');
+        SEO::setDescription('Comparte tu enlace de compra con tu código, ¡y gana dinero sin inversiones ni riesgos! ');
+        SEO::opengraph()->setUrl('https://radi.pet/');
+        SEO::setCanonical('https://radi.pet/');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/placas-buy.png'));
+        SEO::twitter()->setImage(asset('img/placas-buy.png'));
         return view('home.affiliate-program');
     }
 

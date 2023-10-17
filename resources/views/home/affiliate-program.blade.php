@@ -19,7 +19,7 @@
         </div>
         <div class="flex flex-col items-center md:flex-row">
           <a
-            href="/"
+            href="/register"
             style="background: #0D5E6C;"
             class="inline-flex items-center justify-center  text-white w-full h-12 px-6 mb-3 font-medium tracking-wide  transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
           >
@@ -29,16 +29,8 @@
         </div>
       </div>
       <div class="relative lg:w-1/2">
-        <img class="hidden lg:inline-block object-cover w-full h-56 rounded shadow-lg sm:h-96" src="https://images.unsplash.com/photo-1543269866-487350d6fa5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" />
-        <a href="/" aria-label="Play Video" class="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25">
-          <div class="flex items-center justify-center w-16 h-16 transition duration-300 transform bg-gray-100 rounded-full shadow-2xl group-hover:scale-110">
-            <svg class="hidden lg:inline-block w-10 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M16.53,11.152l-8-5C8.221,5.958,7.833,5.949,7.515,6.125C7.197,6.302,7,6.636,7,7v10 c0,0.364,0.197,0.698,0.515,0.875C7.667,17.958,7.833,18,8,18c0.184,0,0.368-0.051,0.53-0.152l8-5C16.822,12.665,17,12.345,17,12 S16.822,11.335,16.53,11.152z"
-              ></path>
-            </svg>
-          </div>
-        </a>
+        <img class="rounded-lg hidden lg:inline-block object-cover w-full h-56 shadow-lg sm:h-96" src="https://images.unsplash.com/photo-1543269866-487350d6fa5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" />
+
       </div>
     </div>
   </div>
@@ -49,11 +41,11 @@
     <div class="col-span-12 md:col-span-4">
             <div style="background: #0D5E6C;" class="hover:-translate-y-1 hover:scale-150 duration-500 relative w-full p-4 overflow-hiddenshadow-lg rounded-2xl">
                 <img alt="moto" src="https://i.ibb.co/z715HdP/Post-facebook-venta-de-producto-comercial-moderno-gris-9.png" class="rounded-xl w-full  mb-4 -right-20 -bottom-8"/>
-                <div class="w-4/6">
+                <div class="w-full">
                     <p class="mb-2 text-lg font-medium text-white">
                         Comparte tu link
                     </p>
-                    <p class="text-xs text-gray-200">
+                    <p class="text-xs w-full text-gray-200">
                         Comparte tu enlace de compra con tu código, ¡y gana dinero sin esfuerzo! Las compras realizadas a través de tu enlace en las próximas 3 semanas te generarán ganancias. ¡Así de sencillo!
                 </div>
             </div>
@@ -67,7 +59,7 @@
                        Recibe premios
                     </p>
                     <p class="text-xs w-full text-gray-700">
-                        Priorizamos la privacidad de nuestros usuarios. Seguimos altos estándares de seguridad de datos y nunca compartimos tu información de contacto la cual solo se comparte cuando alguien escanea el QR de tu mascota desaparecida.                    </p>
+                      Al inicio si vendes 2 placas te regalamos una con un valor de 289 MXN. Y eso no es todo: por cada 10 placas adicionales que vendas, también te obsequiamos una. Tienes la libertad de venderla y ganar más o quedártela como desees.
 
                 </div>
             </div>
@@ -76,11 +68,11 @@
     <div class="col-span-12 md:col-span-4">
             <div style="background:#000000" class="hover:-translate-y-1 hover:scale-150   duration-500 relative w-full p-4 overflow-hiddeshadow-lg rounded-2xl">
                 <img alt="moto" src="https://i.ibb.co/pWYqzXh/Post-facebook-venta-de-producto-comercial-moderno-gris-11.png" class="rounded-xl   h-42 mb-4 -right-20 -bottom-8"/>
-                <div class="w-4/6">
+                <div class="w-full">
                     <p class="mb-2 text-lg font-medium text-white">
-                        Apoya a la causa
+                        Sin inversiones ni riesgos
                     </p>
-                    <p class="text-xs text-gray-200">
+                    <p class="text-xs w-full text-gray-200">
 
                         Si eres estudiante o buscas ingresos extra, esta oportunidad es ideal para ti. No hay requisitos particulares, genera ingresos mientras colaboras en la identificación de mascotas y en la reducción de casos de desapariciones.                    </p>
                 </div>
@@ -98,8 +90,8 @@
       </div>
       <div class="lg:w-1/2">
         <p class="text-base text-gray-700 md:text-lg">
-            Explora y aprovecha una amplia gama de ventajas que te brinda ser afiliado de Radi Pets.  <br>
-            Conviértete en parte de nuestra red de afiliados y descubre cómo puedes disfrutar de una serie de beneficios.
+
+¡Genera ingresos sin necesidad de inversión inicial desde la comodidad de tu hogar vendiendo nuestras placas de identificación de Radi Pets! Todo lo que requieres es una conexión a Internet y tu determinación para tener éxito.
         </p>
       </div>
     </div>
@@ -154,24 +146,30 @@
         <div class="space-y-8">
           <div>
             <p class="mb-4 text-xl font-medium">
-              ¿Cuanto es la comisión?
+              ¿Cuánto es la comisión?
             </p>
             <p class="text-gray-700">
                 La comisión que obtienes al compartir el enlace y cuando alguien realiza una compra equivale al 10.5% del total de la venta.
             </p>
           </div>
           <div>
-            <p class="mb-4 text-xl font-medium">¿cuanto tiempo va a durar el programa de afiliados?</p>
+            <p class="mb-4 text-xl font-medium">¿Como funciona?</p>
+            <p class="text-gray-700">
+                ¡No dejes escapar esta oportunidad única! Nuestro programa de afiliados estará disponible solo hasta el 30 de noviembre. Cada día que pasa es una oportunidad perdida para ganar dinero extra. Regístrate ahora y comienza a generar ingresos mientras compartes tu amor por las mascotas.
+            </p>
+          </div>
+
+          <div>
+            <p class="mb-4 text-xl font-medium">¿Cuánto tiempo va a durar el programa de afiliados?</p>
             <p class="text-gray-700">
                 ¡No dejes escapar esta oportunidad única! Nuestro programa de afiliados estará disponible solo hasta el 30 de noviembre. Cada día que pasa es una oportunidad perdida para ganar dinero extra. Regístrate ahora y comienza a generar ingresos mientras compartes tu amor por las mascotas.
             </p>
           </div>
           <div>
             <p class="mb-4 text-xl font-medium">
-                ¿que información necesito para registrarme?
+              ¿Qué información necesito para registrarme?
               </p>
              <p class="text-gray-700">
-
                 Para unirte al programa, simplemente completa el registro gratuito en la plataforma proporcionando tu nombre, dirección de correo electrónico y número de teléfono.            </p>
           </div>
         </div>
@@ -179,7 +177,7 @@
           <div>
             <p class="mb-4 text-xl font-medium">¿Existen restricciones geográficas para convertirse en afiliado de Radi Pets?</p>
             <p class="text-gray-700">
-              The first mate and his Skipper too will do their very best to make the others comfortable in their tropic island nest.<br />
+              Radi Pets está abierto a afiliados en toda la República Mexicana, lo que significa que cualquier persona que se encuentre en México puede unirse al programa de afiliados sin restricciones geográficas.
             </p>
           </div>
           <div>
@@ -187,7 +185,9 @@
                 ¿Cuánto puedo ganar como afiliado de las placas de identificación de Radi Pets?
             </p>
             <p class="text-gray-700">
-              A business big enough that it could be listed on the NASDAQ goes belly up. Disappears!<br />
+              Al inicio si vendes 2 placas te regalamos una con un valor de 289 MXN. Y eso no es todo: por cada 10 placas adicionales que vendas, también te obsequiamos una. Tienes la libertad de venderla y ganar más o quedártela como desees.
+              <br>
+              En resumen, si vendes tan solo 12 placas de Radi Pets, podrías ganar aproximadamente 938 MXN sin necesidad de invertir dinero inicial y sin la presión de horarios estrictos. ¡Una oportunidad emocionante para generar ingresos a tu ritmo!
             </p>
           </div>
           <div>
@@ -195,10 +195,14 @@
                 ¿Hay un límite en la cantidad de placas de identificación que puedo vender como afiliado?
             </p>
             <p class="text-gray-700">
-              This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.
+              ¡No hay límite en la cantidad de placas de identificación que puedes vender como afiliado de Radi Pets! Al contrario, premiamos y valoramos a las personas que logran vender más.
             </p>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+
+
+@include('layouts.footer')
