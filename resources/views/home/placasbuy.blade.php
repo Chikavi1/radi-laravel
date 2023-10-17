@@ -54,7 +54,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     Placa de identificación Radi Pets
     </h2>
     <p  id="price" class="max-w-md mb-4 text-green-500 font-bold">
-    $269.00  MXN
+    269.00  MXN
     </p>
     <div class="">
     <p class="mb-4 text-lg font-semibold dark:text-gray-400">Selecciona un color</p>
@@ -261,7 +261,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             }else if(color == 5){
                 $("#imagetype2").attr("src","https://i.ibb.co/VtbM0Qc/logos-para-las-placas-12.png");
             }
-            $("#price").text("299.00 MXN");
+            $("#price").text("289.00 MXN");
             $("#availabled").text("Tarda 2-7 dias más (dependiendo de la demanda)");
             $("#inputname").removeClass('hidden')
             $("#inputname").attr('required','true');

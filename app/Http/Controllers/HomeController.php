@@ -41,21 +41,24 @@ class HomeController extends Controller
         SEO::opengraph()->addImage(asset('img/placas-tabla.png'));
         SEO::twitter()->setImage(asset('img/placas-tabla.png'));
 
+        // dd(req::cookie('affiliate'));
 
         if(!req::cookie('affiliate')){
-            return view('home.placasbuy');
-        }else{
             if($request->id){
                 $response = new Response('Set Cookie');
-                return response(view('home.placasbuy'))->withCookie(cookie('affiliate','12345',30240));
+                return response(view('home.placasbuy'))->withCookie(cookie('affiliate',$request->id,30240));
+            }else{
+                return view('home.placasbuy');
             }
+        }else{
+            return view('home.placasbuy');
         }
 
     }
 
     public function generateLogoPlaca($name,$color){
         $BLACK = '#222222';
-        $BLUE  = '#4f46e5';
+        $BLUE  = '#004AAD';
         $RED   = '#dc2626';
         $PINK  = '#ec4899';
         $GREEN = '#059669';

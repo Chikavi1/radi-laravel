@@ -48,6 +48,7 @@ Route::get('/generateThanks/{name}/{pet_name}', [HomeController::class, 'generat
 Route::get('/start-guide-id', [HomeController::class, 'startguide'])->name('home.startguide');
 
 Route::get('/chikavi/orders', [HomeController::class, 'orders'])->name('cart.orders');
+Route::get('/buy-status', [CartController::class, 'statuscart'])->name('cart.status');
 
 Route::get('/affiliate-program', [HomeController::class, 'affiliateprogram'])->name('home.affiliateprogram');
 

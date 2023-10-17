@@ -12,7 +12,7 @@
           <div class="mt-8 space-y-3 h-52 overflow-hidden overflow-y-auto rounded-lg border bg-white px-2 py-4 sm:px-6">
             @foreach ($products as $product)
                 <div class="grid grid-cols-12" >
-                    <div class="col-span-3">
+                    <div class="col-span-4">
                         <img class="m-2 h-24 w-28 rounded-md border object-cover object-center" src="{{$product->attributes->image}}" alt="" />
                     </div>
                     <div class="col-span-8">
@@ -90,9 +90,9 @@
 
                     </div>
                 </div>
-                <input required type="text" maxlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" name="credit-expiry" class="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="MM" />
+                <input required type="text" maxlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" name="month-expiry" class="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="MM" />
 
-                <input required type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" name="credit-expiry" class="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="YYYY" />
+                <input required type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" name="year-expiry" class="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="YYYY" />
                 <input required type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" name="credit-cvc" class="w-1/6 flex-shrink-0 rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="CVC" />
                 </div>
                 <label for="billing-address" class="mt-4 mb-2 block text-sm font-medium">Dirección de Envio</label>
@@ -145,7 +145,8 @@
       </div>
 
       @else
-      <h2 class="text-center">No tienes productos en el carrito</h2>
+      <img class="mx-auto rounded-lg mt-16" src="https://i.pinimg.com/564x/9b/c3/94/9bc394d271c6a44bb1b02d987423aa35.jpg" alt="no ">
+      <h2 class="text-center mt-16 text-3xl">No tienes productos en el carrito</h2>
       @endif
 
 

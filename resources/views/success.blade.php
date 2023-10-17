@@ -1,5 +1,5 @@
 @include('layouts.nav')
-{{--
+@if ($message = Session::get('success'))
 <section class="bg-green-900 text-white">
     <div
       class="mx-auto max-w-screen-xl px-4 py-32 lg:flex h-screen lg:items-center"
@@ -9,7 +9,7 @@
         <h1
           class="text-white bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
         >
-          Compra exitosa
+        {{ $message }}
         </h1>
 
         <p class="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
@@ -27,8 +27,11 @@
         </div>
       </div>
     </div>
-  </section> --}}
+  </section>
+  @endif
 
+
+  @if ($message = Session::get('error'))
   <section class="bg-red-900 text-white">
     <div
       class="mx-auto max-w-screen-xl px-4 py-32 lg:flex h-screen lg:items-center"
@@ -38,7 +41,7 @@
         <h1
           class="text-white bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
         >
-          Pago Rechazado
+        {{ $message }}
         </h1>
 
         <p class="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
@@ -59,3 +62,5 @@
       </div>
     </div>
   </section>
+  @endif
+

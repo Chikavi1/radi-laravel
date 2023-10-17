@@ -79,6 +79,10 @@
                         <li> <a target="_blank" href="https://org.radi.pet">Organizaciones</a></li>
 
                       <li> <a href="/affiliate-program" class="text-green-700">Gana dinero</a></li>
+                      <li> <a href="/checkout" class="text-purple-700"><i class="fa-solid fa-bag-shopping"></i></a></li>
+
+
+
                       {{-- <li> <a href="/adoptions">En adopción</a></li> --}}
                       {{-- <li> <a href="/lost">Mascotas Desaparecidas</a></li>
                       <li> <a href="/org">Albergues</a></li>
