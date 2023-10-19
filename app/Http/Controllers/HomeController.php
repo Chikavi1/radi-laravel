@@ -60,8 +60,8 @@ class HomeController extends Controller
     public function garantias(){
         SEO::setTitle('Garantia en las placas de identificacion de Radi Pets');
         SEO::setDescription('Somos la única empresa que ofrece garantía en tus placas');
-        SEO::opengraph()->setUrl('https://radi.pet/placas-buy');
-        SEO::setCanonical('https://radi.pet/placas-buy');
+        SEO::opengraph()->setUrl('https://radi.pet/garantia-placas');
+        SEO::setCanonical('https://radi.pet/garantia-placas');
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/garantias.png'));
         SEO::twitter()->setImage(asset('img/garantias.png'));

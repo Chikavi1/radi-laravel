@@ -88,6 +88,7 @@ class CartController extends Controller
                 //   if (!isset($token['id'])) {
                 //     return redirect()->route('stripe.add.money');
                 // }
+                dd($request->all());
 
                 $charge = $stripe->charges()->create([
                     "source" => $request->stripeToken,
