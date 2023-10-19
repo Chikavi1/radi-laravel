@@ -270,7 +270,7 @@ class HomeController extends Controller
                 ];
 
                 $client = new \GuzzleHttp\Client();
-                $res = $client->post('localhost:8080/generateQR', [
+                $res = $client->post('https://core.radi.pet/generateQR', [
                     'json' => $payload,
                 ]);
 
