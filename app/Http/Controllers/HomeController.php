@@ -39,8 +39,8 @@ class HomeController extends Controller
         SEO::opengraph()->setUrl('https://radi.pet/placas-buy');
         SEO::setCanonical('https://radi.pet/placas-buy');
         SEO::opengraph()->addProperty('type', 'articles');
-        SEO::opengraph()->addImage(asset('img/placas-tabla.png'));
-        SEO::twitter()->setImage(asset('img/placas-tabla.png'));
+        SEO::opengraph()->addImage(asset('img/placas-fondo.png'));
+        SEO::twitter()->setImage(asset('img/placas-fondo.png'));
 
         // dd(req::cookie('affiliate'));
 
@@ -58,6 +58,13 @@ class HomeController extends Controller
     }
 
     public function garantias(){
+        SEO::setTitle('Garantia en las placas de identificacion de Radi Pets');
+        SEO::setDescription('Somos la única empresa que ofrece garantía en tus placas');
+        SEO::opengraph()->setUrl('https://radi.pet/placas-buy');
+        SEO::setCanonical('https://radi.pet/placas-buy');
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::opengraph()->addImage(asset('img/placas-fondo.png'));
+        SEO::twitter()->setImage(asset('img/placas-fondo.png'));
         return view('home.garantias-placas');
     }
 
@@ -221,8 +228,8 @@ class HomeController extends Controller
         SEO::opengraph()->setUrl('https://radi.pet/affiliate-program');
         SEO::setCanonical('https://radi.pet/affiliate-program');
         SEO::opengraph()->addProperty('type', 'articles');
-        SEO::opengraph()->addImage(asset('img/placas-tabla.png'));
-        SEO::twitter()->setImage(asset('img/placas-tabla.png'));
+        SEO::opengraph()->addImage(asset('img/placas-fondo.png'));
+        SEO::twitter()->setImage(asset('img/placas-fondo.png'));
 
         if(Auth::check()){
             $affiliates = Affiliates::where('status',1)->where('id_user', Auth::user()->id );
