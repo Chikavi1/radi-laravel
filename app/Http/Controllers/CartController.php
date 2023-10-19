@@ -10,6 +10,11 @@ use App\Models\OrdersRadi;
 use App\Models\Identifications;
 use GuzzleHttp\Client;
 use Stripe;
+use App\Models\Affiliates;
+use Hashids\Hashids;
+use Mail;
+
+
 
 class CartController extends Controller
 {
@@ -34,9 +39,8 @@ class CartController extends Controller
         }else if($request->color == 5){
             $color = 'pink';
             $image = 'https://i.ibb.co/nDW0HyW/Nombre-de-tu-mascota-6.png';
-
         }
-        $price =   $request->model == 1? '269':'289';
+        $price =   $request->model == 2? '289':'269';
         $pet_name = $request->model == 2?$request->pet_name:'Radi Pets';
         $type = $request->model == 2? 'Personalizada':'Sin personalizar';
 
@@ -61,35 +65,38 @@ class CartController extends Controller
     }
 
     public function buy(Request $request){
-    //    dd( $request->cookie('affiliate'));
+        // dd($request->all());
+        $id_user = 0;
 
-    $stripe = Stripe::setApiKey(env('STRIPE_ID'));
+        if($request->cookie('affiliate')){
+            $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
+            $id_user = $hashids->decode($request->cookie('affiliate'));
+        }
 
+        $stripe = Stripe::setApiKey(env('STRIPE_ID'));
 
             try{
-                $token = $stripe->tokens()->create([
-                    'card' => [
-                        'number' => $request->get('card-no'),
-                        'exp_month' => $request->get('month-expiry'),
-                        'exp_year' => $request->get('year-expiry'),
-                        'cvc' => $request->get('credit-cvc'),
-                    ],
-                  ]);
+                // $token = $stripe->tokens()->create([
+                //     'card' => [
+                //         'number' => $request->get('card-no'),
+                //         'exp_month' => $request->get('month-expiry'),
+                //         'exp_year' => $request->get('year-expiry'),
+                //         'cvc' => $request->get('credit-cvc'),
+                //     ],
+                //   ]);
 
-                  if (!isset($token['id'])) {
-                    return redirect()->route('stripe.add.money');
-                }
+                //   if (!isset($token['id'])) {
+                //     return redirect()->route('stripe.add.money');
+                // }
 
                 $charge = $stripe->charges()->create([
-                    'card' => $token['id'],
+                    "source" => $request->stripeToken,
                     'currency' => 'MXN',
                     'amount' => Cart::getTotal(),
                     'description' => 'Compra en Radi Pets',
                 ]);
 
                 if($charge['status'] == 'succeeded'){
-
-
 
                     $user_name =    $request->get('name');
                     $email =   $request->get('email');
@@ -98,7 +105,10 @@ class CartController extends Controller
                     $address =   $request->get('billing-address').', '.$request->get('billing-neighborhood').', '.$request->get('billing-city').', '.$request->get('billing-zip');
                     $shipping = 'normal';
 
+                    $cantidad = 0;
                     foreach(Cart::getContent() as $product){
+                        $cantidad += 1;
+
                         $name = $product->name;
                         $sku = '0001';
                         $id_tag = 'RD'.Str::random(7);
@@ -157,13 +167,36 @@ class CartController extends Controller
                         ]);
                         $product->save();
 
+
+                        // generar ganancias
+                        if($id_user != 0){
+                            $affiliates = new Affiliates([
+                                'id_user' => $id_user[0],
+                                'status'  => 1,
+                                'amount' => 30.50,
+                                ]);
+                            $affiliates->save();
+                        }
+
                     }
 
-                    Cart::clear();
+                    $data["email"] = $request->email;
+                    $data["title"] = "Gracias por tu confianza";
+                    $data["body"]  = "Recibo de tu compra en Radi Pets la situación.";
+                    $data["total"] = $total;
+                    $data["info"] = Cart::getContent();
+                    $data["delivery"] = Carbon::now()->addDays(10);
 
+                    Mail::send('mail.receipt', $data, function($message)use($data) {
+                        $message->to($data["email"])
+                                ->subject($data["title"]);
+                    });
+
+                    // enviar correo
+
+                    Cart::clear();
                     return redirect()->route('cart.status')->with('success','Compra exitosa');
                 }
-
 
             }catch (Exception $e) {
                 return redirect()->route('cart.status')->with('error',$e->getMessage());

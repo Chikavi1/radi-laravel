@@ -51,6 +51,7 @@ Route::get('/chikavi/orders', [HomeController::class, 'orders'])->name('cart.ord
 Route::get('/buy-status', [CartController::class, 'statuscart'])->name('cart.status');
 
 Route::get('/affiliate-program', [HomeController::class, 'affiliateprogram'])->name('home.affiliateprogram');
+Route::get('/garantia-placas', [HomeController::class, 'garantias'])->name('home.garantias');
 
 Route::resource('org', OrganizationsController::class);
 Route::resource('pet', PetsController::class);

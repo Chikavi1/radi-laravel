@@ -9,6 +9,9 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 // implements MustVerifyEmail
+use Hashids\Hashids;
+
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -26,6 +29,11 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function setHiddenId(){
+        $hashids = new Hashids(ENV('HASH_ID'),6,'ABCEIU1234567890');
+        return $hashids->encode($this->id);
+    }
+
         protected $fillable = [
             'customer',
             'name',
@@ -37,6 +45,11 @@ class User extends Authenticatable
         public function Pets()
         {
             return $this->hasMany('App\Models\Pets','id_user','id');
+        }
+
+        public function Affiliates()
+        {
+            return $this->hasMany('App\Models\Affiliates','id_user','id');
         }
 
     /**

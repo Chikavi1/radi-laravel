@@ -46,7 +46,10 @@
           </form>
         </div>
 
-        {!! Form::open(['route' => ['cart.buy']], ['class' => 'p-6  flex items-center justify-center' ,'files' => true]) !!}
+        <form role="form" action="{{ route('cart.buy') }}" method="post" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="{{ 'pk_test_51KsA9rBp6uwr6porp9J8YwjOQER0i3Yakw8ovYpZU7H0GqwTZCNrnsUAetok7Giot72v8pHAKpWAFyLjVBBLYO0x00DIFUA2qm' }}" id="payment-form">
+            @csrf
+        {{-- {!! Form::open(['route' => ['cart.buy']],['id'=>'payment-form',
+        'class' => 'require-validation p-6  flex items-center justify-center','data-cc-on-file' => 'false',' data-stripe-publishable-key'=> "{{ env('STRIPE_KEY') }}",'files' => true]) !!} --}}
 
             <div class="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
             <p class="text-xl font-medium">Detalles de pago</p>
@@ -83,17 +86,17 @@
                 <label for="card-no" class="mt-4 mb-2 block text-sm font-medium">Detalles Tarjeta</label>
                 <div class="flex gap-2">
                 <div class="relative w-7/12 flex-shrink-0">
-                    <input required type="text"  maxlength="16" onkeyup=imposeMinMax(this) onblur="ValidateCreditCardNumber()"  id="card-no" name="card-no" class="w-full rounded-md border border-gray-200 px-2 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                    <input required type="text"  maxlength="16"  id="card-no"  class="card-number w-full rounded-md border border-gray-200 px-2 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
                     placeholder="xxxx-xxxx-xxxx-xxxx" />
-                    <div class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
+                    <div class=" pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
 
                     </div>
                 </div>
-                <input required type="text" maxlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" name="month-expiry" class="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="MM" />
+                <input required type="text" maxlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"  class="card-expiry-month w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="MM" />
 
-                <input required type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" name="year-expiry" class="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="YYYY" />
-                <input required type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" name="credit-cvc" class="w-1/6 flex-shrink-0 rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="CVC" />
+                <input required type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"  class="card-expiry-year w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="YYYY" />
+                <input required type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"  class="card-cvc w-1/6 flex-shrink-0 rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="CVC" />
                 </div>
                 <label for="billing-address" class="mt-4 mb-2 block text-sm font-medium">Dirección de Envio</label>
 
@@ -140,7 +143,8 @@
             </div>
             <button class="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white">Ordenar</button>
             </div>
-         {!! Form::close() !!}
+         {{-- {!! Form::close() !!} --}}
+        </form>
 
       </div>
 
@@ -150,32 +154,88 @@
       @endif
 
 
+      <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+$(function() {
+  var $form = $(".require-validation");
+  $('form.require-validation').bind('submit', function(e) {
+    var $form = $(".require-validation"),
+    inputSelector = ['input[type=email]', 'input[type=password]', 'input[type=text]', 'input[type=file]', 'textarea'].join(', '),
+    $inputs = $form.find('.required').find(inputSelector),
+    $errorMessage = $form.find('div.error'),
+    valid = true;
+    $errorMessage.addClass('hide');
+    $('.has-error').removeClass('has-error');
+    $inputs.each(function(i, el) {
+        var $input = $(el);
+        if ($input.val() === '') {
+            $input.parent().addClass('has-error');
+            $errorMessage.removeClass('hide');
+            e.preventDefault();
+        }
+    });
+    if (!$form.data('cc-on-file')) {
+      e.preventDefault();
+      Stripe.setPublishableKey($form.data('stripe-publishable-key'));
+      console.log($('.card-number').val(),
+          $('.card-cvc').val(),
+          $('.card-expiry-month').val(),
+         $('.card-expiry-year').val())
+
+      Stripe.createToken({
+          number: $('.card-number').val(),
+          cvc: $('.card-cvc').val(),
+          exp_month: $('.card-expiry-month').val(),
+          exp_year: $('.card-expiry-year').val()
+      }, stripeResponseHandler);
+    }
+  });
+
+  function stripeResponseHandler(status, response) {
+      if (response.error) {
+          $('.error')
+              .removeClass('hide')
+              .find('.alert')
+              .text(response.error.message);
+              console.log(response.error);
+
+      } else {
+          /* token contains id, last4, and card type */
+          var token = response['id'];
+          $form.find('input[type=text]').empty();
+          $form.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
+          $form.get(0).submit();
+      }
+  }
+});
+</script>
+
       <script>
-        function ValidateCreditCardNumber() {
+//         function ValidateCreditCardNumber() {
 
-        var ccNum = document.getElementById("cardNum").value;
-        var visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
-        var mastercardRegEx = /^(?:5[1-5][0-9]{14})$/;
-        var amexpRegEx = /^(?:3[47][0-9]{13})$/;
-        var discovRegEx = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
-        var isValid = false;
+//         var ccNum = document.getElementById("cardNum").value;
+//         var visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+//         var mastercardRegEx = /^(?:5[1-5][0-9]{14})$/;
+//         var amexpRegEx = /^(?:3[47][0-9]{13})$/;
+//         var discovRegEx = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
+//         var isValid = false;
 
-        if (visaRegEx.test(ccNum)) {
-        isValid = true;
-        } else if(mastercardRegEx.test(ccNum)) {
-        isValid = true;
-        } else if(amexpRegEx.test(ccNum)) {
-        isValid = true;
-        } else if(discovRegEx.test(ccNum)) {
-        isValid = true;
-        }
+//         if (visaRegEx.test(ccNum)) {
+//         isValid = true;
+//         } else if(mastercardRegEx.test(ccNum)) {
+//         isValid = true;
+//         } else if(amexpRegEx.test(ccNum)) {
+//         isValid = true;
+//         } else if(discovRegEx.test(ccNum)) {
+//         isValid = true;
+//         }
 
-        if(isValid) {
-        alert("Thank You!");
-        } else {
-        alert("Please provide a valid Visa number!");
-        }
-}
+//         if(isValid) {
+//         alert("Thank You!");
+//         } else {
+//         alert("Please provide a valid Visa number!");
+//         }
+// }
 
 
       </script>

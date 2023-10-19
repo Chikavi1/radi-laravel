@@ -22,6 +22,7 @@ use App\Models\Identifications;
 use Request as req;
 use Illuminate\Support\Str;
 use Illuminate\Http\Response;
+use App\Models\Affiliates;
 
 
 use Symfony\Component\HttpFoundation\Cookie;
@@ -44,9 +45,9 @@ class HomeController extends Controller
         // dd(req::cookie('affiliate'));
 
         if(!req::cookie('affiliate')){
-            if($request->id){
+            if($request->aid){
                 $response = new Response('Set Cookie');
-                return response(view('home.placasbuy'))->withCookie(cookie('affiliate',$request->id,30240));
+                return response(view('home.placasbuy'))->withCookie(cookie('affiliate',$request->aid,30240));
             }else{
                 return view('home.placasbuy');
             }
@@ -54,6 +55,10 @@ class HomeController extends Controller
             return view('home.placasbuy');
         }
 
+    }
+
+    public function garantias(){
+        return view('home.garantias-placas');
     }
 
     public function generateLogoPlaca($name,$color){
@@ -218,7 +223,15 @@ class HomeController extends Controller
         SEO::opengraph()->addProperty('type', 'articles');
         SEO::opengraph()->addImage(asset('img/placas-tabla.png'));
         SEO::twitter()->setImage(asset('img/placas-tabla.png'));
-        return view('home.affiliate-program');
+
+        if(Auth::check()){
+            $affiliates = Affiliates::where('status',1)->where('id_user', Auth::user()->id );
+            $count  = $affiliates->count();
+            $amount = $affiliates->sum('amount');
+            return view('home.affiliate-program',compact('amount','count'));
+        }else{
+            return view('home.affiliate-program');
+        }
     }
 
     public function orderCreate(Request $request){

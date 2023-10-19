@@ -1,6 +1,98 @@
 
 
 @include('layouts.nav')
+
+@auth
+<div class="grid grid-cols-12 ">
+    <div class="col-span-12 md:col-span-4 p-2 ">
+        <div class="flex h-52  max-w-md overflow-hidden bg-white rounded-lg shadow-lg">
+
+            <div class="w-full p-4">
+                <h1 class="text-2xl font-bold text-gray-900">
+                    Comparte este Link
+                </h1>
+                <p class="mt-2 text-sm text-gray-600" id="p1">
+                    https://www.radi.pet/placas-buy?aid={{Auth::user()->setHiddenId()}}
+                </p>
+
+                <div class="flex justify-between mt-3 item-center">
+                    <h1 class="text-xl font-bold text-gray-700">
+                        Gana dinero con el código
+                    </h1>
+                    <button onclick="copyToClipboard('#p1')" class="px-3 py-2 text-xs font-bold text-white uppercase bg-gray-800 rounded">
+                        Copiar
+                    </button>
+                </div>
+                <p class="text-green-900 font-bold hidden" id="copy">
+                    Se copio el texto!
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-span-12 md:col-span-4 p-2">
+        <div class="px-12 py-8 h-52  bg-white shadow-lg rounded-2xl dark:bg-gray-800">
+            <div class="flex items-center">
+                <span class="relative p-4 bg-purple-200 rounded-xl">
+                    <svg width="40" fill="currentColor" height="40" class="absolute h-4 text-purple-500 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1362 1185q0 153-99.5 263.5t-258.5 136.5v175q0 14-9 23t-23 9h-135q-13 0-22.5-9.5t-9.5-22.5v-175q-66-9-127.5-31t-101.5-44.5-74-48-46.5-37.5-17.5-18q-17-21-2-41l103-135q7-10 23-12 15-2 24 9l2 2q113 99 243 125 37 8 74 8 81 0 142.5-43t61.5-122q0-28-15-53t-33.5-42-58.5-37.5-66-32-80-32.5q-39-16-61.5-25t-61.5-26.5-62.5-31-56.5-35.5-53.5-42.5-43.5-49-35.5-58-21-66.5-8.5-78q0-138 98-242t255-134v-180q0-13 9.5-22.5t22.5-9.5h135q14 0 23 9t9 23v176q57 6 110.5 23t87 33.5 63.5 37.5 39 29 15 14q17 18 5 38l-81 146q-8 15-23 16-14 3-27-7-3-3-14.5-12t-39-26.5-58.5-32-74.5-26-85.5-11.5q-95 0-155 43t-60 111q0 26 8.5 48t29.5 41.5 39.5 33 56 31 60.5 27 70 27.5q53 20 81 31.5t76 35 75.5 42.5 62 50 53 63.5 31.5 76.5 13 94z">
+                        </path>
+                    </svg>
+                </span>
+                <p class="ml-2 text-black text-md dark:text-white">
+                    Ganancias
+                </p>
+            </div>
+            <div class="flex flex-col justify-start">
+                <p class="my-8 text-5xl font-bold text-left text-gray-700 dark:text-gray-100">
+                    $ {{$amount}}
+                    <span class="text-sm">
+                        MXN
+                    </span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-span-12 md:col-span-4 p-2">
+
+
+<div class="relative h-52 w-full p-4 overflow-hidden bg-white shadow-lg rounded-xl md:w-72 dark:bg-gray-800">
+    <a href="#" class="block  ">
+        <div class="flex items-center w-full">
+            <a href="#" class="relative block">
+                <img alt="profil" src="https://i.ibb.co/K5QgHVj/Nombre-de-tu-mascota-4.png" class="mx-auto object-cover rounded-full h-10 w-10 "/>
+            </a>
+            <div class="flex flex-col items-center ml-2">
+                <span class="dark:text-white">
+                    Recompensa: Placa de identificación gratis
+                </span>
+            </div>
+
+        </div>
+        <div class="flex items-center justify-between my-2 mt-12">
+            <p class="text-sm text-gray-300">
+                {{$count}}/10 Para recibir una placa gratis
+            </p>
+            {{-- <p class="text-sm text-gray-300">
+                {{$amount}}/10 Para recibir una placa gratis
+            </p> --}}
+        </div>
+        <div class="w-full h-2 bg-blue-200 rounded-full">
+            <div class="w-2/12 h-full text-xs text-center text-white bg-blue-600 rounded-full">
+            </div>
+        </div>
+    </a>
+</div>
+
+
+    </div>
+</div>
+
+
+@else
+
 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="flex flex-col items-center justify-between lg:flex-row">
       <div class="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0">
@@ -38,7 +130,7 @@
 
 
   <div class="grid grid-cols-12 gap-4 p-6 mb-12">
-    <div class="col-span-12 md:col-span-4">
+    <div class="col-span-12 md:col-span-12 md:col-span-4">
             <div style="background: #0D5E6C;" class="hover:-translate-y-1 hover:scale-150 duration-500 relative w-full p-4 overflow-hiddenshadow-lg rounded-2xl">
                 <img alt="moto" src="https://i.ibb.co/z715HdP/Post-facebook-venta-de-producto-comercial-moderno-gris-9.png" class="rounded-xl w-full  mb-4 -right-20 -bottom-8"/>
                 <div class="w-full">
@@ -206,3 +298,17 @@
 
 
 @include('layouts.footer')
+@endauth
+
+
+<script>
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($.trim($(element).text())).select();
+        document.execCommand("copy");
+        $temp.remove();
+        $("#copy").removeClass('hidden');
+
+    }
+</script>

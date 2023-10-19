@@ -37,6 +37,11 @@
                         Desaparecidos
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ">
+                    <x-nav-link class="font-bold text-green-800" :href="route('home.affiliateprogram')" :active="request()->routeIs('lost.index')">
+                        Gana dinero
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
