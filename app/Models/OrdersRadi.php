@@ -8,7 +8,7 @@ use Hashids\Hashids;
 
 class OrdersRadi extends Model
 {
-    protected $table = 'Ordersradi';
+    protected $table = 'OrdersRadi';
     const CREATED_AT = 'createdAt';
     const UPDATED_AT = 'updatedAt';
 
