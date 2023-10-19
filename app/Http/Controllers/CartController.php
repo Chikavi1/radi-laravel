@@ -205,6 +205,7 @@ class CartController extends Controller
             } catch(\Cartalyst\Stripe\Exception\CardErrorException $e) {
                 return redirect()->route('cart.status')->with('error','Tarjeta declinada, intente con otra.');
             } catch(\Cartalyst\Stripe\Exception\MissingParameterException $e) {
+                dd($e->getMessage());
                 return redirect()->route('cart.status')->with('error','Información incorrecta, verifica tus datos');
             }
 
