@@ -45,12 +45,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <div class="col-span-12 md:col-span-4">
             <div class="hover:-translate-y-1 hover:scale-150 duration-500 relative w-full p-4 overflow-hidden bg-black shadow-lg rounded-2xl">
                 <img alt="moto" src="https://i.ibb.co/VDxGVL6/Post-facebook-venta-de-producto-comercial-moderno-gris-4.png" class="rounded-xl w-full  mb-4 -right-20 -bottom-8"/>
-                <div class="w-4/6">
+                <div class="w-full">
                     <p class="mb-2 text-lg font-medium text-white">
                         Garantia de Radi Pets
                     </p>
                     <p class="text-xs text-gray-400">
-                        En Radi Pets, respaldamos nuestros productos con una garantía sólida de 1 mes. Estamos comprometidos a brindar el mejor servicio a nuestros clientes.
+                        En Radi Pets, ofrecemos la mejor garantía: si en algún momento tu placa se descompone o se pierde, te fabricaremos una nueva gratis. Solo deberás cubrir los gastos de envío.
+                        <br>
+                        <a target="_blank" class="font-bold text-white" href="/garantia-placas">Ver más</a>
                 </div>
             </div>
 
@@ -72,7 +74,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <div class="col-span-12 md:col-span-4">
             <div style="background:#0348ac" class="hover:-translate-y-1 hover:scale-150   duration-500 relative w-full p-4 overflow-hiddeshadow-lg rounded-2xl">
                 <img alt="moto" src="https://i.ibb.co/cxGKfzs/Post-facebook-venta-de-producto-comercial-moderno-gris-6.png" class="rounded-xl   h-42 mb-4 -right-20 -bottom-8"/>
-                <div class="w-4/6">
+                <div class="w-full">
                     <p class="mb-2 text-lg font-medium text-white">
                         Diseño Único e Incomparable
                     </p>

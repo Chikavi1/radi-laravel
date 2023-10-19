@@ -92,7 +92,8 @@ class CartController extends Controller
                 $charge = $stripe->charges()->create([
                     "source" => $request->stripeToken,
                     'currency' => 'MXN',
-                    'amount' => Cart::getTotal(),
+                    // 'amount' => Cart::getTotal(),
+                    'amount' => 10,
                     'description' => 'Compra en Radi Pets',
                 ]);
 

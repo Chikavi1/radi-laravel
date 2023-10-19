@@ -63,8 +63,8 @@ class HomeController extends Controller
         SEO::opengraph()->setUrl('https://radi.pet/placas-buy');
         SEO::setCanonical('https://radi.pet/placas-buy');
         SEO::opengraph()->addProperty('type', 'articles');
-        SEO::opengraph()->addImage(asset('img/placas-fondo.png'));
-        SEO::twitter()->setImage(asset('img/placas-fondo.png'));
+        SEO::opengraph()->addImage(asset('img/garantias.png'));
+        SEO::twitter()->setImage(asset('img/garantias.png'));
         return view('home.garantias-placas');
     }
 
@@ -444,8 +444,13 @@ class HomeController extends Controller
         SEO::opengraph()->setUrl('https://radi.pet/placas');
         SEO::setCanonical('https://radi.pet/placas');
         SEO::opengraph()->addProperty('type', 'articles');
-        SEO::opengraph()->addImage(asset('img/default.png'));
-        SEO::twitter()->setImage(asset('img/default.png'));
+
+
+
+        SEO::opengraph()->addImage(asset('img/placasbg.png'));
+        SEO::twitter()->setImage(asset('img/placasbg.png'));
+
+
         return view('home.placas');
     }
 

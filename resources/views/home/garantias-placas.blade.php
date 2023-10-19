@@ -30,7 +30,7 @@
       <div class="lg:pr-10">
 
         <h5 class="mb-4 text-4xl font-extrabold leading-none">
-            ¿Como funciona?
+            ¿Cómo funciona?
         </h5>
         <p class="mb-6 text-gray-900">
             Para solicitar un reemplazo, puedes contactarnos a través de nuestras redes sociales o canales de comunicación. Explica tu situación y, una vez procesada tu solicitud, te proporcionaremos un enlace para pagar los gastos de envío, que son aproximadamente 120 pesos. <br>Te notificaremos cuando la nueva placa esté lista y te proporcionaremos una guía detallada para seguir el proceso de envío.
@@ -85,7 +85,7 @@
     <div class="grid items-center  text-left grid-cols-1 mb-24 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
       <div>
         <h2 class="mb-4 text-2xl text-left font-extrabold tracking-tight  text-black md:leading-tight sm:text-left md:text-4xl">
-            Como recibo la nueva placa?        </h2>
+            ¿Cómo recibo la nueva placa?       </h2>
         <p class="mb-5 text-base  text-gray-600 text-left md:text-lg">
             La nueva placa que recibirás será exactamente como la compraste, incluyendo el color y, en el caso de personalización, el mismo nombre, no se podrá modificar nada, esto para evitar mal uso de la garantia. En el caso de ediciones especiales o únicas, te enviaremos una placa de Radi Pets, pero no podremos proporcionarte una réplica idéntica a la anterior."
         </p>
