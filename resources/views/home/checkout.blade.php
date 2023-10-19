@@ -46,7 +46,7 @@
           </form>
         </div>
 
-        <form role="form" action="{{ route('cart.buy') }}" method="post" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="{{ 'pk_test_51KsA9rBp6uwr6porp9J8YwjOQER0i3Yakw8ovYpZU7H0GqwTZCNrnsUAetok7Giot72v8pHAKpWAFyLjVBBLYO0x00DIFUA2qm' }}" id="payment-form">
+        <form role="form" action="{{ route('cart.buy') }}" method="post" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="{{ 'pk_live_51KsA9rBp6uwr6porsLeNx9LTinc5UlLigLVda6w2RSnXJon8rlNOHJKLTtJIQEPc5Rsx5iPytfFhlOV2wutNdZEv00J6YxosX1' }}" id="payment-form">
             @csrf
         {{-- {!! Form::open(['route' => ['cart.buy']],['id'=>'payment-form',
         'class' => 'require-validation p-6  flex items-center justify-center','data-cc-on-file' => 'false',' data-stripe-publishable-key'=> "{{ env('STRIPE_KEY') }}",'files' => true]) !!} --}}
