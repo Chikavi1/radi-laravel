@@ -85,7 +85,7 @@
     <div class="grid items-center  text-left grid-cols-1 mb-24 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
       <div>
         <h2 class="mb-4 text-2xl text-left font-extrabold tracking-tight  text-black md:leading-tight sm:text-left md:text-4xl">
-            ¿Cómo recibo la nueva placa?       </h2>
+            ¿Cómo recibo la nueva placa?1       </h2>
         <p class="mb-5 text-base  text-gray-600 text-left md:text-lg">
             La nueva placa que recibirás será exactamente como la compraste, incluyendo el color y, en el caso de personalización, el mismo nombre, no se podrá modificar nada, esto para evitar mal uso de la garantia. En el caso de ediciones especiales o únicas, te enviaremos una placa de Radi Pets, pero no podremos proporcionarte una réplica idéntica a la anterior."
         </p>
@@ -100,7 +100,7 @@
             Condiciones
         </h2>
         <p class="mb-5 text-base text-center text-gray-600 sm:text-left md:text-lg">
-                <ul>Al adquirir una placa, nuestros clientes disfrutan de una garantía de reembolso que se extiende por un período de 12 años, coincidiendo con el promedio de vida de la mascota, o la posibilidad de realizar hasta 2 cambios por cada placa comprada, lo que suceda primero</ul>
+                <ul>Al adquirir una placa, nuestros clientes disfrutan de una garantía de reemplazo que se extiende por un período de 12 años, coincidiendo con el promedio de vida de la mascota, o la posibilidad de realizar hasta 2 cambios por cada placa comprada, lo que suceda primero</ul>
                 <br>
                 <ul>Es importante destacar que esta garantía es exclusivamente aplicable a nuestras placas, y no se extiende a ningún otro producto que ofrecemos.</ul>
                 <br>

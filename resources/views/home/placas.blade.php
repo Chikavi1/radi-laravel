@@ -429,12 +429,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   </summary>
 
   <p class="mt-4 leading-relaxed text-gray-700">
-    El envío generalmente oscila entre 2 y 6 días hábiles.
-
-
-
-
-
+    El plazo de envío suele variar de 2 a 6 días laborables, además del tiempo de creación. Si solicitas una placa sin personalización, en la mayoría de los casos, se enviará de forma inmediata. Sin embargo, en el caso de una placa personalizada, el proceso puede tomar entre 2 y 6 días adicionales.
   </p>
 </details>
 
@@ -834,7 +829,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       <div>
         <h2 class="mb-1 text-xl font-semibold text-left sm:text-2xl sm:text-center lg:text-left">Únete como afiliado de placas de Radi Pets.</h2>
         <p class="mb-6 text-lg font-normal text-left text-gray-200 sm:text-xl lg:mb-0 sm:text-center lg:text-left">
-          Únete como afliliado y aprovecha los descuentos exclusivos <br> al comprar al por mayor las placas de Radi Pets. <br><br> Protege a las mascotas con estilo mientras haces crecer tu negocio. <br> ¡No pierdas esta oportunidad única!</p>
+          Únete como afliliado y aprovecha los premios exclusivos <br>. <br><br> Protege a las mascotas con estilo mientras ganas dinero en tus tiempos libres. <br> ¡No pierdas esta oportunidad única!</p>
       </div>
       <div class="flex flex-col mb-2 space-x-0 space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
         <a href="/affiliate-program" class="w-full btn bg-white px-8 py-4 text-center rounded-md text-black btn-lg sm:w-auto">Ver más</a>
