@@ -270,7 +270,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 <p class="mt-4">Mira lo sencillo y rápido que resulta vincular el perfil de tu mascota con la placa de Radi Pets.</p>
             </div>
             <div class="md:col-span-6 col-span-12">
-              <iframe class="w-11/12 md:w-full h-80 md:h-96 rounded-xl"src="https://www.youtube.com/embed/YblcPsAB40M?si=p8B-n3bpEX5fnXZ2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="w-11/12 md:w-full h-80 md:h-96 rounded-xl" src="https://www.youtube.com/embed/MVLKsNiyYBk?si=vLewWiEnh-z8_34N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
         </div>
     </div>
@@ -284,7 +284,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 <p class="mt-4">Descubre los beneficios de tener la placa de Radi Pets y mantén a tu mascota protegida y conectada. </p>
             </div>
             <div class="col-span-12 md:col-span-6">
-              <iframe class="w-11/12 md:w-full h-80 md:h-96 rounded-xl" src="https://www.youtube.com/embed/Bysd9zKnYwc?si=AkQtz1y1wRNrZ3Cm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+              <iframe class="w-11/12 md:w-full h-80 md:h-96 rounded-xl" src="https://www.youtube.com/embed/zxQUlesgzwY?si=hl0oaS6B_ImWsADz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
 
