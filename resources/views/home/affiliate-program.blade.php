@@ -245,10 +245,10 @@
             </p>
           </div>
           <div>
-            <p class="mb-4 text-xl font-medium">¿Como funciona?</p>
+            <p class="mb-4 text-xl font-medium">¿Cómo funciona?</p>
             <p class="text-gray-700">
-                ¡No dejes escapar esta oportunidad única! Nuestro programa de afiliados estará disponible solo hasta el 30 de noviembre. Cada día que pasa es una oportunidad perdida para ganar dinero extra. Regístrate ahora y comienza a generar ingresos mientras compartes tu amor por las mascotas.
-            </p>
+
+El enlace de afiliados de Radi Pets es tu clave para ganar comisiones. Regístrate, obtén tu enlace único y compártelo. Cuando alguien compra a través de tu enlace, ganas dinero. ¡Así de sencillo!            </p>
           </div>
 
           <div>
