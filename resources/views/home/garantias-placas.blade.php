@@ -17,8 +17,8 @@
         </p>
 
         <p class="max-w-md mb-10 text-xs tracking-wide text-indigo-100 sm:text-sm sm:mx-auto md:mb-16">
-            Solo necesitas presentar tu comprobante de compra y cubrir los gastos de envío a tu domicilio.
-        </p>
+
+            Envíanos un mensaje detallando la razón junto con el enlace de tu mascota vinculada, y solo tendrás que encargarte de los costos de envío a tu dirección.        </p>
 
       </div>
     </div>
@@ -70,7 +70,7 @@
        ¿Qué pasa con la placa anterior?
       </h2>
       <p class="text-base text-left text-gray-700 md:text-lg">
-        La placa anterior (la que posees antes de solicitar el reemplazo) será desactivada en nuestra plataforma y no podrá ser restablecida en ninguna circunstancia. Esto se hace para garantizar que no se haga un uso indebido de la misma, y en caso de violación de esta política, la cuenta del usuario será suspendida de manera permanente."
+        La placa anterior (la que posees antes de solicitar el reemplazo) será desactivada en nuestra plataforma y no podrá ser restablecida en ninguna circunstancia. Esto se hace para garantizar que no se haga un uso indebido de la misma, y en caso de violación de esta política, la cuenta del usuario será suspendida de manera permanente.
     </p>
     </div>
     <div class="mb-4 transition-shadow duration-300 hover:shadow-xl lg:mb-6">
@@ -85,9 +85,9 @@
     <div class="grid items-center  text-left grid-cols-1 mb-24 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
       <div>
         <h2 class="mb-4 text-2xl text-left font-extrabold tracking-tight  text-black md:leading-tight sm:text-left md:text-4xl">
-            ¿Cómo recibo la nueva placa?1       </h2>
+            ¿Cómo recibo la nueva placa?      </h2>
         <p class="mb-5 text-base  text-gray-600 text-left md:text-lg">
-            La nueva placa que recibirás será exactamente como la compraste, incluyendo el color y, en el caso de personalización, el mismo nombre, no se podrá modificar nada, esto para evitar mal uso de la garantia. En el caso de ediciones especiales o únicas, te enviaremos una placa de Radi Pets, pero no podremos proporcionarte una réplica idéntica a la anterior."
+            La nueva placa que recibirás será exactamente como la compraste, incluyendo el color y, en el caso de personalización, el mismo nombre, no se podrá modificar nada, esto para evitar mal uso de la garantia. En el caso de ediciones especiales o únicas, te enviaremos una placa de Radi Pets, pero no podremos proporcionarte una réplica idéntica a la anterior.
         </p>
       </div>
       <div>
