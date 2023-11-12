@@ -73,16 +73,16 @@
         </div>
         <div class="flex items-center justify-between my-2 mt-12">
             <p class="text-sm text-gray-300">
-                {{$count}}/10 Para recibir una placa gratis
+              Llevas {{$count}} placas vendidas <br> Cada 10 te regalamos una placa
             </p>
             {{-- <p class="text-sm text-gray-300">
                 {{$amount}}/10 Para recibir una placa gratis
             </p> --}}
         </div>
-        <div class="w-full h-2 bg-blue-200 rounded-full">
+        {{-- <div class="w-full h-2 bg-blue-200 rounded-full">
             <div class="w-2/12 h-full text-xs text-center text-white bg-blue-600 rounded-full">
             </div>
-        </div>
+        </div> --}}
     </a>
 </div>
 

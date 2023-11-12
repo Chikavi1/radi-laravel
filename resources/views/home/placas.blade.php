@@ -15,10 +15,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       </div>
 
     <div class="text-center">
-        <p class="text-sm"  >Precio</p>
-        <h2 class="text-4xl font-bold text-green-800">$269 MXN</h2>
+        <p class="text-sm text-green-800 font-bold">OFERTA</p>
+        <h2 class="text-xl font-bold text-red-400 line-through">$349 MXN</h2>
+        <h2 class="text-4xl font-bold text-green-800">$239 MXN</h2>
         {{-- <p>Pregunta en tu veterinaria más cercana</p> --}}
-        <p class="mb-8">Incluye <b>envio</b> a todo <b>México</b>  <br>y <b>reemplazo gratis</b> </p>
+        <p class="mb-8">Incluye <b>envió</b> a todo <b>México</b>  <br>y <b>reemplazo gratis</b> </p>
         <a target="_blank" href="/placas-buy" class="w-full shadow-xl btn btn-primary bg-purple-800 px-8 py-4 text-white rounded-md btn-lg sm:w-auto">Comprar</a>
       </div>
     <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">

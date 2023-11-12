@@ -18,7 +18,7 @@
                     <div class="col-span-8">
                         <p class="font-semibold mt-4">{{$product->name}}  {{$product->attributes->color}} </p>
                         <p class=" text-gray-400">{{$product->attributes->pet_name?$product->attributes->pet_name:'Sin Personalizar'}}</p>
-                        <p class="text-lg font-bold">{{$product->price}}</p>
+                        <p class="text-lg font-bold">${{$product->price}} MXN</p>
 
                         {!! Form::open(['route' => ['cart.remove',$product->id]], ['class' => 'p-6  flex items-center justify-center' ,'files' => true]) !!}
 
@@ -37,7 +37,7 @@
                 {{-- <img class="w-14 object-contain" src="https://enviosperros.com/img/ep/aliados/redpack.svg" alt="" /> --}}
                 <div class="ml-5">
                   <span class="mt-2 font-semibold">Envío estándar</span>
-                  <p>Gratis</p>
+                  <p class="font-bold text-green-800">Gratis</p>
                   <p class="text-slate-500 text-sm leading-6">Entrega de 3 a 7 días hábiles</p>
                 </div>
               </label>
@@ -128,17 +128,17 @@
                 <div class="mt-6 border-t border-b py-2">
                 <div class="flex items-center justify-between">
                     <p class="text-sm font-medium text-gray-900">Subtotal</p>
-                    <p class="font-semibold text-gray-900">${{ Cart::getTotal()}}
+                    <p class="font-semibold text-gray-900">${{ Cart::getTotal()}} MXN
                     </p>
                 </div>
                 <div class="flex items-center justify-between">
                     <p class="text-sm font-medium text-gray-900">Envio</p>
-                    <p class="font-semibold text-gray-900">$0.00</p>
+                    <p class="font-semibold text-gray-900">$0 MXN</p>
                 </div>
                 </div>
                 <div class="mt-6 flex items-center justify-between">
                 <p class="text-sm font-medium text-gray-900">Total</p>
-                <p class="text-2xl font-semibold text-gray-900">${{ Cart::getTotal()}}</p>
+                <p class="text-2xl font-semibold text-gray-900">${{ Cart::getTotal()}} MXN</p>
                 </div>
             </div>
             <button class="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white">Ordenar</button>

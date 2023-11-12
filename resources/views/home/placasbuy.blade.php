@@ -54,7 +54,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     Placa de identificación Radi Pets
     </h2>
     <p  id="price" class="max-w-md mb-4 text-green-500 font-bold">
-    269.00  MXN
+    239.00  MXN
     </p>
     <div class="">
     <p class="mb-4 text-lg font-semibold dark:text-gray-400">Selecciona un color</p>
@@ -242,7 +242,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             }
 
 
-            $("#price").text("269.00 MXN");
+            $("#price").text("239.00 MXN");
             $("#availabled").text("Disponible").addClass('text-700-green');
             $("#inputname").addClass('hidden')
             $("#inputname").removeAttr('required');

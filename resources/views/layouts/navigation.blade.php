@@ -107,6 +107,9 @@
             </div>
 
             <div class="mt-3 space-y-1">
+                <x-responsive-nav-link style="color:green;" :href="route('home.affiliateprogram')">
+                    Gana dinero
+                </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('profile.edit')">
                     Perfil
                 </x-responsive-nav-link>

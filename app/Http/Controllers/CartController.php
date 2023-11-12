@@ -40,7 +40,7 @@ class CartController extends Controller
             $color = 'pink';
             $image = 'https://i.ibb.co/nDW0HyW/Nombre-de-tu-mascota-6.png';
         }
-        $price =   $request->model == 2? '289':'269';
+        $price =   $request->model == 2? '289':'239';
         $pet_name = $request->model == 2?$request->pet_name:'Radi Pets';
         $type = $request->model == 2? 'Personalizada':'Sin personalizar';
 
