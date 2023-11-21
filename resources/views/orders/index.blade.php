@@ -258,7 +258,22 @@
                                                     <i class="fa-solid fa-person-praying"></i>
                                                 </a>
 
-                                                <a class="open-2 px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 ">
+                                                <a data-id="{{$pet->id}}"
+                                                    data-pet_name="{{$pet->pet_name}}"
+                                                    data-color="{{$pet->color}}"
+                                                    data-size="{{$pet->size}}"
+                                                    data-specie="{{$pet->specie}}"
+                                                    data-gender="{{$pet->gender}}"
+                                                    data-allergies="{{$pet->allergies}}"
+                                                    data-user_name="{{$pet->user_name}}"
+                                                    data-email="{{$pet->email}}"
+                                                    data-phone="{{$pet->phone}}"
+                                                    data-address="{{$pet->address}}"
+                                                    data-shipping="{{$pet->shipping}}"
+                                                    data-notes="{{$pet->notes}}"
+                                                    data-status="{{$pet->status}}"
+
+                                                    class="open-2 px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 ">
                                                         <i class="fa-solid fa-pen-to-square w-6 h-6"></i>
                                                 </a>
                                                 <i class="fa-solid fa-arrow-right"></i>
@@ -283,179 +298,372 @@
     </section>
 
     {!! Form::open(['route' => ['order.create']], ['class' => 'p-6  flex items-center justify-center' ,'files' => true]) !!}
+        <section id="sectionmodal" class="w-screen h-screen flex items-center justify-center bg-white">
+            <div id="modalOverlay" style="display:none;"
+            >
+                <div id="modal" class="rounded-2xl max-w-5xl">
+                    <div class="flex py-2 w-full items-center justify-center border-b">
+                        <h1 class="pt-4 text-xl text-black font-semibold text-center pb-4">Ordenar Pedido</h1>
+                    </div>
+                    <div class="p-12">
+                    <div class="bg-white  rounded-lg shadow sm:max-w-5xl sm:w-full sm:mx-auto sm:overflow-hidden">
+                        <div class="px-4 py-8 sm:px-10">
 
-    <section id="sectionmodal" class="w-screen h-screen flex items-center justify-center bg-white">
-        <div id="modalOverlay" style="display:none;"
-        >
-             <div id="modal" class="rounded-2xl max-w-5xl">
-                  <div class="flex py-2 w-full items-center justify-center border-b">
-                       <h1 class="pt-4 text-xl text-black font-semibold text-center pb-4">Ordenar Pedido</h1>
+                            <div class="mt-6">
+                                <div class="w-full space-y-6">
+                                    <div class="w-full">
 
-                  </div>
-                  <div class="p-12">
-                   <div class="bg-white  rounded-lg shadow sm:max-w-5xl sm:w-full sm:mx-auto sm:overflow-hidden">
-                       <div class="px-4 py-8 sm:px-10">
+                                        <div class="grid grid-cols-12 gap-3 ">
+                                            <div class="col-span-3 ">
+                                                <input name="quantity" min="1" type="number" value="1" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Nombre usuario"/>
+                                            </div>
+                                            <div class="col-span-9">
+                                                <select name="sku" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="0001">
+                                                        Placa de identificación
+                                                    </option>
+                                                    <option value="0002">
+                                                        Pechera
+                                                    </option>
+                                                    <option value="0003">
+                                                        Caja de subscripción
+                                                    </option>
 
-                           <div class="mt-6">
-                               <div class="w-full space-y-6">
-                                   <div class="w-full">
-
-                                    <div class="grid grid-cols-12 gap-3 ">
-                                        <div class="col-span-3 ">
-                                            <input name="quantity" min="1" type="number" value="1" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Nombre usuario"/>
+                                                </select>
+                                            </div>
                                         </div>
-                                        <div class="col-span-9">
-                                            <select name="sku" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
-                                                <option value="0001">
-                                                    Placa de identificación
-                                                </option>
-                                                <option value="0002">
-                                                    Pechera
-                                                </option>
-                                                <option value="0003">
-                                                    Caja de subscripción
-                                                </option>
 
-                                            </select>
+
+
+                                        <div class="grid grid-cols-12 gap-3 my-8">
+                                            <div class="col-span-12">
+                                                <input name="pet_name"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Nombre mascota"/>
+                                            </div>
+                                            <div class="col-span-3">
+                                                <select name="color" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="blue">
+                                                        Azul
+                                                    </option>
+                                                    <option value="pink">
+                                                        Rosa
+                                                    </option>
+                                                    <option value="black">
+                                                        Negro
+                                                    </option>
+                                                    <option value="red">
+                                                        Rojo
+                                                    </option>
+                                                    <option value="green">
+                                                        Verde
+                                                    </option>
+                                                </select>
+
+                                            </div>
+                                            <div class="col-span-3">
+                                                <select name="size" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="mn">
+                                                        Mini
+                                                    </option>
+                                                    <option value="sm">
+                                                        Pequeño
+                                                    </option>
+                                                    <option value="md">
+                                                        Mediano
+                                                    </option>
+                                                    <option value="lg">
+                                                        Grande
+                                                    </option>
+                                                    <option value="xl">
+                                                        Extragrande
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-span-3">
+                                                <select name="gender" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="dog">
+                                                        Perro
+                                                    </option>
+                                                    <option value="cat">
+                                                        Gato
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-span-3">
+                                                <select name="specie" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="boy">
+                                                        Macho
+                                                    </option>
+                                                    <option value="girl">
+                                                        Hembra
+                                                    </option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div class=" relative my-4">
+                                            <input name="allergies"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Alergias o detalles"/>
+                                            </div>
+                                        <div class="grid grid-cols-12 gap-3 mt-8">
+                                            <div class="col-span-4">
+                                                <input name="user_name"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Nombre usuario"/>
+                                            </div>
+                                            <div class="col-span-4">
+                                                <input name="email"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Correo usuario"/>
+                                            </div>
+                                            <div class="col-span-4">
+                                                <input name="phone"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Celular usuario"/>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="grid grid-cols-12 gap-3 mt-8">
+                                            <div class="col-span-9">
+                                                <input name="address"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Dirección de entrega"/>
+                                            </div>
+                                            <div class="col-span-2">
+                                                <select name="shipping"   class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-52 focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="normal">
+                                                        Normal
+                                                    </option>
+                                                    <option value="express">
+                                                        Express
+                                                    </option>
+
+                                                </select>
+                                        </div>
+
+                                        </div>
+
+
+                                        <div class=" relative my-4">
+                                            <textarea name="notes"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Notas de compra o envio"></textarea>
+                                            </div>
+                                        </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="grid grid-cols-12">
+                                        <div class="col-span-6">
+                                            <p id="close" class="text-xl font-bolf leading-5 text-red-500">
+                                                Cerrar
+                                            </p>
+                                        </div>
+                                        <div class="col-span-6">
+                                            <span class="block w-full rounded-md shadow-sm">
+                                                <button  class="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                                    Ordenar
+                                                </button>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div class="px-4 py-6 border-t-2 border-gray-200  sm:px-10">
+
+                                    </div>
+                                </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    {!! Form::close() !!}
+
+    {!! Form::open(['route' => ['order.update']], ['class' => 'p-6  flex items-center justify-center' ,'files' => true]) !!}
+        <section id="addBookDialog2" class="w-screen h-screen flex items-center justify-center bg-white">
+            <div id="modalOverlay2" style="display:none;"
+            >
+                <div id="modal2" class="rounded-2xl max-w-5xl">
+                    <div class="flex py-2 w-full items-center justify-center border-b">
+                        <h1 class="pt-4 text-xl text-black font-semibold text-center pb-4">Ordenar Pedido</h1>
+
+                    </div>
+                    <div class="p-12">
+                    <div class="bg-white  rounded-lg shadow sm:max-w-5xl sm:w-full sm:mx-auto sm:overflow-hidden">
+                        <div class="px-4 py-8 sm:px-10">
+
+                            <div class="mt-6">
+                                <div class="w-full space-y-6">
+                                    <div class="w-full">
+
+                                        <div class="grid grid-cols-12 gap-3 ">
+                                            <div class="col-span-3 ">
+                                                <input name="quantity" min="1" type="number" value="1" id="quantity" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Nombre usuario"/>
+                                            </div>
+                                            <div class="col-span-9">
+                                                <select name="sku" id="sku" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="0001">
+                                                        Placa de identificación
+                                                    </option>
+                                                    <option value="0002">
+                                                        Pechera
+                                                    </option>
+                                                    <option value="0003">
+                                                        Caja de subscripción
+                                                    </option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="grid grid-cols-12 gap-3 my-8">
+                                            <div class="col-span-12">
+                                                <input name="pet_name" id="pet_name" type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Nombre mascota"/>
+                                            </div>
+                                            <div class="col-span-3">
+                                                <select name="color" id="color" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="blue">
+                                                        Azul
+                                                    </option>
+                                                    <option value="pink">
+                                                        Rosa
+                                                    </option>
+                                                    <option value="black">
+                                                        Negro
+                                                    </option>
+                                                    <option value="red">
+                                                        Rojo
+                                                    </option>
+                                                    <option value="green">
+                                                        Verde
+                                                    </option>
+                                                </select>
+
+                                            </div>
+                                            <div class="col-span-3">
+                                                <select name="size" id="size" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="mn">
+                                                        Mini
+                                                    </option>
+                                                    <option value="sm">
+                                                        Pequeño
+                                                    </option>
+                                                    <option value="md">
+                                                        Mediano
+                                                    </option>
+                                                    <option value="lg">
+                                                        Grande
+                                                    </option>
+                                                    <option value="xl">
+                                                        Extragrande
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-span-3">
+                                                <select name="gender" id="gender" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="dog">
+                                                        Perro
+                                                    </option>
+                                                    <option value="cat">
+                                                        Gato
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-span-3">
+                                                <select name="specie" id="specie" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="boy">
+                                                        Macho
+                                                    </option>
+                                                    <option value="girl">
+                                                        Hembra
+                                                    </option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div class=" relative my-4">
+                                            <input name="allergies" id="allergies"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Alergias o detalles"/>
+                                            </div>
+                                        <div class="grid grid-cols-12 gap-3 mt-8">
+                                            <div class="col-span-4">
+                                                <input name="user_name" id="user_name"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Nombre usuario"/>
+                                            </div>
+                                            <div class="col-span-4">
+                                                <input name="email" id="email" type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Correo usuario"/>
+                                            </div>
+                                            <div class="col-span-4">
+                                                <input name="phone" id="phone" type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Celular usuario"/>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="grid grid-cols-12 gap-3 mt-8">
+                                            <div class="col-span-9">
+                                                <input name="address" id="address" type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Dirección de entrega"/>
+                                            </div>
+                                            <div class="col-span-2">
+                                                <select name="shipping" id="shipping"  class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-52 focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="normal">
+                                                        Normal
+                                                    </option>
+                                                    <option value="express">
+                                                        Express
+                                                    </option>
+
+                                                </select>
+                                        </div>
+
+                                        </div>
+
+
+                                        <div class=" relative my-4">
+                                            <textarea name="notes" id="notes" type="text"  class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Notas de compra o envio"></textarea>
+                                            </div>
+                                        </div>
+
+                                            <div class=" relative py-8">
+                                                <select name="status" id="status"  class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-52 focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
+                                                    <option value="1">
+                                                        Pendiente
+                                                    </option>
+                                                    <option value="2">
+                                                        Hecho
+                                                    </option>
+                                                    <option value="3">
+                                                        Entregadp
+                                                    </option>
+                                                    <option value="0">
+                                                        Cancelado
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <input type="text" name="id" id="idOrder"/>
+                                        </div>
+
+                                        </div>
+                                        <div class="grid grid-cols-12">
+                                            <div class="col-span-6">
+                                                <p id="close2" class="text-xl font-bolf leading-5 text-red-500">
+                                                    Cerrar
+                                                </p>
+                                            </div>
+                                            <div class="col-span-6">
+                                                <span class="block w-full rounded-md shadow-sm">
+                                                    <button  class="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                                        Ordenar
+                                                    </button>
+                                                </span>
+                                            </div>
+
                                         </div>
                                     </div>
-
-
-
-                                    <div class="grid grid-cols-12 gap-3 my-8">
-                                        <div class="col-span-12">
-                                            <input name="pet_name"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Nombre mascota"/>
-                                        </div>
-                                        <div class="col-span-3">
-                                            <select name="color" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
-                                                <option value="blue">
-                                                    Azul
-                                                </option>
-                                                <option value="pink">
-                                                    Rosa
-                                                </option>
-                                                <option value="black">
-                                                    Negro
-                                                </option>
-                                                <option value="red">
-                                                    Rojo
-                                                </option>
-                                                <option value="green">
-                                                    Verde
-                                                </option>
-                                            </select>
-
-                                        </div>
-                                        <div class="col-span-3">
-                                            <select name="size" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
-                                                <option value="mn">
-                                                    Mini
-                                                </option>
-                                                <option value="sm">
-                                                    Pequeño
-                                                </option>
-                                                <option value="md">
-                                                    Mediano
-                                                </option>
-                                                <option value="lg">
-                                                    Grande
-                                                </option>
-                                                <option value="xl">
-                                                    Extragrande
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <div class="col-span-3">
-                                            <select name="gender" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
-                                                <option value="dog">
-                                                    Perro
-                                                </option>
-                                                <option value="cat">
-                                                    Gato
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <div class="col-span-3">
-                                            <select name="specie" class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-full focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
-                                                <option value="boy">
-                                                    Macho
-                                                </option>
-                                                <option value="girl">
-                                                    Hembra
-                                                </option>
-                                            </select>
-                                        </div>
-
+                                    <div class="px-4 py-6 border-t-2 border-gray-200  sm:px-10">
+                                        <p id="close2" class="text-xl font-bolf leading-5 text-red-500">
+                                            Cerrar
+                                        </p>
                                     </div>
+                                </div>
 
-                                    <div class=" relative my-4">
-                                        <textarea name="allergies"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Alergias o detalles"></textarea>
-                                        </div>
-                                    <div class="grid grid-cols-12 gap-3 mt-8">
-                                        <div class="col-span-4">
-                                            <input name="user_name"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Nombre usuario"/>
-                                        </div>
-                                        <div class="col-span-4">
-                                            <input name="email"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Correo usuario"/>
-                                        </div>
-                                        <div class="col-span-4">
-                                            <input name="phone"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Celular usuario"/>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="grid grid-cols-12 gap-3 mt-8">
-                                        <div class="col-span-9">
-                                            <input name="address"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Dirección de entrega"/>
-                                        </div>
-                                        <div class="col-span-2">
-                                            <select name="shipping"   class="block px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm w-52 focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
-                                                <option value="normal">
-                                                    Normal
-                                                </option>
-                                                <option value="express">
-                                                    Express
-                                                </option>
-
-                                            </select>
-                                    </div>
-
-                                    </div>
-
-
-                                       <div class=" relative my-4">
-                                           <textarea name="notes"  type="text" id="search-form-price" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Notas de compra o envio"></textarea>
-                                           </div>
-                                       </div>
-
-                                    </div>
-                                       <div class="w-full">
-
-                                           <div class="w-full">
-
-                                               <div>
-                                                   <span class="block w-full rounded-md shadow-sm">
-                                                       <button  class="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
-                                                           Ordenar
-                                                       </button>
-                                                   </span>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="px-4 py-6 border-t-2 border-gray-200  sm:px-10">
-                                       <p id="close" class="text-xl font-bolf leading-5 text-red-500">
-                                          Cerrar
-                                       </p>
-                                   </div>
-                               </div>
-
-                  </div>
-             </div>
-        </div>
-    </section>
-{!! Form::close() !!}
-
+                    </div>
+                </div>
+            </div>
+        </section>
+    {!! Form::close() !!}
 
 
 
@@ -488,22 +696,97 @@
   opacity: 1;
   top: 50%;
 }
+
+#modalOverlay2{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index:9999;
+}
+#modal2{
+  position: fixed;
+  width: 90%;
+  top: 55%;
+  left: 50%;
+  text-align: center;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translate(-50%,-50%);
+  transition: all 300ms ease-in-out;
+}
+#modalOverlay2.modal-open #modal2 {
+  opacity: 1;
+  top: 50%;
+}
+
 </style>
 
     <script>
 
         $('.open').click(function() {
-        $('#modalOverlay').show().addClass('modal-open');
+            $('#modalOverlay').show().addClass('modal-open');
         });
 
 
         $('#close').click(function() {
-        var modal = $('#modalOverlay');
-        modal.removeClass('modal-open');
-        setTimeout(function() {
-            modal.hide();
-        },200);
+            var modal = $('#modalOverlay');
+            modal.removeClass('modal-open');
+            setTimeout(function() {
+                modal.hide();
+            },200);
         });
+
+
+        $('#close2').click(function() {
+            var modal = $('#modalOverlay2');
+            modal.removeClass('modal-open');
+            setTimeout(function() {
+                modal.hide();
+            },200);
+        });
+
+        $(document).on("click", ".open-2", function () {
+            $('#modalOverlay2').show().addClass('modal-open');
+
+            var myBookId = $(this).data('id');
+            var pet_name = $(this).data('pet_name');
+            var color = $(this).data('color');
+            var size = $(this).data('size');
+            var specie = $(this).data('specie');
+            var gender = $(this).data('gender');
+            var allergies = $(this).data('allergies');
+            var user_name = $(this).data('user_name');
+            var email = $(this).data('email');
+            var phone = $(this).data('phone');
+            var address = $(this).data('address');
+            var shipping = $(this).data('shipping');
+            var notes = $(this).data('notes');
+            var status = $(this).data('status');
+
+            $("#idOrder").val( myBookId );
+            $("#pet_name").val( pet_name);
+            $("#color").val( color );
+            $("#size").val( size );
+            $("#specie").val( specie );
+            $("#gender").val( gender );
+            $("#allergies").val( allergies );
+            $("#user_name").val( user_name );
+            $("#email").val( email );
+            $("#phone").val( phone );
+            $("#address").val( address );
+            $("#shipping").val( shipping );
+            $("#notes").val( notes );
+            $("#status").val( status );
+
+            console.log(myBookId,pet_name,color,size,specie,gender,allergies,
+            user_name,email,phone,address,shipping,notes,status)
+
+        });
+
 
     </script>
 

@@ -69,7 +69,7 @@ class HomeController extends Controller
     }
 
     public function generateLogoPlaca($name,$color){
-        $BLACK = '#222222';
+        $BLACK = '#000000';
         $BLUE  = '#004AAD';
         $RED   = '#dc2626';
         $PINK  = '#ec4899';
@@ -242,15 +242,10 @@ class HomeController extends Controller
     }
 
     public function orderCreate(Request $request){
-        // OrdersRadi::create
-
         $name = 'placa';
         $pricing = 299.00;
         $total   = $pricing*$request->get('quantity');
         $status = 1;
-
-
-
         if($request->get('sku') == '0001'){
 
             $code = 'RD'.Str::random(7);
@@ -313,6 +308,10 @@ class HomeController extends Controller
 
         return redirect()->back();
 
+    }
+
+    public function orderUpdate(Request $request){
+        dd($request->all());
     }
 
     public function orders()

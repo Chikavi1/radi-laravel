@@ -40,6 +40,7 @@ Route::get('/checkout', [CartController::class, 'checkout'])->name('cart.checkou
 Route::post('/cart-buy', [CartController::class, 'buy'])->name('cart.buy');
 
 Route::post('/chikavi/order-create', [HomeController::class, 'orderCreate'])->name('order.create');
+Route::post('/chikavi/order-update', [HomeController::class, 'orderUpdate'])->name('order.update');
 
 
 Route::get('/generateLogoPlaca/{name}/{color}', [HomeController::class, 'generateLogoPlaca'])->name('home.generateLogoPlaca');
