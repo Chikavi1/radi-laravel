@@ -60,7 +60,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <p class="mb-4 text-lg font-semibold dark:text-gray-400">Selecciona un color</p>
     <div class="grid grid-cols-2 gap-4 pb-4 border-b-2 border-gray-300 lg:grid-cols-3 dark:border-gray-600">
     <div>
-    <button type="button" id="btn1" class="flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200 ">
+    {{-- <button type="button" id="btn1" class="flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200 ">
     <div>
     <div style="background: #004AAD;" class="w-8 h-8 mx-auto mb-2 rounded-full bg-emerald-400">
     </div>
@@ -68,10 +68,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         Azul
     </p>
     </div>
-    </button>
+    </button> --}}
     </div>
     <div>
-    <button type="button" id="btn2" class=" flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200 ">
+    <button type="button" id="btn2" class="  btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200 ">
     <div>
     <div style="background: #232323;" class="w-8 h-8 mx-auto mb-2 bg-gray-700 rounded-full dark:bg-gray-600">
     </div>
@@ -82,7 +82,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </button>
     </div>
     <div>
-    <button type="button" id="btn3" class="flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200">
+    <button type="button" id="btn3" class=" btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200">
     <div>
     <div style="background: #d82329;"  class="w-8 h-8 mx-auto mb-2 bg-red-500 rounded-full">
     </div>
@@ -93,7 +93,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </button>
     </div>
     <div>
-    <button type="button" id="btn4" class="flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200">
+    {{-- <button type="button" id="btn4" class="flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200">
     <div>
     <div style="background: #0D5F6D;" class="w-8 h-8 mx-auto mb-2 rounded-full bg-stone-200">
     </div>
@@ -112,7 +112,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         Rosa
     </p>
     </div>
-    </button>
+    </button> --}}
     </div>
     </div>
     </div>
