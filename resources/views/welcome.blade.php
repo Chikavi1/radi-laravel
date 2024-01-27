@@ -251,7 +251,7 @@
                     <div class="col-span-12 md:col-span-6 mt-20 md:mt-0">
                     <a href="/placas">
                             <div class="relative w-full p-4 overflow-hidden bg-white shadow-lg rounded-2xl">
-                                <img alt="moto" src="https://i.ibb.co/fnDgkJS/Behavior-Table-Worksheet-in-White-Blue-and-Pink-Cartoon-Style-1.png" class="rounded-lg w-full h-3/4 mb-4 -right-20 -bottom-8"/>
+                                <img alt="moto" src="https://i.ibb.co/Wz8BjLk/656e1ece-78cb-4c93-a24b-6fa21b4cabd8.jpg" class="rounded-lg w-full h-3/4 mb-4 -right-20 -bottom-8"/>
                                 <div class="w-4/6">
                                     <p class="mb-2 text-lg font-medium text-gray-800">
                                         Placas de identificación
@@ -260,7 +260,7 @@
                                         Incluye envio Desde
                                     </p>
                                     <p class="text-xl font-medium text-indigo-500">
-                                        $269 MXN
+                                        $239 MXN
                                     </p>
                                 </div>
                             </div>
