@@ -76,7 +76,7 @@
                     <ul class="flex space-x-8 text-sm font-semibold">
                         <li> <a href="/download">Clientes</a></li>
                         <li> <a target="_blank" href="/business">Negocios</a></li>
-                        <li> <a target="_blank" href="https://org.radi.pet">Organizaciones</a></li>
+                        <li> <a target="_blank" href="/org">Organizaciones</a></li>
 
                       <li> <a href="/affiliate-program" class="text-green-700">Gana dinero</a></li>
                       <li> <a href="/checkout" class="text-purple-700"><i class="fa-solid fa-bag-shopping"></i></a></li>
@@ -98,7 +98,7 @@
                             </li>
                         @else
                             <li>
-                                <a href="/login" class="cta bg-purple-900 hover:bg-purple-600 px-5 py-3 rounded text-white font-normal">Iniciar sesión</a>
+                                <a href="/placas-buy" class="cta bg-purple-900 hover:bg-purple-600 px-5 py-3 rounded text-white font-normal">Comprar Placa</a>
                             </li>
                         @endauth
                     </ul>
@@ -118,7 +118,7 @@
                     <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="/business" >Negocios</a>
                 </li>
                 <li>
-                    <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="https://org.radi.pet" >Organizaciones</a>
+                    <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="/org" >Organizaciones</a>
                 </li>
                 <li>
                     <a  class="block px-4 py-2 ml-6 md:p-2 lg:px-4" href="/affiliate-program" >Gana dinero</a>

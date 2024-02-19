@@ -112,17 +112,15 @@
         @auth
         @else
         <div class="flex lg:flex-row md:flex-col">
-            <a href="/download" class="mr-2 bg-purple-800 text-white inline-flex py-3 px-5 rounded-lg items-center hover:bg-purple-700 focus:outline-none">
-
-              <span class=" flex items-start flex-col leading-none">
-                <span class="title-font font-medium"><i class="fa-solid fa-cloud-arrow-down"></i> App Clientes</span>
-              </span>
+            <a href="/placas-buy" class="mr-2 bg-green-800 text-white inline-flex py-3 px-5 rounded-lg items-center hover:bg-green-700 focus:outline-none">
+                <span class="flex items-start flex-col leading-none">
+                    <span class="title-font font-medium"> Comprar Placa de identificación</span>
+                  </span>
             </a>
-            <a href="/login" class="bg-white text-green-800 inline-flex py-3 px-5 rounded-lg items-center lg: md:ml-0  md:mt-4 mt-0 lg:mt-0 hover:bg-green-700 focus:outline-none">
-
-              <span class="flex items-start flex-col leading-none">
-                <span class="title-font font-medium"> Inicia sesión</span>
-              </span>
+            <a href="/download" class="bg-white text-purple-800 inline-flex py-3 px-5 rounded-lg items-center lg: md:ml-0  md:mt-4 mt-0 lg:mt-0  focus:outline-none">
+                <span class=" flex items-start flex-col leading-none">
+                    <span class="title-font font-medium"><i class="fa-solid fa-cloud-arrow-down"></i> Descargar App</span>
+                  </span>
             </a>
           </div>
         @endauth
@@ -326,7 +324,7 @@
             <h2 class="w-full max-w-2xl py-8 mx-auto text-2xl font-light text-left md:text-center  text-gray-500">
                 Nuestra plataforma apoya organizaciones, optimiza procesos y promueve el voluntariado. ¡Descubre cómo juntos cambiamos vidas!            </h2>
             <div class="flex items-center justify-center mt-4">
-                <a href="https://org.radi.pet" class=" px-4 py-2 mr-4 rounded-lg text-white uppercase bg-gray-800 border-2 border-transparent text-md hover:bg-gray-900">
+                <a href="/org" class=" px-4 py-2 mr-4 rounded-lg text-white uppercase bg-gray-800 border-2 border-transparent text-md hover:bg-gray-900">
                     Comenzar
                 </a>
 

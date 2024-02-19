@@ -13,16 +13,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <div class=" mb-6 lg:mb-10  ">
 
         <div id="side1" class="hidden -z-10">
-            <img id="imagemain1" class="z-0 object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/K5QgHVj/Nombre-de-tu-mascota-4.png" alt="purple">
-            <img id="imagemain2" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/vzqYRGs/Nombre-de-tu-mascota-5.png" alt="black">
+            <img id="imagemain2" class="object-cover hidden w-full" src="{{asset('img/placa-logo.png')}}" alt="black">
+            <img id="imagemain5" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/nDW0HyW/Nombre-de-tu-mascota-6.png" alt="pink">
+            <img id="imagemain1" class="z-0 object-cover hidden w-full h-full " src="https://i.ibb.co/K5QgHVj/Nombre-de-tu-mascota-4.png" alt="purple">
             <img id="imagemain3" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/d6kM24J/Nombre-de-tu-mascota-7.png" alt="red">
             <img id="imagemain4" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/BGN992R/Nombre-de-tu-mascota-8.png" alt="green">
-            <img id="imagemain5" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/nDW0HyW/Nombre-de-tu-mascota-6.png" alt="pink">
         </div>
 
         <div id="side2" class="hidden">
-                <img id="imagetype1" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/nQdTtCR/logos-para-las-placas-3.png" alt="radi pets">
-                <img id="imagetype2" class="object-cover hidden w-full lg:h-1/2 " src="https://i.ibb.co/pz2Zh9Q/logos-para-las-placas-8.png" alt="custom">
+                <img id="imagetype1" class="object-cover hidden w-full  " src="https://i.ibb.co/nQdTtCR/logos-para-las-placas-3.png" alt="radi pets">
+                <img id="imagetype2" class="object-cover hidden w-full   " src="https://i.ibb.co/pz2Zh9Q/logos-para-las-placas-8.png" alt="custom">
         </div>
 
     </div>
@@ -53,23 +53,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <h2 class="text-xl -mt-16 max-w-xl md:mt-2 mb-4 md:text-5xl font-bold font-heading">
     Placa de identificación Radi Pets
     </h2>
-    <p  id="price" class="max-w-md mb-4 text-green-500 font-bold">
+    <p  id="price" class="max-w-md mb-4 text-3xl text-green-500 font-bold">
     239.00  MXN
     </p>
-    <div class="">
+    {{-- <div class="">
     <p class="mb-4 text-lg font-semibold dark:text-gray-400">Selecciona un color</p>
     <div class="grid grid-cols-2 gap-4 pb-4 border-b-2 border-gray-300 lg:grid-cols-3 dark:border-gray-600">
-    <div>
-    {{-- <button type="button" id="btn1" class="flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200 ">
-    <div>
-    <div style="background: #004AAD;" class="w-8 h-8 mx-auto mb-2 rounded-full bg-emerald-400">
-    </div>
-    <p class="text-xs text-center text-gray-700 dark:text-gray-400">
-        Azul
-    </p>
-    </div>
-    </button> --}}
-    </div>
+        <div>
+        {{-- <button type="button" id="btn1" class="flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200 ">
+        <div>
+        <div style="background: #004AAD;" class="w-8 h-8 mx-auto mb-2 rounded-full bg-emerald-400">
+        </div>
+        <p class="text-xs text-center text-gray-700 dark:text-gray-400">
+            Azul
+        </p>
+        </div>
+        </button> --}
+        </div>
     <div>
     <button type="button" id="btn2" class="  btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200 ">
     <div>
@@ -92,7 +92,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </div>
     </button>
     </div>
-    <div>
+    <div> --}}
     {{-- <button type="button" id="btn4" class="flex btncolor items-center justify-center w-full h-full py-4 border-2  dark:hover:border-green-200 hover:border-green-200">
     <div>
     <div style="background: #0D5F6D;" class="w-8 h-8 mx-auto mb-2 rounded-full bg-stone-200">
@@ -113,9 +113,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </p>
     </div>
     </button> --}}
+    {{-- </div>
     </div>
-    </div>
-    </div>
+    </div> --}}
     <div class="mt-6">
     <p class="mb-2 text-lg font-semibold dark:text-gray-400">Selecciona una opción</p>
     <a href="#" class="text-blue-500 hover:underline dark:text-gray-400">
@@ -171,6 +171,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </div>
     </div>
 
+    <div class="flex flex-wrap items-center">
+        <span class="mr-2">
+            <svg fill="#000000" height="16" width="16" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 214.27 214.27" xml:space="preserve">
+       <g>
+           <path d="M196.926,55.171c-0.11-5.785-0.215-11.25-0.215-16.537c0-4.142-3.357-7.5-7.5-7.5c-32.075,0-56.496-9.218-76.852-29.01
+               c-2.912-2.832-7.546-2.831-10.457,0c-20.354,19.792-44.771,29.01-76.844,29.01c-4.142,0-7.5,3.358-7.5,7.5
+               c0,5.288-0.104,10.755-0.215,16.541c-1.028,53.836-2.436,127.567,87.331,158.682c0.796,0.276,1.626,0.414,2.456,0.414
+               c0.83,0,1.661-0.138,2.456-0.414C199.36,182.741,197.954,109.008,196.926,55.171z M107.131,198.812
+               c-76.987-27.967-75.823-89.232-74.79-143.351c0.062-3.248,0.122-6.396,0.164-9.482c30.04-1.268,54.062-10.371,74.626-28.285
+               c20.566,17.914,44.592,27.018,74.634,28.285c0.042,3.085,0.102,6.231,0.164,9.477C182.961,109.577,184.124,170.844,107.131,198.812
+               z"/>
+           <path d="M132.958,81.082l-36.199,36.197l-15.447-15.447c-2.929-2.928-7.678-2.928-10.606,0c-2.929,2.93-2.929,7.678,0,10.607
+               l20.75,20.75c1.464,1.464,3.384,2.196,5.303,2.196c1.919,0,3.839-0.732,5.303-2.196l41.501-41.5
+               c2.93-2.929,2.93-7.678,0.001-10.606C140.636,78.154,135.887,78.153,132.958,81.082z"/>
+       </g>
+       </svg>
+        </span>
+        <h2 class="text-lg font-bold text-gray-700 dark:text-gray-400">Garantia de reemplazo</h2>
+    </div>
+    <div class="px-7">
+        <p class="mb-2 text-sm dark:text-gray-400">Compra una vez tu placa y despreocupate de volver a comprar</p>
+        </div>
+
     <div class="mt-6 ">
         <input type="hidden" name="color" id="inputcolor">
         <input type="hidden" name="model" id="inputmodel">
@@ -194,11 +218,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
 
     <script>
-        var color = 1;
-        var type  = 0;
+        var color = 2;
+        var type  = 1;
         var side  = 1;
+
+
         $("#side1").removeClass('hidden')
-        $("#imagemain1").removeClass('hidden')
+        $("#imagemain2").removeClass('hidden')
         $("#imagemain1").addClass('animate__animated animate__rollIn')
         $("#btn1").addClass('border-green-400')
         $("#btnmodel1").addClass('border-green-400')
@@ -232,7 +258,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             if(color == 1){
                 $("#imagetype1").attr("src","https://i.ibb.co/nQdTtCR/logos-para-las-placas-3.png");
             }else if(color == 2){
-                $("#imagetype1").attr("src","https://i.ibb.co/82stGXQ/logos-para-las-placas-2.png");
+                $("#imagetype1").attr("src","{{asset('img/placa-logo.png')}}");
             }else if(color == 3){
                 $("#imagetype1").attr("src","https://i.ibb.co/zJBT5NG/logos-para-las-placas-4.png");
             }else if(color == 4){
@@ -253,7 +279,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             if(color == 1){
                 $("#imagetype2").attr("src","https://i.ibb.co/pz2Zh9Q/logos-para-las-placas-8.png");
             }else if(color == 2){
-                $("#imagetype2").attr("src","https://i.ibb.co/wyBM44q/logos-para-las-placas-9.png");
+                $("#imagetype2").attr("src","{{asset('img/placa-per.png')}}");
             }else if(color == 3){
                 $("#imagetype2").attr("src","https://i.ibb.co/gymmpnC/logos-para-las-placas-10.png");
             }else if(color == 4){

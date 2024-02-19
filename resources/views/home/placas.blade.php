@@ -11,7 +11,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </h1>
 
     <div class="w-full mx-auto mt-2 text-center ">
-        <img src="https://i.ibb.co/fNth4mr/Black-White-Square-Interior-Designer-Logo.png" alt="id radi" class="animate__animated animate__rollIn w-72 mx-auto" />
+        <img src="{{asset('img/placa-l.png')}}" alt="id radi" class="animate__animated animate__rollIn w-72 mx-auto" />
       </div>
 
     <div class="text-center">
