@@ -61,6 +61,9 @@ Route::resource('lost', LostController::class);
 Route::resource('links', LinksController::class);
 
 Route::get('/placas-buy', [HomeController::class, 'placasbuy'])->name('home.placasbuy');
+Route::get('/running', [HomeController::class, 'running'])->name('home.running');
+Route::get('/ads', [HomeController::class, 'ads'])->name('home.ads');
+Route::get('/ads-create', [HomeController::class, 'adsCreate'])->name('home.adsCreate');
 
 Route::get('/event/{id}', [EventsController::class, 'show'])->name('events.show');
 Route::get('/events', [EventsController::class, 'index'])->name('events.index');

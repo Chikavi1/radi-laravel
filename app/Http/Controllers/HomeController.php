@@ -31,6 +31,20 @@ class HomeController extends Controller
 {
     //
 
+    public function running(){
+        return view('home.running');
+    }
+
+
+    public function adsCreate(){
+        return view('ads.create');
+    }
+
+    public function ads(){
+        return view('home.ads');
+
+    }
+
     public function placasbuy(Request $request)
     {
 
