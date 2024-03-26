@@ -28,7 +28,7 @@
 
         <a
           href="#"
-          class="text-center w-full rounded bg-white px-12 py-3 text-sm font-medium text-green-800 shadow hover:text-green-900 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+          class="mt-20 sm:mt-4 text-center w-full rounded bg-white px-12 py-3 text-sm font-medium text-green-800 shadow hover:text-green-900 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
         >
           Descargar App
         </a>
@@ -67,19 +67,19 @@
 
 
 
-<div class="mt-8 mx-auto w-3/4 rounded-md h-80 grid grid-cols-12  " style="background:#f7f4ed;">
-    <div class="col-span-4 mt-8">
+<div class="mt-8 p-4 mx-auto w-full md:w-3/4 rounded-md md:h-80 grid grid-cols-12  " style="background:#f7f4ed;">
+    <div class="col-span-12 md:col-span-4 md:mt-8">
         <img class="mx-auto w-44" src="https://cdn-assets-2.alltrails.com/assets/packs/e5a427d1704e64524c7b.avif" alt="">
     </div>
-    <div class="col-span-8">
-        <p class="text-3xl font-bold mt-12">La comunidad que ayuda a encontrar a mascotas desaparecidas.</p>
+    <div class="col-span-12 md:col-span-8 p-4">
+        <p class="text-3xl font-bold md:mt-12">La comunidad que ayuda a encontrar a mascotas desaparecidas.</p>
         <p class="mb-6 text-xl mt-4">Mientras sales a pasear, ayuda a las personas a encontrar a sus mascotas con esta aplicación.</p>
         <a class="bg-green-800 text-white px-2 py-4 rounded-xl" href="">Descargar App Gratis</a>
     </div>
 </div>
 
 
-<h2 class="text-center mt-12 font-bold text-3xl">Radi Running Premium</h2>
+<h2 class="text-center  mt-12 font-bold text-3xl">Radi Running Premium</h2>
 <p class="text-center text-xl">Conoce las ventajas de tener Radi Premium</p>
 <section class="grid grid-cols-1 gap-20 px-4 py-24 mx-auto max-w-7xl lg:px-16 xl:px-24 md:grid-cols-2 lg:grid-cols-3">
     <div>
@@ -182,9 +182,9 @@
     </div>
 </footer>
 
-<p  class="ml-40">No te pierdas de nuestras actualizaciones, comparte tus paseos con #radirunning para compartir tus aventuras con tu mascota.</p>
+<p  class="md:ml-40 p-4">No te pierdas de nuestras actualizaciones, comparte tus paseos con #radirunning para compartir tus aventuras con tu mascota.</p>
   <div class="mt-8 grid grid-cols-12 gap-3  items-center justify-between px-4 mx-auto max-w-7xl md:flex-row">
-    <div class="col-span-4">
+    <div class="col-span-12 md:col-span-4">
         <article class="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg">
             <img
               alt=""
@@ -203,7 +203,7 @@
             </div>
           </article>
     </div>
-    <div class="col-span-4">
+    <div class="col-span-12 md:col-span-4">
         <article class="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg">
             <img
               alt=""
@@ -222,7 +222,7 @@
             </div>
           </article>
     </div>
-    <div class="col-span-4">
+    <div class="col-span-12 md:col-span-4">
         <article class="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg">
 
 
