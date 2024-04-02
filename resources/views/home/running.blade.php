@@ -68,7 +68,7 @@
 
 
 <div class="mt-8 p-4 mx-auto w-full md:w-3/4 rounded-md md:h-80 grid grid-cols-12  " style="background:#f7f4ed;">
-    <div class="col-span-12 md:col-span-4 md:mt-8">
+    <div class="col-span-12 md:col-span-4 md:mt-4">
         <img class="mx-auto w-44" src="https://cdn-assets-2.alltrails.com/assets/packs/e5a427d1704e64524c7b.avif" alt="">
     </div>
     <div class="col-span-12 md:col-span-8 p-4">
@@ -91,9 +91,9 @@
           d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
         />
       </svg>
-      <h3 class="mb-3 text-lg font-medium leading-tight text-gray-900">Unify your payments stack</h3>
+      <h3 class="mb-3 text-lg font-medium leading-tight text-gray-900">Sin Anuncios, Sin Interrupciones</h3>
       <p class="text-base leading-relaxed text-gray-600">
-        Manage all your online and offline sales in one place with a single integration, simplifying reporting and reconciliation. Terminal works seamlessly with Payments, Connect, and Billing.
+        Con Radi Pets Premium, olvídate de los molestos anuncios que interrumpen tus paseos. Disfruta de una experiencia fluida y sin distracciones, concentrándote en lo que realmente importa: el tiempo de calidad con tu mascota.
       </p>
     </div>
     <div>
@@ -106,10 +106,9 @@
         />
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
       </svg>
-      <h3 class="mb-3 text-lg font-medium leading-tight text-gray-900">Own your in-store experience</h3>
+      <h3 class="mb-3 text-lg font-medium leading-tight text-gray-900">Mantén Tu Racha</h3>
       <p class="text-base leading-relaxed text-gray-600">
-        Provide a seamless customer experience across channels, like reserving online and picking up in store. Our SDKs make it easy to integrate into your own mobile and web applications to accept
-        in-store payments.
+        ¿Te encanta seguir una rutina de paseos con tu mascota? Con Radi Pets Premium, nunca perderás tu ritmo. La aplicación te ayuda a mantener una racha constante de paseos, motivándote a mantenerte activo y comprometido con el bienestar de tu peludo amigo.
       </p>
     </div>
     <div>
@@ -121,9 +120,9 @@
           d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20"
         />
       </svg>
-      <h3 class="mb-3 text-lg font-medium leading-tight text-gray-900">Grow your platform’s revenue</h3>
+      <h3 class="mb-3 text-lg font-medium leading-tight text-gray-900">Registro de Varias Mascotas</h3>
       <p class="text-base leading-relaxed text-gray-600">
-        Add in-person payments to your platform or marketplace. Using Terminal with Connect, you can onboard users for online and in-person payments, and unify their payouts across channels.
+        ¿Tienes más de una mascota para pasear? No hay problema. Radi Pets Premium te permite mantener un registro detallado de múltiples mascotas, facilitando la gestión de las necesidades individuales de cada una.
       </p>
     </div>
   </section>
@@ -134,20 +133,7 @@
 
     <div class="flex items-center space-x-6">
 
-      <a href="#">
-        <span class="sr-only">LinkedIn</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="2500" height="2500" viewBox="7.025 7.025 497.951 497.95" class="w-5 h-5" aria-hidden="true">
-          <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-974.482" y1="1306.773" x2="-622.378" y2="1658.877" gradientTransform="translate(1054.43 -1226.825)">
-            <stop offset="0" stop-color="#2489be" />
-            <stop offset="1" stop-color="#0575b3" />
-          </linearGradient>
-          <path
-            d="M256 7.025C118.494 7.025 7.025 118.494 7.025 256S118.494 504.975 256 504.975 504.976 393.506 504.976 256C504.975 118.494 393.504 7.025 256 7.025zm-66.427 369.343h-54.665V199.761h54.665v176.607zM161.98 176.633c-17.853 0-32.326-14.591-32.326-32.587 0-17.998 14.475-32.588 32.326-32.588s32.324 14.59 32.324 32.588c.001 17.997-14.472 32.587-32.324 32.587zm232.45 199.735h-54.4v-92.704c0-25.426-9.658-39.619-29.763-39.619-21.881 0-33.312 14.782-33.312 39.619v92.704h-52.43V199.761h52.43v23.786s15.771-29.173 53.219-29.173c37.449 0 64.257 22.866 64.257 70.169l-.001 111.825z"
-            fill="url(#a)"
-          />
-        </svg>
-      </a>
-      <a href="#">
+      <a href="https://www.instagram.com/radipets">
         <span class="sr-only">Instagram</span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2500 2500" width="2500" height="2500" class="w-5 h-5" aria-hidden="true">
           <defs>
@@ -170,7 +156,7 @@
           />
         </svg>
       </a>
-      <a href="#">
+      <a href="https://facebook.com/radipetsmx">
         <span class="sr-only">Facebook</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="1298" height="2500" viewBox="88.428 12.828 107.543 207.085" class="w-5 h-5" aria-hidden="true">
           <path
@@ -255,41 +241,34 @@
         </a>
         <div class="mt-6 lg:max-w-sm">
           <p class="text-sm text-gray-800">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-          </p>
-          <p class="mt-4 text-sm text-gray-800">
-            Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-          </p>
+            ¡Disfruta tus paseos con tu mascota usando Radi Running!
+                    </p>
+
         </div>
       </div>
       <div class="space-y-2 text-sm">
-        <p class="text-base font-bold tracking-wide text-gray-900">Contacts</p>
+        <p class="text-base font-bold tracking-wide text-gray-900">Enlaces</p>
         <div class="flex">
-          <p class="mr-1 text-gray-800">Phone:</p>
-          <a href="tel:850-123-5021" aria-label="Our phone" title="Our phone" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">850-123-5021</a>
-        </div>
-        <div class="flex">
-          <p class="mr-1 text-gray-800">Email:</p>
-          <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">info@lorem.mail</a>
-        </div>
-        <div class="flex">
-          <p class="mr-1 text-gray-800">Address:</p>
-          <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
-            312 Lovely Street, NY
+          <a href="/download">
+           Clientes
           </a>
+        </div>
+        <div class="flex">
+          <a href="/business">
+            Negocios
+          </a>
+        </div>
+        <div class="flex">
+         <a href="affiliate-program">
+         Gana dinero
+         </a>
         </div>
       </div>
       <div>
-        <span class="text-base font-bold tracking-wide text-gray-900">Social</span>
+        <span class="text-base font-bold tracking-wide text-gray-900">Redes Sociales</span>
         <div class="flex items-center mt-1 space-x-3">
-          <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
-            <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
-              <path
-                d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z"
-              ></path>
-            </svg>
-          </a>
-          <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
+
+          <a href="https://facebook.com/radipetsmx" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
             <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
               <circle cx="15" cy="15" r="4"></circle>
               <path
@@ -297,7 +276,7 @@
               ></path>
             </svg>
           </a>
-          <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
+          <a href="https://www.instagram.com/radipets" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
             <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
               <path
                 d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
@@ -306,7 +285,7 @@
           </a>
         </div>
         <p class="mt-4 text-sm text-gray-500">
-          Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken spare ribs salami.
+          ¡Sigue nuestras huellas! y mantente al tanto de todo lo que tenemos para ti.
         </p>
       </div>
     </div>
