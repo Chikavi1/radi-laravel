@@ -26,12 +26,14 @@
       <div class="mt-8 flex flex-wrap gap-4">
 
 
-        <a
-          href="#"
-          class="mt-20 sm:mt-4 text-center w-full rounded bg-white px-12 py-3 text-sm font-medium text-green-800 shadow hover:text-green-900 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
-        >
-          Descargar App
-        </a>
+        <div class="flex items-center space-x-3">
+            <a target="_blank" href="https://apps.apple.com/mx/app/radi-running/id1666452318" class="w-32 transition duration-300 hover:shadow-lg">
+              <img src="https://kitwind.io/assets/kometa/app-store.png" class="object-cover object-top w-full h-auto mx-auto" alt="" />
+            </a>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=pet.radi.running" class="w-32 transition duration-300 hover:shadow-lg">
+              <img src="https://kitwind.io/assets/kometa/google-play.png" class="object-cover object-top w-full h-auto mx-auto" alt="" />
+            </a>
+          </div>
       </div>
     </div>
   </div>
@@ -48,8 +50,8 @@
         <a href="#" class="w-full text-green-800 btn btn-dark btn-lg sm:w-auto font-bold">            ¡Únete hoy y comienza a compartir tus momentos con tu fiel amigo!
         </a>
       </div>
-      <div class="w-full h-full py-12 ">
-        <img class="rounded-xl" src="https://i.ibb.co/0yxQNft/Blue-Yellow-Modern-Retro-Soccer-Player-Statistic-Facebook-Post.png" alt="">
+      <div class="w-full h-full md:py-12 ">
+        <img class="rounded-xl" src="https://i.ibb.co/MMyWXQH/Post-de-Instagram-recordatorio-aesthetic-rosado-y-blanco-3.png" alt="">
       </div>
     </div>
     <div class="grid flex-col-reverse items-center grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
@@ -60,7 +62,7 @@
         </p>
       </div>
       <div class="w-full h-full py-12">
-        <img  class="rounded-xl"  src="https://i.ibb.co/v3XRF55/Blue-Yellow-Modern-Retro-Soccer-Player-Statistic-Facebook-Post-1.png" alt="">
+        <img  class="rounded-xl w-full"  src="https://i.ibb.co/55Chsbz/Post-de-Instagram-recordatorio-aesthetic-rosado-y-blanco-4.png" alt="">
       </div>
     </div>
   </section>
@@ -69,18 +71,25 @@
 
 <div class="mt-8 p-4 mx-auto w-full md:w-3/4 rounded-md md:h-80 grid grid-cols-12  " style="background:#f7f4ed;">
     <div class="col-span-12 md:col-span-4 md:mt-4">
-        <img class="mx-auto w-44" src="https://cdn-assets-2.alltrails.com/assets/packs/e5a427d1704e64524c7b.avif" alt="">
+        <img class="mx-auto w-44" src="https://i.ibb.co/MBhqWJG/Dise-o-sin-t-tulo-1.png" alt="">
     </div>
     <div class="col-span-12 md:col-span-8 p-4">
         <p class="text-3xl font-bold md:mt-12">La comunidad que ayuda a encontrar a mascotas desaparecidas.</p>
         <p class="mb-6 text-xl mt-4">Mientras sales a pasear, ayuda a las personas a encontrar a sus mascotas con esta aplicación.</p>
-        <a class="bg-green-800 text-white px-2 py-4 rounded-xl" href="">Descargar App Gratis</a>
+        <div class="flex items-center space-x-3">
+            <a target="_blank" href="https://apps.apple.com/mx/app/radi-running/id1666452318" class="w-32 transition duration-300 hover:shadow-lg">
+              <img src="https://kitwind.io/assets/kometa/app-store.png" class="object-cover object-top w-full h-auto mx-auto" alt="" />
+            </a>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=pet.radi.running" class="w-32 transition duration-300 hover:shadow-lg">
+              <img src="https://kitwind.io/assets/kometa/google-play.png" class="object-cover object-top w-full h-auto mx-auto" alt="" />
+            </a>
+          </div>
     </div>
 </div>
 
 
 <h2 class="text-center  mt-12 font-bold text-3xl">Radi Running Premium</h2>
-<p class="text-center text-xl">Conoce las ventajas de tener Radi Premium</p>
+<p class="text-center text-xl px-4">Conoce las ventajas de tener Radi Premium</p>
 <section class="grid grid-cols-1 gap-20 px-4 py-24 mx-auto max-w-7xl lg:px-16 xl:px-24 md:grid-cols-2 lg:grid-cols-3">
     <div>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 mb-4 text-purple-700" aria-hidden="true">
@@ -126,6 +135,43 @@
       </p>
     </div>
   </section>
+
+
+
+  <div id="download" class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
+      <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
+        <div class="max-w-xl mb-6">
+          <div>
+            <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+             Radi Pets
+            </p>
+          </div>
+          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            Descarga Radi Pets para negocios
+          </h2>
+          <p class="text-base text-gray-700 md:text-lg">
+            ¡Descarga nuestra app ahora mismo y comienza a disfrutar de todos los beneficios que ofrece!          </p>
+        </div>
+        <div class="flex items-center space-x-3">
+          <a target="_blank" href="https://apps.apple.com/mx/app/radi-running/id1666452318" class="w-32 transition duration-300 hover:shadow-lg">
+            <img src="https://kitwind.io/assets/kometa/app-store.png" class="object-cover object-top w-full h-auto mx-auto" alt="" />
+          </a>
+          <a target="_blank" href="https://play.google.com/store/apps/details?id=pet.radi.running" class="w-32 transition duration-300 hover:shadow-lg">
+            <img src="https://kitwind.io/assets/kometa/google-play.png" class="object-cover object-top w-full h-auto mx-auto" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="flex items-center justify-center w-full">
+        <div class="w-2/5">
+          <img class="object-cover" src="https://i.ibb.co/wR63D8q/Dise-o-sin-t-tulo-3.png" alt="" />
+        </div>
+        <div class="w-5/12 -ml-16 lg:-ml-32">
+          <img class="object-cover" src="https://i.ibb.co/4f2ZdRq/Dise-o-sin-t-tulo-4.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 <footer class="flex flex-col items-center justify-between px-4 py-2 mx-auto max-w-7xl md:flex-row">
