@@ -51,7 +51,7 @@
         </a>
       </div>
       <div class="w-full h-full md:py-12 ">
-        <img class="rounded-xl" src="https://i.ibb.co/MMyWXQH/Post-de-Instagram-recordatorio-aesthetic-rosado-y-blanco-3.png" alt="">
+        <img class="rounded-xl" src="https://radi-images.s3.us-west-1.amazonaws.com/rr1.png" alt="">
       </div>
     </div>
     <div class="grid flex-col-reverse items-center grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
@@ -62,7 +62,7 @@
         </p>
       </div>
       <div class="w-full h-full py-12">
-        <img  class="rounded-xl w-full"  src="https://i.ibb.co/55Chsbz/Post-de-Instagram-recordatorio-aesthetic-rosado-y-blanco-4.png" alt="">
+        <img  class="rounded-xl w-full"  src="https://radi-images.s3.us-west-1.amazonaws.com/rr1.png" alt="">
       </div>
     </div>
   </section>
@@ -71,7 +71,7 @@
 
 <div class="mt-8 p-4 mx-auto w-full md:w-3/4 rounded-md md:h-80 grid grid-cols-12  " style="background:#f7f4ed;">
     <div class="col-span-12 md:col-span-4 md:mt-4">
-        <img class="mx-auto w-44" src="https://i.ibb.co/MBhqWJG/Dise-o-sin-t-tulo-1.png" alt="">
+        <img class="mx-auto w-44" src="https://radi-images.s3.us-west-1.amazonaws.com/rr3.png" alt="">
     </div>
     <div class="col-span-12 md:col-span-8 p-4">
         <p class="text-3xl font-bold md:mt-12">La comunidad que ayuda a encontrar a mascotas desaparecidas.</p>
@@ -164,10 +164,10 @@
       </div>
       <div class="flex items-center justify-center w-full">
         <div class="w-2/5">
-          <img class="object-cover" src="https://i.ibb.co/wR63D8q/Dise-o-sin-t-tulo-3.png" alt="" />
+          <img class="object-cover" src="https://radi-images.s3.us-west-1.amazonaws.com/rr4.png" alt="" />
         </div>
         <div class="w-5/12 -ml-16 lg:-ml-32">
-          <img class="object-cover" src="https://i.ibb.co/4f2ZdRq/Dise-o-sin-t-tulo-4.png" alt="" />
+          <img class="object-cover" src="https://radi-images.s3.us-west-1.amazonaws.com/rr5.png" alt="" />
         </div>
       </div>
     </div>

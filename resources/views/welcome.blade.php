@@ -117,7 +117,7 @@
                     <span class="title-font font-medium"> Comprar Placa de identificación</span>
                   </span>
             </a>
-            <a href="/download" class="bg-white text-purple-800 inline-flex py-3 px-5 rounded-lg items-center lg: md:ml-0  md:mt-4 mt-0 lg:mt-0  focus:outline-none">
+            <a href="/running" class="bg-white text-purple-800 inline-flex py-3 px-5 rounded-lg items-center lg: md:ml-0  md:mt-4 mt-0 lg:mt-0  focus:outline-none">
                 <span class=" flex items-start flex-col leading-none">
                     <span class="title-font font-medium"><i class="fa-solid fa-cloud-arrow-down"></i> Descargar App</span>
                   </span>
