@@ -62,7 +62,7 @@
         </p>
       </div>
       <div class="w-full h-full py-12">
-        <img  class="rounded-xl w-full"  src="https://radi-images.s3.us-west-1.amazonaws.com/rr1.png" alt="">
+        <img  class="rounded-xl w-full"  src="https://radi-images.s3.us-west-1.amazonaws.com/rr2.png" alt="">
       </div>
     </div>
   </section>
@@ -164,10 +164,10 @@
       </div>
       <div class="flex items-center justify-center w-full">
         <div class="w-2/5">
-          <img class="object-cover" src="https://radi-images.s3.us-west-1.amazonaws.com/rr4.png" alt="" />
+          <img class="object-cover" src="https://radi-images.s3.us-west-1.amazonaws.com/rr5.png" alt="" />
         </div>
         <div class="w-5/12 -ml-16 lg:-ml-32">
-          <img class="object-cover" src="https://radi-images.s3.us-west-1.amazonaws.com/rr5.png" alt="" />
+          <img class="object-cover" src="https://radi-images.s3.us-west-1.amazonaws.com/rr4.png" alt="" />
         </div>
       </div>
     </div>
@@ -228,7 +228,7 @@
               <div class="p-4 sm:p-6">
 
                 <a href="#">
-                  <h3 class="mt-0.5 text-lg text-white">@KarenAlexa</h3>
+                  <h3 class="mt-0.5 text-lg text-white">@Karen</h3>
                 </a>
 
               </div>
