@@ -123,7 +123,7 @@
     </div>
   </div>
 
-
+  <a href="https://p6lde6btg7.execute-api.us-east-1.amazonaws.com/dev/wallet/apple" download="">DEscargar wallet</a>
 
   <section class="text-white bg-gray-900">
     <div class="flex flex-col items-stretch justify-between px-4 py-20 mx-auto max-w-7xl lg:flex-row sm:items-center">

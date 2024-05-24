@@ -148,10 +148,10 @@
             </p>
           </div>
           <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-            Descarga Radi Pets para negocios
+            Descarga Radi Pets Running
           </h2>
           <p class="text-base text-gray-700 md:text-lg">
-            ¡Descarga nuestra app ahora mismo y comienza a disfrutar de todos los beneficios que ofrece!          </p>
+            ¡Descarga nuestra app ahora mismo y comienza a disfrutar de todos los paseos con tu mascota!          </p>
         </div>
         <div class="flex items-center space-x-3">
           <a target="_blank" href="https://apps.apple.com/mx/app/radi-running/id1666452318" class="w-32 transition duration-300 hover:shadow-lg">
