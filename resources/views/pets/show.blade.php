@@ -20,11 +20,11 @@
     </p>
 </div>
 @endif
+<script src="https://js.stripe.com/v3/"></script>
 
 @include('layouts.nav')
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7789760036582954"
-crossorigin="anonymous"></script>
+
 
 
 @if($pet)
@@ -35,7 +35,18 @@ crossorigin="anonymous"></script>
         <img src="{{$pet->photo}}" class="md:object-cover md:w-5/6 md:h-96 md:mx-auto w-full md:rounded-md" alt="profile image">
         <div class="p-4">
 
-          <h2 class="text-3xl font-bold capital text-gray-800 mt-4">{{$pet->name}}</h2>
+           <div class="grid grid-cols-12 mt-4">
+            <div class="col-span-8">
+                <h2 class="text-3xl font-bold capital text-gray-800 ">{{$pet->name}}</h2>
+            </div>
+            <div class="col-span-4">
+                <button onClick="openModal()" type="button" class="py-2 px-4 flex justify-center items-center  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                    <i class="fa-solid fa-heart"></i>
+                    &nbsp;
+                    Apoyar
+                </button>
+            </div>
+           </div>
 
 
 
@@ -430,18 +441,6 @@ crossorigin="anonymous"></script>
             </div>
 
 
-
-          <div class="mt-4 w-full h-64 rounded-md mx-auto text-center">
-            <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-7789760036582954"
-                    data-ad-slot="5321324498"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true">
-
-            </ins>
-          </div>
-
         </div>
       </div>
 
@@ -494,6 +493,116 @@ crossorigin="anonymous"></script>
       </div>
     </div> --}}
 
+
+    <section  class="flex items-center justify-center bg-white">
+        <div id="modalOverlay" style="display:none;">
+            <div id="modal" class="rounded-2xl max-w-xl">
+                <div class="flex py-2 w-full items-center justify-center border-b">
+                        <h1 class="pt-4 text-xl text-black font-semibold text-center pb-4">Apoyar a {{ $pet->name }}</h1>
+                        <button id="close" class="m-4 absolute top-0 right-1 hover:bg-gray-200 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-black" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                </div>
+                <div class="p-4">
+                    <form id="payment-form">
+                        @csrf
+                        <div class="rounded-lg ">
+                            <div  >
+
+                                <div class="mt-6">
+                                    <div class="w-full space-y-6">
+                                        <div class="w-full">
+                                            <div class=" relative ">
+                                                <div class="grid grid-cols-12">
+                                                    <p class="col-span-3 opcion" data-valor="50">50</p>
+                                                    <p class="col-span-3 opcion" data-valor="100">100</p>
+                                                    <p class="col-span-3 opcion" data-valor="200">200</p>
+                                                    <p class="col-span-3 opcion" id="opcion-otro">Otro</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full">
+                                                <div class="relative"  id="input-otro" style="display: none;margin-top:1em;">
+                                                    <input type="number" id="input-cantidad" min="10" placeholder="Ingrese la cantidad" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                                                    </div>
+                                                </div>
+                                                <div class=" relative mt-3">
+                                                    <input required  name="nombre" type="text" id="search-form-location" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Nombre"/>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full">
+                                                    <div class=" relative ">
+                                                        <input required name="city" type="text" id="search-form-name" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Mensaje"/>
+                                                        </div>
+                                                    </div>
+                                                    <div id="card-element" style="padding: 2em 0em;">
+                                                    </div>
+                                                    <div id="card-errors" role="alert"></div>
+                                                  </div>
+                                                        <span class="mt-2 block w-full rounded-md shadow-sm">
+                                                            <button  type="submit" class="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                                                Apoyar
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="my-3 text-green-600 text-center font-bold">Total 100$ <span id="nt-total"></span>  MXN</p>
+                                        <div class="px-4 py-6 border-t-2 border-gray-200  sm:px-10">
+                                            <p class="text-xs leading-5 text-gray-500">
+                                                Tu Apoyo será para comprar alimentos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                    </form>
+            </div>
+        </div>
+</section>
+
+
+
+
+<style>
+    #modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index:9999;
+    }
+
+    #modal {
+    position: fixed;
+    width: 90%;
+    top: 55%;
+    left: 50%;
+    text-align: center;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    transition: all 300ms ease-in-out;
+    }
+
+    #modalOverlay.modal-open #modal {
+    opacity: 1;
+    top: 50%;
+    }
+    .activo{
+        color: green;
+        font-weight: bold !important;
+        font-size: 1.1em;
+    }
+</style>
+
 @else
   <div >
     <div class="text-center mt-40">
@@ -504,12 +613,98 @@ crossorigin="anonymous"></script>
   </div>
 @endif
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
 
 <script>
+
+const opciones = document.querySelectorAll(".opcion");
+    const opcionOtro = document.getElementById("opcion-otro");
+    const inputOtro = document.getElementById("input-otro");
+    const inputCantidad = document.getElementById("input-cantidad");
+    const botonConfirmar = document.getElementById("boton-confirmar");
+
+    opciones.forEach(function(opcion) {
+        opcion.addEventListener("click", function() {
+            // Remover la clase 'activo' de todas las opciones
+            opciones.forEach(function(op) {
+                op.classList.remove("activo");
+            });
+
+            // Agregar la clase 'activo' a la opción seleccionada
+            opcion.classList.add("activo");
+
+            // Si se selecciona la opción "Otro", mostrar el input
+            if (opcion === opcionOtro) {
+                inputOtro.style.display = "block";
+            } else {
+                inputOtro.style.display = "none";
+            }
+        });
+    });
+
+
+
+var stripe = Stripe('pk_live_51KsA9rBp6uwr6porsLeNx9LTinc5UlLigLVda6w2RSnXJon8rlNOHJKLTtJIQEPc5Rsx5iPytfFhlOV2wutNdZEv00J6YxosX1');
+
+// Crea un elemento de pago de Stripe
+var elements = stripe.elements();
+var cardElement = elements.create('card');
+
+// Monta el elemento de pago en el DOM
+cardElement.mount('#card-element');
+
+// Maneja el envío del formulario
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const cantidad = parseInt(inputCantidad.value);
+        if (!isNaN(cantidad) && cantidad >= 10) {
+            console.log("Cantidad ingresada:", cantidad);
+        } else {
+            console.log("Ingrese una cantidad válida (mínimo 10 pesos)");
+        }
+
+    stripe.createPaymentMethod({
+        type: 'card',
+        card: cardElement,
+    }).then(function(result) {
+        if (result.error) {
+            var errorElement = document.getElementById('card-errors');
+            errorElement.textContent = result.error.message;
+        } else {
+            fetch('/procesar-pago', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                body: JSON.stringify({ payment_method: result.paymentMethod.id }),
+            }).then(function(response) {
+                return response.json();
+            }).then(function(data) {
+                console.log(data);
+            });
+        }
+    });
+});
+
+    function openModal(){
+         $('#modalOverlay').show().addClass('modal-open');
+    }
+
+    $('#close').click(function() {
+        var modal = $('#modalOverlay');
+        modal.removeClass('modal-open');
+        setTimeout(function() {
+            modal.hide();
+        },200);
+    });
+
     function copyToClipboard(element) {
         var $temp = $("<input>");
         $("body").append($temp);
@@ -542,7 +737,5 @@ crossorigin="anonymous"></script>
 
 
 </script>
-<script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
     @include('layouts.footer')
