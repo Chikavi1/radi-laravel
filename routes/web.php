@@ -77,6 +77,8 @@ Route::get('/business', [HomeController::class, 'business'])->name('home.busines
 Route::get('/pre-business', [HomeController::class, 'prebusiness'])->name('home.prebusiness');
 Route::post('/prebusinessregister', [HomeController::class, 'prebusinessregister'])->name('prebusinessregister');
 
+Route::post('/support-pet', [HomeController::class, 'handlePayment'])->name('support.pet');
+
 
 Route::get('/report-discount', [HomeController::class, 'reportdiscount'])->name('home.reportdiscount');
 Route::get('/placas-distribuidor', [HomeController::class, 'placasdist'])->name('home.placasdist');

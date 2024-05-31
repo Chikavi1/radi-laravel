@@ -156,7 +156,7 @@
             <div class="sticky right-0 top-0 w-full">
                 <div class="w-52 ml-auto">
                     <div class="p-6 rounded-xl mr-4 shadow-xl">
-                        {!! QrCode::size(150)->style('dot')->eye('circle')->backgroundColor(255,255,255)->color(0,0,0)->generate('https://radi.pet/download') !!}
+                        <img src="/img/download.png" alt="descarga">
                         <p class="text-center font-bold mt-2">Descarga la App</p>
                     </div>
                 </div>

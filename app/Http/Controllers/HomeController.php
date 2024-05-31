@@ -24,6 +24,8 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Response;
 use App\Models\Affiliates;
 
+use Stripe\Stripe;
+use Stripe\PaymentIntent;
 
 use Symfony\Component\HttpFoundation\Cookie;
 
@@ -33,6 +35,41 @@ class HomeController extends Controller
 
     public function running(){
         return view('home.running');
+    }
+
+    public function handlePayment(Request $request)
+    {
+        // return response()->json($request->all());
+        Stripe::setApiKey('sk_test_51KsA9rBp6uwr6por8pB7dv2xDCj4KAWdSCf5FTP3QkXnDpRzQJg9Q6G5TxWJ91Xbf8dwd9b6hbvmScYElAgGRUES00zPLNkIbD');
+        try{
+
+
+            $paymentIntent = PaymentIntent::create([
+                'amount' => $request->get('amount')*100, // Monto en centavos, por ejemplo, 10.99 USD
+                'currency' => 'mxn',
+                'payment_method' => $request->payment_method,
+                'confirmation_method' => 'manual',
+                'confirm' => true,
+                'transfer_data' => [
+                    'destination' => 'acct_1PGaiCHc8UqDpl0V', // ID de la cuenta de Stripe Connect
+                ],
+                'metadata' => [
+                    'name' => $request->get('name'),
+                    'message' => $request->get('message'),
+                    'pet_id' => $request->get('pet_id')
+                ],
+            ]);
+
+            return response()->json([
+                'success' => true,
+                'paymentIntent' => $paymentIntent,
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'error' => $e->getMessage(),
+            ]);
+        }
     }
 
 

@@ -135,6 +135,27 @@
 
 
 
+<ul class=" mt-6 flex flex-wrap text-sm font-medium text-center menu">
+    <li class="mr-2">
+        <a id="menu-info" class="inline-block p-4 font-bold bg-white rounded-t-lg active ">
+            Información
+        </a>
+    </li>
+    <li class="mr-2">
+        <a id="menu-message" class="inline-block p-4 rounded-t-lg font-bold">
+            Mensajes
+        </a>
+    </li>
+    <li class="mr-2">
+        <a id="menu-moments" class="inline-block p-4 rounded-t-lg font-bold">
+            Momentos
+        </a>
+    </li>
+</ul>
+
+
+    <div id="information" class="hidden">
+        <h2 class="text-xl text-center px-5 my-6 font-bold">Información</h2>
 
 
         @if($pet->status == 3 && $pet->losts)
@@ -331,35 +352,9 @@
               </div>
             </div>
           </div>
-          <div
-          class="mt-4 relative block overflow-hidden rounded-lg border border-gray-400 p-4 sm:p-6 lg:p-8"
-      >
-          <span
-          class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-800 via-green-800 to-green-800"
-          ></span>
-
-          <div class="sm:flex sm:justify-between sm:gap-4">
-          <div>
-              <h3 class="text-2xl text-gray-900 sm:text-xl">
-              ¡Crea el perfil de tu mascota <span class="text-green-800 font-bold">gratis</span>!
-              </h3>
-
-              <p class="mt-1 text-xs font-medium text-gray-600">Descarga la app para crear el perfil de tu mascota</p>
-          </div>
-
-          </div>
-
-          <div class="my-4">
-
-          <a href="/download" class="mt-2 mb-4 border-green-600 bg-green-600 hover:bg-green-700 hover:border-green-700 text-white font-bold py-2 px-4 rounded-full">
-              Descargar
-          </a>
-          </div>
-
-</div>
 
 
-            <div
+        <div
                         class="mt-4 relative block overflow-hidden rounded-lg border border-gray-400 p-4 sm:p-6 lg:p-8"
                     >
                         <span
@@ -442,56 +437,73 @@
 
 
         </div>
-      </div>
+    </div>
+
+    <div id="messages" class="hidden">
+        <h2 class="text-xl text-center px-5 font-bold">Mensajes</h2>
+
+        <div class="container flex my-6 flex-col items-center justify-center w-full mx-auto bg-white rounded-lg shadow ">
+            <ul class="flex flex-col divide-y divide">
+                <li class="flex flex-row">
+                    <div class="flex items-center flex-1 p-4 cursor-pointer select-none">
+
+                        <div class="flex-1 pl-1 mr-16">
+                            <div class="font-medium">
+                                Luis Rojas
+                            </div>
+                            <div class="text-sm">
+                                Que chingue su madre el america xdxd
+                            </div>
+                        </div>
+                        <div class="text-xs">
+                            27/05/2024 5:00 PM
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
     </div>
 
+    <div id="moments" class="text-center hidden">
+        <h2 class="text-xl px-8 font-bold">Momentos</h2>
 
-    {{-- <div class="grid grid-cols-12">
-      <div class="col-span-12 md:col-span-4 md:col-start-3">
-        <img alt="blog photo"[src]="$breedData->image"
-        class="md:mt-16 object-cover w-full max-h-96 md:rounded-lg"/>
-      </div>
-      <div  class="col-span-12 md:col-span-4">
-        <div class="w-full p-4 bg-white dark:bg-gray-800">
-          <p class="font-medium text-indigo-500 text-xl">
-              {{$breedData->name}}
-          </p>
+        <h2 class="text-center p-6 ">Para ver los momentos y más información necesitas verlo en la app</h2>
 
-          <dl class="mt-6 flex gap-4 sm:gap-6">
-            <div class="flex flex-col-reverse">
-              <dt class="text-sm font-medium text-gray-600">{{$breedData->lifeExpentancy}} años</dt>
-              <dd class="text-xs text-gray-500">Edad promedio</dd>
+        <button class=" px-6 py-2 m-4 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
+            Descargar App
+        </button>
+
+        {{-- <a href="#" class="block rounded-lg p-4 shadow-sm shadow-indigo-100">
+            <img
+              alt=""
+              src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              class="h-56 w-full rounded-md object-cover"
+            />
+
+            <div class="mt-2">
+              <dl>
+                <div>
+                  <dt class="sr-only">Price</dt>
+
+                  <dd class="text-sm text-gray-500">25 de junio del 2032</dd>
+                </div>
+
+                <div>
+
+                  <dd class="font-medium">Visitando a miaughenin</dd>
+                </div>
+              </dl>
+
+
             </div>
-            <div class="flex flex-col-reverse">
-              <dt class="text-sm font-medium text-gray-600">{{$breedData->minWeight}} KG</dt>
-              <dd class="text-xs text-gray-500">Peso Mínimo</dd>
-            </div>
+          </a> --}}
 
-            <div class="flex flex-col-reverse">
-              <dt class="text-sm font-medium text-gray-600">{{$breedData->maxWeight}} KG</dt>
-              <dd class="text-xs text-gray-500">Peso Máximo</dd>
-            </div>
-          </dl>
-          <p class="font-light text-gray-400 dark:text-gray-300 text-md mt-4">
-            {{$breedData->clean}}
-          </p>
-          <p class="font-light text-gray-400 dark:text-gray-300 text-md mt-4">
-            {{$breedData->description}}
-          </p>
-          <p class="font-light text-gray-400 dark:text-gray-300 text-md mt-4">
-            {{breedData.behavior}}
-          </p>
-          <p class="font-light text-gray-400 dark:text-gray-300 text-md mt-4">
-            Información puede variar.Por el momento Información solo en español.
-          </p>
-          <small class="font-light text-gray-400 dark:text-gray-300 text-md mt-4">
-            Fuente: Royalcanin
-          </small>
+    </div>
 
-        </div>
-      </div>
-    </div> --}}
+    </div>
+
+    </div>
 
 
     <section  class="flex items-center justify-center bg-white">
@@ -525,16 +537,18 @@
 
                                             <div class="w-full">
                                                 <div class="relative"  id="input-otro" style="display: none;margin-top:1em;">
-                                                    <input type="number" id="input-cantidad" min="10" placeholder="Ingrese la cantidad" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
-                                                    </div>
+                                                    <input type="number" id="input-cantidad" min="10" placeholder="Ingrese la cantidad" class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                                                </div>
+                                                <div id="error-message" class="text-red-500 mt-2"></div>
+
                                                 </div>
                                                 <div class=" relative mt-3">
-                                                    <input required  name="nombre" type="text" id="search-form-location" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Nombre"/>
+                                                    <input required  name="name" type="text" id="name" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Nombre"/>
                                                     </div>
                                                 </div>
                                                 <div class="w-full">
                                                     <div class=" relative ">
-                                                        <input required name="city" type="text" id="search-form-name" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Mensaje"/>
+                                                        <input required name="message" type="text" id="message" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Mensaje"/>
                                                         </div>
                                                     </div>
                                                     <div id="card-element" style="padding: 2em 0em;">
@@ -550,7 +564,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="my-3 text-green-600 text-center font-bold">Total 100$ <span id="nt-total"></span>  MXN</p>
+                                        <p class="my-3 text-green-600 text-center font-bold">Total <span id="total">100</span>$ <span id="nt-total"></span>  MXN</p>
                                         <div class="px-4 py-6 border-t-2 border-gray-200  sm:px-10">
                                             <p class="text-xs leading-5 text-gray-500">
                                                 Tu Apoyo será para comprar alimentos.
@@ -621,11 +635,36 @@
 
 <script>
 
-const opciones = document.querySelectorAll(".opcion");
+
+    const opciones = document.querySelectorAll(".opcion");
     const opcionOtro = document.getElementById("opcion-otro");
     const inputOtro = document.getElementById("input-otro");
     const inputCantidad = document.getElementById("input-cantidad");
     const botonConfirmar = document.getElementById("boton-confirmar");
+
+    $("#information").removeClass('hidden');
+
+    $("#menu-info").on('click',()=>{
+        $("#messages").addClass('hidden');
+        $("#moments").addClass('hidden');
+        $("#information").removeClass('hidden');
+
+    })
+
+    $("#menu-message").on('click',()=>{
+        $("#information").addClass('hidden');
+        $("#moments").addClass('hidden');
+        $("#messages").removeClass('hidden');
+
+
+    })
+
+    $("#menu-moments").on('click',()=>{
+        $("#information").addClass('hidden');
+        $("#messages").addClass('hidden');
+        $("#moments").removeClass('hidden');
+
+    })
 
     opciones.forEach(function(opcion) {
         opcion.addEventListener("click", function() {
@@ -633,6 +672,11 @@ const opciones = document.querySelectorAll(".opcion");
             opciones.forEach(function(op) {
                 op.classList.remove("activo");
             });
+
+            var valor = $(this).data('valor');
+            // Imprimir el valor en la consola
+            console.log(valor);
+            $('#total').text(valor);
 
             // Agregar la clase 'activo' a la opción seleccionada
             opcion.classList.add("activo");
@@ -646,9 +690,22 @@ const opciones = document.querySelectorAll(".opcion");
         });
     });
 
+    $('#input-cantidad').on('input', function() {
+        var cantidad = $(this).val();
+        if (cantidad < 10) {
+            $('#error-message').text('El valor debe ser mayor o igual a 10');
+            $('#total').text('');
+        } else {
+            $('#error-message').text('');
+            $('#total').text(cantidad);
+        }
+
+    });
 
 
-var stripe = Stripe('pk_live_51KsA9rBp6uwr6porsLeNx9LTinc5UlLigLVda6w2RSnXJon8rlNOHJKLTtJIQEPc5Rsx5iPytfFhlOV2wutNdZEv00J6YxosX1');
+
+// var stripe = Stripe('pk_live_51KsA9rBp6uwr6porsLeNx9LTinc5UlLigLVda6w2RSnXJon8rlNOHJKLTtJIQEPc5Rsx5iPytfFhlOV2wutNdZEv00J6YxosX1');
+var stripe = Stripe('pk_test_51KsA9rBp6uwr6porp9J8YwjOQER0i3Yakw8ovYpZU7H0GqwTZCNrnsUAetok7Giot72v8pHAKpWAFyLjVBBLYO0x00DIFUA2qm');
 
 // Crea un elemento de pago de Stripe
 var elements = stripe.elements();
@@ -677,13 +734,19 @@ form.addEventListener('submit', function(event) {
             var errorElement = document.getElementById('card-errors');
             errorElement.textContent = result.error.message;
         } else {
-            fetch('/procesar-pago', {
+            fetch('/support-pet', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 },
-                body: JSON.stringify({ payment_method: result.paymentMethod.id }),
+                body: JSON.stringify({
+                    payment_method: result.paymentMethod.id,
+                    pet_id: {{$pet->id}},
+                    name:  $("#name").val(),
+                    message: $("#message").val(),
+                    amount: $("#total").text()
+                }),
             }).then(function(response) {
                 return response.json();
             }).then(function(data) {
